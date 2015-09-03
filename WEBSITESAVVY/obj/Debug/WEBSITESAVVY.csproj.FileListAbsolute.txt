@@ -1,0 +1,139 @@
+D:\Savvy Adjuster\DropBoxSavvy\Dropbox\Source Web\New Version\WEBSITESAVVY\WEBSITESAVVY\bin\WEBSITESAVVY.dll
+D:\Savvy Adjuster\DropBoxSavvy\Dropbox\Source Web\New Version\WEBSITESAVVY\WEBSITESAVVY\bin\WEBSITESAVVY.pdb
+D:\Savvy Adjuster\DropBoxSavvy\Dropbox\Source Web\New Version\WEBSITESAVVY\WEBSITESAVVY\bin\CKEditor.NET.dll
+D:\Savvy Adjuster\DropBoxSavvy\Dropbox\Source Web\New Version\WEBSITESAVVY\WEBSITESAVVY\bin\CKEditor.NET.pdb
+D:\Savvy Adjuster\DropBoxSavvy\Dropbox\Source Web\New Version\WEBSITESAVVY\WEBSITESAVVY\obj\Debug\ResolveAssemblyReference.cache
+D:\Savvy Adjuster\DropBoxSavvy\Dropbox\Source Web\New Version\WEBSITESAVVY\WEBSITESAVVY\obj\Debug\WEBSITESAVVY.csproj.ResolveComReference.cache
+D:\Savvy Adjuster\DropBoxSavvy\Dropbox\Source Web\New Version\WEBSITESAVVY\WEBSITESAVVY\obj\Debug\WEBSITESAVVY.dll
+D:\Savvy Adjuster\DropBoxSavvy\Dropbox\Source Web\New Version\WEBSITESAVVY\WEBSITESAVVY\obj\Debug\WEBSITESAVVY.pdb
+D:\Savvy Adjuster\DropBoxSavvy\Dropbox\Source Web\Mobile Version\WEBSITESAVVY\WEBSITESAVVY\obj\Debug\ResolveAssemblyReference.cache
+D:\Savvy Adjuster\DropBoxSavvy\Dropbox\Source Web\Mobile Version\WEBSITESAVVY\WEBSITESAVVY\obj\Debug\WEBSITESAVVY.csproj.ResolveComReference.cache
+D:\Savvy Adjuster\DropBoxSavvy\Dropbox\Source Web\Mobile Version\WEBSITESAVVY\WEBSITESAVVY\bin\WEBSITESAVVY.dll
+D:\Savvy Adjuster\DropBoxSavvy\Dropbox\Source Web\Mobile Version\WEBSITESAVVY\WEBSITESAVVY\bin\WEBSITESAVVY.pdb
+D:\Savvy Adjuster\DropBoxSavvy\Dropbox\Source Web\Mobile Version\WEBSITESAVVY\WEBSITESAVVY\bin\CKEditor.NET.dll
+D:\Savvy Adjuster\DropBoxSavvy\Dropbox\Source Web\Mobile Version\WEBSITESAVVY\WEBSITESAVVY\bin\CKEditor.NET.pdb
+D:\Savvy Adjuster\DropBoxSavvy\Dropbox\Source Web\Mobile Version\WEBSITESAVVY\WEBSITESAVVY\obj\Debug\WEBSITESAVVY.dll
+D:\Savvy Adjuster\DropBoxSavvy\Dropbox\Source Web\Mobile Version\WEBSITESAVVY\WEBSITESAVVY\obj\Debug\WEBSITESAVVY.pdb
+D:\Savvy Adjuster\DropBoxSavvy\Dropbox\Source Web\Mobile Version\WEBSITESAVVY(New)\WEBSITESAVVY\obj\Debug\ResolveAssemblyReference.cache
+D:\Savvy Adjuster\DropBoxSavvy\Dropbox\Source Web\Mobile Version\WEBSITESAVVY(New)\WEBSITESAVVY\obj\Debug\WEBSITESAVVY.csproj.ResolveComReference.cache
+D:\Savvy Adjuster\DropBoxSavvy\Dropbox\Source Web\Mobile Version\WEBSITESAVVY(New)\WEBSITESAVVY\obj\Debug\WEBSITESAVVY.dll
+D:\Savvy Adjuster\DropBoxSavvy\Dropbox\Source Web\Mobile Version\WEBSITESAVVY(New)\WEBSITESAVVY\obj\Debug\WEBSITESAVVY.pdb
+C:\Users\DELL\Desktop\WEBSITESAVVY(New)\WEBSITESAVVY\bin\FredCK.FCKeditorV2.dll
+C:\Users\DELL\Desktop\WEBSITESAVVY(New)\WEBSITESAVVY\bin\WEBSITESAVVY.dll
+C:\Users\DELL\Desktop\WEBSITESAVVY(New)\WEBSITESAVVY\bin\WEBSITESAVVY.pdb
+C:\Users\DELL\Desktop\WEBSITESAVVY(New)\WEBSITESAVVY\bin\AjaxControlToolkit.dll
+C:\Users\DELL\Desktop\WEBSITESAVVY(New)\WEBSITESAVVY\bin\CKEditor.NET.dll
+C:\Users\DELL\Desktop\WEBSITESAVVY(New)\WEBSITESAVVY\bin\Google.GData.AccessControl.dll
+C:\Users\DELL\Desktop\WEBSITESAVVY(New)\WEBSITESAVVY\bin\Google.GData.Calendar.dll
+C:\Users\DELL\Desktop\WEBSITESAVVY(New)\WEBSITESAVVY\bin\Google.GData.Client.dll
+C:\Users\DELL\Desktop\WEBSITESAVVY(New)\WEBSITESAVVY\bin\Google.GData.Extensions.dll
+C:\Users\DELL\Desktop\WEBSITESAVVY(New)\WEBSITESAVVY\bin\itextsharp.dll
+C:\Users\DELL\Desktop\WEBSITESAVVY(New)\WEBSITESAVVY\bin\AjaxControlToolkit.pdb
+C:\Users\DELL\Desktop\WEBSITESAVVY(New)\WEBSITESAVVY\bin\CKEditor.NET.pdb
+C:\Users\DELL\Desktop\WEBSITESAVVY(New)\WEBSITESAVVY\bin\ar\AjaxControlToolkit.resources.dll
+C:\Users\DELL\Desktop\WEBSITESAVVY(New)\WEBSITESAVVY\bin\cs\AjaxControlToolkit.resources.dll
+C:\Users\DELL\Desktop\WEBSITESAVVY(New)\WEBSITESAVVY\bin\de\AjaxControlToolkit.resources.dll
+C:\Users\DELL\Desktop\WEBSITESAVVY(New)\WEBSITESAVVY\bin\es\AjaxControlToolkit.resources.dll
+C:\Users\DELL\Desktop\WEBSITESAVVY(New)\WEBSITESAVVY\bin\fr\AjaxControlToolkit.resources.dll
+C:\Users\DELL\Desktop\WEBSITESAVVY(New)\WEBSITESAVVY\bin\he\AjaxControlToolkit.resources.dll
+C:\Users\DELL\Desktop\WEBSITESAVVY(New)\WEBSITESAVVY\bin\hi\AjaxControlToolkit.resources.dll
+C:\Users\DELL\Desktop\WEBSITESAVVY(New)\WEBSITESAVVY\bin\it\AjaxControlToolkit.resources.dll
+C:\Users\DELL\Desktop\WEBSITESAVVY(New)\WEBSITESAVVY\bin\ja\AjaxControlToolkit.resources.dll
+C:\Users\DELL\Desktop\WEBSITESAVVY(New)\WEBSITESAVVY\bin\ko\AjaxControlToolkit.resources.dll
+C:\Users\DELL\Desktop\WEBSITESAVVY(New)\WEBSITESAVVY\bin\nl\AjaxControlToolkit.resources.dll
+C:\Users\DELL\Desktop\WEBSITESAVVY(New)\WEBSITESAVVY\bin\pt\AjaxControlToolkit.resources.dll
+C:\Users\DELL\Desktop\WEBSITESAVVY(New)\WEBSITESAVVY\bin\ru\AjaxControlToolkit.resources.dll
+C:\Users\DELL\Desktop\WEBSITESAVVY(New)\WEBSITESAVVY\bin\tr-TR\AjaxControlToolkit.resources.dll
+C:\Users\DELL\Desktop\WEBSITESAVVY(New)\WEBSITESAVVY\bin\zh-CHS\AjaxControlToolkit.resources.dll
+C:\Users\DELL\Desktop\WEBSITESAVVY(New)\WEBSITESAVVY\bin\zh-CHT\AjaxControlToolkit.resources.dll
+C:\Users\DELL\Desktop\WEBSITESAVVY(New)\WEBSITESAVVY\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\DELL\Desktop\WEBSITESAVVY(New)\WEBSITESAVVY\obj\Debug\WEBSITESAVVY.csproj.ResolveComReference.cache
+C:\Users\DELL\Desktop\WEBSITESAVVY(New)\WEBSITESAVVY\obj\Debug\WEBSITESAVVY.dll
+C:\Users\DELL\Desktop\WEBSITESAVVY(New)\WEBSITESAVVY\obj\Debug\WEBSITESAVVY.pdb
+C:\Users\DELL\Desktop\ASP\WEBSITESAVVY(New)\WEBSITESAVVY\bin\WEBSITESAVVY.dll
+C:\Users\DELL\Desktop\ASP\WEBSITESAVVY(New)\WEBSITESAVVY\bin\WEBSITESAVVY.pdb
+C:\Users\DELL\Desktop\ASP\WEBSITESAVVY(New)\WEBSITESAVVY\bin\AjaxControlToolkit.dll
+C:\Users\DELL\Desktop\ASP\WEBSITESAVVY(New)\WEBSITESAVVY\bin\CKEditor.NET.dll
+C:\Users\DELL\Desktop\ASP\WEBSITESAVVY(New)\WEBSITESAVVY\bin\FredCK.FCKeditorV2.dll
+C:\Users\DELL\Desktop\ASP\WEBSITESAVVY(New)\WEBSITESAVVY\bin\Google.GData.AccessControl.DLL
+C:\Users\DELL\Desktop\ASP\WEBSITESAVVY(New)\WEBSITESAVVY\bin\Google.GData.Calendar.dll
+C:\Users\DELL\Desktop\ASP\WEBSITESAVVY(New)\WEBSITESAVVY\bin\Google.GData.Client.dll
+C:\Users\DELL\Desktop\ASP\WEBSITESAVVY(New)\WEBSITESAVVY\bin\Google.GData.Extensions.dll
+C:\Users\DELL\Desktop\ASP\WEBSITESAVVY(New)\WEBSITESAVVY\bin\itextsharp.dll
+C:\Users\DELL\Desktop\ASP\WEBSITESAVVY(New)\WEBSITESAVVY\bin\AjaxControlToolkit.pdb
+C:\Users\DELL\Desktop\ASP\WEBSITESAVVY(New)\WEBSITESAVVY\bin\CKEditor.NET.pdb
+C:\Users\DELL\Desktop\ASP\WEBSITESAVVY(New)\WEBSITESAVVY\bin\ar\AjaxControlToolkit.resources.dll
+C:\Users\DELL\Desktop\ASP\WEBSITESAVVY(New)\WEBSITESAVVY\bin\cs\AjaxControlToolkit.resources.dll
+C:\Users\DELL\Desktop\ASP\WEBSITESAVVY(New)\WEBSITESAVVY\bin\de\AjaxControlToolkit.resources.dll
+C:\Users\DELL\Desktop\ASP\WEBSITESAVVY(New)\WEBSITESAVVY\bin\es\AjaxControlToolkit.resources.dll
+C:\Users\DELL\Desktop\ASP\WEBSITESAVVY(New)\WEBSITESAVVY\bin\fr\AjaxControlToolkit.resources.dll
+C:\Users\DELL\Desktop\ASP\WEBSITESAVVY(New)\WEBSITESAVVY\bin\he\AjaxControlToolkit.resources.dll
+C:\Users\DELL\Desktop\ASP\WEBSITESAVVY(New)\WEBSITESAVVY\bin\hi\AjaxControlToolkit.resources.dll
+C:\Users\DELL\Desktop\ASP\WEBSITESAVVY(New)\WEBSITESAVVY\bin\it\AjaxControlToolkit.resources.dll
+C:\Users\DELL\Desktop\ASP\WEBSITESAVVY(New)\WEBSITESAVVY\bin\ja\AjaxControlToolkit.resources.dll
+C:\Users\DELL\Desktop\ASP\WEBSITESAVVY(New)\WEBSITESAVVY\bin\ko\AjaxControlToolkit.resources.dll
+C:\Users\DELL\Desktop\ASP\WEBSITESAVVY(New)\WEBSITESAVVY\bin\nl\AjaxControlToolkit.resources.dll
+C:\Users\DELL\Desktop\ASP\WEBSITESAVVY(New)\WEBSITESAVVY\bin\pt\AjaxControlToolkit.resources.dll
+C:\Users\DELL\Desktop\ASP\WEBSITESAVVY(New)\WEBSITESAVVY\bin\ru\AjaxControlToolkit.resources.dll
+C:\Users\DELL\Desktop\ASP\WEBSITESAVVY(New)\WEBSITESAVVY\bin\tr-TR\AjaxControlToolkit.resources.dll
+C:\Users\DELL\Desktop\ASP\WEBSITESAVVY(New)\WEBSITESAVVY\bin\zh-CHS\AjaxControlToolkit.resources.dll
+C:\Users\DELL\Desktop\ASP\WEBSITESAVVY(New)\WEBSITESAVVY\bin\zh-CHT\AjaxControlToolkit.resources.dll
+C:\Users\DELL\Desktop\ASP\WEBSITESAVVY(New)\WEBSITESAVVY\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\DELL\Desktop\ASP\WEBSITESAVVY(New)\WEBSITESAVVY\obj\Debug\WEBSITESAVVY.csproj.ResolveComReference.cache
+C:\Users\DELL\Desktop\ASP\WEBSITESAVVY(New)\WEBSITESAVVY\obj\Debug\WEBSITESAVVY.dll
+C:\Users\DELL\Desktop\ASP\WEBSITESAVVY(New)\WEBSITESAVVY\obj\Debug\WEBSITESAVVY.pdb
+D:\PlatfomSavvy\platform-savvy\WEBSITESAVVY\bin\WEBSITESAVVY.dll
+D:\PlatfomSavvy\platform-savvy\WEBSITESAVVY\bin\WEBSITESAVVY.pdb
+D:\PlatfomSavvy\platform-savvy\WEBSITESAVVY\bin\AjaxControlToolkit.dll
+D:\PlatfomSavvy\platform-savvy\WEBSITESAVVY\bin\CKEditor.NET.dll
+D:\PlatfomSavvy\platform-savvy\WEBSITESAVVY\bin\itextsharp.dll
+D:\PlatfomSavvy\platform-savvy\WEBSITESAVVY\bin\AjaxControlToolkit.pdb
+D:\PlatfomSavvy\platform-savvy\WEBSITESAVVY\bin\CKEditor.NET.pdb
+D:\PlatfomSavvy\platform-savvy\WEBSITESAVVY\bin\ar\AjaxControlToolkit.resources.dll
+D:\PlatfomSavvy\platform-savvy\WEBSITESAVVY\bin\cs\AjaxControlToolkit.resources.dll
+D:\PlatfomSavvy\platform-savvy\WEBSITESAVVY\bin\de\AjaxControlToolkit.resources.dll
+D:\PlatfomSavvy\platform-savvy\WEBSITESAVVY\bin\es\AjaxControlToolkit.resources.dll
+D:\PlatfomSavvy\platform-savvy\WEBSITESAVVY\bin\fr\AjaxControlToolkit.resources.dll
+D:\PlatfomSavvy\platform-savvy\WEBSITESAVVY\bin\he\AjaxControlToolkit.resources.dll
+D:\PlatfomSavvy\platform-savvy\WEBSITESAVVY\bin\hi\AjaxControlToolkit.resources.dll
+D:\PlatfomSavvy\platform-savvy\WEBSITESAVVY\bin\it\AjaxControlToolkit.resources.dll
+D:\PlatfomSavvy\platform-savvy\WEBSITESAVVY\bin\ja\AjaxControlToolkit.resources.dll
+D:\PlatfomSavvy\platform-savvy\WEBSITESAVVY\bin\ko\AjaxControlToolkit.resources.dll
+D:\PlatfomSavvy\platform-savvy\WEBSITESAVVY\bin\nl\AjaxControlToolkit.resources.dll
+D:\PlatfomSavvy\platform-savvy\WEBSITESAVVY\bin\pt\AjaxControlToolkit.resources.dll
+D:\PlatfomSavvy\platform-savvy\WEBSITESAVVY\bin\ru\AjaxControlToolkit.resources.dll
+D:\PlatfomSavvy\platform-savvy\WEBSITESAVVY\bin\tr-TR\AjaxControlToolkit.resources.dll
+D:\PlatfomSavvy\platform-savvy\WEBSITESAVVY\bin\zh-CHS\AjaxControlToolkit.resources.dll
+D:\PlatfomSavvy\platform-savvy\WEBSITESAVVY\bin\zh-CHT\AjaxControlToolkit.resources.dll
+D:\PlatfomSavvy\platform-savvy\WEBSITESAVVY\obj\Debug\WEBSITESAVVY.csprojResolveAssemblyReference.cache
+D:\PlatfomSavvy\platform-savvy\WEBSITESAVVY\obj\Debug\WEBSITESAVVY.dll
+D:\PlatfomSavvy\platform-savvy\WEBSITESAVVY\obj\Debug\WEBSITESAVVY.pdb
+D:\SAVVYPlatform\WEBSITESAVVY\obj\Debug\WEBSITESAVVY.csprojResolveAssemblyReference.cache
+D:\SAVVYPlatform\WEBSITESAVVY\obj\Debug\WEBSITESAVVY.dll
+D:\SAVVYPlatform\WEBSITESAVVY\obj\Debug\WEBSITESAVVY.pdb
+D:\SourceCode\SAVVY\WEBSITESAVVY\bin\WEBSITESAVVY.dll
+D:\SourceCode\SAVVY\WEBSITESAVVY\bin\WEBSITESAVVY.pdb
+D:\SourceCode\SAVVY\WEBSITESAVVY\bin\AjaxControlToolkit.dll
+D:\SourceCode\SAVVY\WEBSITESAVVY\bin\CKEditor.NET.dll
+D:\SourceCode\SAVVY\WEBSITESAVVY\bin\itextsharp.dll
+D:\SourceCode\SAVVY\WEBSITESAVVY\bin\AjaxControlToolkit.pdb
+D:\SourceCode\SAVVY\WEBSITESAVVY\bin\CKEditor.NET.pdb
+D:\SourceCode\SAVVY\WEBSITESAVVY\bin\ar\AjaxControlToolkit.resources.dll
+D:\SourceCode\SAVVY\WEBSITESAVVY\bin\cs\AjaxControlToolkit.resources.dll
+D:\SourceCode\SAVVY\WEBSITESAVVY\bin\de\AjaxControlToolkit.resources.dll
+D:\SourceCode\SAVVY\WEBSITESAVVY\bin\es\AjaxControlToolkit.resources.dll
+D:\SourceCode\SAVVY\WEBSITESAVVY\bin\fr\AjaxControlToolkit.resources.dll
+D:\SourceCode\SAVVY\WEBSITESAVVY\bin\he\AjaxControlToolkit.resources.dll
+D:\SourceCode\SAVVY\WEBSITESAVVY\bin\hi\AjaxControlToolkit.resources.dll
+D:\SourceCode\SAVVY\WEBSITESAVVY\bin\it\AjaxControlToolkit.resources.dll
+D:\SourceCode\SAVVY\WEBSITESAVVY\bin\ja\AjaxControlToolkit.resources.dll
+D:\SourceCode\SAVVY\WEBSITESAVVY\bin\ko\AjaxControlToolkit.resources.dll
+D:\SourceCode\SAVVY\WEBSITESAVVY\bin\nl\AjaxControlToolkit.resources.dll
+D:\SourceCode\SAVVY\WEBSITESAVVY\bin\pt\AjaxControlToolkit.resources.dll
+D:\SourceCode\SAVVY\WEBSITESAVVY\bin\ru\AjaxControlToolkit.resources.dll
+D:\SourceCode\SAVVY\WEBSITESAVVY\bin\tr-TR\AjaxControlToolkit.resources.dll
+D:\SourceCode\SAVVY\WEBSITESAVVY\bin\zh-CHS\AjaxControlToolkit.resources.dll
+D:\SourceCode\SAVVY\WEBSITESAVVY\bin\zh-CHT\AjaxControlToolkit.resources.dll
+D:\SourceCode\SAVVY\WEBSITESAVVY\obj\Debug\WEBSITESAVVY.dll
+D:\SourceCode\SAVVY\WEBSITESAVVY\obj\Debug\WEBSITESAVVY.pdb
+D:\SourceCode\SAVVY\WEBSITESAVVY\obj\Debug\WEBSITESAVVY.csprojResolveAssemblyReference.cache
