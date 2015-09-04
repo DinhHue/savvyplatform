@@ -32,29 +32,31 @@ namespace WEBSITESAVVY.Pages
                             lblBrief.Text = row["Brief"].ToString();
                             lblThamChieu.Text = row["TenClaim"].ToString();
                             lblInsurer.Text = row["TenNhaBH"].ToString();
+                            lblInsured.Text = row["TenKhachHang"].ToString();
                             lblPolicyNo.Text = row["PolicyNo"].ToString();
-                            lblSubsidiary.Text=row["TenDonVi"].ToString();
-                            lblEffective.Text=row["Effective"].ToString();
-                            lblTypeofPolicy.Text=row["TypePolicy"].ToString();
+                            lblSubsidiary.Text = row["TenDonVi"].ToString();
+                            lblEffective.Text = row["Effective"].ToString();
+                            lblTypeofPolicy.Text = row["TypePolicy"].ToString();
                             lblAdress.Text = row["DiaChi"].ToString();
                             lblNguoiDaiDien.Text = row["TenNguoiDaiDien"].ToString();
                             lblDienThoai.Text = row["DienThoai"].ToString();
-                            lblDiadiemTonThat.Text=row["Premises"].ToString();
-                            lblDateofloss.Text=row["DOL"].ToString();
-                            lblTypeofloss.Text=row["LoaiHinhTonThat"].ToString();
-                            lblSuminsured.Text=row["SumInsured"].ToString();
+                            lblDiadiemTonThat.Text = row["Premises"].ToString();
+                            lblDateofloss.Text = row["DOL"].ToString();
+                            lblTypeofloss.Text = row["LoaiHinhTonThat"].ToString();
+                            lblSuminsured.Text = row["SumInsured"].ToString();
                             lblDeductible.Text = row["TruMienThuong"].ToString();
-                            lblClaimsum.Text=row["KhieuNai"].ToString();
-                            lblpayment.Text=row["BoiThuong"].ToString();
+                            lblClaimsum.Text = row["KhieuNai"].ToString();
+                            lblpayment.Text = row["BoiThuong"].ToString();
                             lbllossestimate.Text = row["TonThatHopLe"].ToString();
                             lblReserve.Text = row["DuPhongBoiThuong"].ToString();
                             lblsettlement.Text = row["TruGiaTriThuHoi"].ToString();
-                            lblSR01date.Text=row["NgayBatDauGiamDinh"].ToString();
-                            lblILAdate.Text=row["ILADATE"].ToString();
-                            lblPRDate.Text=row["PRDate"].ToString();
-                            lblIRdate.Text=row["IRDate"].ToString();
-                            lblFRdate.Text=row["FRDate"].ToString();
+                            lblSR01date.Text = row["NgayBatDauGiamDinh"].ToString();
+                            lblILAdate.Text = row["ILADATE"].ToString();
+                            lblPRDate.Text = row["PRDate"].ToString();
+                            lblIRdate.Text = row["IRDate"].ToString();
+                            lblFRdate.Text = row["FRDate"].ToString();
                             lblFFRdate.Text = row["FFRDate"].ToString();
+                            lblDateofinstruction.Text = row["AssignedDate"].ToString();
                         }
 
                     }
