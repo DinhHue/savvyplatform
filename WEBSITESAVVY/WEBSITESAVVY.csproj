@@ -1404,6 +1404,7 @@
     <Content Include="Pages\updatecoverhome.aspx" />
     <Content Include="Pages\updatetimesheetpop.aspx" />
     <Content Include="Pages\updateweeklyreport.aspx" />
+    <Content Include="Pages\Uploads.aspx" />
     <Content Include="Pages\ViewWR.aspx" />
     <Content Include="Pages\Individual.aspx" />
     <Content Include="Pages\WebForm1.aspx" />
@@ -1707,6 +1708,8 @@
     <Content Include="Uc\UcQuanLyCongTacTimeSheet.ascx" />
     <Content Include="Uc\UcTheLoaiSum.ascx" />
     <Content Include="Uc\UcThongTinDVBHVANDBHKSRR.ascx" />
+    <Content Include="Uploads\Images\index.jpg" />
+    <Content Include="Uploads\Images\Thumb\index.jpg" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -2839,6 +2842,13 @@
     </Compile>
     <Compile Include="Pages\updateweeklyreport.aspx.designer.cs">
       <DependentUpon>updateweeklyreport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Uploads.aspx.cs">
+      <DependentUpon>Uploads.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Uploads.aspx.designer.cs">
+      <DependentUpon>Uploads.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\ViewWR.aspx.cs">
       <DependentUpon>ViewWR.aspx</DependentUpon>
