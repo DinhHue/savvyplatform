@@ -61,7 +61,7 @@
         }
 
         function loadReport(index) {
-            
+
             var Link = "";
             if (index == 0)
                 Link = "../Pages/generalinformation.aspx";
@@ -84,7 +84,6 @@
 
 			if (Link != "")
 			    $("#frameCenter").attr("src", Link);
-			
 
             /*$.ajax({
                 url: Link,
@@ -102,6 +101,14 @@
 
         function updateField(obj) {
 
+            closeAllDialog();
+
+            var type = $(obj).attr("type");
+
+            var parentWindow = $('#w_UpdateField').parent(".panel");
+            if (type == "date")
+                parentWindow = $('#w_UpdateFieldSmall').parent(".panel");
+
             var title = $(parentWindow).children().children()[0];
             var strTitle = $($(obj).children().children()[0]).html();
 
@@ -114,14 +121,7 @@
             //alert(key);
             var param = "?key=" + key;
            
-//            var type = $(obj).attr("type");
-//            if (type)
-//                param += "&type=" + type;
-
-//            var content = "<iframe src='../Pages/ClaimUpdateFieldPop.aspx" + param + "'></iframe>";
-            var type = $(obj).attr("type");
-            if (type)
-                param += "&type=" + type;
+            if (type)  param += "&type=" + type;
             param += "&title=" + strTitle;
 
             var content = "<iframe src='../Pages/ClaimUpdateFieldPop.aspx" + param + "'></iframe>";
