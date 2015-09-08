@@ -1389,6 +1389,7 @@
     <Content Include="Pages\reportFFR.aspx" />
     <Content Include="Pages\reportPR_word.aspx" />
     <Content Include="Pages\reportSR01.aspx" />
+    <Content Include="Pages\search.aspx" />
     <Content Include="Pages\SiteSurveyRecordView.aspx" />
     <Content Include="Pages\StaticsticsTimeSheet.aspx" />
     <Content Include="Pages\SubHome.aspx" />
@@ -2734,6 +2735,13 @@
     </Compile>
     <Compile Include="Pages\reportSR01.aspx.designer.cs">
       <DependentUpon>reportSR01.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\search.aspx.cs">
+      <DependentUpon>search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\search.aspx.designer.cs">
+      <DependentUpon>search.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\SiteSurveyRecordView.aspx.cs">
       <DependentUpon>SiteSurveyRecordView.aspx</DependentUpon>
