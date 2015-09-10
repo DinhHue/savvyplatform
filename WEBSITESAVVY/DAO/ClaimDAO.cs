@@ -2111,6 +2111,47 @@ namespace WEBSITESAVVY.DAO
             }
             return null;
         }
-        
+        public DataTable SearchNDBH(string key)
+        {
+            string sql = "sp_KhachHang_Search";
+            List<SqlParameter> ds = new List<SqlParameter>();
+            ds.Add(new SqlParameter("@key ", key));           
+            return SqlDataAcessHelper.exStoreParas(sql, ds);
+        }
+        public DataTable SearchLHTT(string key)
+        {
+            string sql = "sp_Claim_SearchLoaiHinhTT";
+            List<SqlParameter> ds = new List<SqlParameter>();
+            ds.Add(new SqlParameter("@key ", key));
+            return SqlDataAcessHelper.exStoreParas(sql, ds);
+        }
+        public DataTable SearchPolicy(string key)
+        {
+            string sql = "sp_Claim_SearchPolicy";
+            List<SqlParameter> ds = new List<SqlParameter>();
+            ds.Add(new SqlParameter("@key ", key));
+            return SqlDataAcessHelper.exStoreParas(sql, ds);
+        }
+        public DataTable SearchBrief(string key)
+        {
+            string sql = "sp_Claim_SearchBrief";
+            List<SqlParameter> ds = new List<SqlParameter>();
+            ds.Add(new SqlParameter("@key ", key));
+            return SqlDataAcessHelper.exStoreParas(sql, ds);
+        }
+        public DataTable SearchDKBS(string key)
+        {
+            string sql = "sp_Claim_SearchDKBS";
+            List<SqlParameter> ds = new List<SqlParameter>();
+            ds.Add(new SqlParameter("@key ", key));
+            return SqlDataAcessHelper.exStoreParas(sql, ds);
+        }
+        public DataTable SearchAllCase(string key)
+        {
+            string sql = "sp_Claim_SearchAll";
+            List<SqlParameter> ds = new List<SqlParameter>();
+            ds.Add(new SqlParameter("@key ", key));
+            return SqlDataAcessHelper.exStoreParas(sql, ds);
+        }
     }
 }
