@@ -27,13 +27,16 @@ namespace WEBSITESAVVY.Pages
         {
             //string[] filePaths = Directory.GetFiles(Server.MapPath(IMG_THUMB_PATH));
 
-            DirectoryInfo di = new DirectoryInfo(Server.MapPath(IMG_THUMB_PATH));
-            FileSystemInfo[] files = di.GetFileSystemInfos();
+            DirectoryInfo di = new DirectoryInfo(Server.MapPath(IMG_PATH));
+            FileInfo[] files = di.GetFiles();
             //var orderedFiles = files.OrderBy(f => f.CreationTime);
             var orderedFiles = files.OrderByDescending(f => f.LastWriteTime);
 
             repeaterView.DataSource = orderedFiles;
             repeaterView.DataBind();
+
+            repeaterList.DataSource = orderedFiles;
+            repeaterList.DataBind();
 
         }
 
@@ -102,6 +105,25 @@ namespace WEBSITESAVVY.Pages
             ResizedImage.DrawImage(imgOriginal, 0, 0, ThumbnailWidth, ThumbnailHeight);
             // Save thumbnail to file
             ThumbnailBitmap.Save(ThumbnailImagePath);
+        }
+
+        protected void btnSearch_Click(object sender, EventArgs e)
+        {
+            String str = txtSearch.Text;
+
+            DirectoryInfo di = new DirectoryInfo(Server.MapPath(IMG_PATH));
+            FileInfo[] files = di.GetFiles();
+            //var orderedFiles = files.OrderBy(f => f.CreationTime);
+            //var orderedFiles = files.OrderByDescending(f => f.LastWriteTime);
+
+            var orderedFiles = files.Where(f => f.Name.Contains(str))
+                                    .OrderByDescending(f => f.LastWriteTime);
+
+            repeaterView.DataSource = orderedFiles;
+            repeaterView.DataBind();
+
+            repeaterList.DataSource = orderedFiles;
+            repeaterList.DataBind();
         }
     }
 }
