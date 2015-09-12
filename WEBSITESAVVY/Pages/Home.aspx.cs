@@ -315,6 +315,12 @@ namespace WEBSITESAVVY.Pages
             }
         }
 
+        protected void btnSearchKey_Click(object sender, EventArgs e)
+        {
+            string key = txtTuKhoa.Text;
+            Response.Redirect("~/Pages/search.aspx?key="+key);
+        }
+
        
     }
 }

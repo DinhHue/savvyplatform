@@ -1,15 +1,24 @@
 ﻿<%@ Page Title="Events - SA Platform" Language="C#" MasterPageFile="~/Pages/Site1.Master" AutoEventWireup="true" CodeBehind="trackinglog.aspx.cs" Inherits="WEBSITESAVVY.Pages.trackinglog" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
+ <script type="text/javascript">    
+     function Focus(object) {
+         object.value = "";
+     }
 
+     function Blur(object) {
+         if (object.value == "")
+             object.value = "Change date";
+     }
+    </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
  <asp:ScriptManager ID="ScriptManager1" runat="server">
         </asp:ScriptManager>
     <div id="db_top" class="db_top">
         <asp:Label ID="Label1" runat="server" Text="Events "></asp:Label>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
-        <asp:TextBox ID="txtDate" runat="server" CssClass="input" AutoPostBack="True" 
-            ontextchanged="txtDate_TextChanged"></asp:TextBox>
+        &nbsp;&nbsp;&nbsp;
+        <asp:TextBox ID="txtDate" runat="server" CssClass="input" AutoPostBack="True" onfocus="Focus(this)" onblur="Blur(this)"
+            ontextchanged="txtDate_TextChanged">Today</asp:TextBox>
                              <ajaxToolkit:CalendarExtender ID="txtDate_CalendarExtender" runat="server" 
             TargetControlID="txtDate" DaysModeTitleFormat="yyyy-MM,dd" 
             Format="yyyy-MM-dd" TodaysDateFormat="yyyy-MM,dd">

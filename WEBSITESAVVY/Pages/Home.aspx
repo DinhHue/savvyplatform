@@ -12,21 +12,36 @@
             window.scrollTo(0, 0);
             //$("html, body").animate({ scrollTop: 0 }, 500);
         }
+        function Focus(object) {
+            object.value = "";
+        }
+
+        function Blur(object) {
+            if (object.value == "")
+                object.value = "Enter your key";
+        }
     </script>
+    
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-    <span runat="server" id="tabid" style="display:none">home</span>
-    <%-- header --%>
-    <div class="ambitios_rows_sub">
-    <div class="ambitios_container_16">
-      <div class="ambitios_wrapper">
-        <div class="titleobject ambitios_alpha">
-          <h1 class="ambitios_uppercase">CLAIM LIST PENDING</h1>
-        </div>
-      </div>
-    </div>
-  </div>
-    <%-- content main --%>
+    <span runat="server" id="tabid" style="display:none">home</span>    <%-- header --%>
+   
+        <div style="padding-right: 40px" align="right">       
+                         
+                        <table align="center" width="100%">
+                            <tr>
+                                <td align="right" width="95%">
+                         
+                        <asp:TextBox ID="txtTuKhoa" runat="server" CssClass="input" onfocus="Focus(this)" onblur="Blur(this)">Enter your key</asp:TextBox>
+                                </td>
+                                <td class="righthome" width="5%">
+                        <asp:Button ID="btnSearchKey" runat="server" Height="30px" 
+                            onclick="btnSearchKey_Click" 
+                CssClass="ambitios_submit_button" />
+                                </td>
+                            </tr>
+            </table>
+           </div>            
   <div class="ambitios_container_16">
        <div class="ambitios_content">   
       <div class="ambitios_wrapper" align="center">
@@ -37,7 +52,7 @@
             <table align="center" width="100%">
                 <tr >
                     <td class="left" >
-                        <asp:Label ID="Label3" runat="server" Text="Đi đến nhanh Claim" 
+                        <asp:Label ID="Label3" runat="server" Text="Quick Case:" 
                             ForeColor="#CC0000"></asp:Label>
                     &nbsp;:</td>
                     <td class="righthome" width="200px">                   
@@ -78,7 +93,7 @@
                             Width="100px" onclick="btnClosed_Click" CssClass="btnThem" />
                     </td>
                 </tr>
-                <%-- tìm kiếm theo đơn vị BH, tăng rate, giảm rate --%>                <%--<tr >
+                <%-- tìm kiếm theo đơn vị BH, tăng rate, giảm rate --%><%--<tr >
                     <td class="left">
                         Đơn Vị Bảo Hiểm : :</td>
                     <td class="righthome" colspan="2">
