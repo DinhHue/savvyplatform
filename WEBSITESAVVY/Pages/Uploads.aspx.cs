@@ -28,6 +28,7 @@ namespace WEBSITESAVVY.Pages
             //string[] filePaths = Directory.GetFiles(Server.MapPath(IMG_THUMB_PATH));
 
             DirectoryInfo di = new DirectoryInfo(Server.MapPath(IMG_PATH));
+            //di.GetDirectories();
             FileInfo[] files = di.GetFiles();
             //var orderedFiles = files.OrderBy(f => f.CreationTime);
             var orderedFiles = files.OrderByDescending(f => f.LastWriteTime);

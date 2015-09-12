@@ -1405,6 +1405,7 @@
     <Content Include="Pages\updatecoverhome.aspx" />
     <Content Include="Pages\updatetimesheetpop.aspx" />
     <Content Include="Pages\updateweeklyreport.aspx" />
+    <Content Include="Pages\UploadMedia.aspx" />
     <Content Include="Pages\Uploads.aspx" />
     <Content Include="Pages\ViewWR.aspx" />
     <Content Include="Pages\Individual.aspx" />
@@ -2684,6 +2685,13 @@
     </Compile>
     <Compile Include="Pages\updateweeklyreport.aspx.designer.cs">
       <DependentUpon>updateweeklyreport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\UploadMedia.aspx.cs">
+      <DependentUpon>UploadMedia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\UploadMedia.aspx.designer.cs">
+      <DependentUpon>UploadMedia.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\Uploads.aspx.cs">
       <DependentUpon>Uploads.aspx</DependentUpon>

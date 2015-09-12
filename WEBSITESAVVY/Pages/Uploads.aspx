@@ -48,7 +48,7 @@
     }
     </style>
 </head>
-<body onload="$('#display_grid').hide();">
+<body >
     <form id="form1" runat="server">
     <div>
         
@@ -58,6 +58,7 @@
                 <td>
                     <asp:FileUpload ID="FileUpload1" runat="server"  />
                     <asp:Button ID="btnUpload" runat="server" Text="Upload" OnClick="Upload" /> <br />
+                </td>
                 <td>
                     <asp:TextBox ID="txtSearch" runat="server" placeholder="Search" Width="100px" 
                         ontextchanged="btnSearch_Click"  ></asp:TextBox>
@@ -72,7 +73,8 @@
             </tr>
             <tr>
                 <td colspan="3"><asp:Label runat="server" id="StatusLabel" text=" " />
-                    <input id="url" type="hidden" value="" /></td>
+                    <input id="url" type="hidden" value="" />
+                </td>
             </tr>
         </table>
         
@@ -94,7 +96,7 @@
              <div style="clear:both;"></div>
          </div>
 
-         <div id="display_grid">
+         <div id="display_grid" style="display:none">
             <table width="100%" cellpadding="5px">
                 <tr style="background:#f5f5f5">
                     <th>Name</th>

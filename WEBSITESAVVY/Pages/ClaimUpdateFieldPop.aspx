@@ -19,13 +19,13 @@
             ],
 
             toolbar1: "newdocument fullpage | bold italic underline strikethrough | alignleft aligncenter alignright alignjustify | styleselect formatselect fontselect fontsizeselect",
-            toolbar2: "cut copy paste | searchreplace | bullist numlist | outdent indent | undo redo | image code | forecolor backcolor",
+            toolbar2: "cut copy paste | searchreplace | bullist numlist | outdent indent | undo redo | image media code preview | forecolor backcolor",
             toolbar3: "",
 
             menubar: false,
             toolbar_items_size: 'small',
 
-            image_advtab: false,
+            image_advtab: true,
 
 
         });</script>
