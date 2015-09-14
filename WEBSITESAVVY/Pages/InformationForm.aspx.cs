@@ -570,37 +570,7 @@ namespace WEBSITESAVVY.Pages
             oSheet = (Microsoft.Office.Interop.Excel.Worksheet)oSheets.get_Item(1);
             oSheet.Name = sheetName;
 
-            // Tạo phần đầu nếu muốn
-            //Microsoft.Office.Interop.Excel.Range head = oSheet.get_Range("A1", "C1");
-            //head.MergeCells = true;
-            //head.Value2 = title;
-            //head.Font.Bold = true;
-            //head.Font.Name = "Tahoma";
-            //head.Font.Size = "18";
-            //head.HorizontalAlignment = Microsoft.Office.Interop.Excel.XlHAlign.xlHAlignCenter;
-
-            // Tạo tiêu đề cột 
-            //Microsoft.Office.Interop.Excel.Range cl1 = oSheet.get_Range("A3", "A3");
-            //cl1.Value2 = "Mã đơn vị";
-            //cl1.ColumnWidth = 13.5;
-
-            //Microsoft.Office.Interop.Excel.Range cl2 = oSheet.get_Range("B3", "B3");
-            //cl2.Value2 = "Tên đơn vị";
-            //cl2.ColumnWidth = 25.0;
-
-            //Microsoft.Office.Interop.Excel.Range cl3 = oSheet.get_Range("C3", "C3");
-            //cl3.Value2 = "Chức năng";
-            //cl3.ColumnWidth = 40.0;
-
-            //Microsoft.Office.Interop.Excel.Range rowHead = oSheet.get_Range("A3", "C3");
-            //rowHead.Font.Bold = true;
-            //// Kẻ viền
-            //rowHead.Borders.LineStyle = Microsoft.Office.Interop.Excel.Constants.xlSolid;
-            //// Thiết lập màu nền
-            //rowHead.Interior.ColorIndex = 15;
-            //rowHead.HorizontalAlignment = Microsoft.Office.Interop.Excel.XlHAlign.xlHAlignCenter;
-
-
+            
             // Tạo mẳng đối tượng để lưu dữ toàn bồ dữ liệu trong DataTable,
             // vì dữ liệu được được gán vào các Cell trong Excel phải thông qua object thuần.
             object[,] arr = new object[dt.Rows.Count, dt.Columns.Count];
@@ -705,7 +675,6 @@ namespace WEBSITESAVVY.Pages
 
             Response.Write(sw.ToString());
             Response.End();
-           
           
         }      
 

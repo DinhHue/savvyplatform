@@ -1,5 +1,6 @@
 ﻿<%@ Page Title="Events - SA Platform" Language="C#" MasterPageFile="~/Pages/Site1.Master" AutoEventWireup="true" CodeBehind="trackinglog.aspx.cs" Inherits="WEBSITESAVVY.Pages.trackinglog" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
+    <link href="../Styles/normal.css" rel="stylesheet" type="text/css" />
  <script type="text/javascript">    
      function Focus(object) {
          object.value = "";

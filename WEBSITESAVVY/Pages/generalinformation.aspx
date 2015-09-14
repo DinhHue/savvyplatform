@@ -6,16 +6,7 @@
 <head runat="server">
     <title></title>
     <link href="../Styles/normal.css" rel="stylesheet" type="text/css" />
-   
-    <style type="text/css">
-        .style2
-        {
-            text-align: left;
-            vertical-align: top;
-            width: 35%;
-            height: 46px;
-        }
-    </style>
+ 
    
 </head>
 <body>
