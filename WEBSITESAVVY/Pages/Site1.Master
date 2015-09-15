@@ -53,7 +53,8 @@
                         <li id="task"><a href="../Pages/DAILYTODO.aspx"><span><span>To-do-list</span></span></a></li>
                         <li id="weekly"><a href="../Pages/ListWeeklyReport.aspx"><span><span>Weekly Update</span></span></a></li>
                         <li id="tracking"><a href="trackinglog.aspx"><span><span>Events</span></span></a></li>
-                        <li><a href="javascript:void(0)" onclick="$('#w_NewClaim').window('open')" >New Claim</a></li>
+                        <li><a href="javascript:void(0)" onclick="$('#w_NewClaim').window('open')" ><span><span>New Claim</span></span></a></li>
+                        <li id="news"><a href="../Pages/NewsManager.aspx"><span><span>News</span></span></a></li>
                       </ul>
                       </div>
                  

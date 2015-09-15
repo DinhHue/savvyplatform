@@ -1368,6 +1368,9 @@
     <Content Include="Pages\newdiscussion.aspx" />
     <Content Include="Pages\NewItemWorkSheet.aspx" />
     <Content Include="Pages\newitemworksheetpop.aspx" />
+    <Content Include="Pages\News.aspx" />
+    <Content Include="Pages\NewsManager.aspx" />
+    <Content Include="Pages\NewsManagerPopup.aspx" />
     <Content Include="Pages\NewTimeSheet.aspx" />
     <Content Include="Pages\NewTimeSheetOtherLA.aspx" />
     <Content Include="Pages\newtimesheetpop.aspx" />
@@ -1611,6 +1614,8 @@
     <Compile Include="DAO\LoaiDRDAO.cs" />
     <Compile Include="DAO\LoaiHangMucDAO.cs" />
     <Compile Include="DAO\LossListDAO.cs" />
+    <Compile Include="DAO\NewsDAO.cs" />
+    <Compile Include="DAO\NewsTypeDAO.cs" />
     <Compile Include="DAO\NhomHangMucDAO.cs" />
     <Compile Include="DAO\NoteDAO.cs" />
     <Compile Include="DAO\SendMailDAO.cs" />
@@ -1638,6 +1643,7 @@
     <Compile Include="DTO\LoaiDRDTO.cs" />
     <Compile Include="DTO\LoaiHangMucDTO.cs" />
     <Compile Include="DTO\LossListDTO.cs" />
+    <Compile Include="DTO\NewsDTO.cs" />
     <Compile Include="DTO\NhomHangMucDTO.cs" />
     <Compile Include="DTO\TienDoXyLyDTO.cs" />
     <Compile Include="DTO\TrackingDTO.cs" />
@@ -2426,6 +2432,27 @@
     </Compile>
     <Compile Include="Pages\newitemworksheetpop.aspx.designer.cs">
       <DependentUpon>newitemworksheetpop.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\News.aspx.cs">
+      <DependentUpon>News.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\News.aspx.designer.cs">
+      <DependentUpon>News.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\NewsManager.aspx.cs">
+      <DependentUpon>NewsManager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\NewsManager.aspx.designer.cs">
+      <DependentUpon>NewsManager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\NewsManagerPopup.aspx.cs">
+      <DependentUpon>NewsManagerPopup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\NewsManagerPopup.aspx.designer.cs">
+      <DependentUpon>NewsManagerPopup.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\NewTimeSheet.aspx.cs">
       <DependentUpon>NewTimeSheet.aspx</DependentUpon>
