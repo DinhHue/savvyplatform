@@ -1813,6 +1813,7 @@
     </Compile>
     <Compile Include="Pages\ClaimUpdateFieldPop.aspx.cs">
       <DependentUpon>ClaimUpdateFieldPop.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Pages\ClaimUpdateFieldPop.aspx.designer.cs">
       <DependentUpon>ClaimUpdateFieldPop.aspx</DependentUpon>
