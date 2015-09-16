@@ -11,7 +11,7 @@ using System.IO;
 using iTextSharp.text;
 using iTextSharp.text.html.simpleparser;
 using iTextSharp.text.pdf;
-
+using System.Web.UI.HtmlControls;
 namespace WEBSITESAVVY.Pages
 {
     public partial class reportSR01 : System.Web.UI.Page
@@ -29,6 +29,7 @@ namespace WEBSITESAVVY.Pages
                 mClaimID = idclaim;
                 loadData(mClaimID);
                 loadDanhMucThietHai(mClaimID);
+                //idClaim.Text = idclaim;
             }
         }
         void loadckLHTT(int idck)
@@ -83,6 +84,7 @@ namespace WEBSITESAVVY.Pages
             if (row != null)
             {
                 //lblNgayGiamDinh.Text = "Ngày " + DateTime.Now.ToString("dd/MM/yyyy");
+               
                 lblNgayGiamDinh.Text = row["NgayBatDauGiamDinh"].ToString();
                 lblTenClaim.Text = "SR01_" + row["TenClaim"].ToString();
                 lblGiamDinhVien.Text = row["FullName"].ToString();

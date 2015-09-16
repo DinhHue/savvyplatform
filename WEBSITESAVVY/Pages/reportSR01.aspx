@@ -7,10 +7,11 @@
     <title>report SR01</title>
     <link rel="stylesheet" type="text/css" href="../Content/themes/default/easyui.css"/>
 	<link rel="stylesheet" type="text/css" href="../Content/themes/icon.css"/>
-
+    <%--<link  href="../Content/themes/menu.css" rel="stylesheet" type="text/css" />--%>
     <script type="text/javascript" src="../js/jquery-1.4.min.js"></script>
     <link href="../Styles/CssForm.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="../js/jquery-1.4.min.js"></script>
+    <link href="../css/main.css" rel="stylesheet" type="text/css" />
 
     <style type="text/css">
         @page :first {
@@ -139,9 +140,18 @@
             display:block ! important;
         }
        
-      
+      .menufo{
+           
+          top: 100%;
+          width: 8em;
+          margin-top: -10em;
+           text-align:left;
+        }
         
     </style>
+    
+       
+        
 </head>
 <body >
     
@@ -174,7 +184,8 @@
                             <td class="style3" >
                                 <asp:Label ID="lblTenClaim" runat="server" 
                                     Text="SR01+ CL.TENCLAIM" Width="240px" 
-                                    ForeColor="#006600" Font-Bold=True CssClass="field_input" ></asp:Label></td>
+                                    ForeColor="#006600" Font-Bold=True CssClass="field_input" ></asp:Label>
+                                    </td>
                             <td valign="top"  >
                                 <div style="float:left;">
                                     <asp:Label ID="Label3" runat="server" 
@@ -203,7 +214,7 @@
                             <td colspan="2" class="style1" >
                                 <asp:Label ID="Label4" runat="server" 
                                     Text="Đơn vị <br/><i>Subsidiary</i>" 
-                                    Width="130px" CssClass=" bg_text" ></asp:Label>
+                                    Width="130px" CssClass="bg_text" ></asp:Label>
                                 <asp:Label ID="lblTenDonVi" runat="server" 
                                     Text="TEN DON VI" Width="395px" 
                                     CssClass="field_input" Font-Bold="true" ></asp:Label></td>
@@ -242,7 +253,7 @@
                                     Width="130px" CssClass=" bg_text" ></asp:Label>
                                 <asp:Label ID="lblNguoiLienHe" runat="server" 
                                     Text="NGUOI LIEN HE" Width="217px" 
-                                    CssClass="field_input" ></asp:Label>
+                                    CssClass="field_input"  ></asp:Label>
 
                                 <asp:Label  runat="server"
                                     Text="Số điện thoại <br/><i>Phone No.</i>" Width="99px"  
@@ -566,25 +577,41 @@
                   <table width="100%">
                     <tr>
                         <td width="25%" style="padding-left: 10px" align="center">
-                            <asp:Label ID="Label35" runat="server" Font-Bold="True" Text="Người báo cáo"></asp:Label>
+                            <asp:Label ID="Label35" runat="server" Font-Bold="True" Text="Đại diện cho"></asp:Label>
                             <br />
-                            <asp:Label ID="Label34" runat="server" Font-Italic="True" Text="Prepared by"></asp:Label>
+                            <asp:Label ID="Label34" runat="server" Font-Italic="True" Text="(On behafl of)"></asp:Label>
                         </td>
                         <td align="center" width="25%">
-                            <asp:Label ID="Label42" runat="server" Font-Bold="True" Text="Người báo cáo"></asp:Label>
+                            <asp:Label ID="Label50" runat="server" Font-Bold="True" Text="Đại diện cho"></asp:Label>
                             <br />
-                            <asp:Label ID="Label43" runat="server" Font-Italic="True" Text="Prepared by"></asp:Label>
+                            <asp:Label ID="Label51" runat="server" Font-Italic="True" Text="(On behafl of)"></asp:Label>
                         </td>
                         <td align="center" width="25%">
-                            <asp:Label ID="Label48" runat="server" Font-Bold="True" Text="Người báo cáo"></asp:Label>
+                            <asp:Label ID="Label54" runat="server" Font-Bold="True" Text="Đại diện cho"></asp:Label>
                             <br />
-                            <asp:Label ID="Label49" runat="server" Font-Italic="True" Text="Prepared by"></asp:Label>
+                            <asp:Label ID="Label52" runat="server" Font-Italic="True" Text="(On behafl of)"></asp:Label>
                         </td>
                         <td align="center" width="25%">
-                            <asp:Label ID="Label36" runat="server" Font-Bold="True" Text="Phê duyệt bởi"></asp:Label>
+                            <asp:Label ID="Label55" runat="server" Font-Bold="True" 
+                                Text="Đại diện cho SAVVY"></asp:Label>
                             <br />
-                            <asp:Label ID="Label37" runat="server" Font-Italic="True" 
-                                Text="Checked &amp; Approved  by"></asp:Label>
+                            <asp:Label ID="Label53" runat="server" Font-Italic="True" Text="(On behafl of)"></asp:Label>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td width="25%" style="padding-left: 10px">
+                            <br />
+                            <br />
+                        </td>
+                        <td width="25%">
+                            &nbsp;</td>
+                        <td width="25%">
+                            &nbsp;</td>
+                        <td align="center" width="25%">
+                            <br />
+                            <br />
+                            <br />
                         </td>
                     </tr>
                     <tr>
@@ -601,23 +628,8 @@
                                 ForeColor="#000066"></asp:Label>
                         </td>
                         <td align="center" width="25%">
-                            <asp:Label ID="lblNguoiCheckBC" runat="server" Font-Bold="True" 
+                            <asp:Label ID="lblDaiDienSAVVY" runat="server" Font-Bold="True" 
                                 ForeColor="#000066"></asp:Label>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td width="25%" style="padding-left: 10px">
-                            <br />
-                            <br />
-                        </td>
-                        <td width="25%">
-                            &nbsp;</td>
-                        <td width="25%">
-                            &nbsp;</td>
-                        <td align="center" width="25%">
-                            <br />
-                            <br />
-                            <br />
                         </td>
                     </tr>
                     <tr>
@@ -664,7 +676,7 @@
                             style="font-size: 12px; color: #000066; font-style: italic" width="25%">
                             <asp:Label ID="Label41" runat="server" Text="(Chức vụ (Job Title):"></asp:Label>
                             <br />
-                            <asp:Label ID="lblChucvuNguoiCheck" runat="server" Font-Bold="True" 
+                            <asp:Label ID="lblChucVuDaiDienSAVVY" runat="server" Font-Bold="True" 
                                 ForeColor="#000066"></asp:Label>
                         </td>
                     </tr>
@@ -674,42 +686,32 @@
         </div>
 
          <!--tool bottom-->
-        <script language="javascript">
+         <script type="text/javascript">
             function printPDF() {
                 $('.tool_bottom').css("display", "none");
                 window.print();
                 $('.tool_bottom').css("display", "inherit");
             }
-        </script>
-        <div id="tool_bottom" runat="server" class="tool_bottom" >
-            <%--<button class="" onclick="printPDF();" >Export to PDF</button>--%>
+       
 
-            <asp:Menu ID="Menu1" runat="server" onclick="scrollWin(0, 100)" 
-                BackColor="#E3EAEB" DynamicHorizontalOffset="2" Font-Bold="True" 
-                Font-Names="Times New Roman" Font-Size="16px" ForeColor="#666666" 
-                StaticSubMenuIndent="10px">
-                <DynamicHoverStyle BackColor="#666666" ForeColor="White" />
-                <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
-                <DynamicMenuStyle BackColor="#E3EAEB" />
-                <DynamicSelectedStyle BackColor="#1C5E55" />
-                <Items>
-                    <asp:MenuItem Text="Choose" Value="Choose">
-                        <asp:MenuItem Text="Submit" Value="Submit"></asp:MenuItem>
-                        <asp:MenuItem Text="Checked" Value="Checked"></asp:MenuItem>
-                        <asp:MenuItem Text="Approved" Value="Approved"></asp:MenuItem>
-                        <asp:MenuItem Text="Export to PDF" Value="Export to PDF"></asp:MenuItem>
-                    </asp:MenuItem>
-                </Items>
-                <StaticHoverStyle BackColor="#666666" ForeColor="White" />
-                <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
-                <StaticSelectedStyle BackColor="#1C5E55" />
-            </asp:Menu> 
+
+         </script>
+        <div id="tool_bottom" runat="server" class="tool_bottom" >
+     
+         <button class="" onclick="openSubmit(this)">Submit</button>
+        <%-- <asp:Button ID="idClaim" runat="server" onclick="openSubmit(this);" Text="Submit" />--%>
+         &nbsp;&nbsp;
+         <asp:Button ID="btnChecked" runat="server" Text="Checked" />
+         &nbsp;&nbsp;
+         <asp:Button ID="btnApproved" runat="server" Text="Approved" />
+         &nbsp;&nbsp;
+         <button class="" onclick="printPDF();" >Export to PDF</button>                
         </div>
         <div style="height:40px;"></div>
         <!--end tool bottom-->
  
         </form>
-
+         <div id="w_Submit" class="easyui-window" title="Submit to ..." style="width:650px;height:490px;padding:0px;"></div>
        
         <script type="text/javascript">
 
@@ -766,5 +768,6 @@
 
           
         </script>
+
 </body>
 </html>

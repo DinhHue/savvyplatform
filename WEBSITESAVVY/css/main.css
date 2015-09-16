@@ -353,6 +353,39 @@ ol li:hover {
 .ambitios_menu li a:hover span span, .sfHover a span span{
 	background:	url(../images/ambitios_menu_bghover_tile.png) repeat-x 50% 0%;
 }
+
+
+.menufo ul {
+ background: #8AD385;
+ width: 250px;
+ padding: 0;
+ list-style-type: none;
+ text-align: left;
+}
+.menufo li {
+ width: auto;
+ height: 40px;
+ line-height: 40px;
+ border-bottom: 1px solid #e8e8e8;
+ padding: 0 1em;
+}
+.menufo li {
+ text-decoration: none;
+ color: #333;
+ font-weight: bold;
+ display: block;
+}
+.menufo li:hover {
+ background: #CDE2CD;
+}
+.menufo ul li {
+ position: relative;
+}
+.menufo .sub-menu {
+ position: absolute;
+ left: 250px;
+ top: 0;
+}
 /* = Row sub pages
 ----------------------------------------------- */
 .ambitios_rows_sub

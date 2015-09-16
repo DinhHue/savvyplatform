@@ -706,58 +706,58 @@ namespace WEBSITESAVVY.Pages {
         protected global::System.Web.UI.WebControls.Label Label34;
         
         /// <summary>
-        /// Label42 control.
+        /// Label50 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label42;
+        protected global::System.Web.UI.WebControls.Label Label50;
         
         /// <summary>
-        /// Label43 control.
+        /// Label51 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label43;
+        protected global::System.Web.UI.WebControls.Label Label51;
         
         /// <summary>
-        /// Label48 control.
+        /// Label54 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label48;
+        protected global::System.Web.UI.WebControls.Label Label54;
         
         /// <summary>
-        /// Label49 control.
+        /// Label52 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label49;
+        protected global::System.Web.UI.WebControls.Label Label52;
         
         /// <summary>
-        /// Label36 control.
+        /// Label55 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label36;
+        protected global::System.Web.UI.WebControls.Label Label55;
         
         /// <summary>
-        /// Label37 control.
+        /// Label53 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label37;
+        protected global::System.Web.UI.WebControls.Label Label53;
         
         /// <summary>
         /// lblNguoiBaoCao control.
@@ -787,13 +787,13 @@ namespace WEBSITESAVVY.Pages {
         protected global::System.Web.UI.WebControls.Label lblNguoiBaoCao1;
         
         /// <summary>
-        /// lblNguoiCheckBC control.
+        /// lblDaiDienSAVVY control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblNguoiCheckBC;
+        protected global::System.Web.UI.WebControls.Label lblDaiDienSAVVY;
         
         /// <summary>
         /// Label38 control.
@@ -895,13 +895,13 @@ namespace WEBSITESAVVY.Pages {
         protected global::System.Web.UI.WebControls.Label Label41;
         
         /// <summary>
-        /// lblChucvuNguoiCheck control.
+        /// lblChucVuDaiDienSAVVY control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblChucvuNguoiCheck;
+        protected global::System.Web.UI.WebControls.Label lblChucVuDaiDienSAVVY;
         
         /// <summary>
         /// tool_bottom control.
@@ -913,12 +913,21 @@ namespace WEBSITESAVVY.Pages {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl tool_bottom;
         
         /// <summary>
-        /// Menu1 control.
+        /// btnChecked control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Menu Menu1;
+        protected global::System.Web.UI.WebControls.Button btnChecked;
+        
+        /// <summary>
+        /// btnApproved control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnApproved;
     }
 }

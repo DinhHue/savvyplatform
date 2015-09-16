@@ -17,7 +17,7 @@ namespace WEBSITESAVVY.Pages
             {
                 if (Session["GDV"] != null)
                 {
-                    string 
+                    //string 
                 }
                 else
                     Response.Redirect("~/Pages/Login.aspx");
