@@ -8,10 +8,10 @@
     <link rel="stylesheet" type="text/css" href="../Content/themes/default/easyui.css"/>
 	<link rel="stylesheet" type="text/css" href="../Content/themes/icon.css"/>
     <%--<link  href="../Content/themes/menu.css" rel="stylesheet" type="text/css" />--%>
-    <script type="text/javascript" src="../js/jquery-1.4.min.js"></script>
+  <%--  <script type="text/javascript" src="../js/jquery-1.4.min.js"></script>
     <link href="../Styles/CssForm.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="../js/jquery-1.4.min.js"></script>
-    <link href="../css/main.css" rel="stylesheet" type="text/css" />
+    <link href="../css/main.css" rel="stylesheet" type="text/css" />--%>
 
     <style type="text/css">
         @page :first {
@@ -145,8 +145,15 @@
           top: 100%;
           width: 8em;
           margin-top: -10em;
-           text-align:left;
+          text-align:left;
         }
+        .menufo: hover{
+            
+          margin-top: -22px;
+        
+        }
+        
+       
         
     </style>
     
@@ -600,6 +607,25 @@
                     </tr>
                     
                     <tr>
+                        <td width="25%" style="padding-left: 10px" align="center">
+                            <asp:Label ID="Label59" runat="server" Font-Bold="True" 
+                                Text="NĐBH"></asp:Label>
+                        </td>
+                        <td width="25%" align="center">
+                            <asp:Label ID="Label58" runat="server" Font-Bold="True" 
+                                Text="SAVVY"></asp:Label>
+                            </td>
+                        <td width="25%" align="center">
+                            <asp:Label ID="Label57" runat="server" Font-Bold="True" 
+                                Text="SAVVY"></asp:Label>
+                            </td>
+                        <td align="center" width="25%">
+                            <asp:Label ID="Label56" runat="server" Font-Bold="True" 
+                                Text="SAVVY"></asp:Label>
+                        </td>
+                    </tr>
+                    
+                    <tr>
                         <td width="25%" style="padding-left: 10px">
                             <br />
                             <br />
@@ -692,27 +718,35 @@
                 window.print();
                 $('.tool_bottom').css("display", "inherit");
             }
-       
-
-
-         </script>
+          </script>
         <div id="tool_bottom" runat="server" class="tool_bottom" >
-     
-         <button class="" onclick="openSubmit(this)">Submit</button>
-        <%-- <asp:Button ID="idClaim" runat="server" onclick="openSubmit(this);" Text="Submit" />--%>
-         &nbsp;&nbsp;
-         <asp:Button ID="btnChecked" runat="server" Text="Checked" />
-         &nbsp;&nbsp;
-         <asp:Button ID="btnApproved" runat="server" Text="Approved" />
-         &nbsp;&nbsp;
+            <asp:Menu ID="Menu1" runat="server" BackColor="#B5C7DE" 
+                DynamicHorizontalOffset="2" Font-Names="Times New Roman" Font-Size="16px" 
+                ForeColor="#284E98" RenderingMode="List" StaticSubMenuIndent="10px" CssClass="menufo">
+                <DynamicHoverStyle BackColor="#284E98" ForeColor="White"/>
+                <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                <DynamicMenuStyle BackColor="#B5C7DE" />
+                <DynamicSelectedStyle BackColor="#507CD1" />
+                <Items>
+                    <asp:MenuItem Text="Choose" Value="Choose">
+                        <asp:MenuItem Text="Submit" Value="Submit" 
+                            NavigateUrl="~/Messages/submitreport.aspx" ></asp:MenuItem>
+                        <asp:MenuItem Text="Checked" Value="Checked"></asp:MenuItem>
+                        <asp:MenuItem Text="Approved" Value="Approved"></asp:MenuItem>
+                    </asp:MenuItem>
+                </Items>
+                <StaticHoverStyle BackColor="#284E98" ForeColor="White" />
+                <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                <StaticSelectedStyle BackColor="#507CD1" />
+            </asp:Menu>
          <button class="" onclick="printPDF();" >Export to PDF</button>                
         </div>
         <div style="height:40px;"></div>
         <!--end tool bottom-->
- 
+
         </form>
-         <div id="w_Submit" class="easyui-window" title="Submit to ..." style="width:650px;height:490px;padding:0px;"></div>
-       
+        
+      
         <script type="text/javascript">
 
             function getString(array, start, end) {

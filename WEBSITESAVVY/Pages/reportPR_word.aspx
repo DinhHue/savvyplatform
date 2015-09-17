@@ -730,7 +730,79 @@
             <div style="text-align: justify"><%--<asp:Label ID="lblTT" runat="server" Width="850px" ></asp:Label>--%>
             <p>  Các thông tin và diễn biến tiếp theo liên quan đến vụ tổn thất này sẽ tiếp tục được chúng tôi quan tâm theo dõi và sẽ định kỳ báo cáo để Nhà Bảo Hiểm nắm rõ.</p><p>  Nếu Quý Công ty Bảo hiểm có bất kỳ câu hỏi hoặc yêu cầu nào khác liên quan đến công tác giám định vụ tổn thất này, xin vui lòng liên lạc với chúng tôi để được hỗ trợ tốt nhất.</p></div>
         </div>
-
+         <table width="100%">
+                    <tr>
+                        <td width="40%" style="padding-left: 10px">
+                            <asp:Label ID="Label35" runat="server" Font-Bold="True" Text="Người báo cáo"></asp:Label>
+                            <br />
+                            <asp:Label ID="Label34" runat="server" Font-Italic="True" Text="Prepared by"></asp:Label>
+                        </td>
+                        <td>
+                            &nbsp;</td>
+                        <td align="center" width="40%">
+                            <asp:Label ID="Label36" runat="server" Font-Bold="True" Text="Phê duyệt bởi"></asp:Label>
+                            <br />
+                            <asp:Label ID="Label37" runat="server" Font-Italic="True" 
+                                Text="Checked &amp; Approved  by"></asp:Label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="40%" style="padding-left: 10px">
+                            <asp:Label ID="lblNguoiBaoCao" runat="server" Font-Bold="True" 
+                                ForeColor="#000066"></asp:Label>
+                        </td>
+                        <td>
+                            &nbsp;</td>
+                        <td align="center" width="40%">
+                            <asp:Label ID="lblNguoiCheckBC" runat="server" Font-Bold="True" 
+                                ForeColor="#000066"></asp:Label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="40%" style="padding-left: 10px">
+                            <br />
+                            <br />
+                        </td>
+                        <td>
+                            &nbsp;</td>
+                        <td align="center" width="40%">
+                            <br />
+                            <br />
+                            <br />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="font-size: 10px; font-style: italic; padding-left: 10px;" 
+                            width="40%">
+                            <asp:Label ID="Label38" runat="server" Text="(Chữ ký / Signature)"></asp:Label>
+                        </td>
+                        <td style="font-size: 10px; text-align: center; font-style: italic">
+                            &nbsp;</td>
+                        <td align="center" 
+                            style="font-size: 10px; text-align: center; font-style: italic" width="40%">
+                            <asp:Label ID="Label39" runat="server" Text="(Chữ ký / Signature)"></asp:Label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="style2" 
+                            style="font-size: 12px; color: #000066; font-style: italic; padding-left: 10px;" 
+                            width="40%">
+                            <asp:Label ID="Label40" runat="server" Text="(Chức vụ (Job Title):"></asp:Label>
+                            <br />
+                            <asp:Label ID="lblChucVuNguoiBC" runat="server" Font-Bold="True" 
+                                ForeColor="#000066"></asp:Label>
+                        </td>
+                        <td class="style2" style="font-size: 11px; color: #000066; font-style: italic">
+                        </td>
+                        <td class="style2" align="center" 
+                            style="font-size: 12px; color: #000066; font-style: italic" width="40%">
+                            <asp:Label ID="Label41" runat="server" Text="(Chức vụ (Job Title):"></asp:Label>
+                            <br />
+                            <asp:Label ID="lblChucvuNguoiCheck" runat="server" Font-Bold="True" 
+                                ForeColor="#000066"></asp:Label>
+                        </td>
+                    </tr>
+                    </table>
 
     <div style="height:40px;"></div>
 

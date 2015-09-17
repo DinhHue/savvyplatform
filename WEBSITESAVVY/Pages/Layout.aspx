@@ -84,18 +84,6 @@
 
 			if (Link != "")
 			    $("#frameCenter").attr("src", Link);
-
-            /*$.ajax({
-                url: Link,
-                beforeSend: function () {
-                    //$("#mp-loading").css("display", "block");
-                },
-                success: function (data) {
-                    $("#layoutContent").html(data);
-
-                    //$("#mp-loading").css("display", "none");
-                }
-            });*/
         }
 
 
@@ -348,7 +336,8 @@
 		</div>
 	</div>
 	<!--<div data-options="region:'east',split:true,collapsed:true,title:'East'" style="width:100px;padding:10px;">east region</div>-->
-	<div data-options="region:'south',border:true" style="height:20px;background:#E0ECFF;padding:2px;">Savvy Adjuster JSC</div>
+	<div data-options="region:'south',border:true" style="height:20px;background:#E0ECFF;padding:2px;">Savvy Adjuster JSC
+    </div>
 	<div id="layoutContent" data-options="region:'center',title:'Report'">
         <iframe id="frameCenter" src="../Pages/generalinformation.aspx" ></iframe>
 	</div>
@@ -360,6 +349,10 @@
 
     <div id="w_NewClaim" class="easyui-window" title="New claim" data-options="modal:true,closed:true,iconCls:'icon-add'" style="width:650px;height:490px;padding:0px;">
         <iframe src="../Pages/NewClaimpop.aspx" ></iframe>
+    </div>
+
+    <div id="w_Submit" class="easyui-window" title="Submit to ..." data-options="modal:true,closed:true,iconCls:'icon-add'" style="width:650px;height:490px;padding:0px;">
+        <iframe src="../Messages/submitreport.aspx"></iframe>
     </div>
 
     <div id="w_UpdateField" class="easyui-window" title="Update" data-options="modal:false,closed:true,iconCls:'icon-save'" style="width:650px;height:490px;padding:0px;"></div>

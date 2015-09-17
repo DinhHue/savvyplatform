@@ -760,6 +760,42 @@ namespace WEBSITESAVVY.Pages {
         protected global::System.Web.UI.WebControls.Label Label53;
         
         /// <summary>
+        /// Label59 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label59;
+        
+        /// <summary>
+        /// Label58 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label58;
+        
+        /// <summary>
+        /// Label57 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label57;
+        
+        /// <summary>
+        /// Label56 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label56;
+        
+        /// <summary>
         /// lblNguoiBaoCao control.
         /// </summary>
         /// <remarks>
@@ -913,21 +949,12 @@ namespace WEBSITESAVVY.Pages {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl tool_bottom;
         
         /// <summary>
-        /// btnChecked control.
+        /// Menu1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnChecked;
-        
-        /// <summary>
-        /// btnApproved control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnApproved;
+        protected global::System.Web.UI.WebControls.Menu Menu1;
     }
 }
