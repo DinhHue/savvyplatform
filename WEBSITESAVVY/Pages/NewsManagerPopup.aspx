@@ -101,71 +101,75 @@
             padding: 3px;
             background: #F0F0F0;
         }
+        
+        .ms-container
+        {
+            width:95%;
+        }
+        
+        span.title
+        {
+            display:block;
+            padding:10px 0 5px 0;
+        }
+        
+        .input
+        {
+            max-width:none;
+        }
+        
     </style>
 </head>
 <body>
-    <form id="form1" runat="server">
+    <form id="form1" runat="server">    
     <div>
+
         <table width="100%">
             <tr>
-                <td class="leftpop">
-                    <asp:Label ID="Label7" runat="server" Text="Title :"></asp:Label>
-                </td>
                 <td class="rightpop">
                     <asp:HiddenField ID="txtID_News" runat="server" />
-                    <asp:TextBox ID="txtTitle" runat="server" CssClass="input" required></asp:TextBox>
+                    <asp:Label ID="Label7" CssClass="title" runat="server" Text="Title :"></asp:Label>
+                    <asp:TextBox ID="txtTitle" runat="server" CssClass="input" Width="95%" required></asp:TextBox>
                 </td>
             </tr>
             <tr>
-                <td class="leftpop">
-                    <asp:Label ID="Label3" runat="server" Text="Link Image :"></asp:Label>
-                </td>
                 <td class="rightpop">
-                    <asp:TextBox ID="txtLinkImage" runat="server" CssClass="input" required ></asp:TextBox>
+                    <asp:Label ID="Label3" CssClass="title" runat="server" Text="Link Image :"></asp:Label>
+                    <asp:TextBox ID="txtLinkImage" runat="server" CssClass="input" Width="95%"  required ></asp:TextBox>
                 </td>
             </tr>
             <tr>
-                <td class="leftpop">
-                    <asp:Label ID="Label1" runat="server" Text="Brief :"></asp:Label>
-                </td>
                 <td class="rightpop">
-                    <asp:TextBox ID="txtBrief" runat="server" CssClass="input"  required
+                    <asp:Label ID="Label1" CssClass="title" runat="server" Text="Brief :"></asp:Label>
+                    <asp:TextBox ID="txtBrief" runat="server" CssClass="input" Width="95%"  required
                         TextMode="MultiLine"></asp:TextBox>
                 </td>
             </tr>
 
             <tr>
-                <td class="leftpop">
-                    <asp:Label ID="Label8" runat="server" Text="Type :"></asp:Label>
-                </td>
                 <td class="rightpop">
-
-                    &nbsp;<asp:ListBox ID="listBoxType" SelectionMode="Multiple" runat="server" 
-                        Height="130px" Width="252px"></asp:ListBox>
+                    <asp:Label ID="Label8" CssClass="title" runat="server"  Text="Type :"></asp:Label>
+                    <asp:ListBox ID="listBoxType" SelectionMode="Multiple" runat="server" 
+                        Height="130px" Width="95%"></asp:ListBox>
 
                 </td>
             </tr>
             
             <tr>
-                <td class="leftpop">
-                    <asp:Label ID="Label4" runat="server" Text="Contents :"></asp:Label>
-                </td>
                 <td class="rightpop">
+                    <asp:Label ID="Label4" CssClass="title" runat="server" Text="Contents :"></asp:Label>
                     <asp:TextBox ID="txtContents" ClientIDMode="Static" runat="server" CssClass="input" 
-                        TextMode="MultiLine" Width="100%" ></asp:TextBox>
+                        TextMode="MultiLine" Width="100%" Height="350px" ></asp:TextBox>
                 </td>
             </tr>
             
             <tr>
-                <td class="leftpop">
-                    &nbsp;</td>
                 <td class="rightpop">
                     &nbsp;&nbsp;</td>
             </tr>
             <tr>
-                <td colspan="2" align="center">
-                    <asp:Button ID="btnCreate" runat="server" CssClass="btn" Text="OK" onclick="btnCreate_Click" 
-                         />
+                <td align="center">
+                    <asp:Button ID="btnCreate" runat="server" CssClass="btn" Text="OK" onclick="btnCreate_Click" />
 						
 					<asp:Button ID="btnUpdate" runat="server" CssClass="btn" Text="Update" 
                         onclick="btnUpdate_Click" />
@@ -174,7 +178,7 @@
                 </td>
             </tr>
             <tr>
-                <td align="center" colspan="2"><asp:Label ID="lblStatus" runat="server" ></asp:Label></td>
+                <td align="center" ><asp:Label ID="lblStatus" runat="server" ></asp:Label></td>
             </tr>
         </table>
     </div>

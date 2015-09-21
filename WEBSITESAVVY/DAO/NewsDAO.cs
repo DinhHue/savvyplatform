@@ -20,6 +20,8 @@ namespace WEBSITESAVVY.DAO
             list.Add(new SqlParameter("@LinkImages", news.LinkImages));
             //list.Add(new SqlParameter("@DateCreated", news.DateCreated));
             list.Add(new SqlParameter("@DateModified", news.DateModified));
+            list.Add(new SqlParameter("@Views", news.Views));
+            list.Add(new SqlParameter("@Hot", news.Hot));
             list.Add(new SqlParameter("@Brief", news.Brief));
             list.Add(new SqlParameter("@Contents", news.Contents));
             //list.Add(new SqlParameter("@ID_GDVPost", news.ID_GDVPost));
@@ -58,6 +60,41 @@ namespace WEBSITESAVVY.DAO
             return SqlDataAcessHelper.exStoreNoParas(sql);
         }
 
+        public DataTable GetListType(int idNew)
+        {
+            string sql = "sp_News_List_Type";
+            List<SqlParameter> list = new List<SqlParameter>();
+            list.Add(new SqlParameter("@ID_News", idNew));
+            return SqlDataAcessHelper.exStoreParas(sql, list);
+        }
+
+        public DataTable GetListHot()
+        {
+            string sql = "sp_News_List_Hot";
+            return SqlDataAcessHelper.exStoreNoParas(sql);
+        }
+
+        public DataTable GetListMostView()
+        {
+            string sql = "sp_News_List_MostView";
+            return SqlDataAcessHelper.exStoreNoParas(sql);
+        }
+
+        public DataTable GetListMostViewHot()
+        {
+            string sql = "sp_News_List_MostViewHot";
+            return SqlDataAcessHelper.exStoreNoParas(sql);
+        }
+
+        public DataTable GetListByType(string id_type)
+        {
+            string sql = "sp_News_ListByType";
+            List<SqlParameter> list = new List<SqlParameter>();
+            list.Add(new SqlParameter("@ID_Type", id_type));
+            return SqlDataAcessHelper.exStoreParas(sql, list);
+        }
+
+
         public DataTable GetListSearch(String keyword)
         {
             string sql = "sp_News_List_Search";
@@ -65,6 +102,24 @@ namespace WEBSITESAVVY.DAO
             list.Add(new SqlParameter("@keyword", keyword));
             return SqlDataAcessHelper.exStoreParas(sql, list);
         }
+
+        public DataTable GetListSearchByType(String idType, String keyword)
+        {
+            string sql = "sp_News_SearchByType";
+            List<SqlParameter> list = new List<SqlParameter>();
+            list.Add(new SqlParameter("@ID_Type", idType));
+            list.Add(new SqlParameter("@keyword", keyword));
+            return SqlDataAcessHelper.exStoreParas(sql, list);
+        }
+
+        public DataTable GetListComment(int idNews)
+        {
+            string sql = "sp_News_List_Comment";
+            List<SqlParameter> list = new List<SqlParameter>();
+            list.Add(new SqlParameter("@idNews", idNews));
+            return SqlDataAcessHelper.exStoreParas(sql, list);
+        }
+
 
         public NewsDTO GetNews(int ID_News)
         {
@@ -80,6 +135,8 @@ namespace WEBSITESAVVY.DAO
                 news.ID_News = (int)row["ID_News"];
                 news.Title   = row["Title"].ToString();
                 news.LinkImages = row["LinkImages"].ToString();
+                news.Views = (int)row["Views"];
+                news.Hot   = (int)row["Hot"];
                 news.Brief   = row["Brief"].ToString();
                 news.Contents = row["Contents"].ToString();
 

@@ -12,6 +12,8 @@ namespace WEBSITESAVVY.DTO
         public String       LinkImages;
         public DateTime     DateCreated;
         public DateTime     DateModified;
+        public int          Views;
+        public int          Hot;
         public String       Brief;
         public String       Contents;
         public int          ID_GDVPost;
@@ -27,6 +29,8 @@ namespace WEBSITESAVVY.DTO
             this.LinkImages = "";
             this.DateCreated = DateTime.Now;
             this.DateModified = DateTime.Now;
+            this.Views = 0;
+            this.Hot = 0;
             this.Brief = "";
             this.Contents = "";
             this.ID_Types = " ";

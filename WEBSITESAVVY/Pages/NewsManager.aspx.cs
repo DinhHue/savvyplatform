@@ -18,11 +18,25 @@ namespace WEBSITESAVVY.Pages
         {
             if (!IsPostBack)
             {
-                ddlPageSize.SelectedValue = PageSize.ToString();
-                DataTable dt = newDao.GetList();
-                DataSource = dt;
-                fillData();
+                loadData();
+                loadDropdownList();
             }
+        }
+
+        public void loadData()
+        {
+            ddlPageSize.SelectedValue = PageSize.ToString();
+            DataTable dt = newDao.GetList();
+            DataSource = dt;
+            fillData();
+        }
+
+        public void loadDropdownList()
+        {
+            ddlTypes.DataSource = newsType.GetList();
+            ddlTypes.DataTextField = "NameType";
+            ddlTypes.DataValueField = "ID_Type";
+            ddlTypes.DataBind();
         }
 
         public void fillData()
@@ -56,7 +70,16 @@ namespace WEBSITESAVVY.Pages
         protected void btnSearch_Click(object sender, EventArgs e)
         {
             String keyWord = txtSearch.Text;
-            DataTable dt = newDao.GetListSearch(keyWord);
+            DataTable dt = null;
+            String idType = ddlTypes.SelectedValue.ToString();
+            if (idType.Trim() != "")
+            {
+                dt = newDao.GetListSearchByType(idType, keyWord);
+            }
+            else
+            {
+                dt = newDao.GetListSearch(keyWord);
+            }
 
             PageNumber = 0;
             DataSource = dt;
@@ -109,6 +132,7 @@ namespace WEBSITESAVVY.Pages
         }
         protected void rptPages_ItemCommand1(object source, RepeaterCommandEventArgs e)
         {
+
             PageNumber = Convert.ToInt32(e.CommandArgument) - 1;
             fillData();
 
@@ -129,8 +153,51 @@ namespace WEBSITESAVVY.Pages
                 if(page - 1 >= 0)
                     PageNumber = page - 1;
             }
-            fillData();
+            
         }
+
+        protected void dllTypes_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            PageNumber = 0;
+            string idType = ddlTypes.SelectedValue.ToString();
+            if (idType.Trim() != "")
+            {
+                DataSource = newDao.GetListByType(idType);
+                fillData();
+            }
+            else
+            {
+                loadData();
+            }
+        }
+
+        protected void repeaterList_ItemDataBound(object sender, RepeaterItemEventArgs e)
+        {
+            if (e.Item.ItemType == ListItemType.Item || e.Item.ItemType == ListItemType.AlternatingItem)
+            {
+                HiddenField hiden = (HiddenField)e.Item.FindControl("hidden_ID_news");
+                DataTable dt = newDao.GetListType(int.Parse( hiden.Value ));
+                Repeater RepeaterChild = (Repeater)e.Item.FindControl("repeaterType");
+                RepeaterChild.DataSource = dt;
+                RepeaterChild.DataBind();
+            }
+        }
+
+        protected void rptPages_ItemDataBound(object sender, RepeaterItemEventArgs e)
+        {
+            if (e.Item.ItemType == ListItemType.Item || e.Item.ItemType == ListItemType.AlternatingItem)
+            {
+                LinkButton lb = e.Item.FindControl("btnPage") as LinkButton;
+                ScriptManager.GetCurrent(this).RegisterAsyncPostBackControl(lb);
+
+                if (lb.CommandArgument == (PageNumber + 1).ToString())
+                {
+                    lb.CssClass = "selected";
+                }
+            }
+        }
+
+        
 
     }
 }
