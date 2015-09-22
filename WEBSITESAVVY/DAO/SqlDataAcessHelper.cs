@@ -53,6 +53,18 @@ namespace WEBSITESAVVY.DAO
             return dt;
         }
 
+        public static DataSet SeletSto2(string sql, List<SqlParameter> ds)
+        {
+            DataSet dse = new DataSet();
+            SqlConnection cn = new SqlConnection(ConfigurationManager.ConnectionStrings["SAVVYConnectionString"].ConnectionString);
+            SqlCommand cmd = new SqlCommand(sql, cn);
+            cmd.CommandType = CommandType.StoredProcedure;           
+            for (int i = 0; i < ds.Count; i++)
+                cmd.Parameters.Add(ds[i]);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dse);
+            return dse;
+        }
         /// <summary>
         /// gọi các store INSERT/ UPDATE/ DELETE, có tham số(s) input
         /// </summary>

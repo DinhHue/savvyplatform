@@ -65,21 +65,23 @@
             var Link = "";
             if (index == 0)
                 Link = "../Pages/generalinformation.aspx";
-			if(index == 1)
+            if (index == 1)
+                Link = "../Pages/sitephoto.aspx";
+			if(index == 2)
 				Link = "../Pages/reportSR01.aspx";
-			else if(index == 2)
-				Link = "../Pages/reportILA.aspx";
 			else if(index == 3)
-				Link = "../Pages/reportPR.aspx";
+				Link = "../Pages/reportILA.aspx";
 			else if(index == 4)
-			    Link = "../Pages/reportIR.aspx";
+				Link = "../Pages/reportPR.aspx";
 			else if(index == 5)
-			    Link = "../Pages/reportFR.aspx";
+			    Link = "../Pages/reportIR.aspx";
 			else if(index == 6)
-			    Link = "../Pages/reportFFR.aspx";
+			    Link = "../Pages/reportFR.aspx";
 			else if(index == 7)
+			    Link = "../Pages/reportFFR.aspx";
+			else if(index == 8)
 			    Link = "../Pages/listworksheet.aspx";
-			else if (index == 8)
+			else if (index == 9)
 			    link = "../Pages/task.aspx";
 
 			if (Link != "")
@@ -203,7 +205,9 @@
 	</div>
 	<div data-options="region:'west',split:true,title:'Part of Claim'" style="width:25%">
 		<div id="panelMenu" class="easyui-accordion" data-options="fit:false,border:false" style="width:100%;">
-        <div id="GeIn" title="GeIn"  style="padding:0px;">            
+            <div id="GeIn" title="General Information"  style="padding:0px;">            
+		    </div>
+            <div id="SP" title="Site Photos"  style="padding:0px;">            
 			</div>	
 			<div id="SR01" title="SR01"  style="padding:0px;">
                 <ol type="1" >

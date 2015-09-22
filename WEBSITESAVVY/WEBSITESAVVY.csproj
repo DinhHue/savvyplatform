@@ -1347,8 +1347,10 @@
     <Content Include="Pages\NewItemWorkSheet.aspx" />
     <Content Include="Pages\newitemworksheetpop.aspx" />
     <Content Include="Pages\News.aspx" />
+    <Content Include="Pages\NewsDetail.aspx" />
     <Content Include="Pages\NewsManager.aspx" />
     <Content Include="Pages\NewsManagerPopup.aspx" />
+    <Content Include="Pages\NewsTypes.aspx" />
     <Content Include="Pages\NewTimeSheet.aspx" />
     <Content Include="Pages\NewTimeSheetOtherLA.aspx" />
     <Content Include="Pages\newtimesheetpop.aspx" />
@@ -1373,6 +1375,7 @@
     <Content Include="Pages\reportPR_word.aspx" />
     <Content Include="Pages\reportSR01.aspx" />
     <Content Include="Pages\search.aspx" />
+    <Content Include="Pages\sitephoto.aspx" />
     <Content Include="Pages\SiteSurveyRecordView.aspx" />
     <Content Include="Pages\StaticsticsTimeSheet.aspx" />
     <Content Include="Pages\stopworking.aspx" />
@@ -1823,6 +1826,7 @@
       <DependentUpon>ClaimDetail.Master</DependentUpon>
     </Compile>
     <Compile Include="DAO\ChiTietThietHaiDAO.cs" />
+    <Compile Include="DAO\CommentDAO.cs" />
     <Compile Include="DAO\DaiLyDAO.cs" />
     <Compile Include="DAO\DanhMucThietHaiDAO.cs" />
     <Compile Include="DAO\DeXuatBoiThuongDAO.cs" />
@@ -1844,6 +1848,7 @@
     <Compile Include="DAO\NhomHangMucDAO.cs" />
     <Compile Include="DAO\NoteDAO.cs" />
     <Compile Include="DAO\SendMailDAO.cs" />
+    <Compile Include="DAO\SitePhotoDAO.cs" />
     <Compile Include="DAO\TienDoXuLyDAO.cs" />
     <Compile Include="DAO\TrackingDAO.cs" />
     <Compile Include="Default.aspx.cs">
@@ -1854,6 +1859,7 @@
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
     <Compile Include="DTO\ChiTietThietHaiDTO.cs" />
+    <Compile Include="DTO\CommentDTO.cs" />
     <Compile Include="DTO\DAILYDTO.cs" />
     <Compile Include="DTO\DanhMucThietHaiDTO.cs" />
     <Compile Include="DTO\DeXuatBoiThuongDTO.cs" />
@@ -1870,6 +1876,7 @@
     <Compile Include="DTO\LossListDTO.cs" />
     <Compile Include="DTO\NewsDTO.cs" />
     <Compile Include="DTO\NhomHangMucDTO.cs" />
+    <Compile Include="DTO\SitePhotoDTO.cs" />
     <Compile Include="DTO\TienDoXyLyDTO.cs" />
     <Compile Include="DTO\TrackingDTO.cs" />
     <Compile Include="KeepAlive.ashx.cs">
@@ -2672,6 +2679,13 @@
     <Compile Include="Pages\News.aspx.designer.cs">
       <DependentUpon>News.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Pages\NewsDetail.aspx.cs">
+      <DependentUpon>NewsDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\NewsDetail.aspx.designer.cs">
+      <DependentUpon>NewsDetail.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Pages\NewsManager.aspx.cs">
       <DependentUpon>NewsManager.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -2685,6 +2699,13 @@
     </Compile>
     <Compile Include="Pages\NewsManagerPopup.aspx.designer.cs">
       <DependentUpon>NewsManagerPopup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\NewsTypes.aspx.cs">
+      <DependentUpon>NewsTypes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\NewsTypes.aspx.designer.cs">
+      <DependentUpon>NewsTypes.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\NewTimeSheet.aspx.cs">
       <DependentUpon>NewTimeSheet.aspx</DependentUpon>
@@ -2853,6 +2874,13 @@
     </Compile>
     <Compile Include="Pages\search.aspx.designer.cs">
       <DependentUpon>search.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\sitephoto.aspx.cs">
+      <DependentUpon>sitephoto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\sitephoto.aspx.designer.cs">
+      <DependentUpon>sitephoto.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\SiteSurveyRecordView.aspx.cs">
       <DependentUpon>SiteSurveyRecordView.aspx</DependentUpon>
