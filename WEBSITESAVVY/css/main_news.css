@@ -1,0 +1,100 @@
+﻿body {
+}
+
+.padding_none
+{
+    padding:0px;
+}
+.paddingL_none
+{
+    padding-left:0px;
+}
+.paddingR_none
+{
+    padding-right:0px;
+}
+.margin_none
+{
+    margin:0px;
+}
+
+header, footer
+{
+    background:#F5F5F5;
+}
+
+.header-top
+{
+    border-top:2px solid #ddd;
+    border-bottom: 2px solid #ddd;
+}
+        
+.logo
+{
+    margin-top:10px;
+    font-size:20px;
+}
+
+.title-bar
+{
+    background:#F5F5F5; padding:8px 5px; margin:10px auto 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+        
+.linkImage
+{
+    float: left; height: 100px; width: 120px; margin: 0px 5px 5px 0px;
+}
+
+        
+.item_type
+{
+    border-bottom: 1px dotted #CCC;
+}
+
+.home
+{
+    background: transparent url("/images/home.png") no-repeat;
+    display: inline-block;
+    float: left;
+    padding-left: 25px;
+    color: #777;
+    text-transform: uppercase;
+    font-size:14px;
+    margin-left: 0px;
+}
+        
+.split {
+    background: transparent url("/images/next-icon-red.png") no-repeat;
+    display: inline-block;
+    float: left;
+    padding-left: 15px;
+    color: #777;
+    text-transform: uppercase;
+    font-size:14px;
+    margin-left: 15px;
+}
+
+/*** Comment ***/
+
+.comment .item
+{
+    padding:5px;
+    border-bottom: 1px solid #F7F7F0;
+    border-radius: 3px;
+}
+.comment .item:nth-child(odd) {
+    background: none;
+}
+
+.comment .item:nth-child(even) {
+    background: #FBFBFB;
+    border-radus: 3px;
+} 
+        
+.postcomment
+{
+    padding:5px; margin-top:10px;
+}
+        

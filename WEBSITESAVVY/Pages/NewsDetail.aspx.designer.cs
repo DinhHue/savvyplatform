@@ -22,6 +22,33 @@ namespace WEBSITESAVVY.Pages {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
+        /// ScriptManager1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.ScriptManager ScriptManager1;
+        
+        /// <summary>
+        /// UpdatePanel1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.UpdatePanel UpdatePanel1;
+        
+        /// <summary>
+        /// repeaterTag control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Repeater repeaterTag;
+        
+        /// <summary>
         /// hiddenIDNews control.
         /// </summary>
         /// <remarks>
@@ -67,6 +94,15 @@ namespace WEBSITESAVVY.Pages {
         protected global::System.Web.UI.WebControls.Label lblContent;
         
         /// <summary>
+        /// lblNumberComment control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblNumberComment;
+        
+        /// <summary>
         /// rptComment control.
         /// </summary>
         /// <remarks>
@@ -74,6 +110,15 @@ namespace WEBSITESAVVY.Pages {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Repeater rptComment;
+        
+        /// <summary>
+        /// rptPagesComment control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Repeater rptPagesComment;
         
         /// <summary>
         /// txtComment control.
@@ -101,5 +146,14 @@ namespace WEBSITESAVVY.Pages {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Repeater rptTypes;
+        
+        /// <summary>
+        /// repeaterMostViews control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Repeater repeaterMostViews;
     }
 }

@@ -60,6 +60,14 @@ namespace WEBSITESAVVY.DAO
             return SqlDataAcessHelper.exStoreNoParas(sql);
         }
 
+        public DataTable GetListNewLimit(int number)
+        {
+            string sql = "sp_News_List_Limit";
+            List<SqlParameter> list = new List<SqlParameter>();
+            list.Add(new SqlParameter("@number", number));
+            return SqlDataAcessHelper.exStoreParas(sql, list);
+        }
+
         public DataTable GetListType(int idNew)
         {
             string sql = "sp_News_List_Type";
@@ -74,6 +82,14 @@ namespace WEBSITESAVVY.DAO
             return SqlDataAcessHelper.exStoreNoParas(sql);
         }
 
+        public DataTable GetListHotLimit(int number)
+        {
+            string sql = "sp_News_List_Hot_Limit";
+            List<SqlParameter> list = new List<SqlParameter>();
+            list.Add(new SqlParameter("@number", number));
+            return SqlDataAcessHelper.exStoreParas(sql, list);
+        }
+
         public DataTable GetListMostView()
         {
             string sql = "sp_News_List_MostView";
@@ -84,6 +100,15 @@ namespace WEBSITESAVVY.DAO
         {
             string sql = "sp_News_List_MostViewHot";
             return SqlDataAcessHelper.exStoreNoParas(sql);
+        }
+
+
+        public DataTable GetListMostViewHotLimit(int number)
+        {
+            string sql = "sp_News_List_MostViewHot_Limit";
+            List<SqlParameter> list = new List<SqlParameter>();
+            list.Add(new SqlParameter("@number", number));
+            return SqlDataAcessHelper.exStoreParas(sql, list);
         }
 
         public DataTable GetListByType(string id_type)

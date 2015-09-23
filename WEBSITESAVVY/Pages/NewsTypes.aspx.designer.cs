@@ -40,6 +40,15 @@ namespace WEBSITESAVVY.Pages {
         protected global::System.Web.UI.WebControls.Repeater repeaterList;
         
         /// <summary>
+        /// rptPages control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Repeater rptPages;
+        
+        /// <summary>
         /// rptTypes control.
         /// </summary>
         /// <remarks>
@@ -47,5 +56,14 @@ namespace WEBSITESAVVY.Pages {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Repeater rptTypes;
+        
+        /// <summary>
+        /// repeaterMostViews control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Repeater repeaterMostViews;
     }
 }
