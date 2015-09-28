@@ -1,5 +1,9 @@
-﻿body {
+﻿body
+{
+    background-image: url("/images/bg-block1.png");
+    background-repeat: repeat-x;
 }
+
 
 .padding_none
 {
@@ -21,6 +25,12 @@
 header, footer
 {
     background:#F5F5F5;
+    color:#FFF;
+}
+
+.max-width-win
+{
+    max-width:1024px;
 }
 
 .header-top
@@ -37,9 +47,10 @@ header, footer
 
 .title-bar
 {
-    background:#F5F5F5; padding:8px 5px; margin:10px auto 10px;
+    background:#FFF; padding:8px 5px; margin:10px auto 10px;
     border: 1px solid #ddd;
     border-radius: 4px;
+    color:#333;
 }
         
 .linkImage
@@ -60,8 +71,6 @@ header, footer
     float: left;
     padding-left: 25px;
     color: #777;
-    text-transform: uppercase;
-    font-size:14px;
     margin-left: 0px;
 }
         
@@ -71,9 +80,35 @@ header, footer
     float: left;
     padding-left: 15px;
     color: #777;
-    text-transform: uppercase;
-    font-size:14px;
     margin-left: 15px;
+}
+
+.bg-main
+{
+    background-color: #4BA614;
+    background-image: linear-gradient(to bottom, #4BA614, #008C00);
+    color:#FFF!important;
+    border-color:#4BA614;
+}
+
+.bg-main a {
+    color: #FFF;
+    text-decoration: none;
+}
+
+a {
+    color: #1B8000;
+    text-decoration: none;
+}
+
+/*** override bootstrap  ***/
+.nav > li > a:focus, .nav > li > a:hover {
+    text-decoration: none;
+    background-color: #BCF297;
+}
+
+.panel-default {
+    border-color: #4BA614;
 }
 
 /*** Comment ***/
@@ -95,6 +130,6 @@ header, footer
         
 .postcomment
 {
-    padding:5px; margin-top:10px;
+    padding:5px;
 }
         

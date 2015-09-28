@@ -42,23 +42,11 @@ namespace WEBSITESAVVY.Pages
                     this.Title = news.Title;
                     //loadComment(int.Parse(idNews));
 
-                    //
-                    fillDataTemplate();
-
                     loadComment(int.Parse(idNews));
                 }
             }
         }
 
-
-        public void fillDataTemplate()
-        {
-            rptTypes.DataSource = daoNewsType.GetList();
-            rptTypes.DataBind();
-
-            repeaterMostViews.DataSource = daoNews.GetListMostViewHotLimit(10);
-            repeaterMostViews.DataBind();
-        }
 
 
         public void loadComment(int idNews)
