@@ -77,5 +77,12 @@ namespace WEBSITESAVVY.DTO
             get { return maGDVNhan; }
             set { maGDVNhan = value; }
         }
+        string report;
+
+        public string Report
+        {
+            get { return report; }
+            set { report = value; }
+        }
     }
 }

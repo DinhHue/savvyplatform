@@ -3,7 +3,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>News Home</title>
+    <title>Blogs Home</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -20,6 +20,8 @@
               margin: auto;
           }
     </style>
+
+   
 </head>
 <body>
     <form id="form1" runat="server">
@@ -38,9 +40,9 @@
 					    <div class="col-sm-8 paddingL_none">
 						    <div class="shop-menu pull-right">
 							    <ul class="nav navbar-nav">
-								    <li><a href="../Pages/Home.aspx">Quản Lý</a></li>
-								    <li><a href="../Pages/News.aspx">Tin tức</a></li>
-								    <li><a href="#">Thông tin chung</a></li>
+								    <li><a href="../Pages/Home.aspx">Claims</a></li>
+								    <li><a href="../Pages/News.aspx">Blogs</a></li>
+								    <li><a href="#">Post</a></li>
 								    <li><a href="#">Liên Hệ </a></li>
 							    </ul>
 						    </div>

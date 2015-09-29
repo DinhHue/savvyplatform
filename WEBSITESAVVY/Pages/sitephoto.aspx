@@ -41,19 +41,35 @@
         <hr />    
 
              <div style="clear:both;">
-                 <asp:DataList ID="DataList1" runat="server" Width="100%" RepeatColumns="2">
+                 <asp:DataList ID="DataList1" runat="server" Width="100%" RepeatColumns="2" 
+                     DataKeyField="ID_SP" oncancelcommand="DataList1_CancelCommand" 
+                     oneditcommand="DataList1_EditCommand" 
+                     onupdatecommand="DataList1_UpdateCommand" 
+                     ondeletecommand="DataList1_DeleteCommand">
+                    
                  <ItemTemplate>
             <table width="80%" align="center">
                 <tr>
                     <td align = "center" style="padding: 5px">
-                       <asp:Image ID="Image1" runat="server" Height="300px" Width="300px" ImageUrl='<%# Eval("LinkHinh") %>' /><br />
-                       <asp:Label ID="Label1" runat="server" Text='<%# Eval("DienGiai") %>' Font-Size="16px" ForeColor="Navy"/>
+                       <asp:Image ID="Image1" runat="server" ImageUrl='<%# Eval("LinkHinh") %>' Height="300px" Width="300px" /><br />
+                       <asp:Label ID="Label1" runat="server" Text='<%# Eval("DienGiai") %>' Font-Size="16px" ForeColor="Navy"/><br />
+                        <asp:Button ID="Button1" runat="server" Text="Edit" CommandName="edit" CssClass="btn" />  <asp:Button ID="Button4" runat="server" Text="Delete" CommandName="delete" CssClass="btn" />
+                  
                     </td>                
                 </tr>
                
             </table>
             </ItemTemplate>
-                 </asp:DataList>
+             <EditItemTemplate>
+             <div align="center" id="EditImage">
+                <asp:Image ID="Image1" runat="server" ImageUrl='<%# Eval("LinkHinh") %>' Height="300px" Width="300px" /> <br />
+                <asp:TextBox ID="txtDienGiaiEdit" runat="server" Text='<%# Eval("DienGiai") %>' TextMode="MultiLine" Height="60px" Width="85%" ForeColor="#000066"></asp:TextBox><br />
+                <asp:Button ID="Button2" runat="server" Text="Update" CommandName="update" CssClass="btn" />
+                 &nbsp;
+                <asp:Button ID="Button3" runat="server" Text="Cancel" CommandName="cancel" CssClass="btn" />
+                  </div>  
+                </EditItemTemplate>
+            </asp:DataList>
             </div>       
     </div>
     </form>

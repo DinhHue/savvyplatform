@@ -261,6 +261,10 @@
                     Value="Quản Lý Diary"></asp:MenuItem>
                 <asp:MenuItem NavigateUrl="~/Manage/QuanLyMeMo.aspx" 
                 Text="Quản Lý Memos" Value="Quản Lý MeMo"></asp:MenuItem>
+                <asp:MenuItem NavigateUrl="~/Pages/NewsManager.aspx" 
+                    Text="Quản lý bài viết Blogs" Value="Quản lý bài viết Blogs"></asp:MenuItem>
+                <asp:MenuItem NavigateUrl="~/Pages/NewsTypes.aspx" Text="Quản lý Type News" 
+                    Value="Quản lý Type News"></asp:MenuItem>
             </Items>
         </asp:Menu>
         </div>

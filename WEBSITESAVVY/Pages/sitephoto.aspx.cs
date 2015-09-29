@@ -57,6 +57,43 @@ namespace WEBSITESAVVY.Pages
             DataList1.DataSource = ds;
             DataList1.DataBind();
         }
+
+        protected void DataList1_EditCommand(object source, DataListCommandEventArgs e)
+        {
+            DataList1.EditItemIndex = e.Item.ItemIndex;
+            LoadImage(Session["ThamChieu"].ToString());
+        }
+
+        protected void DataList1_CancelCommand(object source, DataListCommandEventArgs e)
+        {
+            DataList1.EditItemIndex = -1;
+            LoadImage(Session["ThamChieu"].ToString());
+        }
+
+        protected void DataList1_UpdateCommand(object source, DataListCommandEventArgs e)
+        {
+            int idsp=int.Parse(DataList1.DataKeys[e.Item.ItemIndex].ToString());
+            string diengiai = ((TextBox)e.Item.FindControl("txtDienGiaiEdit")).Text;
+            string id = txtClaimNo.Text;
+            bool up = sp.UpdateHinh(id, idsp, diengiai);
+            if (up == true)
+            {
+                LoadImage(id);
+                DataList1.EditItemIndex = -1;
+                DataList1.DataBind();
+            }
+        }
+
+        protected void DataList1_DeleteCommand(object source, DataListCommandEventArgs e)
+        {
+            int idsp = int.Parse(DataList1.DataKeys[e.Item.ItemIndex].ToString());
+            string id = txtClaimNo.Text;
+            bool kq = sp.Delete(id, idsp);
+            if (kq == true)
+            {
+                LoadImage(id);
+            }
+        }
        
     }
 }

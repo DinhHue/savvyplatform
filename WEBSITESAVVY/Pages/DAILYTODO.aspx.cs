@@ -534,107 +534,6 @@ namespace WEBSITESAVVY.Pages
             loadAllTask();
         }
 
-        //protected void gvDSDaGiao_RowUpdating(object sender, GridViewUpdateEventArgs e)
-        //{
-        //    GridViewRow row = gvDSDaGiao.Rows[e.RowIndex];
-        //    int ma = int.Parse(gvDSDaGiao.DataKeys[e.RowIndex].Value.ToString());
-        //    string diengiai = null;
-        //    //int maGDV = int.Parse(Session["MaGDV"].ToString());
-        //    int maGDV = int.Parse(Request.Cookies["MaGDV"].Value);
-        //    TextBox dienGiai = row.Cells[3].Controls[0] as TextBox;
-        //    diengiai = dienGiai.Text;
-        //    TextBox dead = row.Cells[5].Controls[0] as TextBox;
-        //    DateTime deadline = DateTime.Parse(dead.Text);
-        //    DataTable dt = new DataTable();           
-        //    string ten = GetName();
-        //    string email = null, idclaim = null, brief = null;            
-        //    bool up = dldao.UpdateDaily(ma, diengiai,deadline);
-        //    if (up == true)
-        //    {
-        //        e.Cancel = true;
-        //        gvDSDaGiao.EditIndex = -1;
-        //        dt = dldao.GetInfoTask(ma);
-        //        if (dt.Rows.Count > 0)
-        //        {
-        //            //dl.ID_Claim, gdv.Email, dl.DienGiai, gdv.TenGDV;
-        //            DataRow dr = dt.Rows[0];
-        //            idclaim = dr[0].ToString();
-        //            brief = idclaim +" - "+ cl.Laybrif(idclaim);
-        //            email = dr[1].ToString();
-        //        }
-        //        sendmail.CapNhatTask("Task-to-do", ten, email, brief, diengiai, deadline);
-        //        loadImport(maGDV);
-        //        loadWaiting(maGDV);
-        //        loadDaiLyDone(maGDV);
-        //        loadGDV();
-        //        loadTaskReceived(maGDV);
-        //        loadTaskAssigned(maGDV);
-        //        loadTaskDone(maGDV);
-        //        loadAllTask();
-        //    }
-        //}
-
-        //protected void gvDSDaGiao_RowCancelingEdit(object sender, GridViewCancelEditEventArgs e)
-        //{
-        //    e.Cancel = true;
-        //    gvDSDaGiao.EditIndex = -1;
-        //    //int ma = int.Parse(Session["MaDaiLy"].ToString());
-        //    //int maGDV = int.Parse(Session["MaGDV"].ToString());
-        //    int maGDV = int.Parse(Request.Cookies["MaGDV"].Value);
-        //    loadImport(maGDV);
-        //    loadWaiting(maGDV);
-        //    loadDaiLyDone(maGDV);
-        //    loadGDV();
-        //    loadTaskReceived(maGDV);
-        //    loadTaskAssigned(maGDV);
-        //    loadTaskDone(maGDV);
-        //    loadAllTask();
-        //}
-
-        //protected void gvDSDaGiao_RowEditing(object sender, GridViewEditEventArgs e)
-        //{
-        //    gvDSDaGiao.EditIndex = e.NewEditIndex;
-        //    //int maGDV = int.Parse(Session["MaGDV"].ToString());
-        //    int maGDV = int.Parse(Request.Cookies["MaGDV"].Value);
-        //    loadImport(maGDV);
-        //    loadWaiting(maGDV);
-        //    loadDaiLyDone(maGDV);
-        //    loadGDV();
-        //    loadTaskReceived(maGDV);
-        //    loadTaskAssigned(maGDV);
-        //    loadTaskDone(maGDV);
-        //    loadAllTask();
-        //}
-
-        //protected void gvDSDaGiao_RowDeleting(object sender, GridViewDeleteEventArgs e)
-        //{
-        //    int ma = int.Parse(gvDSDaGiao.DataKeys[e.RowIndex].Value.ToString());
-        //    DataTable dt = new DataTable();
-        //    dt = dldao.GetInfoTask(ma);
-        //    string idclaim = null, email = null, noidung = null, brief = null;
-        //    string ten = GetName();
-        //    if (dt.Rows.Count > 0)
-        //    {
-        //        DataRow dr = dt.Rows[0];
-        //        idclaim = dr[0].ToString();
-        //        email = dr[1].ToString();
-        //        noidung = dr[2].ToString();
-        //        brief = idclaim + " - " + cl.Laybrif(idclaim);
-        //    }
-        //    sendmail.BoTask("Task_to-do", ten, email, brief, noidung);
-        //    dldao.DeleteDaiLy(ma);
-        //    //int maGDV = int.Parse(Session["MaGDV"].ToString());
-        //    int maGDV = int.Parse(Request.Cookies["MaGDV"].Value);
-        //    loadImport(maGDV);
-        //    loadWaiting(maGDV);
-        //    loadDaiLyDone(maGDV);
-        //    loadGDV();
-        //    loadTaskReceived(maGDV);
-        //    loadTaskAssigned(maGDV);
-        //    loadTaskDone(maGDV);
-        //    loadAllTask();
-        //}
-
         protected void gvDSDuocNhan_RowDeleting(object sender, GridViewDeleteEventArgs e)
         {
             int ma= int.Parse(gvDSDuocNhan.DataKeys[e.RowIndex].Value.ToString());
@@ -675,36 +574,7 @@ namespace WEBSITESAVVY.Pages
             }
         }
 
-        //protected void gvDSDaGiao_RowDeleting1(object sender, GridViewDeleteEventArgs e)
-        //{
-        //    int ma = int.Parse(gvDSDaGiao.DataKeys[e.RowIndex].Value.ToString());
-        //    DataTable dt = new DataTable();
-        //    dt = dldao.GetInfoTask(ma);
-        //    string idclaim = null, email = null, noidung = null, brief = null;
-        //    string ten = GetName();
-        //    if (dt.Rows.Count > 0)
-        //    {
-        //        DataRow dr = dt.Rows[0];
-        //        idclaim = dr[0].ToString();
-        //        email = dr[1].ToString();
-        //        noidung = dr[2].ToString();
-        //        brief = idclaim + " - " + cl.Laybrif(idclaim);
-        //    }
-        //    dldao.DeleteDaiLy(ma);
-        //    sendmail.BoTask("Task_to-do", ten, email, brief, noidung);
-            
-        //    //int maGDV = int.Parse(Session["MaGDV"].ToString());
-        //    int maGDV = int.Parse(Request.Cookies["MaGDV"].Value);
-        //    loadImport(maGDV);
-        //    loadWaiting(maGDV);
-        //    loadDaiLyDone(maGDV);
-        //    loadGDV();
-        //    loadTaskReceived(maGDV);
-        //    loadTaskAssigned(maGDV);
-        //    loadTaskDone(maGDV);
-        //    loadAllTask();
-        //}
-
+     
         protected void gvDaGiao_RowDeleting(object sender, GridViewDeleteEventArgs e)
         {
             int maGDV = int.Parse(Request.Cookies["MaGDV"].Value);

@@ -172,8 +172,10 @@
 						<a href="../Pages/QuanLyQuiTrinh.aspx" class="easyui-linkbutton" data-options="plain:true"><span class="button-menu">Memos</span></a>
 						<a href="../Pages/DAILYTODO.aspx" class="easyui-linkbutton" data-options="plain:true"><span class="button-menu">To-do-list</span></a>
 						<a href="../Pages/ListWeeklyReport.aspx" class="easyui-linkbutton" data-options="plain:true" ><span class="button-menu">Weekly Update</span></a>
-						<a href="javascript:void(0)" onclick="$('#w_NewClaim').window('open')" class="easyui-linkbutton" data-options="plain:true"><span class="button-menu">New Claim</span></a></td>
-					<td><div style="float:right">
+						<a href="javascript:void(0)" onclick="$('#w_NewClaim').window('open')" class="easyui-linkbutton" data-options="plain:true"><span class="button-menu">New Claim</span></a>
+					    <a href="../Pages/News.aspx"class="easyui-linkbutton" data-options="plain:true" ><span class="button-menu">Blogs</span></a>
+                     </td>
+                    <td><div style="float:right">
 							<a class="easyui-splitbutton" href="#" class="easyui-linkbutton" data-options="menu:'#mmProfile', plain:false">
                             <span><span style="color:#444">
                             <asp:Label ID="lblName" runat="server" Text=""></asp:Label> <asp:Label 

@@ -350,6 +350,16 @@ table td
     box-shadow: 5px 3px 5px #ccc;
     background-color: #F0F0F0;
 }
+.table_notification
+{
+    border: 2px groove #F3F3F3;
+    vertical-align: top;
+    text-align: center;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    padding: 10px;
+    box-shadow: 5px 3px 5px #ccc;
+}
 .buttonmananger
 {
    padding-left:15px;
@@ -366,6 +376,17 @@ input.textmananger
     border-radius: 15px;
     border: 1px solid #CCCCCC;
     padding: 5px;
+}
+input.textTB
+{
+    font-family: Times New Roman;
+    font-size: 16px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    border: 1px solid #CCCCCC;
+    padding: 5px;
+    color: #003300;
+    background-color: #FFFFFF;
 }
 .colmanager1
 {

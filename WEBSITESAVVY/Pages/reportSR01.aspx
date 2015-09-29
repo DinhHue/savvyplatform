@@ -8,11 +8,22 @@
     <link rel="stylesheet" type="text/css" href="../Content/themes/default/easyui.css"/>
 	<link rel="stylesheet" type="text/css" href="../Content/themes/icon.css"/>
     <%--<link  href="../Content/themes/menu.css" rel="stylesheet" type="text/css" />--%>
-  <%--  <script type="text/javascript" src="../js/jquery-1.4.min.js"></script>
-    <link href="../Styles/CssForm.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="../js/jquery-1.4.min.js"></script>
-    <link href="../css/main.css" rel="stylesheet" type="text/css" />--%>
-
+    <script type="text/javascript" src="../Scripts/jquery.easyui.min.js"></script>
+   <%-- <link href="../css/popup.css" rel="stylesheet" type="text/css" />--%>
+    
+    <script type="text/javascript">
+        function MoveToURL()  
+        {
+            //var reportWin=window.open("../Messages/submitreport.aspx","options",'resizable=yes,scrollbars=yes,width=780,height=650,left=150,top=50,status=yes')
+            var contentPage = '<iframe   style="width:100%; height:100% ; border:none;" src="../Messages/submitreport.aspx"></iframe>'
+            $("#w_MessageClaim").html(contentPage); 
+            $('#w_MessageClaim').window('open');
+            window.scrollTo(0, 0);
+            
+        } 
+        
+    </script>
     <style type="text/css">
         @page :first {
               margin: 5mm 7.5mm 0 15mm;   
@@ -143,7 +154,7 @@
       .menufo{
            
           top: 100%;
-          width: 8em;
+         
           margin-top: -10em;
           text-align:left;
         }
@@ -722,7 +733,8 @@
         <div id="tool_bottom" runat="server" class="tool_bottom" >
             <asp:Menu ID="Menu1" runat="server" BackColor="#B5C7DE" 
                 DynamicHorizontalOffset="2" Font-Names="Times New Roman" Font-Size="16px" 
-                ForeColor="#284E98" RenderingMode="List" StaticSubMenuIndent="10px" CssClass="menufo">
+                ForeColor="#284E98" RenderingMode="List" StaticSubMenuIndent="5px" 
+                CssClass="menufo" onmenuitemclick="Menu1_MenuItemClick">
                 <DynamicHoverStyle BackColor="#284E98" ForeColor="White"/>
                 <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
                 <DynamicMenuStyle BackColor="#B5C7DE" />
@@ -730,23 +742,25 @@
                 <Items>
                     <asp:MenuItem Text="Choose" Value="Choose">
                         <asp:MenuItem Text="Submit" Value="Submit" 
-                            NavigateUrl="~/Messages/submitreport.aspx" ></asp:MenuItem>
-                        <asp:MenuItem Text="Checked" Value="Checked"></asp:MenuItem>
+                            NavigateUrl="javascript:MoveToURL();" ></asp:MenuItem>
+                        <asp:MenuItem Text="Checked" Value="Checked" NavigateUrl="javascript:MoveToURL();"></asp:MenuItem>
                         <asp:MenuItem Text="Approved" Value="Approved"></asp:MenuItem>
+                        <asp:MenuItem Text="Export to PDF" Value="Export to PDF" NavigateUrl="javascript:printPDF();"></asp:MenuItem>
                     </asp:MenuItem>
                 </Items>
                 <StaticHoverStyle BackColor="#284E98" ForeColor="White" />
                 <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
                 <StaticSelectedStyle BackColor="#507CD1" />
             </asp:Menu>
-         <button class="" onclick="printPDF();" >Export to PDF</button>                
+       <%--  <button class="" onclick="printPDF();" >Export to PDF</button>  --%>              
         </div>
         <div style="height:40px;"></div>
         <!--end tool bottom-->
 
         </form>
         
-      
+      <div id="w_MessageClaim" class="easyui-window" title=" Submit to ..."  data-options="modal:true,closed:true,iconCls:'icon-add'" style="width:550px;height:400px;">abc</div>
+
         <script type="text/javascript">
 
             function getString(array, start, end) {

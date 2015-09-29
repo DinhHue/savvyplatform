@@ -41,6 +41,52 @@ namespace WEBSITESAVVY.DAO
             ds.Add(gdvgiao);
             return SqlDataAcessHelper.exNonStoreParas(sql, ds);
         }
+        public bool ThongBaoCheck(DAILYDTO dl)
+        {
+            string sql = "sp_DaiLyToDo_insertTB";
+            List<SqlParameter> ds = new List<SqlParameter>();
+
+            SqlParameter maclaim = new SqlParameter("@maclaim", SqlDbType.VarChar);
+            maclaim.Value = dl.MaClaim;
+            ds.Add(maclaim);
+            SqlParameter diengiai = new SqlParameter("@diengiai", SqlDbType.NVarChar);
+            diengiai.Value = dl.DienGiai;
+            ds.Add(diengiai);
+            SqlParameter rate = new SqlParameter("@rate", SqlDbType.Int);
+            rate.Value = dl.Rate;
+            ds.Add(rate);
+            SqlParameter mucdo = new SqlParameter("@mamucdo", SqlDbType.Int);
+            mucdo.Value = dl.Lev;
+            ds.Add(mucdo);
+            SqlParameter gdv = new SqlParameter("@idgdv", SqlDbType.Int);
+            gdv.Value = dl.MaGDV;
+            ds.Add(gdv);
+            SqlParameter date = new SqlParameter("@ngay", SqlDbType.Date);
+            date.Value = dl.Ngay;
+            ds.Add(date);
+            SqlParameter datedead = new SqlParameter("@deadline", SqlDbType.Date);
+            datedead.Value = dl.Deadline;
+            ds.Add(datedead);
+            SqlParameter gdvgiao = new SqlParameter("@idgdvnhan", SqlDbType.Int);
+            gdvgiao.Value = dl.MaGDVNhan;
+            ds.Add(gdvgiao);
+            SqlParameter report = new SqlParameter("@rp", SqlDbType.VarChar);
+            report.Value = dl.Report;
+            ds.Add(report);
+            return SqlDataAcessHelper.exNonStoreParas(sql, ds);
+        }
+        public DataRow LayThongBao(string rp, string id)
+        {
+            string sql = "sp_DaiLyToDo_SelectThongBao";
+            List<SqlParameter> ds = new List<SqlParameter>();
+            ds.Add(new SqlParameter("@report", rp));
+            ds.Add(new SqlParameter("@idclaim",id));
+            DataTable dt = SqlDataAcessHelper.exStoreParas(sql, ds);
+            DataRow dr=null;
+            if (dt.Rows.Count > 0)
+                dr = dt.Rows[0];
+            return dr;
+        }
         public DataTable ListImportant(int magdv)
         {
             string sql = "sp_DaiLy_selectImportant";

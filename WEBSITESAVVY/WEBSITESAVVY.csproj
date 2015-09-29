@@ -395,6 +395,7 @@
     <Content Include="Content\themes\metro\window.css" />
     <Content Include="css\claim.css" />
     <Content Include="css\color.css" />
+    <Content Include="css\popup.css" />
     <Content Include="css\hover.htc" />
     <Content Include="css\ie6.css" />
     <Content Include="css\jquery.bubblepopup.v2.3.1.css" />
@@ -1875,6 +1876,7 @@
     <Compile Include="DTO\LoaiHangMucDTO.cs" />
     <Compile Include="DTO\LossListDTO.cs" />
     <Compile Include="DTO\NewsDTO.cs" />
+    <Compile Include="DTO\NewsTypeDTO.cs" />
     <Compile Include="DTO\NhomHangMucDTO.cs" />
     <Compile Include="DTO\SitePhotoDTO.cs" />
     <Compile Include="DTO\TienDoXyLyDTO.cs" />
