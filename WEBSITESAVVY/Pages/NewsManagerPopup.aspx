@@ -5,13 +5,19 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <link href="../Styles/CssForm.css" rel="stylesheet" type="text/css" />
     <link href="../Content/multi-select/css/multi-select.css" media="screen" rel="stylesheet" type="text/css">
 
     <script src="../tinymce/tinymce.min.js" type="text/javascript"></script>
-    <script src="http://code.jquery.com/jquery-1.8.0.min.js" type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="../Content/multi-select/js/jquery.multi-select.js" type="text/javascript"></script>
 	<script src="../Content/multi-select/js/jquery.quicksearch.js" type="text/javascript"></script>
+
+       
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
     <script type="text/javascript">
 
@@ -84,6 +90,15 @@
 			    }
 		    });
 
+
+            $('#btnSelectImg').click(function(){
+                var url = $("#imgFrame").contents().find("#url").val();;
+                $('#txtLinkImage').val(url);
+            });
+
+            
+
+
         });
 
     </script>
@@ -118,13 +133,44 @@
             max-width:none;
         }
         
+        .tool_bottom
+        {
+	        padding:5px; position: fixed; bottom: 0px; left: 0px; background:#FCFCFC; width:100%; border-top:1px solid #BCBCBC; text-align:center;
+        }
+
+        iframe
+        {
+            border:1px solid #BCBCBC;
+            width:100%;
+            height:100%;
+        }
+        
+        .modal-dialog {
+            margin: 15px auto;
+            width: 90%;
+        }
+        .modal-header {
+            padding: 8px 15px;
+        }
+        .modal-body {
+            padding: 10px;
+        }
+        .modal-footer {
+            padding: 5px 15px;
+        }
+        .contentDialog
+        {
+            height: 400px;
+        }
+    </style>
+        
     </style>
 </head>
 <body>
     <form id="form1" runat="server">    
     <div>
 
-        <table width="100%">
+        <table width="100%" style="font:12px">
             <tr>
                 <td class="rightpop">
                     <asp:HiddenField ID="txtID_News" runat="server" />
@@ -135,7 +181,10 @@
             <tr>
                 <td class="rightpop">
                     <asp:Label ID="Label3" CssClass="title" runat="server" Text="Link Image :"></asp:Label>
-                    <asp:TextBox ID="txtLinkImage" runat="server" CssClass="input" Width="95%"  required ></asp:TextBox>
+                    <table style="width:95%;">
+                        <tr><td style="width:90%"><asp:TextBox ID="txtLinkImage" ClientIDMode="Static" runat="server" CssClass="input" Width="100%"  required ></asp:TextBox></td>
+                            <td><input id="browse" type="button" data-toggle="modal" data-target="#imageModal" class="btn" value="..." /></td></tr>
+                    </table>
                 </td>
             </tr>
             <tr>
@@ -164,24 +213,42 @@
             </tr>
             
             <tr>
-                <td class="rightpop">
-                    &nbsp;&nbsp;</td>
-            </tr>
-            <tr>
-                <td align="center">
-                    <asp:Button ID="btnCreate" runat="server" CssClass="btn" Text="OK" onclick="btnCreate_Click" />
-						
-					<asp:Button ID="btnUpdate" runat="server" CssClass="btn" Text="Update" 
-                        onclick="btnUpdate_Click" />
-
-                    <input class="btn" type="button" value="Cancel" onclick="parent.closeDialog();" />
-                </td>
-            </tr>
-            <tr>
                 <td align="center" ><asp:Label ID="lblStatus" runat="server" ></asp:Label></td>
             </tr>
         </table>
     </div>
+
+
+    <div id="tool_bottom" runat="server" class="tool_bottom" >
+        <asp:Button ID="btnCreate" runat="server" CssClass="btn" Text="OK" onclick="btnCreate_Click" />
+						
+		<asp:Button ID="btnUpdate" runat="server" CssClass="btn" Text="Update" 
+            onclick="btnUpdate_Click" />
+
+        <input class="btn" type="button" value="Cancel" onclick="parent.closeDialog();" />
+    </div>
+    <div style="height:40px;"></div>
+    <!--end tool bottom-->
+
+    <!--Dialog-->
+    <div class="modal fade" id="imageModal" role="dialog">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">
+                        &times;</button>
+                    <h4 class="modal-title">
+                        File Manager</h4>
+                </div>
+                <div class="modal-body contentDialog"><iframe id="imgFrame" src="../Pages/Uploads.aspx"></iframe></div>
+                <div class="modal-footer">
+                    <button id="btnSelectImg" type="button" class="btn btn-pri" data-dismiss="modal">OK</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     </form>
 </body>
 </html>
