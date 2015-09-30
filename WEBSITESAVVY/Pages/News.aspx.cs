@@ -19,22 +19,11 @@ namespace WEBSITESAVVY.Pages
         {
             if (!IsPostBack)
             {
-                fillDataTemplate();
-
                 fillDataNewsHot();
                 fillDataNews();
             }
         }
 
-
-        public void fillDataTemplate()
-        {
-            rptTypes.DataSource = daoNewsType.GetList();
-            rptTypes.DataBind();
-
-            repeaterMostViews.DataSource = daoNews.GetListMostViewHotLimit(10);
-            repeaterMostViews.DataBind();
-        }
 
         public void fillDataNewsHot()
         {

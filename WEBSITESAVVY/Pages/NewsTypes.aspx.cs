@@ -27,21 +27,11 @@ namespace WEBSITESAVVY.Pages
                     NewsTypeDTO newsType = daoNewsType.GetNewsType(idType);
                     lblTitle.Text = newsType.NameType;
 
-                    fillDataTemplate();
-
                     fillData();
                 }
             }
         }
 
-        public void fillDataTemplate()
-        {
-            rptTypes.DataSource = daoNewsType.GetList();
-            rptTypes.DataBind();
-
-            repeaterMostViews.DataSource = daoNews.GetListMostViewHotLimit(10);
-            repeaterMostViews.DataBind();
-        }
 
         public void fillData()
         {

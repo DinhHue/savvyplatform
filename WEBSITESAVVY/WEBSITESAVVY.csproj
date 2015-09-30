@@ -1989,6 +1989,13 @@
     <Compile Include="Manage\QuanLyTaskAssiged.aspx.designer.cs">
       <DependentUpon>QuanLyTaskAssiged.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Master\news.Master.cs">
+      <DependentUpon>news.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master\news.Master.designer.cs">
+      <DependentUpon>news.Master</DependentUpon>
+    </Compile>
     <Compile Include="Messages\submitreport.aspx.cs">
       <DependentUpon>submitreport.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -3304,6 +3311,7 @@
     <None Include="images\jquerybubblepopup-theme\green\Thumbs.db" />
     <None Include="images\jquerybubblepopup-theme\violet\Thumbs.db" />
     <Content Include="Pages\Site1.Master" />
+    <Content Include="Master\news.Master" />
     <None Include="tinymce\langs\readme.md" />
     <None Include="tinymce\skins\lightgray\fonts\tinymce-small.eot" />
     <None Include="tinymce\skins\lightgray\fonts\tinymce-small.ttf" />
