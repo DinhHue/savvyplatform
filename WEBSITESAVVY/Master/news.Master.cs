@@ -15,17 +15,25 @@ namespace WEBSITESAVVY.Master
 
         NewsDAO daoNews = new NewsDAO();
         NewsTypeDAO daoNewsType = new NewsTypeDAO();
+        GiamDinhVienDAO gdvDao = new GiamDinhVienDAO();
 
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
             {
+                if (Request.Cookies["MaGDV"] == null) Response.Redirect("../Pages/Login.aspx");    
+
                 loadTemplate();
             }
         }
 
         public void loadTemplate()
         {
+            int idGDV = int.Parse(Request.Cookies["MaGDV"].Value);
+            lblName.Text = gdvDao.LayTenTheoMa(idGDV);
+
+            if (!gdvDao.KiemTraBacQuanLy(idGDV)) itemAdmin.Visible = false;
+                
             rptTypes.DataSource = daoNewsType.GetList();
             rptTypes.DataBind();
 
@@ -36,5 +44,8 @@ namespace WEBSITESAVVY.Master
             }
             
         }
+
+
+
     }
 }

@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/Master/news.Master" AutoEventWireup="true" CodeBehind="NewsDetail.aspx.cs" Inherits="WEBSITESAVVY.Pages.NewsDetail" %>
+﻿<%@ Page Language="C#" MasterPageFile="../Master/news.Master" AutoEventWireup="true" CodeBehind="NewsDetail.aspx.cs" Inherits="WEBSITESAVVY.Pages.NewsDetail" %>
 
 <asp:Content ID="contentHead" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
@@ -24,9 +24,15 @@
                 <div>
 
                     <asp:HiddenField ID="hiddenIDNews" runat="server" />
-                    <h3 class="title "><asp:Label ID="lblTitle" runat="server">Types</asp:Label></h3>
-                    <p style="text-align:right;"><b>Ngày tạo: <asp:Label ID="lblDate" Font-Size="12px"  runat="server" ></asp:Label></b></p>
-                    <p><b><asp:Label ID="lblBrief"  Font-Bold="true" runat="server" /></b></p>
+                    <h3 class="title "><asp:Label ID="lblTitle" Font-Bold="true" runat="server">Types</asp:Label></h3>
+                    
+                    <p style="text-align:right; margin-bottom:0px;"><label id="lblNameCreate" runat="server" /> <asp:Label ID="lblDate"   runat="server" ></asp:Label></p>
+                    <p style="text-align:right; margin-bottom:0px;"><label id="lblNameModifier" runat="server" /> <asp:Label ID="lblDateModifier" runat="server" ></asp:Label></p>
+                    <p style="text-align:right;" >
+                        <asp:LinkButton ID="btnEditNews" runat="server" Text="Chỉnh sửa bài viết" />
+                    </p>
+                    
+                    <p><asp:Label ID="lblBrief" Font-Size="15px"  Font-Bold="true" runat="server" /></p>
                     <p><asp:Label ID="lblContent" runat="server" ></asp:Label></p>
 
                 </div>

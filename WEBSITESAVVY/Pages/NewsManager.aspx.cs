@@ -13,14 +13,32 @@ namespace WEBSITESAVVY.Pages
     {
         private NewsDAO newDao = new NewsDAO();
         private NewsTypeDAO newsType = new NewsTypeDAO();
+        private GiamDinhVienDAO gdvDao = new GiamDinhVienDAO();
 
         protected void Page_Load(object sender, EventArgs e)
         {
+
             if (!IsPostBack)
             {
+                if (!checkAdmin())
+                {
+                    Response.Redirect("../Pages/Home.aspx");
+                }
                 loadData();
                 loadDropdownList();
             }
+        }
+
+        public bool checkAdmin()
+        {
+            if (Request.Cookies["MaGDV"] != null)
+            {
+                int idgdv = int.Parse(Request.Cookies["MaGDV"].Value);
+                if (gdvDao.KiemTraBacQuanLy(idgdv))
+                    return true;
+                return false;
+            }
+            return false;
         }
 
         public void loadData()

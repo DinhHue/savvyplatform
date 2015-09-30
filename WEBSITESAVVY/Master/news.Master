@@ -14,6 +14,44 @@
 
     <link rel="stylesheet" href="/css/main_news.css">
 
+    <script type="text/javascript">
+        function CreateNews() {
+            var contentPage = '<iframe src="../Pages/NewsManagerPopup.aspx"></iframe>'
+            $('.contentDialog').html(contentPage);
+        }
+
+        function EditNews(idNews) {
+            var param = "?Action=Edit";
+            param += "&idNews=" + idNews;
+            var contentPage = '<iframe src="../Pages/NewsManagerPopup.aspx' + param + '"></iframe>'
+            $('.contentDialog').html(contentPage);
+        }
+
+        function closeDialog() {
+            $('.close').trigger("click");
+            window.location.href = "../Pages/NewsMyPost.aspx";
+        }
+
+        function Refresh() {
+            window.location.href = window.location.href;
+        }
+
+    </script>
+
+    <style type="text/css">
+        iframe
+        {
+            border:1px solid #BCBCBC;
+            width:100%;
+            height:100%;
+        }
+        .contentDialog
+        {
+            height:450px;
+        }
+    </style>
+
+
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
@@ -39,10 +77,18 @@
 						    <div class="shop-menu pull-right">
 							    <ul class="nav navbar-nav">
 
-                                        <li><a href="../Pages/Home.aspx">Quản Lý</a></li>
-								        <li><a href="../Pages/News.aspx">Tin tức</a></li>
-								        <li><a href="#">Thông tin chung</a></li>
-								        <li><a href="#">Liên Hệ </a></li>
+								        <li data-toggle="modal" data-target="#myModal" onclick="return CreateNews();" ><a href="#">Đăng Bài</a></li>
+								        <li>
+                                            <a href="#" data-toggle="dropdown" >
+                                                <asp:Label ID="lblName" runat="server" Text=""></asp:Label> <span class="caret"></span>  </a>
+                                            
+                                            <ul class="dropdown-menu">
+                                                <li><a href="../Pages/Home.aspx">Trang Quản Lý</a></li>
+                                                <li id="itemAdmin" runat="server" ><a href="../Pages/NewsManager.aspx">Quản Lý Bài Viết</a></li>
+                                                <li><a href="../Pages/NewsMyPost.aspx">Bài Viết Của Tôi</a></li>
+                                                <li><a href="../Pages/Logout.aspx">Logout</a></li>
+                                            </ul>
+                                        </li>
 								    
 							    </ul>
 						    </div>
@@ -145,6 +191,26 @@
 			    </div>
 		    </div>
 	    </footer>
+
+
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">
+                            &times;</button>
+                        <h4 class="modal-title">
+                            Bài viết</h4>
+                    </div>
+                    <div class="modal-body contentDialog">Loading...</div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">
+                            Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
 
     </form>
 </body>

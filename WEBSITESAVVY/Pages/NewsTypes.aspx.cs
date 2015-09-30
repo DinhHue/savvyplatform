@@ -40,7 +40,7 @@ namespace WEBSITESAVVY.Pages
             System.Data.DataView dv = new System.Data.DataView(dt);
             pgitems.DataSource = dv;
             pgitems.AllowPaging = true;
-            pgitems.PageSize = 15;
+            pgitems.PageSize = 20;
             pgitems.CurrentPageIndex = PageNumber;
             if (pgitems.PageCount > 1)
             {

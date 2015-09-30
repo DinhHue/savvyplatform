@@ -33,7 +33,15 @@ namespace WEBSITESAVVY.Pages
 
                     lblTitle.Text = news.Title;
                     lblBrief.Text = news.Brief;
-                    lblDate.Text = news.DateCreated.ToString("hh:mm dd/M/yyyy");
+                    lblNameCreate.InnerHtml = "Người tạo: " + news.Ten_GDVPost;
+                    lblDate.Text = " | " + news.DateCreated.ToString("hh:mm dd/M/yyyy");
+                    lblNameModifier.InnerHtml = "Cập nhật bởi: " + news.Ten_GDVEdit;
+                    lblDateModifier.Text = " | " + news.DateModified.ToString("hh:mm dd/M/yyyy");
+
+                    btnEditNews.Attributes.Add("data-toggle", "modal");
+                    btnEditNews.Attributes.Add("data-target", "#myModal");
+                    btnEditNews.Attributes.Add("onclick", "return EditNews(" + news.ID_News + ")");
+
                     lblContent.Text = news.Contents;
 
                     repeaterTag.DataSource = daoNews.GetListType(int.Parse(idNews));

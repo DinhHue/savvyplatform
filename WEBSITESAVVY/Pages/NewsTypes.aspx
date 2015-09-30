@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/Master/news.Master" AutoEventWireup="true" CodeBehind="NewsTypes.aspx.cs" Inherits="WEBSITESAVVY.Pages.NewsTypes" %>
+﻿<%@ Page Language="C#" MasterPageFile="../Master/news.Master" AutoEventWireup="true" CodeBehind="NewsTypes.aspx.cs" Inherits="WEBSITESAVVY.Pages.NewsTypes" %>
 
 
 <asp:Content ID="contentHead" ContentPlaceHolderID="head" runat="server">
