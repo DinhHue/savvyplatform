@@ -22,14 +22,14 @@ begin
 end
 
 --------------------------------------------------
-alter proc [dbo].[sp_News_GroupByYearMonth] 
+ALTER proc [dbo].[sp_News_GroupByYearMonth] 
 @year int
 as
 begin
-	select MONTH( N.DateCreated ) as 'Month', COUNT(*) as 'Count'
+	select YEAR(N.DateCreated) as 'Year', MONTH( N.DateCreated ) as 'Month', COUNT(*) as 'Count'
 	from NEWS N
 	where YEAR(N.DateCreated) = @year
-	group by MONTH( N.DateCreated )
+	group by YEAR(N.DateCreated), MONTH( N.DateCreated )
 end
 
 -------------Test---------------------------------
