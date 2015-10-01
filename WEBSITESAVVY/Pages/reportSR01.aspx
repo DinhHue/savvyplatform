@@ -15,12 +15,10 @@
     <script type="text/javascript">
         function MoveToURL()  
         {
-            //var reportWin=window.open("../Messages/submitreport.aspx","options",'resizable=yes,scrollbars=yes,width=780,height=650,left=150,top=50,status=yes')
-            var contentPage = '<iframe   style="width:100%; height:100% ; border:none;" src="../Messages/submitreport.aspx"></iframe>'
+            var contentPage = '<iframe style="width:100%; height:100% ; border:none;" src="../Messages/submitreport.aspx"></iframe>'
             $("#w_MessageClaim").html(contentPage); 
             $('#w_MessageClaim').window('open');
-            window.scrollTo(0, 0);
-            
+            window.scrollTo(0, 0);            
         } 
         
     </script>
@@ -166,9 +164,7 @@
         
        
         
-    </style>
-    
-       
+    </style>  
         
 </head>
 <body >

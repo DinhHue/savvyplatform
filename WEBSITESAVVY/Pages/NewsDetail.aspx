@@ -1,6 +1,7 @@
 ﻿<%@ Page Language="C#" MasterPageFile="../Master/news.Master" AutoEventWireup="true" CodeBehind="NewsDetail.aspx.cs" Inherits="WEBSITESAVVY.Pages.NewsDetail" %>
 
 <asp:Content ID="contentHead" ContentPlaceHolderID="head" runat="server">
+
 </asp:Content>
 
 <asp:Content ID="contentTitleBar" ContentPlaceHolderID="ContentPlaceHolderTitleBar" runat="server">
