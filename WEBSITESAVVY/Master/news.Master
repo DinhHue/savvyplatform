@@ -45,9 +45,15 @@
             width:100%;
             height:100%;
         }
+        .modal-header {
+            padding: 8px 15px;
+        }
+        .modal-body {
+            padding: 10px;
+        }
         .contentDialog
         {
-            height:450px;
+            height:550px;
         }
     </style>
 
@@ -204,10 +210,6 @@
                             Bài viết</h4>
                     </div>
                     <div class="modal-body contentDialog">Loading...</div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">
-                            Close</button>
-                    </div>
                 </div>
             </div>
         </div>

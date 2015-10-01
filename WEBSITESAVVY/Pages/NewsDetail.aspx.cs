@@ -34,9 +34,9 @@ namespace WEBSITESAVVY.Pages
                     lblTitle.Text = news.Title;
                     lblBrief.Text = news.Brief;
                     lblNameCreate.InnerHtml = "Người tạo: " + news.Ten_GDVPost;
-                    lblDate.Text = " | " + news.DateCreated.ToString("hh:mm dd/M/yyyy");
+                    lblDate.Text = " | " + news.DateCreated.ToString("hh:mm tt dd/M/yyyy");
                     lblNameModifier.InnerHtml = "Cập nhật bởi: " + news.Ten_GDVEdit;
-                    lblDateModifier.Text = " | " + news.DateModified.ToString("hh:mm dd/M/yyyy");
+                    lblDateModifier.Text = " | " + news.DateModified.ToString("hh:mm tt dd/M/yyyy");
 
                     btnEditNews.Attributes.Add("data-toggle", "modal");
                     btnEditNews.Attributes.Add("data-target", "#myModal");
