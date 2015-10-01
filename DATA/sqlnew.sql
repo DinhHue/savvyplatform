@@ -36,3 +36,17 @@ end
 [sp_News_GroupByYear]
 [sp_News_GroupByYearMonth] 2015
 [sp_News_Search_YearMonth] 2015, 9
+--------------------------------------------------
+
+create proc [dbo].[sp_News_TypeSummary] 
+as
+begin
+	
+	select t.ID_Type, t.NameType , 
+		(	select COUNT(*)
+			from NEWS n
+			where t.ID_Type IN ( SELECT * FROM dbo.fnSplitString(n.ID_Types))
+		) as 'Count'
+	from TYPENEWS t
+
+end

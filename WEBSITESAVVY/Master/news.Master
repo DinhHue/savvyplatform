@@ -178,7 +178,7 @@
 						                        <asp:Repeater ID="rptTypes" runat="server">
                                                     <ItemTemplate>
 
-                                                        <li class="item_type"><a href="../Pages/NewsTypes.aspx?id=<%# Eval("ID_Type") %>"><%# Eval("NameType") %></a></li>
+                                                        <li class="item_type"><a href='../Pages/NewsTypes.aspx?id=<%# Eval("ID_Type") %>'> <span class="pull-right">(<%# Eval("Count") %>)</span> <%# Eval("NameType") %></a></li>
 
                                                     </ItemTemplate>
                                                 </asp:Repeater>

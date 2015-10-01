@@ -34,7 +34,7 @@ namespace WEBSITESAVVY.Master
 
             if (!gdvDao.KiemTraBacQuanLy(idGDV)) itemAdmin.Visible = false;
                 
-            rptTypes.DataSource = daoNewsType.GetList();
+            rptTypes.DataSource = daoNewsType.GetListSummary();
             rptTypes.DataBind();
 
             if (repeaterMostViews.DataSource == null)
