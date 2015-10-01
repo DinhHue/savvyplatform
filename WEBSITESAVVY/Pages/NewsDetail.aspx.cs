@@ -131,6 +131,10 @@ namespace WEBSITESAVVY.Pages
             {
                 LinkButton lb = e.Item.FindControl("btnPage") as LinkButton;
                 ScriptManager.GetCurrent(this).RegisterAsyncPostBackControl(lb);
+                if (lb.CommandArgument == (PageNumber + 1).ToString())
+                {
+                    lb.CssClass = "selected";
+                }
 
             }
             else if (e.Item.ItemType == ListItemType.Footer)

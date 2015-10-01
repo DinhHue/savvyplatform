@@ -1,8 +1,8 @@
-﻿<%@ Page Language="C#" MasterPageFile="../Master/news.Master" AutoEventWireup="true" CodeBehind="NewsTypes.aspx.cs" Inherits="WEBSITESAVVY.Pages.NewsTypes" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master/news.Master" AutoEventWireup="true" CodeBehind="NewsTime.aspx.cs" Inherits="WEBSITESAVVY.Pages.NewsTime" %>
 
-
-<asp:Content ID="contentHead" ContentPlaceHolderID="head" runat="server">
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
+
 
 <asp:Content ID="contentTitleBar" ContentPlaceHolderID="ContentPlaceHolderTitleBar" runat="server">
     
@@ -10,6 +10,7 @@
     <asp:Label CssClass="split" ID="lblTitle" runat="server" />
 
 </asp:Content>
+
 
 <asp:Content ID="contentMain" ContentPlaceHolderID="ContentPlaceHolderMain" runat="server">
     
@@ -26,11 +27,11 @@
                                     
                                 <div style="margin:5px 0 5px 0">
                                     <p>
-                                        <a href="../Pages/NewsDetail.aspx?id=<%# Eval("ID_News") %>"><span ><b><%# Eval("Title") %></b></a></span>
+                                        <a href="/Pages/NewsDetail.aspx?id=<%# Eval("ID_News") %>"><span ><b><%# Eval("Title") %></b></a></span>
                                                 
                                     </p>
                                     <p>
-                                        <a href="../Pages/NewsDetail.aspx?id=<%# Eval("ID_News") %>">
+                                        <a href="/Pages/NewsDetail.aspx?id=<%# Eval("ID_News") %>">
                                             <img class="linkImage img-thumbnail" src="<%# Eval("LinkImages") %>" alt="<%# Eval("LinkImages") %>" />
                                         </a>
 

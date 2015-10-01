@@ -190,5 +190,29 @@ namespace WEBSITESAVVY.DAO
             else
                 return null;
         }
+
+        public DataTable GroupByYear()
+        {
+            string sql = "sp_News_GroupByYear";
+            return SqlDataAcessHelper.exStoreNoParas(sql);
+        }
+
+        public DataTable GroupByMonth(int year)
+        {
+            string sql = "sp_News_GroupByYearMonth";
+            List<SqlParameter> list = new List<SqlParameter>();
+            list.Add(new SqlParameter("@year", year));
+            return SqlDataAcessHelper.exStoreParas(sql, list);
+        }
+
+        public DataTable GetListSearchByYearMonth(int year, int month)
+        {
+            string sql = "sp_News_Search_YearMonth";
+            List<SqlParameter> list = new List<SqlParameter>();
+            list.Add(new SqlParameter("@year", year));
+            list.Add(new SqlParameter("@month", month));
+            return SqlDataAcessHelper.exStoreParas(sql, list);
+        }
+
     }
 }

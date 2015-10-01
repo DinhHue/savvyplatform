@@ -12,29 +12,58 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
+    <script src="/js/jquery.scrollUp.min.js"></script>
+
     <link rel="stylesheet" href="/css/main_news.css">
 
     <script type="text/javascript">
+
+        /*scroll to top*/
+        $.noConflict();
+        jQuery(document).ready(function () {
+            jQuery(function () {
+                jQuery.scrollUp({
+                    scrollName: 'scrollUp', // Element ID
+                    scrollDistance: 300, // Distance from top/bottom before showing element (px)
+                    scrollFrom: 'top', // 'top' or 'bottom'
+                    scrollSpeed: 300, // Speed back to top (ms)
+                    easingType: 'linear', // Scroll to top easing (see http://easings.net/)
+                    animation: 'fade', // Fade, slide, none
+                    animationSpeed: 200, // Animation in speed (ms)
+                    scrollTrigger: false, // Set a custom triggering element. Can be an HTML string or jQuery object
+                    //scrollTarget: false, // Set a custom target element for scrolling to the top
+                    scrollText: '<img src="/images/up-arrow.png" />', // Text for element, can contain HTML
+                    scrollTitle: false, // Set a custom <a> title if required.
+                    scrollImg: false, // Set true to use image
+                    activeOverlay: false, // Set CSS color to display scrollUp active point, e.g '#00FFFF'
+                    zIndex: 2147483647 // Z-Index for the overlay
+                });
+            });
+        });
+
         function CreateNews() {
             var contentPage = '<iframe class="frame" src="../Pages/NewsManagerPopup.aspx"></iframe>'
-            $('.contentDialog').html(contentPage);
+            jQuery('.contentDialog').html(contentPage);
         }
 
         function EditNews(idNews) {
             var param = "?Action=Edit";
             param += "&idNews=" + idNews;
             var contentPage = '<iframe class="frame" src="../Pages/NewsManagerPopup.aspx' + param + '"></iframe>'
-            $('.contentDialog').html(contentPage);
+            jQuery('.contentDialog').html(contentPage);
         }
 
         function closeDialog() {
-            $('.close').trigger("click");
+            jQuery('.close').trigger("click");
             window.location.href = "../Pages/NewsMyPost.aspx";
         }
 
         function Refresh() {
             window.location.href = window.location.href;
         }
+
+       
+
 
     </script>
 
@@ -59,6 +88,11 @@
         {
             height:550px;
         }
+        
+        .nav a[aria-expanded="true"] {
+            background-color: #BCF297;
+        } 
+        
     </style>
 
 
@@ -155,6 +189,40 @@
                              </div>
 
 
+                             <div class="panel-group">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading bg-main"><b>Thời Gian</b></div>
+                                    <div class="panel-body" style="padding:2px 0" >
+                                            <div class="nav">   
+                                            <ul class="nav" >
+						                    <asp:Repeater ID="repeaterYear" runat="server" 
+                                                    onitemdatabound="repeaterYear_ItemDataBound">
+                                                <ItemTemplate>
+
+                                                    <li class="item_type" ><a href="#<%# Eval("Year") %>" data-toggle="collapse" data-parent="#accordian" > <span class="pull-right">(<%# Eval("Count") %>)</span> <%# Eval("Year") %>  </a></li>
+
+                                                    <div style="height: 0px;" id="<%# Eval("Year") %>" class="panel-collapse collapse">
+
+										                <ul class="nav" style="padding: 2px;">
+				
+                                                            <asp:Repeater ID="repeaterItemYear" runat="server">
+                                                                <ItemTemplate>
+                                                                    <li><a href='/Pages/NewsTime.aspx?year=<%# Eval("Year") %>&month=<%# Eval("Month") %>' style="padding:6px 12px;"><span class="pull-right">(<%# Eval("Count") %>)</span> Tháng <%# Eval("Month") %> </a></li>
+                                                                </ItemTemplate>
+                                                            </asp:Repeater>
+
+										                </ul>
+								                    </div>
+                                                       
+                                                </ItemTemplate>
+                                            </asp:Repeater>
+							                </ul>
+					                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
                             <div class="panel-group">
                                 <div class="panel panel-default">
                                     <div class="panel-heading bg-main"><b>Xem Nhiều Nhất</b></div>
@@ -178,6 +246,7 @@
                                     </div>
                                 </div>
                             </div>
+
 
 					</div>
 

@@ -101,6 +101,13 @@ a {
     text-decoration: none;
 }
 
+a#scrollUp {
+  bottom: 0px;
+  right: 10px;
+  border:0px;
+}
+
+
 /*** override bootstrap  ***/
 .nav > li > a:focus, .nav > li > a:hover {
     text-decoration: none;
@@ -127,6 +134,11 @@ a {
 
 .panel-default {
     border-color: #4BA614;
+}
+
+.pagination a.selected
+{
+    background:#DDD;
 }
 
 /*** Comment ***/

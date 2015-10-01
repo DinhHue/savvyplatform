@@ -26,7 +26,7 @@
             <div class="container-fluid row" style="margin-bottom:10px;" >
 			
 				<div class="col-sm-12 col-md-9">
-					<div id="Div1" class="carousel slide " data-ride="carousel">
+					<div  id="myCarousel" class="carousel slide " data-ride="carousel">
 						<!-- Indicators -->
 						<ol class="carousel-indicators">
 							<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -39,19 +39,19 @@
 						<div class="carousel-inner" role="listbox">
 
 						    <div class="item active">
-							<img src="http://savvyadjusters.com.vn/sites/default/files/styles/home_slideshow/public/2.jpg" alt="Chania" width="460" height="345">
+							<img src="http://savvyadjusters.com.vn/sites/default/files/styles/home_slideshow/public/2.jpg" alt="Chania" >
 						    </div>
 
 						    <div class="item">
-							<img src="http://savvyadjusters.com.vn/sites/default/files/styles/home_slideshow/public/Can_Tho_City_-_Can_Tho_bridge.jpg" alt="Chania" width="460" height="345">
+							<img src="http://savvyadjusters.com.vn/sites/default/files/styles/home_slideshow/public/Can_Tho_City_-_Can_Tho_bridge.jpg" alt="Chania" />
 						    </div>
 						
 						    <div class="item">
-							<img src="http://savvyadjusters.com.vn/sites/default/files/styles/home_slideshow/public/Flooding_Lake_Delton.JPG" alt="Flower" width="460" height="345">
+							<img src="http://savvyadjusters.com.vn/sites/default/files/styles/home_slideshow/public/Flooding_Lake_Delton.JPG" alt="Flower" />
 						    </div>
 
 						    <div class="item">
-							<img src="http://savvyadjusters.com.vn/sites/default/files/styles/home_slideshow/public/ship%20insurance.jpg" alt="Flower" width="460" height="345">
+							<img src="http://savvyadjusters.com.vn/sites/default/files/styles/home_slideshow/public/ship%20insurance.jpg" alt="Flower" />
 						    </div>
 					  
 						</div>

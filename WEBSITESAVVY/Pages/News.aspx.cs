@@ -19,6 +19,8 @@ namespace WEBSITESAVVY.Pages
         {
             if (!IsPostBack)
             {
+                Page.Title = "SAVVY ADJUSTERS JSC";
+
                 fillDataNewsHot();
                 fillDataNews();
             }

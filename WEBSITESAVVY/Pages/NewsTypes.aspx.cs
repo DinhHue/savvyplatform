@@ -25,6 +25,8 @@ namespace WEBSITESAVVY.Pages
                 {
 
                     NewsTypeDTO newsType = daoNewsType.GetNewsType(idType);
+
+                    Page.Title = newsType.NameType;
                     lblTitle.Text = newsType.NameType;
 
                     fillData();
@@ -41,6 +43,7 @@ namespace WEBSITESAVVY.Pages
             pgitems.DataSource = dv;
             pgitems.AllowPaging = true;
             pgitems.PageSize = 20;
+            if (PageNumber >= pgitems.PageCount) PageNumber = 0;
             pgitems.CurrentPageIndex = PageNumber;
             if (pgitems.PageCount > 1)
             {
@@ -96,7 +99,22 @@ namespace WEBSITESAVVY.Pages
 
         protected void rptPages_ItemDataBound(object sender, RepeaterItemEventArgs e)
         {
+            if (e.Item.ItemType == ListItemType.Item || e.Item.ItemType == ListItemType.AlternatingItem)
+            {
+                LinkButton lb = e.Item.FindControl("btnPage") as LinkButton;
+                ScriptManager.GetCurrent(this).RegisterAsyncPostBackControl(lb);
 
+                if (lb.CommandArgument == (PageNumber + 1).ToString())
+                {
+                    lb.CssClass = "selected";
+                }
+            }
+            else if (e.Item.ItemType == ListItemType.Footer)
+            {
+                LinkButton linkBt = (LinkButton)e.Item.FindControl("btnPageNext");
+                linkBt.CommandArgument = (PageNumber + 2).ToString();
+                ScriptManager.GetCurrent(this).RegisterAsyncPostBackControl(linkBt);
+            } 
         }
     }
 }
