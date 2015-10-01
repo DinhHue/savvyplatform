@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/Master/news.Master" AutoEventWireup="true" CodeBehind="News.aspx.cs" Inherits="WEBSITESAVVY.Pages.News" %>
+﻿<%@ Page Title="Blogs - News" Language="C#" MasterPageFile="~/Master/news.Master" AutoEventWireup="true" CodeBehind="News.aspx.cs" Inherits="WEBSITESAVVY.Pages.News" %>
 
 
 
@@ -81,7 +81,7 @@
 					<div class="row" style="font-size:13px">
 						                    
                         <ul class="nav">
-                            <li style="background-color: #BCF297;" ><a style="color:#777; font-size:14px">Tin mới</a></li>
+                            <li style="background-color: #179406; color: #FFFFFF; font-weight: bold;" class="panel-heading" ><%--<a style="color:#FFFFFF; font-size:14px">Tin mới</a>--%>Tin mới</li>
                             <asp:Repeater ID="repeaterListNew" runat="server" >
                                 <ItemTemplate>
                                     <li class="item_type" ><a style="padding:4px 8px;" href="../Pages/NewsDetail.aspx?id=<%# Eval("ID_News") %>"> <%# Eval("Title")%> </a></li>
@@ -100,7 +100,7 @@
                         
             <div class="panel-group">
                 <div class="panel panel-default">
-                    <div class="panel-heading" style="background-color: #BCF297; font-weight:bold; color:Green">Tin Nóng</div>
+                    <div class="panel-heading" style="background-color: #179406; font-weight:bold; color:#FFFFFF">Tin Nóng</div>
                     <div class="panel-body" style="padding: 0 0 20px 0">
 
                         <asp:Repeater ID="repeaterList" runat="server" >

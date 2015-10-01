@@ -119,6 +119,14 @@ namespace WEBSITESAVVY.DAO
             return SqlDataAcessHelper.exStoreParas(sql, list);
         }
 
+        public DataTable GetListByGDV(int idGDV)
+        {
+            string sql = "[sp_News_ListByGDV]";
+            List<SqlParameter> list = new List<SqlParameter>();
+            list.Add(new SqlParameter("@ID_GDV", idGDV));
+            return SqlDataAcessHelper.exStoreParas(sql, list);
+        }
+
 
         public DataTable GetListSearch(String keyword)
         {

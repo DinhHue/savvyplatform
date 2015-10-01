@@ -19,6 +19,9 @@ namespace WEBSITESAVVY.Pages
             
             if (!IsPostBack)
             {
+
+                if (Request.Cookies["MaGDV"] == null) Response.Redirect("../Pages/Login.aspx");    
+
                 LoadData();
 
                 String idNews = "";
@@ -114,11 +117,14 @@ namespace WEBSITESAVVY.Pages
 
         protected void btnUpdate_Click(object sender, EventArgs e)
         {
+            int idgdv = int.Parse(Request.Cookies["MaGDV"].Value);
+
             int idNews = int.Parse( txtID_News.Value);
             NewsDTO news = newsDao.GetNews(idNews);
             news.Title = txtTitle.Text;
             news.LinkImages = txtLinkImage.Text;
             news.Brief = txtBrief.Text;
+            news.ID_GDVEdit = idgdv;
             news.DateModified = DateTime.Now;
             news.Contents = txtContents.Text;
 
@@ -137,7 +143,6 @@ namespace WEBSITESAVVY.Pages
             lblStatus.Text = "";
             if (newsDao.Update(news))
             {
-                Response.Write("<script> window.parent.closeDialog(); </script>");
                 Response.Write("<script> window.parent.Refresh();</script>");
             }
             else

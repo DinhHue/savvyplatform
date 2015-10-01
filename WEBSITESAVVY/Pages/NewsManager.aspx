@@ -124,7 +124,8 @@
                                         <asp:HiddenField ID="hidden_ID_news" Value='<%#DataBinder.Eval(Container.DataItem, "ID_News") %>'
                                             runat="server" />
                                         <input idnews='<%# Eval("ID_News") %>' type="button" class="btn" style="margin: 2px;
-                                            padding: 2px; cursor: pointer" value="Edit" onclick="editNews(this)" />
+                                            padding: 2px; cursor: pointer" value="Edit" onclick="editNews(this)" /> 
+                                        
                                         <div>
                                             <asp:Repeater ID="repeaterType" runat="server">
                                                 <ItemTemplate>
