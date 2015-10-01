@@ -16,14 +16,14 @@
 
     <script type="text/javascript">
         function CreateNews() {
-            var contentPage = '<iframe src="../Pages/NewsManagerPopup.aspx"></iframe>'
+            var contentPage = '<iframe class="frame" src="../Pages/NewsManagerPopup.aspx"></iframe>'
             $('.contentDialog').html(contentPage);
         }
 
         function EditNews(idNews) {
             var param = "?Action=Edit";
             param += "&idNews=" + idNews;
-            var contentPage = '<iframe src="../Pages/NewsManagerPopup.aspx' + param + '"></iframe>'
+            var contentPage = '<iframe class="frame" src="../Pages/NewsManagerPopup.aspx' + param + '"></iframe>'
             $('.contentDialog').html(contentPage);
         }
 
@@ -40,6 +40,10 @@
 
     <style type="text/css">
         iframe
+        {
+            border:1px solid #BCBCBC;
+        }
+        .frame
         {
             border:1px solid #BCBCBC;
             width:100%;
