@@ -123,7 +123,22 @@ namespace WEBSITESAVVY.DAO
             ds.Add(ma);
             return SqlDataAcessHelper.exNonStoreParas(sql, ds);
         }
-
+        public string LayTinhTrang(string id, string report)
+        {
+            string sql = "sp_DAILYTODO_KiemTraTinhTrang";
+            List<SqlParameter> ds = new List<SqlParameter>();
+            ds.Add(new SqlParameter("@idclaim", id));
+            ds.Add(new SqlParameter("@report", report));
+            DataTable dt = new DataTable();
+            dt = SqlDataAcessHelper.exStoreParas(sql, ds);
+            string tt = null;
+            if (dt.Rows.Count > 0)
+            {
+                DataRow dr = dt.Rows[0];
+                tt = dr[0].ToString();
+            }
+            return tt;
+        }
         public DataTable DaiLyTheoMa(int madaily)
         {
             string sql = "sp_DaiLy_SelectMa";
@@ -300,6 +315,31 @@ namespace WEBSITESAVVY.DAO
             ma.Value = madaily;
             ds.Add(ma);
             return SqlDataAcessHelper.exStoreParas(sql, ds);
+        }
+
+        public bool CheckedReport(string idclaim, string report,string ykien)
+        {
+            string sql = "sp_DAILYTODO_CheckedSR01";
+            List<SqlParameter> ds = new List<SqlParameter>();
+            ds.Add(new SqlParameter("@idclaim", idclaim));
+            ds.Add(new SqlParameter("@report",report));
+            ds.Add(new SqlParameter("@ykien", ykien));
+            return SqlDataAcessHelper.exNonStoreParas(sql, ds);
+        }
+
+        public DataRow SelectMessageReport(string idclaim, string report)
+        {
+            string sql = "sp_DAILYTODO_SelectRP";
+            List<SqlParameter> ds = new List<SqlParameter>();
+            ds.Add(new SqlParameter("@idclaim", idclaim));
+            ds.Add(new SqlParameter("@report", report));
+            DataTable dt = SqlDataAcessHelper.exStoreParas(sql, ds);
+            DataRow dr = null;
+            if (dt.Rows.Count > 0)
+            {
+                dr = dt.Rows[0];                
+            }
+            return dr;
         }
     }
 }

@@ -24,7 +24,17 @@ namespace WEBSITESAVVY.Messages
                 {
                     loadGDV();
                     string id = Session["ThamChieu"].ToString();
-                    loadTB(id);
+                    if (dldao.LayThongBao("SR01", id) != null)
+                    {
+                        panelthongbao.Visible = true;
+                        loadTB(id);
+                        panelSubmit.Visible = false;
+                    }
+                    else
+                    {   
+                        panelthongbao.Visible = false;
+                         panelSubmit.Visible = true;
+                    }
                 }
             }
             catch (Exception ex)
@@ -32,6 +42,17 @@ namespace WEBSITESAVVY.Messages
                 Response.Write("<script> alert('"+ex.Message+"');</script>");
             }
         }
+        void loadTB(string id)
+        {
+            if (dldao.LayThongBao("SR01", id) != null)
+            {
+                DataRow dr = dldao.LayThongBao("SR01", id);
+                txtThongBao.Text = dr["DienGiai"].ToString();
+                txtNgay.Text = dr["Ngay"].ToString();
+                lblGDV.Text = dr["TenGDV"].ToString();
+            }
+        }
+       
          void loadGDV()
         {
             if (!this.IsPostBack)
@@ -43,16 +64,7 @@ namespace WEBSITESAVVY.Messages
               
             }
         }
-         void loadTB(string id)
-         {
-             if (dldao.LayThongBao("SR01", id) != null)
-             {
-                 DataRow dr = dldao.LayThongBao("SR01", id);
-                 txtThongBao.Text = dr["DienGiai"].ToString();
-                 txtNgay.Text = dr["Ngay"].ToString();
-                 lblGDV.Text = dr["TenGDV"].ToString();
-             }
-         }
+        
         string GetName()
         {
             int maGDV = int.Parse(Request.Cookies["MaGDV"].Value);
@@ -71,7 +83,7 @@ namespace WEBSITESAVVY.Messages
                     Response.Write("<script>alert('Chưa nhập diễn giải công việc!');<script/>");
                 else
                 {
-                    dldto.DienGiai = diengiai;
+                    
                     dldto.Rate = 1;
                     dldto.Lev = 1;
                     dldto.Ngay = DateTime.Parse(DateTime.Now.ToShortDateString());
@@ -84,6 +96,7 @@ namespace WEBSITESAVVY.Messages
                         string ten = GetName();
                         string user = gdv.LayUsername(gdvnhan);
                         dldto.MaGDVNhan = gdvnhan;
+                        dldto.DienGiai = drDSGDV.SelectedItem.ToString() +": " + diengiai;
                         string email = gdv.LayEmail(user);
 
                         string brief = idclaim + " - " + cl.Laybrif(idclaim);
@@ -93,6 +106,7 @@ namespace WEBSITESAVVY.Messages
                         bodyCC += "<br/>";
                         bodyCC += "<br/>";
                         bodyCC += ten + " gửi bạn một tin nhắn có nội dung như sau: ";
+                        bodyCC += "<br/>";
                         bodyCC += "<br/>";
                         bodyCC += "<< " + diengiai + " >>";
                         bodyCC += "<br/>";
@@ -104,7 +118,7 @@ namespace WEBSITESAVVY.Messages
                         if (them == true)
                         {
                             sendmail.Send_Email_Task(email, "Task-to-do " + brief, bodyCC, "huedinh@savvyadjusters.vn");
-                            Response.Write("<script>parent.closeDialog();</script>");
+                            Response.Write("<script> window.parent.closeDialog(); </script>");
                            
                         }
                     }

@@ -18,9 +18,19 @@
             var contentPage = '<iframe style="width:100%; height:100% ; border:none;" src="../Messages/submitreport.aspx"></iframe>'
             $("#w_MessageClaim").html(contentPage); 
             $('#w_MessageClaim').window('open');
-            window.scrollTo(0, 0);            
-        } 
-        
+            window.scrollTo(0, 0);
+        }
+        function SendChecked() {
+            var contentPage = '<iframe style="width:100%; height:100% ; border:none;" src="../Messages/checkedreport.aspx"></iframe>'
+            $("#w_CheckClaim").html(contentPage);
+            $('#w_CheckClaim').window('open');
+            window.scrollTo(0, 0);
+        }
+        function closeDialog() {
+            //$('.panel-tool-close').trigger("click");
+            $('#w_MessageClaim').window('close');
+            $('#w_CheckClaim').window('close'); 
+        }
     </script>
     <style type="text/css">
         @page :first {
@@ -737,10 +747,9 @@
                 <DynamicSelectedStyle BackColor="#507CD1" />
                 <Items>
                     <asp:MenuItem Text="Choose" Value="Choose">
-                        <asp:MenuItem Text="Submit" Value="Submit" 
-                            NavigateUrl="javascript:MoveToURL();" ></asp:MenuItem>
-                        <asp:MenuItem Text="Checked" Value="Checked" NavigateUrl="javascript:MoveToURL();"></asp:MenuItem>
-                        <asp:MenuItem Text="Approved" Value="Approved"></asp:MenuItem>
+                        <asp:MenuItem Text="Submit" Value="Submit" NavigateUrl="javascript:MoveToURL();" ></asp:MenuItem>
+                        <asp:MenuItem Text="Checked / Approved" Value="Checked" NavigateUrl="javascript: SendChecked();"></asp:MenuItem>
+                       <%-- <asp:MenuItem Text="Approved" Value="Approved"></asp:MenuItem>--%>
                         <asp:MenuItem Text="Export to PDF" Value="Export to PDF" NavigateUrl="javascript:printPDF();"></asp:MenuItem>
                     </asp:MenuItem>
                 </Items>
@@ -755,7 +764,8 @@
 
         </form>
         
-      <div id="w_MessageClaim" class="easyui-window" title=" Submit to ..."  data-options="modal:true,closed:true,iconCls:'icon-add'" style="width:550px;height:400px;">abc</div>
+      <div id="w_MessageClaim" class="easyui-window" title=" Submit to ..."  data-options="modal:true,closed:true,iconCls:'icon-add'" style="width:550px;height:250px;">abc</div>
+       <div id="w_CheckClaim" class="easyui-window" title=" Checked, send message to ..."  data-options="modal:true,closed:true,iconCls:'icon-add'" style="width:550px;height:400px;">abc</div>
 
         <script type="text/javascript">
 

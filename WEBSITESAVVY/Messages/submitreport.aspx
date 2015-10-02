@@ -22,29 +22,38 @@
     <form id="form1" runat="server">
       <asp:ScriptManager ID="ScriptManager2" runat="server"/>
     <div align="center">
-     <table class="table_notification" align="center" width="100%">
+        <asp:Panel ID="panelthongbao" runat="server" Visible="False">
+        <table class="table_notification" align="center" width="100%" id="ThongBao">
             <tr>
                 <td class="leftpop" rowspan="2">
-                   <asp:Label ID="lblGDV" runat="server"></asp:Label> </td>
-                   <td align="left">
-                  <%-- <asp:TextBox ID="txtNgay" runat="server" 
-                           Enabled="False" CssClass="textTB"></asp:TextBox><br />
-                       <asp:TextBox ID="txtThongBao" runat="server" CssClass="textTB" 
-                           Enabled="False" Width="80%"></asp:TextBox>--%>                           
-                        <asp:Label ID="txtThongBao" runat="server" Text="Label" CssClass="labelTBNoiDng"></asp:Label>  <br/>
-                      
-                       
+                   <asp:Label ID="lblGDV" runat="server"></asp:Label> :</td>
+                   <td align="left" class="right">                                         
+                        <asp:Label ID="txtThongBao" runat="server" Text="" CssClass="labelTBNoiDng"></asp:Label>  <br/>
                 </td>
             </tr>
             <tr>
                    <td align="right">
-                        <asp:Label ID="txtNgay" runat="server" Text="Label" CssClass="labelTBNgay"></asp:Label>
+                        <asp:Label ID="txtNgay" runat="server" Text="" CssClass="labelTBNgay"></asp:Label>
                       
                        
                 </td>
             </tr>
-            </table><br />
-        <table class="table_notification" align="center" width="100%">
+            </table>
+            </asp:Panel>            
+             <asp:Panel ID="panelchecked" runat="server" Visible="False">       
+     <table class="table_notification" align="center" width="100%" id="Table1" style="margin-top: 20px">
+            <tr>
+                <td align="center">
+                        <asp:Label ID="lblYKien" runat="server" CssClass="labelbold" 
+                            ForeColor="#006600"></asp:Label>  <br/>
+                </td>
+            </tr>
+            </table> 
+            </asp:Panel>
+         
+            <br />
+        <asp:Panel ID="panelSubmit" runat="server" Visible="true">
+        <table class="table_notification" align="center" width="100%" id="tablesubmit">
             <tr>
                 <td class="leftedit">
                    <asp:Label ID="Label1" runat="server" Text="To :"></asp:Label> </td>
@@ -71,7 +80,7 @@
                 </td>
             </tr>
         </table>
-    
+        </asp:Panel>
     </div>
     </form>
 </body>

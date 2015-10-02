@@ -911,6 +911,7 @@
     <Content Include="Manage\QuanLyMemos.aspx" />
     <Content Include="Manage\QuanLyNguoiDaiDien.aspx" />
     <Content Include="Manage\QuanLyTaskAssiged.aspx" />
+    <Content Include="Messages\checkedreport.aspx" />
     <Content Include="Messages\submitreport.aspx" />
     <Content Include="mobile\Homem.aspx" />
     <Content Include="mobile\InformationForm.aspx" />
@@ -1756,6 +1757,13 @@
     </Compile>
     <Compile Include="Master\news.Master.designer.cs">
       <DependentUpon>news.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Messages\checkedreport.aspx.cs">
+      <DependentUpon>checkedreport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Messages\checkedreport.aspx.designer.cs">
+      <DependentUpon>checkedreport.aspx</DependentUpon>
     </Compile>
     <Compile Include="Messages\submitreport.aspx.cs">
       <DependentUpon>submitreport.aspx</DependentUpon>
