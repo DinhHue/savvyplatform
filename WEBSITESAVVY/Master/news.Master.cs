@@ -7,6 +7,7 @@ using System.Web.UI.WebControls;
 using WEBSITESAVVY.DAO;
 using System.Data;
 using WEBSITESAVVY.DTO;
+using System.Globalization;
 
 namespace WEBSITESAVVY.Master
 {
@@ -64,6 +65,17 @@ namespace WEBSITESAVVY.Master
             
         }
 
+
+        protected void repeaterItemYear_ItemDataBound(object sender, RepeaterItemEventArgs e)
+        {
+            if (e.Item.ItemType == ListItemType.Item || e.Item.ItemType == ListItemType.AlternatingItem)
+            {
+                int month = (int)DataBinder.Eval(e.Item.DataItem, "Month");
+                Label lblMonth = (Label)e.Item.FindControl("lblMonth");
+                lblMonth.Text = CultureInfo.CurrentCulture.DateTimeFormat.GetMonthName(month);
+            }
+
+        }
 
 
     }

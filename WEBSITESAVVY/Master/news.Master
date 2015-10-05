@@ -205,9 +205,11 @@
 
 										                <ul class="nav" style="padding: 2px;">
 				
-                                                            <asp:Repeater ID="repeaterItemYear" runat="server">
+                                                            <asp:Repeater ID="repeaterItemYear" OnItemDataBound="repeaterItemYear_ItemDataBound" runat="server">
                                                                 <ItemTemplate>
-                                                                    <li><a href='/Pages/NewsTime.aspx?year=<%# Eval("Year") %>&month=<%# Eval("Month") %>' style="padding:6px 12px;"><span class="pull-right">(<%# Eval("Count") %>)</span> Tháng <%# Eval("Month") %> </a></li>
+                                                                    <li><a href='/Pages/NewsTime.aspx?year=<%# Eval("Year") %>&month=<%# Eval("Month") %>' style="padding:6px 12px;">
+                                                                        <span class="pull-right">(<%#  Eval("Count") %>)</span> 
+                                                                        <asp:Label ID="lblMonth" runat="server" /></a></li>
                                                                 </ItemTemplate>
                                                             </asp:Repeater>
 
