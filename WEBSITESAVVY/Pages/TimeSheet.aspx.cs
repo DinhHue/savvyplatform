@@ -87,28 +87,28 @@ namespace WEBSITESAVVY
             drGDV.DataTextField = "TenGDV";
             drGDV.DataBind();
         }
-        void loadTSDate(string date)
+        void loadTSDate(string dateto,string datefrom)
         {
-            gvDSTimeSheet.DataSource = tsdao.TimesheetDate(date);
+            gvDSTimeSheet.DataSource = tsdao.TimesheetDate(dateto, datefrom);
             gvDSTimeSheet.DataBind();
           
          
         }
-        void loadTSCaseDate(string date, string id)
+        void loadTSCaseDate(string date, string id, string datefrom)
         {
-            gvDSTimeSheet.DataSource = tsdao.TimesheetCaseDate(date, id);
+            gvDSTimeSheet.DataSource = tsdao.TimesheetCaseDate(date, id,datefrom);
             gvDSTimeSheet.DataBind();
           
         }
-        void loadTSGDVDate(string date, int maLA)
+        void loadTSGDVDate(string date, int maLA, string date2)
         {
-            gvDSTimeSheet.DataSource = tsdao.TimeSheetGDVDate(date, maLA);
+            gvDSTimeSheet.DataSource = tsdao.TimeSheetGDVDate(date, maLA,date2);
             gvDSTimeSheet.DataBind();
            
         }
-        void loadTSGDVDATECASE(string id, int gdv, string date)
+        void loadTSGDVDATECASE(string id, int gdv, string date, string date2)
          {
-             gvDSTimeSheet.DataSource = tsdao.TSGDVDateClaim(date, gdv, id);
+             gvDSTimeSheet.DataSource = tsdao.TSGDVDateClaim(date, gdv, id,date2);
              gvDSTimeSheet.DataBind();
            
         }
@@ -116,7 +116,8 @@ namespace WEBSITESAVVY
         {
 
             string ma = txtMaClaim.Text;
-            string ngay = txtDate.Text;
+            string ngay = txtDateFrom.Text;
+            string ngayto = txtDateto.Text;
             int maLA = int.Parse(drGDV.SelectedItem.Value.ToString());
             if (ngay == "" && ma == "" && maLA != 0)
             {
@@ -129,15 +130,15 @@ namespace WEBSITESAVVY
             }
             if (ngay != "" && ma == "" && maLA == 0)
             {
-                loadTSDate(ngay);
+                loadTSDate(ngayto,ngay);
             }
             if (ngay != "" && ma != "" && maLA == 0)
             {
-                loadTSCaseDate(ngay, ma);
+                loadTSCaseDate(ngayto, ma,ngay);
             }
             if (ngay != "" & ma == "" && maLA != 0)
             {
-                loadTSGDVDate(ngay, maLA);
+                loadTSGDVDate(ngayto, maLA,ngay);
             }
             if (ngay == "" && ma != "" && maLA != 0)
             {
@@ -145,7 +146,7 @@ namespace WEBSITESAVVY
             }
             if (ngay != "" && ma != "" && maLA != 0)
             {
-                loadTSGDVDATECASE(ma, maLA, ngay);
+                loadTSGDVDATECASE(ma, maLA, ngayto,ngay);
             }
             ////tablethem.Visible = false;
             //int idgdv = int.Parse(drGDV.SelectedItem.Value.ToString());            
@@ -175,7 +176,9 @@ namespace WEBSITESAVVY
             {
                 //lblThongBaoDS.Text = "Chưa có cập nhật Diary của " + thamchieu + " này!";
                 //lblThongBaoDS.Visible = true;
-                Response.Write("<script>alert('Empty Timesheet!');</script>");
+                //Response.Write("<script>alert('Empty Timesheet!');</script>");
+
+                ScriptManager.RegisterStartupScript(this, GetType(), "alertMessage", "alert('Empty Timesheet!');", true);
             }
 
         }
@@ -579,7 +582,8 @@ namespace WEBSITESAVVY
                     int cv = int.Parse(dr[0].ToString());
                     if (cv != 2)
                     {
-                        Response.Write("<script> alert('Sorry, You haven't permission to delete timesheet!');</script>");
+                        //Response.Write("<script> alert('Sorry, You haven't permission to delete timesheet!');</script>");
+                        ScriptManager.RegisterStartupScript(this, GetType(), "alertMessage", "alertMessage();", true);
                     }
                     else
                     {
@@ -599,7 +603,7 @@ namespace WEBSITESAVVY
                                 loadTSTheoGDVClaim(idgdv, maclaim);
                         }
                         else
-                            Response.Write("<script> alert('Delete faile!');</script>");
+                            ScriptManager.RegisterStartupScript(this, GetType(), "alertMessage", "alertMessage();", true);
                     }
                 }
             }

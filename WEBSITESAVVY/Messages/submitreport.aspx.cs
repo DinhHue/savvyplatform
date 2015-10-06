@@ -23,18 +23,7 @@ namespace WEBSITESAVVY.Messages
                 if (Session["ThamChieu"].ToString() != null)
                 {
                     loadGDV();
-                    string id = Session["ThamChieu"].ToString();
-                    //if (dldao.LayThongBao("SR01", id) != null)
-                    //{
-                    //    panelthongbao.Visible = true;
-                    //    loadTB(id);
-                    //    panelSubmit.Visible = false;
-                    //}
-                    //else
-                    //{   
-                    //    panelthongbao.Visible = false;
-                    //     panelSubmit.Visible = true;
-                    //}
+                    string id = Session["ThamChieu"].ToString();                
                     string tt = LayTinhTrang(id, "SR01");
                     if (tt == "No")
                         loadTB(id);

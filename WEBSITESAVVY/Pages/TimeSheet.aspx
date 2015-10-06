@@ -87,6 +87,10 @@
 
             $(".gridtable").tableDnD();
         });
+
+        function alertMessage() {
+            alert('You can not deleted, please contact to your admin!');
+        }
     </script>
 
 
@@ -137,15 +141,23 @@
       <div class="ambitios_wrapper" align="center">
           <table style="vertical-align: top; text-align: center" width="100%">
               <tr>
-                  <td>
-                            <asp:Label ID="Label3" runat="server" Text="Date :" Font-Bold="True"></asp:Label>
-                            &nbsp;<asp:TextBox ID="txtDate" runat="server" CssClass="input"></asp:TextBox>
-                             <ajaxToolkit:CalendarExtender ID="txtDate_CalendarExtender" runat="server" 
-            TargetControlID="txtDate" DaysModeTitleFormat="yyyy-MM,dd" 
+                  <td><asp:Label ID="Label1" runat="server" Text="Date to :" Font-Bold="True"></asp:Label>
+                            &nbsp;<asp:TextBox ID="txtDateto" runat="server" CssClass="input" 
+                          Width="10%"></asp:TextBox>
+                             <ajaxToolkit:CalendarExtender ID="CalendarExtender1" runat="server" 
+            TargetControlID="txtDateto" DaysModeTitleFormat="yyyy-MM,dd" 
+            Format="yyyy-MM-dd" TodaysDateFormat="yyyy-MM,dd">
+        </ajaxToolkit:CalendarExtender>                  
+                            <asp:Label ID="Label3" runat="server" Text="Date from :" Font-Bold="True"></asp:Label>
+                            &nbsp;<asp:TextBox ID="txtDateFrom" runat="server" CssClass="input" 
+                          Width="10%"></asp:TextBox>
+                             <ajaxToolkit:CalendarExtender ID="txtDateFrom_CalendarExtender" runat="server" 
+            TargetControlID="txtDateFrom" DaysModeTitleFormat="yyyy-MM,dd" 
             Format="yyyy-MM-dd" TodaysDateFormat="yyyy-MM,dd">
         </ajaxToolkit:CalendarExtender>                     
                       <asp:Label ID="Label2" runat="server" Text="Claim No. :" Font-Bold="True"></asp:Label>
-                      &nbsp;<asp:TextBox ID="txtMaClaim" runat="server" CssClass="input txtClaim" ></asp:TextBox>
+                      &nbsp;<asp:TextBox ID="txtMaClaim" runat="server" CssClass="input txtClaim" 
+                          Width="10%" ></asp:TextBox>
                       &nbsp;<asp:DropDownList ID="drGDV" runat="server" AppendDataBoundItems="True" Width="200px"
                           CssClass="input ddlGDV" AutoPostBack="True">
                           <asp:ListItem Value="0">Chọn GĐV</asp:ListItem>
@@ -166,7 +178,7 @@
                       <div id="mn" class="menu-content"  
                           style="padding: 2px; width:250px; text-align: left;">
                       <ul>
-                     <li><asp:HyperLink ID="HyperLink4" runat="server" class="easyui-linkbutton" CssClass="input" NavigateUrl="~/Pages/AdjustTimesheet.aspx" data-options="plain:true" >Adjust Time-Spent</asp:HyperLink></li>
+                    <%-- <li><asp:HyperLink ID="HyperLink4" runat="server" class="easyui-linkbutton" CssClass="input" NavigateUrl="~/Pages/AdjustTimesheet.aspx" data-options="plain:true" >Adjust Time-Spent</asp:HyperLink></li>--%>
                   <li> <asp:HyperLink ID="HyperLink5" runat="server" class="easyui-linkbutton" onclick="$('#w_NewTimeSheet').window('open')"  CssClass="input"  href="javascript:void(0)" data-options="plain:true">New TimeSheet</asp:HyperLink></li>
                    
                     <li> <asp:HyperLink ID="HyperLink6" runat="server" class="easyui-linkbutton" CssClass="input" NavigateUrl="~/Pages/NewTimeSheetOtherLA.aspx" data-options="plain:true">New TimeSheet for Other LA</asp:HyperLink></li>
@@ -176,7 +188,7 @@
                 
                   </td>
               </tr>
-           <%--   <tr>
+              <%--   <tr>
                   <td style="padding-right: 50px; text-align: right">
                   <div style="float:right">
                     <asp:Button ID="btnAdjustTime" runat="server" CssClass="btn" Text="Adjust Time-Spent"

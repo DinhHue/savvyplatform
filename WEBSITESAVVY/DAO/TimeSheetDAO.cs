@@ -286,16 +286,19 @@ namespace WEBSITESAVVY.DAO
 
             return SqlDataAcessHelper.exNonStoreParas(sql, ds);
         }
-        public DataTable TimesheetDate(string date)
+        public DataTable TimesheetDate(string date1,string date2)
         {
             string sql = "sp_Timesheet_Date";
             List<SqlParameter> ds = new List<SqlParameter>();
             SqlParameter ngay = new SqlParameter("@ngay", SqlDbType.VarChar);
-            ngay.Value = date;
+            ngay.Value = date1;
             ds.Add(ngay);
+            SqlParameter ngay2 = new SqlParameter("@ngayden", SqlDbType.VarChar);
+            ngay2.Value = date2;
+            ds.Add(ngay2);
             return SqlDataAcessHelper.exStoreParas(sql, ds);
         }
-        public DataTable TimesheetCaseDate(string date, string id)
+        public DataTable TimesheetCaseDate(string date, string id, string date2)
         {
             string sql = "sp_Timesheet_DateClaim";
             List<SqlParameter> ds = new List<SqlParameter>();
@@ -305,6 +308,9 @@ namespace WEBSITESAVVY.DAO
             SqlParameter caseno = new SqlParameter("@idclaim", SqlDbType.VarChar);
             caseno.Value = id;
             ds.Add(caseno);
+            SqlParameter ngay2 = new SqlParameter("@ngayden", SqlDbType.VarChar);
+            ngay2.Value = date2;
+            ds.Add(ngay2);
             return SqlDataAcessHelper.exStoreParas(sql, ds);
         }
         public DataTable TimesheetGDVCase(string id, int gdv)
@@ -319,7 +325,7 @@ namespace WEBSITESAVVY.DAO
             ds.Add(caseno);
             return SqlDataAcessHelper.exStoreParas(sql, ds);
         }
-        public DataTable TimeSheetGDVDate(string date, int magdv)
+        public DataTable TimeSheetGDVDate(string date, int magdv, string date2)
         {
             string sql = "sp_Timesheet_GDVDate";
             List<SqlParameter> ds = new List<SqlParameter>();
@@ -329,9 +335,12 @@ namespace WEBSITESAVVY.DAO
             SqlParameter maLA = new SqlParameter("@idgdv", SqlDbType.Int);
             maLA.Value = magdv;
             ds.Add(maLA);
+            SqlParameter ngay2 = new SqlParameter("@ngayden", SqlDbType.VarChar);
+            ngay2.Value = date2;
+            ds.Add(ngay2);
             return SqlDataAcessHelper.exStoreParas(sql, ds);
         }
-        public DataTable TSGDVDateClaim(string date, int magdv, string id)
+        public DataTable TSGDVDateClaim(string date, int magdv, string id, string date2)
         {
             string sql = "sp_Timesheet_GDVDateClaimAdjus";
             List<SqlParameter> ds = new List<SqlParameter>();
@@ -344,6 +353,10 @@ namespace WEBSITESAVVY.DAO
             SqlParameter maLA = new SqlParameter("@gdv", SqlDbType.Int);
             maLA.Value = magdv;
             ds.Add(maLA);
+
+            SqlParameter ngay2 = new SqlParameter("@ngayden", SqlDbType.VarChar);
+            ngay2.Value = date2;
+            ds.Add(ngay2);
             return SqlDataAcessHelper.exStoreParas(sql, ds);
         }
         public Object upTSObject(int ma, string key, string value)

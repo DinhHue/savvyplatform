@@ -62,8 +62,8 @@
             window.location.href = window.location.href;
         }
 
+       
 
-  
 
     </script>
 
@@ -191,7 +191,7 @@
 
                              <div class="panel-group">
                                 <div class="panel panel-default">
-                                    <div class="panel-heading bg-main"><b> Blog Archive </b></div>
+                                    <div class="panel-heading bg-main"><b>Blog Archive</b></div>
                                     <div class="panel-body" style="padding:2px 0" >
                                             <div class="nav">   
                                             <ul class="nav" >
@@ -205,9 +205,11 @@
 
 										                <ul class="nav" style="padding: 2px;">
 				
-                                                            <asp:Repeater ID="repeaterItemYear" runat="server">
+                                                            <asp:Repeater ID="repeaterItemYear" OnItemDataBound="repeaterItemYear_ItemDataBound" runat="server">
                                                                 <ItemTemplate>
-                                                                    <li><a href='/Pages/NewsTime.aspx?year=<%# Eval("Year") %>&month=<%# Eval("Month") %>' style="padding:6px 12px;"><span class="pull-right">(<%# Eval("Count") %>)</span>( <%# Eval("Month") %> ) </a></li>
+                                                                    <li><a href='/Pages/NewsTime.aspx?year=<%# Eval("Year") %>&month=<%# Eval("Month") %>' style="padding:6px 12px;">
+                                                                        <span class="pull-right">(<%#  Eval("Count") %>)</span> 
+                                                                        <asp:Label ID="lblMonth" runat="server" /></a></li>
                                                                 </ItemTemplate>
                                                             </asp:Repeater>
 
@@ -280,7 +282,7 @@
                         <button type="button" class="close" data-dismiss="modal">
                             &times;</button>
                         <h4 class="modal-title">
-                            Acticle</h4>
+                            Article</h4>
                     </div>
                     <div class="modal-body contentDialog">Loading...</div>
                 </div>

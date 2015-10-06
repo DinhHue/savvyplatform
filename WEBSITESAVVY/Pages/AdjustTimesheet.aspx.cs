@@ -48,9 +48,9 @@ namespace WEBSITESAVVY.Pages
             grTSGDVCase.Visible = false;
             grTSGDVDateCase.Visible = false;
         }
-        void loadTSDate(string date)
+        void loadTSDate(string dateto, string datefrom)
         {
-            gvDSTimeSheetDate.DataSource = ts.TimesheetDate(date);
+            gvDSTimeSheetDate.DataSource = ts.TimesheetDate(dateto, datefrom);
             gvDSTimeSheetDate.DataBind();
             gvDSTimeSheet.Visible = false;
             gvDSTimeSheetDate.Visible = true;
@@ -62,8 +62,8 @@ namespace WEBSITESAVVY.Pages
         }
         void loadTSCaseDate(string date, string id)
         {
-            gvTimesheetCaseDate.DataSource = ts.TimesheetCaseDate(date, id);
-            gvTimesheetCaseDate.DataBind();
+            //gvTimesheetCaseDate.DataSource = ts.TimesheetCaseDate(date, id);
+            //gvTimesheetCaseDate.DataBind();
             gvDSTimeSheet.Visible = false;
             gvDSTimeSheetDate.Visible = false;
             gvTimesheetCaseDate.Visible = true;
@@ -74,8 +74,8 @@ namespace WEBSITESAVVY.Pages
         }
         void loadTSGDVDate(string date, int maLA)
         {
-            grTSGDVDate.DataSource = ts.TimeSheetGDVDate(date, maLA);
-            grTSGDVDate.DataBind();
+            //grTSGDVDate.DataSource = ts.TimeSheetGDVDate(date, maLA);
+            //grTSGDVDate.DataBind();
             gvDSTimeSheet.Visible = false;
             gvDSTimeSheetDate.Visible = false;
             gvTimesheetCaseDate.Visible = false;
@@ -98,8 +98,8 @@ namespace WEBSITESAVVY.Pages
         }
         void loadTSGDVDATECASE(string id, int gdv, string date)
         {
-            grTSGDVDateCase.DataSource = ts.TSGDVDateClaim(date, gdv, id);
-            grTSGDVDateCase.DataBind();
+            //grTSGDVDateCase.DataSource = ts.TSGDVDateClaim(date, gdv, id);
+            //grTSGDVDateCase.DataBind();
             gvDSTimeSheet.Visible = false;
             gvDSTimeSheetDate.Visible = false;
             gvTimesheetCaseDate.Visible = false;
@@ -120,7 +120,7 @@ namespace WEBSITESAVVY.Pages
             }
             if (ngay != "" && ma == "" && maLA == 0)
             {
-                loadTSDate(ngay);
+               // loadTSDate(ngay);
             }
             if (ngay != "" && ma != "" && maLA == 0)
             {
@@ -210,20 +210,20 @@ namespace WEBSITESAVVY.Pages
             string ngay = txtDate.Text;
             int IDTS = int.Parse(gvDSTimeSheetDate.DataKeys[e.RowIndex].Value.ToString());
             ts.XoaTimeSheet(IDTS);
-            loadTSDate(ngay);
+            //loadTSDate(ngay);
         }
 
         protected void gvDSTimeSheetDate_RowCancelingEdit(object sender, GridViewCancelEditEventArgs e)
         {
             e.Cancel = true;
             gvDSTimeSheetDate.EditIndex = -1;
-            loadTSDate(txtDate.Text);
+            //loadTSDate(txtDate.Text);
         }
 
         protected void gvDSTimeSheetDate_RowEditing(object sender, GridViewEditEventArgs e)
         {
             gvDSTimeSheetDate.EditIndex = e.NewEditIndex;
-            loadTSDate(txtDate.Text);
+           // loadTSDate(txtDate.Text);
         }
 
         protected void gvDSTimeSheetDate_RowUpdating(object sender, GridViewUpdateEventArgs e)
@@ -243,7 +243,7 @@ namespace WEBSITESAVVY.Pages
             {
                 e.Cancel = true;
                 gvDSTimeSheetDate.EditIndex = -1;
-                loadTSDate(txtDate.Text);
+                //loadTSDate(txtDate.Text);
             }
         }
 
