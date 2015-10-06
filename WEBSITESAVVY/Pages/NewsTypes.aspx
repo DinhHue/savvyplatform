@@ -63,6 +63,11 @@
                                     runat="server"><%# Container.DataItem %>
                                 </asp:LinkButton></li>
                             </ItemTemplate>
+                            <FooterTemplate>
+                                <li><asp:LinkButton ID="btnPageNext" Style="" CommandName="Page" CommandArgument=""
+                                    runat="server">Next
+                                </asp:LinkButton></li>
+                            </FooterTemplate>
                         </asp:Repeater>
                     </ul>
                 </div>

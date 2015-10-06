@@ -7,34 +7,63 @@
     <title></title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
-    <link type="text/css" rel="stylesheet" href="/css/main_news.css"/>
-   
+    <script src="/js/jquery.scrollUp.min.js"></script>
+
+    <link rel="stylesheet" href="/css/main_news.css">
+
     <script type="text/javascript">
+
+        /*scroll to top*/
+        $.noConflict();
+        jQuery(document).ready(function () {
+            jQuery(function () {
+                jQuery.scrollUp({
+                    scrollName: 'scrollUp', // Element ID
+                    scrollDistance: 300, // Distance from top/bottom before showing element (px)
+                    scrollFrom: 'top', // 'top' or 'bottom'
+                    scrollSpeed: 300, // Speed back to top (ms)
+                    easingType: 'linear', // Scroll to top easing (see http://easings.net/)
+                    animation: 'fade', // Fade, slide, none
+                    animationSpeed: 200, // Animation in speed (ms)
+                    scrollTrigger: false, // Set a custom triggering element. Can be an HTML string or jQuery object
+                    //scrollTarget: false, // Set a custom target element for scrolling to the top
+                    scrollText: '<img src="/images/up-arrow.png" />', // Text for element, can contain HTML
+                    scrollTitle: false, // Set a custom <a> title if required.
+                    scrollImg: false, // Set true to use image
+                    activeOverlay: false, // Set CSS color to display scrollUp active point, e.g '#00FFFF'
+                    zIndex: 2147483647 // Z-Index for the overlay
+                });
+            });
+        });
+
         function CreateNews() {
             var contentPage = '<iframe class="frame" src="../Pages/NewsManagerPopup.aspx"></iframe>'
-            $('.contentDialog').html(contentPage);
+            jQuery('.contentDialog').html(contentPage);
         }
 
         function EditNews(idNews) {
             var param = "?Action=Edit";
             param += "&idNews=" + idNews;
             var contentPage = '<iframe class="frame" src="../Pages/NewsManagerPopup.aspx' + param + '"></iframe>'
-            $('.contentDialog').html(contentPage);
+            jQuery('.contentDialog').html(contentPage);
         }
 
         function closeDialog() {
-            $('.close').trigger("click");
+            jQuery('.close').trigger("click");
             window.location.href = "../Pages/NewsMyPost.aspx";
         }
 
         function Refresh() {
             window.location.href = window.location.href;
         }
+
+
+  
 
     </script>
 
@@ -59,6 +88,11 @@
         {
             height:550px;
         }
+        
+        .nav a[aria-expanded="true"] {
+            background-color: #BCF297;
+        } 
+        
     </style>
 
 
@@ -87,15 +121,15 @@
 						    <div class="shop-menu pull-right">
 							    <ul class="nav navbar-nav">
 
-								        <li data-toggle="modal" data-target="#myModal" onclick="return CreateNews();" ><a href="#">Đăng Bài</a></li>
+								        <li data-toggle="modal" data-target="#myModal" onclick="return CreateNews();" ><a href="#">New Post</a></li>
 								        <li>
                                             <a href="#" data-toggle="dropdown" >
                                                 <asp:Label ID="lblName" runat="server" Text=""></asp:Label> <span class="caret"></span>  </a>
                                             
                                             <ul class="dropdown-menu">
-                                                <li><a href="../Pages/Home.aspx"> Platform - Claim </a></li>
-                                                <li id="itemAdmin" runat="server" ><a href="../Pages/NewsManager.aspx">Quản Lý Bài Viết</a></li>
-                                                <li><a href="../Pages/NewsMyPost.aspx">Bài Viết Của Tôi</a></li>
+                                                <li><a href="../Pages/Home.aspx">Platform - Claim</a></li>
+                                                <li id="itemAdmin" runat="server" ><a href="../Pages/NewsManager.aspx">Management News</a></li>
+                                                <li><a href="../Pages/NewsMyPost.aspx">My Post</a></li>
                                                 <li><a href="../Pages/Logout.aspx">Logout</a></li>
                                             </ul>
                                         </li>
@@ -136,7 +170,7 @@
 
                             <div class="panel-group">
                                   <div class="panel panel-default">
-                                        <div class="panel-heading bg-main"><b>Thể Loại</b></div>
+                                        <div class="panel-heading bg-main"><b>Category</b></div>
                                         <div class="panel-body" style="padding:2px 0">
 
                                            
@@ -144,7 +178,7 @@
 						                        <asp:Repeater ID="rptTypes" runat="server">
                                                     <ItemTemplate>
 
-                                                        <li class="item_type"><a href="../Pages/NewsTypes.aspx?id=<%# Eval("ID_Type") %>"><%# Eval("NameType") %></a></li>
+                                                        <li class="item_type"><a href='../Pages/NewsTypes.aspx?id=<%# Eval("ID_Type") %>'> <span class="pull-right">(<%# Eval("Count") %>)</span> <%# Eval("NameType") %></a></li>
 
                                                     </ItemTemplate>
                                                 </asp:Repeater>
@@ -155,9 +189,43 @@
                              </div>
 
 
+                             <div class="panel-group">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading bg-main"><b> Blog Archive </b></div>
+                                    <div class="panel-body" style="padding:2px 0" >
+                                            <div class="nav">   
+                                            <ul class="nav" >
+						                    <asp:Repeater ID="repeaterYear" runat="server" 
+                                                    onitemdatabound="repeaterYear_ItemDataBound">
+                                                <ItemTemplate>
+
+                                                    <li class="item_type" ><a href="#<%# Eval("Year") %>" data-toggle="collapse" data-parent="#accordian" > <span class="pull-right">(<%# Eval("Count") %>)</span> <%# Eval("Year") %>  </a></li>
+
+                                                    <div style="height: 0px;" id="<%# Eval("Year") %>" class="panel-collapse collapse">
+
+										                <ul class="nav" style="padding: 2px;">
+				
+                                                            <asp:Repeater ID="repeaterItemYear" runat="server">
+                                                                <ItemTemplate>
+                                                                    <li><a href='/Pages/NewsTime.aspx?year=<%# Eval("Year") %>&month=<%# Eval("Month") %>' style="padding:6px 12px;"><span class="pull-right">(<%# Eval("Count") %>)</span>( <%# Eval("Month") %> ) </a></li>
+                                                                </ItemTemplate>
+                                                            </asp:Repeater>
+
+										                </ul>
+								                    </div>
+                                                       
+                                                </ItemTemplate>
+                                            </asp:Repeater>
+							                </ul>
+					                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
                             <div class="panel-group">
                                 <div class="panel panel-default">
-                                    <div class="panel-heading bg-main"><b>Xem Nhiều Nhất</b></div>
+                                    <div class="panel-heading bg-main"><b>Most popular</b></div>
                                     <div class="panel-body" style="padding:2px 0" >
                                             <div class="nav">   
                                             <ul class="nav" >
@@ -178,6 +246,7 @@
                                     </div>
                                 </div>
                             </div>
+
 
 					</div>
 
@@ -211,7 +280,7 @@
                         <button type="button" class="close" data-dismiss="modal">
                             &times;</button>
                         <h4 class="modal-title">
-                            Bài viết</h4>
+                            Acticle</h4>
                     </div>
                     <div class="modal-body contentDialog">Loading...</div>
                 </div>

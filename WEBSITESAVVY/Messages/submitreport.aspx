@@ -23,10 +23,10 @@
       <asp:ScriptManager ID="ScriptManager2" runat="server"/>
     <div align="center">
         <asp:Panel ID="panelthongbao" runat="server" Visible="False">
-        <table class="table_notification" align="center" width="100%" id="ThongBao">
+        <table class="table_notification" align="center" width="100%" id="ThongBao" style="margin-top: 10px">
             <tr>
                 <td class="leftpop" rowspan="2">
-                   <asp:Label ID="lblGDV" runat="server"></asp:Label> :</td>
+                   <asp:Label ID="lblGDV" runat="server"></asp:Label> </td>
                    <td align="left" class="right">                                         
                         <asp:Label ID="txtThongBao" runat="server" Text="" CssClass="labelTBNoiDng"></asp:Label>  <br/>
                 </td>
@@ -46,6 +46,11 @@
                 <td align="center">
                         <asp:Label ID="lblYKien" runat="server" CssClass="labelbold" 
                             ForeColor="#006600"></asp:Label>  <br/>
+                </td>
+            </tr>
+            <tr>
+                <td align="right">
+                    <asp:Label ID="txtngayxong" runat="server" CssClass="labelTBNgay"></asp:Label>
                 </td>
             </tr>
             </table> 

@@ -317,13 +317,14 @@ namespace WEBSITESAVVY.DAO
             return SqlDataAcessHelper.exStoreParas(sql, ds);
         }
 
-        public bool CheckedReport(string idclaim, string report,string ykien)
+        public bool CheckedReport(string idclaim, string report,string ykien, DateTime ngayxong)
         {
             string sql = "sp_DAILYTODO_CheckedSR01";
             List<SqlParameter> ds = new List<SqlParameter>();
             ds.Add(new SqlParameter("@idclaim", idclaim));
             ds.Add(new SqlParameter("@report",report));
             ds.Add(new SqlParameter("@ykien", ykien));
+            ds.Add(new SqlParameter("@datedone", ngayxong));
             return SqlDataAcessHelper.exNonStoreParas(sql, ds);
         }
 

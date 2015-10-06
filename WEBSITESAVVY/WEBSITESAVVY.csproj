@@ -1354,6 +1354,7 @@
     <Content Include="Pages\NewsManager.aspx" />
     <Content Include="Pages\NewsManagerPopup.aspx" />
     <Content Include="Pages\NewsMyPost.aspx" />
+    <Content Include="Pages\NewsTime.aspx" />
     <Content Include="Pages\NewsTypes.aspx" />
     <Content Include="Pages\NewTimeSheet.aspx" />
     <Content Include="Pages\NewTimeSheetOtherLA.aspx" />
@@ -1540,6 +1541,8 @@
     <Content Include="Uc\UcThongTinDVBHVANDBHKSRR.ascx" />
     <Content Include="Uploads\Images\baby-boy-icon.png" />
     <Content Include="Uploads\Images\Thumb\baby-boy-icon.png" />
+    <Content Include="Uploads\Media\MINIONS - Happy Holidays.mp4" />
+    <Content Include="Uploads\Media\Romance.mp3" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -2485,6 +2488,13 @@
     <Compile Include="Pages\NewsMyPost.aspx.designer.cs">
       <DependentUpon>NewsMyPost.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Pages\NewsTime.aspx.cs">
+      <DependentUpon>NewsTime.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\NewsTime.aspx.designer.cs">
+      <DependentUpon>NewsTime.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Pages\NewsTypes.aspx.cs">
       <DependentUpon>NewsTypes.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -3096,6 +3106,7 @@
     <None Include="tinymce\skins\lightgray\fonts\tinymce.eot" />
     <None Include="tinymce\skins\lightgray\fonts\tinymce.ttf" />
     <None Include="tinymce\skins\lightgray\fonts\tinymce.woff" />
+    <None Include="Uploads\Media\♭♫ Canción de Cuna - Laberinto del Fauno %28Piano Ver.%29 ♫♭ - YouTube.FLV" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
@@ -3105,7 +3116,7 @@
         <WebProjectProperties>
           <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>52942</DevelopmentServerPort>
+          <DevelopmentServerPort>53144</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>
           </IISUrl>

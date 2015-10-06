@@ -16,6 +16,12 @@ namespace WEBSITESAVVY.DAO
             return SqlDataAcessHelper.exStoreNoParas(sql);
         }
 
+        public DataTable GetListSummary()
+        {
+            string sql = "sp_News_TypeSummary";
+            return SqlDataAcessHelper.exStoreNoParas(sql);
+        }
+
         public NewsTypeDTO GetNewsType(String id)
         {
             string sql = "sp_TypeNews_ID";

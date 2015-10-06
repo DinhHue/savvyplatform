@@ -1,14 +1,19 @@
-﻿<%@ Page Title="Blogs - Your post" Language="C#" MasterPageFile="../Master/news.Master" AutoEventWireup="true" CodeBehind="NewsMyPost.aspx.cs" Inherits="WEBSITESAVVY.Pages.NewsMyPost" %>
-<asp:Content ID="contentHead" ContentPlaceHolderID="head" runat="server">
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master/news.Master" AutoEventWireup="true" CodeBehind="NewsTime.aspx.cs" Inherits="WEBSITESAVVY.Pages.NewsTime" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
+
 
 <asp:Content ID="contentTitleBar" ContentPlaceHolderID="ContentPlaceHolderTitleBar" runat="server">
+    
     <a href="/Pages/News.aspx"><span class="home">Home</span></a>
     <asp:Label CssClass="split" ID="lblTitle" runat="server" />
+
 </asp:Content>
 
-<asp:Content ID="contentMain" ContentPlaceHolderID="ContentPlaceHolderMain" runat="server">
 
+<asp:Content ID="contentMain" ContentPlaceHolderID="ContentPlaceHolderMain" runat="server">
+    
     <asp:UpdatePanel ID="UpdatePanel1" runat="server">
         <ContentTemplate>
 
@@ -22,11 +27,11 @@
                                     
                                 <div style="margin:5px 0 5px 0">
                                     <p>
-                                        <a href="../Pages/NewsDetail.aspx?id=<%# Eval("ID_News") %>"><span ><b><%# Eval("Title") %></b></a></span>
+                                        <a href="/Pages/NewsDetail.aspx?id=<%# Eval("ID_News") %>"><span ><b><%# Eval("Title") %></b></a></span>
                                                 
                                     </p>
                                     <p>
-                                        <a href="../Pages/NewsDetail.aspx?id=<%# Eval("ID_News") %>">
+                                        <a href="/Pages/NewsDetail.aspx?id=<%# Eval("ID_News") %>">
                                             <img class="linkImage img-thumbnail" src="<%# Eval("LinkImages") %>" alt="<%# Eval("LinkImages") %>" />
                                         </a>
 

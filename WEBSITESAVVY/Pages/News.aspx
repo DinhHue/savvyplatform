@@ -26,7 +26,7 @@
             <div class="container-fluid row" style="margin-bottom:10px;" >
 			
 				<div class="col-sm-12 col-md-9">
-					<div id="Div1" class="carousel slide " data-ride="carousel">
+					<div  id="myCarousel" class="carousel slide " data-ride="carousel">
 						<!-- Indicators -->
 						<ol class="carousel-indicators">
 							<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -39,19 +39,19 @@
 						<div class="carousel-inner" role="listbox">
 
 						    <div class="item active">
-							<img src="http://savvyadjusters.com.vn/sites/default/files/styles/home_slideshow/public/2.jpg" alt="Chania" width="460" height="345">
+							<img src="http://savvyadjusters.com.vn/sites/default/files/styles/home_slideshow/public/2.jpg" alt="Chania" >
 						    </div>
 
 						    <div class="item">
-							<img src="http://savvyadjusters.com.vn/sites/default/files/styles/home_slideshow/public/Can_Tho_City_-_Can_Tho_bridge.jpg" alt="Chania" width="460" height="345">
+							<img src="http://savvyadjusters.com.vn/sites/default/files/styles/home_slideshow/public/Can_Tho_City_-_Can_Tho_bridge.jpg" alt="Chania" />
 						    </div>
 						
 						    <div class="item">
-							<img src="http://savvyadjusters.com.vn/sites/default/files/styles/home_slideshow/public/Flooding_Lake_Delton.JPG" alt="Flower" width="460" height="345">
+							<img src="http://savvyadjusters.com.vn/sites/default/files/styles/home_slideshow/public/Flooding_Lake_Delton.JPG" alt="Flower" />
 						    </div>
 
 						    <div class="item">
-							<img src="http://savvyadjusters.com.vn/sites/default/files/styles/home_slideshow/public/ship%20insurance.jpg" alt="Flower" width="460" height="345">
+							<img src="http://savvyadjusters.com.vn/sites/default/files/styles/home_slideshow/public/ship%20insurance.jpg" alt="Flower" />
 						    </div>
 					  
 						</div>
@@ -81,7 +81,7 @@
 					<div class="row" style="font-size:13px">
 						                    
                         <ul class="nav">
-                            <li style="background-color: #179406; color: #FFFFFF; font-weight: bold;" class="panel-heading" ><%--<a style="color:#FFFFFF; font-size:14px">Tin mới</a>--%>Tin mới</li>
+                            <li style="background-color: #179406; color: #FFFFFF; font-weight: bold;" class="panel-heading" > Newest </li>
                             <asp:Repeater ID="repeaterListNew" runat="server" >
                                 <ItemTemplate>
                                     <li class="item_type" ><a style="padding:4px 8px;" href="../Pages/NewsDetail.aspx?id=<%# Eval("ID_News") %>"> <%# Eval("Title")%> </a></li>
@@ -100,7 +100,7 @@
                         
             <div class="panel-group">
                 <div class="panel panel-default">
-                    <div class="panel-heading" style="background-color: #179406; font-weight:bold; color:#FFFFFF">Tin Nóng</div>
+                    <div class="panel-heading" style="background-color: #179406; font-weight:bold; color:#FFFFFF">Most popular</div>
                     <div class="panel-body" style="padding: 0 0 20px 0">
 
                         <asp:Repeater ID="repeaterList" runat="server" >

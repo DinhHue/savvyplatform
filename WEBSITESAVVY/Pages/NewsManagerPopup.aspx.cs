@@ -79,7 +79,7 @@ namespace WEBSITESAVVY.Pages
                 }
             }
         }
-
+        GiamDinhVienDAO gdv = new GiamDinhVienDAO();
         protected void btnCreate_Click(object sender, EventArgs e)
         {
             int idgdv = int.Parse(Request.Cookies["MaGDV"].Value);
@@ -108,13 +108,28 @@ namespace WEBSITESAVVY.Pages
             lblStatus.Text = "";
             if (newsDao.CreateNew(news))
             {
+                SaveLogTracking(idgdv,gdv.LayTenTheoMa(idgdv)+" viết bài: "+ txtTitle.Text, "Blogs");
                 Response.Write("<script> window.parent.closeDialog(); </script>");
                 Response.Write("<script> window.parent.Refresh();</script>");
             }
             else
                 lblStatus.Text = "Create Error";
         }
-
+        void SaveLogTracking(int maGDV, string noidung, string maclaim)
+        {
+            try
+            {
+                TrackingDTO tr = new TrackingDTO();
+                TrackingDAO trdao = new TrackingDAO();
+                tr.MaGDV = maGDV;
+                tr.NoiDung = noidung;
+                tr.TimeReal = DateTime.Now;
+                tr.MaClaim = maclaim;
+                trdao.InsertTracking(tr);
+            }
+            catch (Exception ex)
+            { }
+        }
         protected void btnUpdate_Click(object sender, EventArgs e)
         {
             int idgdv = int.Parse(Request.Cookies["MaGDV"].Value);
@@ -143,6 +158,7 @@ namespace WEBSITESAVVY.Pages
             lblStatus.Text = "";
             if (newsDao.Update(news))
             {
+                SaveLogTracking(idgdv, gdv.LayTenTheoMa(idgdv)+ " cập nhật bài: "+ txtTitle.Text, "Blogs");
                 Response.Write("<script> window.parent.Refresh();</script>");
             }
             else

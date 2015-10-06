@@ -34,13 +34,32 @@ namespace WEBSITESAVVY.Master
 
             if (!gdvDao.KiemTraBacQuanLy(idGDV)) itemAdmin.Visible = false;
                 
-            rptTypes.DataSource = daoNewsType.GetList();
+            rptTypes.DataSource = daoNewsType.GetListSummary();
             rptTypes.DataBind();
 
             if (repeaterMostViews.DataSource == null)
             {
                 repeaterMostViews.DataSource = daoNews.GetListMostViewHotLimit(10);
                 repeaterMostViews.DataBind();
+            }
+
+            //Load Group Year
+            repeaterYear.DataSource = daoNews.GroupByYear();
+            repeaterYear.DataBind();
+            
+        }
+
+        protected void repeaterYear_ItemDataBound(object sender, RepeaterItemEventArgs e)
+        {
+            //Load group Year item
+            if (e.Item.ItemType == ListItemType.Item || e.Item.ItemType == ListItemType.AlternatingItem)
+            {
+                int year = (int)DataBinder.Eval(e.Item.DataItem, "Year");
+                DataTable dt = daoNews.GroupByMonth(year);
+                Repeater repeaterItemYear = (Repeater)e.Item.FindControl("repeaterItemYear");
+
+                repeaterItemYear.DataSource = dt;
+                repeaterItemYear.DataBind();
             }
             
         }
