@@ -10,9 +10,52 @@
 
     <script type="text/javascript" src="../js/jquery-1.4.min.js"></script>
 
-<%--	<link rel="stylesheet" type="text/css" href="../css/claim.css"/>
-	<script type="text/javascript" src="../Scripts/jquery.min.js"></script>
-	<script type="text/javascript" src="../Scripts/jquery.easyui.min.js"></script>--%>
+    <script type="text/javascript" src="../tinymce/tinymce.min.js"></script>
+
+    <script type="text/javascript">
+        
+        function cancel(obj)
+        {
+            var key = $(obj).attr("key");
+            $("#lbl" + key).show();
+            $("#panel" + key).hide();
+        };
+
+        function editField(obj) {
+            var key = $(obj).attr("key");
+
+            <%  if(!showEdit)  Response.Write("return;");    %>
+
+            $("#lbl" + key).hide();
+            $("#panel" + key).show();
+
+            window.location.href = "#" + key;
+
+            tinymce.init({
+                selector: "#txt" + key,
+                plugins: [
+                        "advlist autolink autosave link image lists charmap print preview hr anchor pagebreak spellchecker",
+                        "searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime image imagetools media nonbreaking",
+                        "table contextmenu directionality emoticons textcolor paste fullpage textcolor colorpicker textpattern example"
+                ],
+
+                toolbar1: "newdocument fullpage | bold italic underline strikethrough | alignleft aligncenter alignright alignjustify | styleselect formatselect fontselect fontsizeselect",
+                toolbar2: "cut copy paste | searchreplace | bullist numlist | outdent indent | undo redo | image media code preview | forecolor backcolor | print fullscreen |",
+                toolbar3: "",
+
+                menubar: false,
+                toolbar_items_size: 'small',
+
+                image_advtab: true,
+
+
+            });
+
+
+
+        }
+
+    </script>
 
 
 
@@ -180,6 +223,20 @@
       
         
     </style>
+
+    <style type="text/css">
+        .hiden
+        {
+            display:none ;
+        }
+        .panelUpdate *
+        {
+            font-size:14px !important;
+        }
+
+    </style>
+
+
 </head>
 <body>
     <form id="form1" runat="server">
@@ -475,54 +532,142 @@
 
         <div class="box" >
             <h3 id="A1" key="A1" title="Giới Thiệu Chung" onclick="parent.updateField(this);">I. GIỚI THIỆU CHUNG</h3>
-            <div>
-                <asp:Label ID="lblA1" runat="server" Width="100%" ></asp:Label>
+            <div >
+                <asp:Label ID="lblA1" key="A1" onclick="editField(this)" runat="server" Width="100%" ></asp:Label>
+                <asp:Panel ID="panelA1" CssClass="panelUpdate hiden" runat="server">
+                    <asp:TextBox ID="txtA1" CssClass="hiden" TextMode="MultiLine" Height="250px" runat="server" />
+                    <div style="margin-top:10px">
+                        <asp:Button id="btnUpdateA1" key="A1" onclick="btnUpdate_Click" Text="Update" runat="server"/>
+                        <input id="btnCancelA1" key="A1" type="button" value="Cancel" onclick="cancel(this)" />
+                    </div>
+                </asp:Panel>
             </div>
         </div>
 
         <div class="box" >
             <h3 id="GioiThieu" key="GioiThieu" title="Người Được Bảo Hiểm" onclick="parent.updateField(this);">II. NGƯỜI ĐƯỢC BẢO HIỂM</h3>
-            <div><asp:Label ID="lblGioiThieu" runat="server" Width="100%" ></asp:Label></div>
+            <div key="GioiThieu" >
+                <asp:Label ID="lblGioiThieu" key="GioiThieu" onclick="editField(this)" runat="server" Width="100%" ></asp:Label>
+                <asp:Panel ID="panelGioiThieu" CssClass="panelUpdate hiden" runat="server">
+                    <asp:TextBox ID="txtGioiThieu" CssClass="hiden" TextMode="MultiLine" Height="250px" runat="server" />
+                    <div style="margin-top:10px">
+                        <asp:Button id="btnUpdateGioiThieu" key="GioiThieu" onclick="btnUpdate_Click" Text="Update" runat="server"/>
+                        <input id="btnCancelGioiThieu" key="GioiThieu" type="button" value="Cancel" onclick="cancel(this)" />
+                    </div>
+                </asp:Panel>
+            </div>
         </div>
 
         <div class="box" >
             <h3 id="C1" key="DienBienTonThat" title="Diễn Biến" onclick="parent.updateField(this);">III. DIỄN BIẾN</h3>
-            <div><asp:Label ID="lblC1" runat="server" Width="100%" ></asp:Label></div>
+            <div>
+                <asp:Label ID="lblDienBienTonThat" key="DienBienTonThat" onclick="editField(this)" runat="server" Width="100%" ></asp:Label>
+                <asp:Panel ID="panelDienBienTonThat" CssClass="panelUpdate hiden" runat="server">
+                    <asp:TextBox ID="txtDienBienTonThat" CssClass="hiden" TextMode="MultiLine" Height="250px" runat="server" />
+                    <div style="margin-top:10px">
+                        <asp:Button id="btnUpdateC1" key="DienBienTonThat" onclick="btnUpdate_Click" Text="Update" runat="server"/>
+                        <input id="btnCancelC1" key="DienBienTonThat" type="button" value="Cancel" onclick="cancel(this)" />
+                    </div>
+                </asp:Panel>
+            </div>
         </div>
 
         <div class="box" >
             <h3 id="C3" key="C3" title="Nguyên Nhân" onclick="parent.updateField(this);">IV. NGUYÊN NHÂN</h3>
-            <div><asp:Label ID="lblC3" runat="server" Width="100%" ></asp:Label></div>
+            <div>
+                <asp:Label ID="lblC3" key="C3" onclick="editField(this)" runat="server" Width="100%" ></asp:Label>
+                <asp:Panel ID="panelC3" CssClass="panelUpdate hiden" runat="server">
+                    <asp:TextBox ID="txtC3" CssClass="hiden" TextMode="MultiLine" Height="250px" runat="server" />
+                    <div style="margin-top:10px">
+                        <asp:Button  key="C3" onclick="btnUpdate_Click" Text="Update" runat="server"/>
+                        <input  key="C3" type="button" value="Cancel" onclick="cancel(this)" />
+                    </div>
+                </asp:Panel>
+            </div>
         </div>
 
         <div class="box" >
             <h3 id="E1" key="E1" title="Phạm Vi Bảo Hiểm" onclick="parent.updateField(this);">V. PHẠM VI BẢO HIỂM</h3>
-            <div><asp:Label ID="lblE1" runat="server" Width="100%" ></asp:Label></div>
+            <div>
+                <asp:Label ID="lblE1" key="E1" onclick="editField(this)" runat="server" Width="100%" ></asp:Label>
+                <asp:Panel ID="panelE1" CssClass="panelUpdate hiden" runat="server">
+                    <asp:TextBox ID="txtE1" CssClass="hiden" TextMode="MultiLine" Height="250px" runat="server" />
+                    <div style="margin-top:10px">
+                        <asp:Button  key="E1" onclick="btnUpdate_Click" Text="Update" runat="server"/>
+                        <input  key="E1" type="button" value="Cancel" onclick="cancel(this)" />
+                    </div>
+                </asp:Panel>
+            </div>
         </div>
 
         <div class="box" >
             <h3 id="D1" key="D1" title="Phạm Vi Và Mức Độ Thiệt Hại" onclick="parent.updateField(this);">VI. PHẠM VI VÀ MỨC ĐỘ THIỆT HẠI</h3>
-            <div><asp:Label ID="lblD1" runat="server" Width="100%" ></asp:Label></div>
+            <div>
+                <asp:Label ID="lblD1" key="D1" onclick="editField(this)" runat="server" Width="100%" ></asp:Label>
+                <asp:Panel ID="panelD1" CssClass="panelUpdate hiden" runat="server">
+                    <asp:TextBox ID="txtD1" CssClass="hiden" TextMode="MultiLine" Height="250px" runat="server" />
+                    <div style="margin-top:10px">
+                        <asp:Button   key="D1" onclick="btnUpdate_Click" Text="Update" runat="server"/>
+                        <input  key="D1" type="button" value="Cancel" onclick="cancel(this)" />
+                    </div>
+                </asp:Panel>
+            </div>
         </div>
 
         <div class="box" >
             <h3 id="G" key="G" title="Đơn Bảo Hiểm Khác" onclick="parent.updateField(this);">VII. ĐƠN BẢO HIỂM KHÁC</h3>
-            <div><asp:Label ID="lblG" runat="server" Width="100%" ></asp:Label></div>
+            <div>
+                <asp:Label ID="lblG" key="G" onclick="editField(this)" runat="server" Width="100%" ></asp:Label>
+                <asp:Panel ID="panelG" CssClass="panelUpdate hiden" runat="server">
+                    <asp:TextBox ID="txtG" CssClass="hiden" TextMode="MultiLine" Height="250px" runat="server" />
+                    <div style="margin-top:10px">
+                        <asp:Button   key="G" onclick="btnUpdate_Click" Text="Update" runat="server"/>
+                        <input  key="G" type="button" value="Cancel" onclick="cancel(this)" />
+                    </div>
+                </asp:Panel>
+            </div>
         </div>
 
         <div class="box" >
             <h3 id="H" key="H" title="Giá Trị Thu Hồi" onclick="parent.updateField(this);">VIII. GIÁ TRỊ THU HỒI</h3>
-            <div><asp:Label ID="lblH" runat="server" Width="100%" ></asp:Label></div>
+            <div>
+                <asp:Label ID="lblH" key="H" onclick="editField(this)" runat="server" Width="100%" ></asp:Label>
+                <asp:Panel ID="panelH" CssClass="panelUpdate hiden" runat="server">
+                    <asp:TextBox ID="txtH"  CssClass="hiden" TextMode="MultiLine" Height="250px" runat="server" />
+                    <div style="margin-top:10px">
+                        <asp:Button  key="H" onclick="btnUpdate_Click" Text="Update" runat="server"/>
+                        <input  key="H" type="button" value="Cancel" onclick="cancel(this)" />
+                    </div>
+                </asp:Panel>
+            </div>
         </div>
 
         <div class="box" >
             <h3 id="I" key="I" title="Dự Phòng Bồi Thường" onclick="parent.updateField(this);">IX. DỰ PHÒNG BỒI THƯỜNG</h3>
-            <div><asp:Label ID="lblI" runat="server" Width="100%" ></asp:Label></div>
+            <div>
+                <asp:Label ID="lblI" key="I" onclick="editField(this)" runat="server" Width="100%" ></asp:Label>
+                <asp:Panel ID="panelI" CssClass="panelUpdate hiden" runat="server">
+                    <asp:TextBox ID="txtI"  CssClass="hiden" TextMode="MultiLine" Height="250px" runat="server" />
+                    <div style="margin-top:10px">
+                        <asp:Button key="I" onclick="btnUpdate_Click" Text="Update" runat="server"/>
+                        <input  key="I" type="button" value="Cancel" onclick="cancel(this)" />
+                    </div>
+                </asp:Panel>
+            </div>
         </div>
 
         <div class="box" >
             <h3 id="TamUngBoiThuongText" key="TamUngBoiThuongText" title="Tạm Ứng Bồi Thường" onclick="parent.updateField(this);">X. TẠM ỨNG BỒI THƯỜNG</h3>
-            <div><asp:Label ID="lblTamUngBoiThuongText" runat="server" Width="100%" ></asp:Label></div>
+            <div>
+                <asp:Label ID="lblTamUngBoiThuongText" key="TamUngBoiThuongText" onclick="editField(this)" runat="server" Width="100%" ></asp:Label>
+                <asp:Panel ID="panelTamUngBoiThuongText" CssClass="panelUpdate hiden" runat="server">
+                    <asp:TextBox ID="txtTamUngBoiThuongText"  CssClass="hiden" TextMode="MultiLine" Height="250px" runat="server" />
+                    <div style="margin-top:10px">
+                        <asp:Button  key="TamUngBoiThuongText" onclick="btnUpdate_Click" Text="Update" runat="server"/>
+                        <input  key="TamUngBoiThuongText" type="button" value="Cancel" onclick="cancel(this)" />
+                    </div>
+                </asp:Panel>
+            </div>
         </div>
 
         <div class="box" >
