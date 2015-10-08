@@ -1,0 +1,570 @@
+﻿/* DEFAULTS
+----------------------------------------------------------*/
+
+body
+{
+  
+    font-size: 16px;
+    font-family: Georgia, "Times New Roman" , Times, serif;
+    margin: 0px;
+    padding: 0px;
+}
+
+a:link, a:visited
+{
+    color: #034af3;
+}
+
+a:hover
+{
+    color: #1d60ff;
+    text-decoration: none;
+}
+
+a:active
+{
+    color: #034af3;
+}
+
+p
+{
+    margin-bottom: 10px;
+    line-height: 1.6em;
+}
+
+div.mainclaim
+{ text-align: left;
+    font-size: 12px;
+    vertical-align: top;
+    float: left;
+    list-style: none;  }
+/* HEADINGS   
+----------------------------------------------------------*/
+
+h1, h2, h3, h4, h5, h6
+{
+	font-size: 1.5em;
+	color: #060;
+	font-variant: small-caps;
+	text-transform: none;
+	font-weight: 200;
+	margin-bottom: 0px;
+}
+
+h1
+{
+    font-size: 1.6em;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+
+h2
+{
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+h3
+{
+    font-size: 1.2em;
+}
+
+h4
+{
+    font-size: 1.1em;
+}
+
+h5, h6
+{
+    font-size: 1em;
+}
+
+/* this rule styles <h1> and <h2> tags that are the 
+first child of the left and right table columns */
+.rightColumn > h1, .rightColumn > h2, .leftColumn > h1, .leftColumn > h2
+{
+    margin-top: 0px;
+}
+.bottonrow
+{
+    border-bottom: 1px solid #003300;
+    display: table-cell
+}
+
+.blockrow {
+    background: none repeat-x scroll center bottom #FFFFFF;
+}
+
+/* PRIMARY LAYOUT ELEMENTS   
+----------------------------------------------------------*/
+
+.page
+{
+    font-family :Times New Roman;
+    width: 100%;
+    background-color: #fff;
+    margin: 0px auto 0px auto;
+    border: 0px solid #496077;
+}
+
+.header
+{
+    position: inherit;
+    background: #008000;
+    width: 100%;
+    text-align: center;
+    vertical-align: top;
+}
+
+.header h1
+{
+    font-weight: 700;
+    margin: 0px;
+    padding: 0px 0px 0px 20px;
+    color: #f9f9f9;
+    border: none;
+    line-height: 2em;
+    font-size: 2em;
+    text-align:Center;
+   
+}
+.menuleft
+{
+    width:25%;
+    float:left;
+    vertical-align:top;
+    
+}
+.main
+{
+    padding: 0px 10px 0px 0px;
+    margin: 6px 4px 4px 4px;
+    min-height: 420px;
+    text-align:center;
+    
+}
+.mainmanager
+{
+    padding: 0px 10px 0px 0px;
+    margin: 6px 4px 4px 4px;
+    min-height: 420px;
+    text-align:center;
+    width:85%;
+}
+.mainchild
+{
+    float:left;
+    width:95%;
+    vertical-align:top;
+      
+}
+.leftCol
+{
+    padding: 6px 0px;
+    margin: 12px 8px 8px 8px;
+    min-height: 200px;
+}
+
+.footer
+{
+	padding: 8px 0px 0px 0px;
+	margin: 0px auto;	
+	/*line-height: normal;
+	color: #030;*/
+	height:100px;
+}
+
+
+/* TAB MENU   
+----------------------------------------------------------*/
+
+div.hideSkiplink
+{
+    background-color: #060;
+    text-align: center;
+    float: none;
+    vertical-align: top;
+    padding: 0px 0px 0px 2%;
+}
+
+div.menu
+{
+    text-align: right;
+    font-size: 12px;
+    vertical-align: top;
+    float: right;
+    list-style: none;
+    padding: 0px 2px 0px 0px;
+}
+
+div.menu ul
+{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    width: auto;
+    vertical-align:top;
+}
+
+div.menu ul li a,div.menu ul li a:visited
+{
+	background-color: #060;
+	border: 1px #4e667d solid;
+	color: #FFF;
+	display: block;
+	line-height: 1.35em;
+	padding: 4px 20px;
+	text-decoration: none;
+	white-space: nowrap;
+	vertical-align:top;
+}
+
+div.menu ul li a:hover
+{
+	background-color: #bfcbd6;
+	color: #060;
+	text-decoration: none;
+}
+div.menu ul li a:active
+{
+	background-color: #bfcbd6;
+	color: #060;
+	text-decoration: none;
+}
+div.menu ul li a:active span
+{
+	background-color: #bfcbd6;
+	color: #060;
+	text-decoration: none;
+}
+
+div.menuLeft
+{
+    float: left;
+    width: 99%;
+    border: 1px solid #CCC;
+    padding-left: 10px;
+    padding-top: 10px;
+    overflow: scroll;
+    height:490px;
+} 
+.menuLeft ul {
+    width: 100%;
+   
+    margin: 0px;
+}
+.menuLeft li {
+    border-bottom: 1px solid #CCC;
+    margin: 0px;
+    padding: 0px;
+    background: none repeat scroll 0% 0% #EEE;
+}
+.menuLeft a
+{
+    text-decoration: none;
+    display: block;
+    font-weight: bold;
+    font-size: 16px;
+    color: #333333;
+    text-shadow: 1px 1px #FFF;
+    padding: 2% 4%;
+}
+.menuLeft ul li a:hover
+{
+    color: #999999;
+    background-color: #808080;
+}
+.menuLeft ul li a:active
+{
+}
+
+.active
+{
+   
+}
+ul li {
+    line-height: 20px;
+    list-style-type: none;
+}
+.down
+{
+    display:none;
+    position:absolute;
+    min-width:25%;
+    padding:2px 2px;
+}
+.menu_down
+{
+    
+}
+
+.menuLeft ul li:hover .down
+{
+    display: block;
+    background: #CCCCCC;
+    left: 0;
+    height: auto;
+    white-space: nowrap;   
+    color: #003300;
+    right:auto;
+}   
+.outmenuleft
+{
+    padding: 2px;
+    margin: 1px;
+   
+    width: 20%;
+}
+/* FORM ELEMENTS   
+----------------------------------------------------------*/
+
+fieldset
+{
+    margin: 1em 0px;
+    padding: 1em;
+    border: 1px solid #ccc;
+}
+
+fieldset p 
+{
+    margin: 2px 12px 10px 10px;
+}
+
+fieldset.login label, fieldset.register label, fieldset.changePassword label
+{
+    display: block;
+}
+
+fieldset label.inline 
+{
+    display: inline;
+}
+
+legend 
+{
+    font-size: 1.1em;
+    font-weight: 600;
+    padding: 2px 4px 8px 4px;
+}
+
+input.textEntry 
+{
+    border: 1px solid #ccc;
+    margin-left: 0px;
+}
+input.textClaim
+{
+    width:250px;
+    border: 1px solid #ccc;
+    height:25px;
+}
+input.text
+{
+    width: 70%;
+    border: thin solid #ccc;
+    height: 25px;
+}
+input.passwordEntry 
+{
+    border: 1px solid #ccc;
+    }
+
+div.accountInfo
+{
+    width: 40%;
+    position:absolute;
+}
+
+/* MISC  
+----------------------------------------------------------*/
+
+.clear
+{
+    clear: both;
+}
+
+.title
+{
+    display: block;
+    float: left;
+    text-align: right;
+    width: 70%;
+   
+    padding-right: 30px;
+}
+
+.loginDisplay
+{
+    font-size: 1.1em;
+    display: block;
+    text-align: right;
+    padding: 10px;
+    color: White;
+    font-size:16px;
+}
+
+.loginDisplay a:link
+{
+    color: white;
+}
+
+.loginDisplay a:visited
+{
+    color: white;
+}
+
+.loginDisplay a:hover
+{
+    color: white;
+}
+
+.failureNotification
+{
+    font-size: 1.2em;
+    color: Red;
+}
+
+.bold
+{
+    font-weight: bold;
+}
+.submitButton
+{
+    text-align: right;
+    padding-right: 10px;
+}
+.tablenew
+{
+    font-family: 'Times New Roman' , Times, serif;
+    font-size: 14px;
+    vertical-align: top;
+    text-align: justify;
+    width: 80%;
+    text-align: center;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    box-shadow: 5px 3px 5px #ccc;
+    background-color: #F0F0F0;
+}
+.login
+{
+    width: 220px;
+  
+    position: relative;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.contentsubsub
+{
+    font-family: 'Times New Roman' , Times, serif;
+    font-size: 16px;
+    vertical-align: top;
+    text-align: left;
+    width: 99%;
+}
+.mainclaim
+{
+    padding: 4px 5px 10px 20px;
+    border: 1px solid #CCCCCC;  
+    width: 97%;
+    float: left;
+    overflow: scroll;
+    height: 490px;
+}
+.outmainclaim
+{
+   
+    padding: 2px;
+    margin: 1px;
+    width: 78%;
+    float: right;
+}
+.thanhngang
+{
+    font-family: 'Times New Roman' , Times, serif;
+    border: 1px solid #CCCCCC;
+    width: 100%;
+    height: 30px;
+    background-color: #CCCCCC;
+    vertical-align: top;
+    padding-bottom: 5px;
+}
+
+
+
+
+/* css popup */
+.headForm{
+    background:#006300; 
+    height:35px; 
+    font-weight:bold; 
+    color: whitesmoke; 
+    font-size: 20px;   
+    text-align: center !important; 
+    padding-top: 10px;
+}
+
+.popup, .bmulti {
+    /*background-color: white; */
+    border: 1px solid gray;
+    border-radius: 5px;
+    box-shadow: 0 0 25px 5px #999;
+    color: #111;
+    display: none;
+    min-height: 20%;
+    min-width: 20%;
+    padding: 10px;
+}
+
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+iframe{
+    height: 100%;
+    width: 100%;
+}
+
+.content{
+    position:relative;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background:WhiteSmoke;
+    padding:5px 10px;
+}
+
+.contentPopup{
+    position:relative;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background:WhiteSmoke;
+    height: 90%;
+    width: 100%;
+}
+
+.bClose {
+    position: absolute;
+    right: 16px;
+    top: 16px;
+    z-index:1;
+    vertical-align: middle;
+    text-align:center;
+    padding:4px;
+    width:20px;
+    height:20px;
+    cursor:pointer;
+}
+.bClose:hover {
+    box-shadow: inset 0 1px #FFF, 0 2px 2px #000;
+    background: rgba(0, 0, 0, .2);
+    text-shadow: 0 0 12px #2054DA, 0 1px #FFF;
+}
+    .bClose:active {
+        box-shadow:none;
+    }
+/* end popup */

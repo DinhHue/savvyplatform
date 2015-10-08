@@ -1,0 +1,294 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="news.master.cs" Inherits="WEBSITESAVVY.Master.news" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+    <script src="/js/jquery.scrollUp.min.js"></script>
+
+    <link rel="stylesheet" href="/css/main_news.css">
+
+    <script type="text/javascript">
+
+        /*scroll to top*/
+        $.noConflict();
+        jQuery(document).ready(function () {
+            jQuery(function () {
+                jQuery.scrollUp({
+                    scrollName: 'scrollUp', // Element ID
+                    scrollDistance: 300, // Distance from top/bottom before showing element (px)
+                    scrollFrom: 'top', // 'top' or 'bottom'
+                    scrollSpeed: 300, // Speed back to top (ms)
+                    easingType: 'linear', // Scroll to top easing (see http://easings.net/)
+                    animation: 'fade', // Fade, slide, none
+                    animationSpeed: 200, // Animation in speed (ms)
+                    scrollTrigger: false, // Set a custom triggering element. Can be an HTML string or jQuery object
+                    //scrollTarget: false, // Set a custom target element for scrolling to the top
+                    scrollText: '<img src="/images/up-arrow.png" />', // Text for element, can contain HTML
+                    scrollTitle: false, // Set a custom <a> title if required.
+                    scrollImg: false, // Set true to use image
+                    activeOverlay: false, // Set CSS color to display scrollUp active point, e.g '#00FFFF'
+                    zIndex: 2147483647 // Z-Index for the overlay
+                });
+            });
+        });
+
+        function CreateNews() {
+            var contentPage = '<iframe class="frame" src="../Pages/NewsManagerPopup.aspx"></iframe>'
+            jQuery('.contentDialog').html(contentPage);
+        }
+
+        function EditNews(idNews) {
+            var param = "?Action=Edit";
+            param += "&idNews=" + idNews;
+            var contentPage = '<iframe class="frame" src="../Pages/NewsManagerPopup.aspx' + param + '"></iframe>'
+            jQuery('.contentDialog').html(contentPage);
+        }
+
+        function closeDialog() {
+            jQuery('.close').trigger("click");
+            window.location.href = "../Pages/NewsMyPost.aspx";
+        }
+
+        function Refresh() {
+            window.location.href = window.location.href;
+        }
+
+       
+
+
+    </script>
+
+    <style type="text/css">
+        iframe
+        {
+            border:1px solid #BCBCBC;
+        }
+        .frame
+        {
+            border:1px solid #BCBCBC;
+            width:100%;
+            height:100%;
+        }
+        .modal-header {
+            padding: 8px 15px;
+        }
+        .modal-body {
+            padding: 10px;
+        }
+        .contentDialog
+        {
+            height:550px;
+        }
+        
+        .nav a[aria-expanded="true"] {
+            background-color: #BCF297;
+        } 
+        
+    </style>
+
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <asp:ScriptManager ID="ScriptManager1" EnablePartialRendering="true" runat="server">
+    </asp:ScriptManager>
+ 
+
+    
+        <header id="header"><!--header-->
+		
+		    <div class="header-top bg-main"><!--header-middle-->
+			    <div class="container-fluid max-width-win">
+				    <div class="row">
+					    <div class="col-sm-4">
+						    <div class="logo pull-left">
+							    <a href="../Pages/News.aspx">SAVVY ADJUSTERS JSC</a>
+						    </div>
+						
+					    </div>
+					    <div class="col-sm-8">
+						    <div class="shop-menu pull-right">
+							    <ul class="nav navbar-nav">
+
+								        <li data-toggle="modal" data-target="#myModal" onclick="return CreateNews();" ><a href="#">New Post</a></li>
+								        <li>
+                                            <a href="#" data-toggle="dropdown" >
+                                                <asp:Label ID="lblName" runat="server" Text=""></asp:Label> <span class="caret"></span>  </a>
+                                            
+                                            <ul class="dropdown-menu">
+                                                <li><a href="../Pages/Home.aspx">Platform - Claim</a></li>
+                                                <li id="itemAdmin" runat="server" ><a href="../Pages/NewsManager.aspx">Management News</a></li>
+                                                <li><a href="../Pages/NewsMyPost.aspx">My Post</a></li>
+                                                <li><a href="../Pages/Logout.aspx">Logout</a></li>
+                                            </ul>
+                                        </li>
+								    
+							    </ul>
+						    </div>
+					    </div>
+				    </div>
+			    </div>
+		    </div><!--/header-middle-->
+		
+	    </header><!--/header-->
+
+
+
+        <section>
+		    <div class="container-fluid max-width-win">
+			    
+                <div class="row title-bar" >
+                    
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolderTitleBar" runat="server">
+                    <span class="home">Home</span>
+                    </asp:ContentPlaceHolder>
+
+                </div>
+
+                <div class="row">
+				
+				    <div class="col-sm-9">
+
+                            <asp:ContentPlaceHolder ID="ContentPlaceHolderMain" runat="server">
+                            <p>body</p>
+                            </asp:ContentPlaceHolder>
+
+				    </div>
+				
+				    <div class="col-sm-3">
+
+                            <div class="panel-group">
+                                  <div class="panel panel-default">
+                                        <div class="panel-heading bg-main"><b>Category</b></div>
+                                        <div class="panel-body" style="padding:2px 0">
+
+                                           
+                                                <ul class="nav" >
+						                        <asp:Repeater ID="rptTypes" runat="server">
+                                                    <ItemTemplate>
+
+                                                        <li class="item_type"><a href='../Pages/NewsTypes.aspx?id=<%# Eval("ID_Type") %>'> <span class="pull-right">(<%# Eval("Count") %>)</span> <%# Eval("NameType") %></a></li>
+
+                                                    </ItemTemplate>
+                                                </asp:Repeater>
+							                    </ul>
+					
+                                        </div>
+                                  </div>
+                             </div>
+
+
+                             <div class="panel-group">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading bg-main"><b>Blog Archive</b></div>
+                                    <div class="panel-body" style="padding:2px 0" >
+                                            <div class="nav">   
+                                            <ul class="nav" >
+						                    <asp:Repeater ID="repeaterYear" runat="server" 
+                                                    onitemdatabound="repeaterYear_ItemDataBound">
+                                                <ItemTemplate>
+
+                                                    <li class="item_type" ><a href="#<%# Eval("Year") %>" data-toggle="collapse" data-parent="#accordian" > <span class="pull-right">(<%# Eval("Count") %>)</span> <%# Eval("Year") %>  </a></li>
+
+                                                    <div style="height: 0px;" id="<%# Eval("Year") %>" class="panel-collapse collapse">
+
+										                <ul class="nav" style="padding: 2px;">
+				
+                                                            <asp:Repeater ID="repeaterItemYear" OnItemDataBound="repeaterItemYear_ItemDataBound" runat="server">
+                                                                <ItemTemplate>
+                                                                    <li><a href='/Pages/NewsTime.aspx?year=<%# Eval("Year") %>&month=<%# Eval("Month") %>' style="padding:6px 12px;">
+                                                                        <span class="pull-right">(<%#  Eval("Count") %>)</span> 
+                                                                        <asp:Label ID="lblMonth" runat="server" /></a></li>
+                                                                </ItemTemplate>
+                                                            </asp:Repeater>
+
+										                </ul>
+								                    </div>
+                                                       
+                                                </ItemTemplate>
+                                            </asp:Repeater>
+							                </ul>
+					                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="panel-group">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading bg-main"><b>Most popular</b></div>
+                                    <div class="panel-body" style="padding:2px 0" >
+                                            <div class="nav">   
+                                            <ul class="nav" >
+						                    <asp:Repeater ID="repeaterMostViews" runat="server">
+                                                <ItemTemplate>
+
+                                                    <li>
+                                                        <a style="padding:2px;" href='../Pages/NewsDetail.aspx?id=<%# Eval("ID_News") %>'>
+                                                            <img class="img-thumbnail" style="max-width:55px; width:30%" src="<%# Eval("LinkImages") %>" alt="<%# Eval("LinkImages") %>" align="left" hspace="3" border="0" vspace="3">
+                                                        
+                                                            <%# Eval("Title") %> 
+                                                            <div class="clearfix"></div>
+                                                        </a>
+                                                </ItemTemplate>
+                                            </asp:Repeater>
+							                </ul>
+					                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+					</div>
+
+				</div>
+
+
+		    </div>
+	    </section>
+
+
+
+
+
+        <footer id="footer"><!--Footer-->
+		    <div class="footer-bottom bg-main" style="padding:10px;">
+			    <div class="container-fluid max-width-win">
+				    <div class="row">
+					<p class="pull-left">Copyright © 2015 Savvy Inc. All rights reserved.</p>
+					<p class="pull-right">Designed by <span><a target="_blank" href="#">Savvy</a></span></p>
+				    </div>
+			    </div>
+		    </div>
+	    </footer>
+
+
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">
+                            &times;</button>
+                        <h4 class="modal-title">
+                            Article</h4>
+                    </div>
+                    <div class="modal-body contentDialog">Loading...</div>
+                </div>
+            </div>
+        </div>
+
+    </form>
+</body>
+</html>

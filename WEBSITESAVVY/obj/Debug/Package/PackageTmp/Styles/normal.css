@@ -1,0 +1,112 @@
+﻿body
+{
+    font-family: 'Times New Roman' , Times, serif;
+    font-size: 16px;
+    vertical-align: top;
+}
+.tbgene
+{
+    vertical-align: top;
+    padding: 10px;
+    width: 100%;
+    font-family: 'Times New Roman' , Times, serif;
+    font-size: 16px;
+}
+.colleftlable
+{
+    font-weight: bold;
+   text-align: left;
+    vertical-align: top;
+    width: 15%;
+    padding-left: 20px;
+    font-size: 18px;
+}
+.colleftcont
+{
+    text-align: left;
+    vertical-align: top;
+    width: 35%;
+    padding-left: 10px;
+}
+.colrilbale
+{
+    font-weight: bold;
+    text-align: left;
+    vertical-align: top;
+    width: 15%;
+    padding-left: 20px;
+    font-size: 18px;
+}
+.colricont
+{
+    text-align: left;
+    vertical-align: top;
+    width: 35%;
+    padding-left: 10px;
+}
+    
+.headrow
+{
+    font-family: 'Times New Roman' , Times, serif;
+    font-size: 22px;
+    font-weight: bold;
+    color: #003300;
+    text-align: left;
+    padding: 10px;
+    margin: 0px;
+    border-bottom-style: groove;
+    border-bottom-width: thin;
+    border-bottom-color: #CCCCCC;
+    border-top-style: groove;
+    border-top-width: thin;
+    border-top-color: #CCCCCC;
+    background-color: #F3F3F3;
+}
+
+.leftcol
+{
+font-weight: bold;
+    text-align: left;
+    vertical-align: top;
+    width: 25%;
+     padding-left: 20px;
+}
+    
+.rightcol
+{
+    text-align: left;
+    vertical-align: top;
+    width: 75%;
+   
+}
+.lablecontent
+{
+    text-decoration: underline;
+    text-align: left;
+    vertical-align: top;
+    width: 100%;
+}
+ .field_input
+ {
+    border-left: 1.5px solid #FFFFFF;
+    border-right: 1.5px solid #FFFFFF;
+    border-top: 1.5px solid #FFFFFF;
+    border-bottom: 1.5px solid #DCDCDC;
+   /*background: #EBF3EB;*/
+    color: #000080;
+  /*padding:3px 3px 0px 7px;*/
+    /*font-weight:bold;*/
+    margin-top: 1px;
+    margin-bottom: 2px;
+ }
+ .bg_text
+ {
+     background:#f0f0f0;
+     font-weight:bold;
+     font-size:17px;
+            
+ }
+ .lblable
+ {
+     text-align: left;
+     }
