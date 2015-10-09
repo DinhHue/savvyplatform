@@ -6,6 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data;
 using WEBSITESAVVY.DAO;
+using WEBSITESAVVY.DTO;
 
 namespace WEBSITESAVVY.Pages
 {
@@ -13,12 +14,19 @@ namespace WEBSITESAVVY.Pages
     {
         public static string mClaimID = "";
         private ClaimDAO claimDao = new ClaimDAO();
+
+        public bool showEdit = true;
+
+        SendMailDAO sm = new SendMailDAO();
+        GiamDinhVienDAO gdv = new GiamDinhVienDAO();
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Session["ThamChieu"] != null)
             {
                 mClaimID = Session["ThamChieu"].ToString();
-                loadData();
+                if(!IsPostBack)
+                    loadData();
             }
         }
 
@@ -81,18 +89,94 @@ namespace WEBSITESAVVY.Pages
                 //load nội dung
 
                 lblGioiThieu.Text = row["GioiThieu"].ToString();
+                txtGioiThieu.Text = lblGioiThieu.Text;
+
                 lblExecutiveSummaryFR.Text = row["ExecutiveSummaryFR"].ToString();
+                txtExecutiveSummaryFR.Text = lblExecutiveSummaryFR.Text;
+
                 lblK.Text = row["K"].ToString();
+                txtK.Text = lblK.Text;
+
                 lblDienBienTonThat.Text = row["DienBienTonThat"].ToString();
-                lblC3.Text = row["C3FR"].ToString();
+                txtDienBienTonThat.Text = lblDienBienTonThat.Text;
+
+                lblC3FR.Text = row["C3FR"].ToString();
+                txtC3FR.Text = lblC3FR.Text;
+
                 lblE2.Text = row["E2"].ToString();
+                txtE2.Text = lblE2.Text;
+
                 lblD1.Text = row["D1"].ToString();
+                txtD1.Text = lblD1.Text;
+
                 lblB1.Text = row["B1"].ToString();
+                txtB1.Text = lblB1.Text;
+
                 lblG.Text = row["G"].ToString();
+                txtG.Text = lblG.Text;
+
                 lblH.Text = row["H"].ToString();
+                txtH.Text = lblH.Text;
+
                 lblB2.Text = row["B2"].ToString();
+                txtB2.Text = lblB2.Text;
+
                 lblConclution.Text = row["Conclution"].ToString();
+                txtConclution.Text = lblConclution.Text;
             }
         }
+
+        protected void btnUpdate_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                mClaimID = Session["ThamChieu"].ToString();
+                int claimID = int.Parse(mClaimID);
+
+                Button btn = (Button)sender;
+                string key = btn.Attributes["key"];
+
+                TextBox txtValue = (TextBox)FindControl("txt" + key);
+                string value = txtValue.Text;
+                string title = "";
+
+                if (value.Contains("'"))
+                {
+                    value = value.Replace("'", "&#39;");
+                }
+                claimDao.updateClaimField(mClaimID, key, value);
+                //sm.sendNoiDungClaim("Report_Update", TenGDV(), value,key, claimID);
+                //sm.UpdateClaim("Report_Update", TenGDV(), value, key, claimID);
+                int maGDV = int.Parse(Request.Cookies["MaGDV"].Value);
+                string noidung = gdv.LayTenTheoMa(maGDV) + " edited " + title + " of " + claimID + ".";
+                SaveLogTracking(maGDV, noidung, mClaimID);
+
+
+                Response.Redirect(Request.RawUrl + "#" + key);
+
+            }
+            catch (Exception ex)
+            {
+                Response.Write("<script>alert('Error', 'Error update data');</script>");
+            }
+        }
+
+
+        void SaveLogTracking(int maGDV, string noidung, string maclaim)
+        {
+            try
+            {
+                TrackingDTO tr = new TrackingDTO();
+                TrackingDAO trdao = new TrackingDAO();
+                tr.MaGDV = maGDV;
+                tr.NoiDung = noidung;
+                tr.TimeReal = DateTime.Now;
+                tr.MaClaim = maclaim;
+                trdao.InsertTracking(tr);
+            }
+            catch (Exception ex)
+            { }
+        }
+
     }
 }
