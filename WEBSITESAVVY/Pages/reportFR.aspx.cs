@@ -14,8 +14,9 @@ namespace WEBSITESAVVY.Pages
     {
         public static string mClaimID = "";
         private ClaimDAO claimDao = new ClaimDAO();
+        private DaiLyDAO dailyDao = new DaiLyDAO();
 
-        public bool showEdit = true;
+        public bool isLock = false;
 
         SendMailDAO sm = new SendMailDAO();
         GiamDinhVienDAO gdv = new GiamDinhVienDAO();
@@ -26,8 +27,15 @@ namespace WEBSITESAVVY.Pages
             {
                 mClaimID = Session["ThamChieu"].ToString();
 
-                if(!IsPostBack)
+                if (!IsPostBack)
+                {
+                    string done = dailyDao.KiemTraTinhTrang(mClaimID, "FR");
+                    if (done != null && done.ToLower() == "yes")
+                    {
+                        isLock = true;
+                    }
                     loadData();
+                }
             }
         }
 

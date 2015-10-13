@@ -23,7 +23,7 @@
         function editField(obj) {
             var key = $(obj).attr("key");
 
-            <%  if(!showEdit)  Response.Write("return;");    %>
+            <%  if(isLock)  Response.Write("return;");    %>
 
             $("#lbl" + key).hide();
             $("#panel" + key).show();
