@@ -10,8 +10,8 @@
     <%--<link  href="../Content/themes/menu.css" rel="stylesheet" type="text/css" />--%>
     <script type="text/javascript" src="../js/jquery-1.4.min.js"></script>
     <script type="text/javascript" src="../Scripts/jquery.easyui.min.js"></script>
-   <%-- <link href="../css/popup.css" rel="stylesheet" type="text/css" />--%>
-    
+    <%-- <link href="../css/popup.css" rel="stylesheet" type="text/css" />--%>
+    <script src="../js/knockout-2.3.0.js" type="text/javascript"></script>
     <script type="text/javascript">
         function MoveToURL()  
         {
@@ -29,8 +29,23 @@
         function closeDialog() {
             //$('.panel-tool-close').trigger("click");
             $('#w_MessageClaim').window('close');
-            $('#w_CheckClaim').window('close'); 
+            $('#w_CheckClaim').window('close');
         }
+
+        function cancel(obj) {
+            var key = $(obj).attr("key");
+            $("#lbl" + key).show();
+            $("#panel" + key).hide();
+        };
+
+        function x() {
+            this.FirstName = ko.observable("Anubhav");
+            this.change = ko.observable(false);
+            this.edit = function () {
+                this.change(true)
+            }
+        }
+        ko.applyBindings(new x());
     </script>
     <style type="text/css">
         @page :first {
@@ -617,7 +632,7 @@
                         </td>
                         <td align="center" width="25%">
                             <asp:Label ID="Label55" runat="server" Font-Bold="True" 
-                                Text="Đại diện cho SAVVY"></asp:Label>
+                                Text="Đại diện cho "></asp:Label>
                             <br />
                             <asp:Label ID="Label53" runat="server" Font-Italic="True" Text="(On behafl of)"></asp:Label>
                         </td>
@@ -625,20 +640,17 @@
                     
                     <tr>
                         <td width="25%" style="padding-left: 10px" align="center">
-                            <asp:Label ID="Label59" runat="server" Font-Bold="True" 
-                                Text="NĐBH"></asp:Label>
+                            <asp:Label ID="DaiDien1" runat="server" Font-Bold="True"></asp:Label>                  
+
                         </td>
                         <td width="25%" align="center">
-                            <asp:Label ID="Label58" runat="server" Font-Bold="True" 
-                                Text="SAVVY"></asp:Label>
+                            <asp:Label ID="DaiDien2" runat="server" Font-Bold="True"></asp:Label>
                             </td>
                         <td width="25%" align="center">
-                            <asp:Label ID="Label57" runat="server" Font-Bold="True" 
-                                Text="SAVVY"></asp:Label>
+                            <asp:Label ID="DaiDien3" runat="server" Font-Bold="True"></asp:Label>
                             </td>
                         <td align="center" width="25%">
-                            <asp:Label ID="Label56" runat="server" Font-Bold="True" 
-                                Text="SAVVY"></asp:Label>
+                            <asp:Label ID="DaiDien4" runat="server" Font-Bold="True"></asp:Label>
                         </td>
                     </tr>
                     
@@ -655,27 +667,10 @@
                             <br />
                             <br />
                             <br />
+                            <br />
                         </td>
                     </tr>
-                    <tr>
-                        <td width="25%" style="padding-left: 10px" align="center">
-                            <asp:Label ID="lblNguoiBaoCao" runat="server" Font-Bold="True" 
-                                ForeColor="#000066"></asp:Label>
-                        </td>
-                        <td align="center" width="25%">
-                            <asp:Label ID="lblNguoiBaoCao0" runat="server" Font-Bold="True" 
-                                ForeColor="#000066"></asp:Label>
-                        </td>
-                        <td align="center" width="25%">
-                            <asp:Label ID="lblNguoiBaoCao1" runat="server" Font-Bold="True" 
-                                ForeColor="#000066"></asp:Label>
-                        </td>
-                        <td align="center" width="25%">
-                            <asp:Label ID="lblDaiDienSAVVY" runat="server" Font-Bold="True" 
-                                ForeColor="#000066"></asp:Label>
-                        </td>
-                    </tr>
-                    <tr>
+                      <tr>
                         <td style="font-size: 10px; font-style: italic; padding-left: 10px;" 
                             width="25%" align="center">
                             <asp:Label ID="Label38" runat="server" Text="(Chữ ký / Signature)"></asp:Label>
@@ -693,33 +688,58 @@
                         </td>
                     </tr>
                     <tr>
+                        <td width="25%" style="padding-left: 10px" align="center">
+                            <asp:Label ID="TenDaiDien1" runat="server" Font-Bold="True" 
+                                ForeColor="#000066"></asp:Label>
+                        </td>
+                        <td align="center" width="25%">
+                            <asp:Label ID="TenDaiDien2" runat="server" Font-Bold="True" 
+                                ForeColor="#000066"></asp:Label>
+                        </td>
+                        <td align="center" width="25%">
+                            <asp:Label ID="TenDaiDien3" runat="server" Font-Bold="True" 
+                                ForeColor="#000066"></asp:Label>
+                        </td>
+                        <td align="center" width="25%">
+                            <asp:Label ID="TenDaiDien4" runat="server" Font-Bold="True" 
+                                ForeColor="#000066"></asp:Label>
+                        </td>
+                    </tr>
+                  
+                    <tr>
                         <td class="style2" 
                             style="font-size: 12px; color: #000066; font-style: italic; padding-left: 10px;" 
                             width="25%" align="center">
-                            <asp:Label ID="Label40" runat="server" Text="(Chức vụ (Job Title):"></asp:Label>
+                            <asp:Label ID="Label40" runat="server" Text="(Chức vụ (Job Title):" 
+                                ForeColor="Black"></asp:Label>
                             <br />
-                            <asp:Label ID="lblChucVuNguoiBC" runat="server" Font-Bold="True" 
+                            <asp:Label ID="ChucVuDaiDien1" runat="server" Font-Bold="True" 
                                 ForeColor="#000066"></asp:Label>
                         </td>
-                        <td class="style2" style="font-size: 11px; color: #000066; font-style: italic" 
+                        <td class="style2" style="font-size: 12px; color: #000066; font-style: italic; padding-left: 10px;" 
                             align="center" width="25%">
-                            <asp:Label ID="Label45" runat="server" Text="(Chức vụ (Job Title):"></asp:Label>
+                            <asp:Label ID="Label45" runat="server" Text="(Chức vụ (Job Title):" 
+                                ForeColor="Black"></asp:Label>
                             <br />
-                            <asp:Label ID="lblChucVuNguoiBC0" runat="server" Font-Bold="True" 
+                            <asp:Label ID="ChucVuDaiDien2" runat="server" Font-Bold="True" 
                                 ForeColor="#000066"></asp:Label>
                         </td>
-                        <td class="style2" style="font-size: 11px; color: #000066; font-style: italic" 
+                        <td class="style2" style="font-size: 12px; color: #000066; font-style: italic; padding-left: 10px;" 
                             align="center" width="25%">
-                            <asp:Label ID="Label46" runat="server" Text="(Chức vụ (Job Title):"></asp:Label>
+                            <asp:Label ID="Label46" runat="server" Text="(Chức vụ (Job Title):" 
+                                ForeColor="Black"></asp:Label>
                             <br />
-                            <asp:Label ID="lblChucVuNguoiBC1" runat="server" Font-Bold="True" 
+                            <asp:Label ID="ChucVuDaiDien3" runat="server" Font-Bold="True" 
                                 ForeColor="#000066"></asp:Label>
                         </td>
                         <td class="style2" align="center" 
-                            style="font-size: 12px; color: #000066; font-style: italic" width="25%">
-                            <asp:Label ID="Label41" runat="server" Text="(Chức vụ (Job Title):"></asp:Label>
+                            
+                            style="font-size: 12px; color: #000066; font-style: italic; padding-left: 10px;" 
+                            width="25%">
+                            <asp:Label ID="Label41" runat="server" Text="(Chức vụ (Job Title):" 
+                                ForeColor="Black"></asp:Label>
                             <br />
-                            <asp:Label ID="lblChucVuDaiDienSAVVY" runat="server" Font-Bold="True" 
+                            <asp:Label ID="ChucVuDaiDien4" runat="server" Font-Bold="True" 
                                 ForeColor="#000066"></asp:Label>
                         </td>
                     </tr>
@@ -740,7 +760,7 @@
             <asp:Menu ID="Menu1" runat="server" BackColor="#B5C7DE" 
                 DynamicHorizontalOffset="2" Font-Names="Times New Roman" Font-Size="16px" 
                 ForeColor="#284E98" RenderingMode="List" StaticSubMenuIndent="5px" 
-                CssClass="menufo" onmenuitemclick="Menu1_MenuItemClick">
+                CssClass="menufo">
                 <DynamicHoverStyle BackColor="#284E98" ForeColor="White"/>
                 <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
                 <DynamicMenuStyle BackColor="#B5C7DE" />
@@ -757,7 +777,7 @@
                 <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
                 <StaticSelectedStyle BackColor="#507CD1" />
             </asp:Menu>
-       <%--  <button class="" onclick="printPDF();" >Export to PDF</button>  --%>              
+          <%--  <%#DataBinder.Eval(Container.DataItem, "TenHangMuc") %>  --%>            
         </div>
         <div style="height:40px;"></div>
         <!--end tool bottom-->

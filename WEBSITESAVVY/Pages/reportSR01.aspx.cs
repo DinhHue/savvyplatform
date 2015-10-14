@@ -18,7 +18,7 @@ namespace WEBSITESAVVY.Pages
     {
         private ClaimDAO claimDao = new ClaimDAO();
         private static String mClaimID = "";
-
+        CHUKYDAO ck = new CHUKYDAO();
         protected void Page_Load(object sender, EventArgs e)
         {
             //if (Request.QueryString["claimID"] != null)
@@ -29,6 +29,7 @@ namespace WEBSITESAVVY.Pages
                 mClaimID = idclaim;
                 loadData(mClaimID);
                 loadDanhMucThietHai(mClaimID);
+                LoadChuKy(mClaimID);
                 //idClaim.Text = idclaim;
             }
         }
@@ -184,11 +185,25 @@ namespace WEBSITESAVVY.Pages
             }
         }
 
-        protected void Menu1_MenuItemClick(object sender, MenuEventArgs e)
+        void LoadChuKy(string idclaim)
         {
-
+            DataRow dr = ck.SelectChuKy(idclaim);
+            if (dr != null)
+            {
+                DaiDien1.Text = dr["DaiDien1"].ToString();
+                DaiDien2.Text = dr["DaiDien2"].ToString();
+                DaiDien3.Text = dr["DaiDien3"].ToString();
+                DaiDien4.Text = dr["DaiDien4"].ToString();
+                TenDaiDien1.Text = dr["TenDaiDien1"].ToString();
+                TenDaiDien2.Text = dr["TenDaiDien2"].ToString();
+                TenDaiDien3.Text = dr["TenDaiDien3"].ToString();
+                TenDaiDien4.Text = dr["TenDaiDien4"].ToString();
+                ChucVuDaiDien1.Text = dr["ChucVuDaiDien1"].ToString();
+                ChucVuDaiDien2.Text = dr["ChucVuDaiDien2"].ToString();
+                ChucVuDaiDien3.Text = dr["ChucVuDaiDien3"].ToString();
+                ChucVuDaiDien4.Text = dr["ChucVuDaiDien4"].ToString();
+            }
         }
-
        
     }
 }

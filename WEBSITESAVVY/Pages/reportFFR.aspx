@@ -862,8 +862,13 @@
             }
         </script>
         <div id="tool_bottom" runat="server" class="tool_bottom" >
-            <button class="btn" onclick="printPDF();" >Export to PDF</button>
-             <button class="btn" onclick="window.open('../Pages/reportFFR_word.aspx','_blank');">Export To Word</button>
+            <button class="btn" onclick="printPDF();" >Export to PDF</button>&nbsp;&nbsp;&nbsp;  &nbsp
+             <button class="btn" onclick="window.open('../Pages/reportFFR_word.aspx','_blank');">Export To Word</button>&nbsp;&nbsp;&nbsp;  &nbsp
+              <asp:Button class="btn" ID="btnPrepareFFR" runat="server" Text="Preparer" 
+                onclick="btnPrepareFFR_Click"/>  
+            &nbsp;&nbsp;&nbsp;  &nbsp
+        <asp:Button class="btn" ID="btnCheckFFR" runat="server" Text="Checker" 
+                onclick="btnCheckFFR_Click"  />
         </div>
         <div style="height:40px;"></div>
         <!--end tool bottom-->
