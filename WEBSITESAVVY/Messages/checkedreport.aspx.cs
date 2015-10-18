@@ -16,36 +16,46 @@ namespace WEBSITESAVVY.Messages
         ClaimDAO cl = new ClaimDAO();
         SendMailDAO sendmail = new SendMailDAO();
         DaiLyDAO dldao = new DaiLyDAO();
+
+        public static string report = "";
+
         protected void Page_Load(object sender, EventArgs e)
         {
             try
             {
-                if (Session["ThamChieu"].ToString() != null)
+                if (!IsPostBack)
                 {
-                    loadGDV();
-                    string id = Session["ThamChieu"].ToString();
-                    string tt = LayTinhTrang(id,"SR01");
-                   if(tt=="No")
-                       loadTB(id);
-                   if (tt == "Yes")
-                       loadMessage(id, "SR01");
-                   if(tt==null)
-                   {
-                       panelchecked.Visible = false;
-                       panelthongbao.Visible = false;
-                   }
+                    if (Session["ThamChieu"].ToString() != null)
+                    {
+
+                        report = Request.QueryString["report"].ToString();
+
+                        loadGDV();
+                        string id = Session["ThamChieu"].ToString();
+                        string tt = LayTinhTrang(id, report);
+
+                        if (tt == "No")
+                            loadTB(id, report);
+                        if (tt == "Yes")
+                            loadMessage(id, report);
+                        if (tt == null)
+                        {
+                            panelchecked.Visible = false;
+                            panelthongbao.Visible = false;
+                        }
+                    }
                 }
             }
             catch (Exception ex)
             {
-                Response.Write("<script> alert('" + ex.Message + "');</script>");
+                Response.Write("<script> alert(' Error: " + ex.Message + "');</script>");
             }
         }
-        void loadTB(string id)
+        void loadTB(string id, string type)
         {
-            if (dldao.LayThongBao("SR01", id) != null)
+            if (dldao.LayThongBao(type , id) != null)
             {
-                DataRow dr = dldao.LayThongBao("SR01", id);
+                DataRow dr = dldao.LayThongBao(type, id);
                 txtThongBao.Text = dr["DienGiai"].ToString();
                 txtNgay.Text = dr["Ngay"].ToString();
                 lblGDV.Text = dr["TenGDV"].ToString();
@@ -144,11 +154,11 @@ namespace WEBSITESAVVY.Messages
                         bodyCC += "Nếu có trở ngại gì vui lòng feedback ở platform hoặc gặp trực tiếp " + ten + " nhé!<br/>";
                         bodyCC += "<br/>";
                         bodyCC += "<br/> Have a nice day.";
-                        bool them = dldao.CheckedReport(idclaim,"SR01",diengiai,ngayxong);
+                        bool them = dldao.CheckedReport(idclaim, report ,diengiai,ngayxong);
                         if (them == true)
                         {
                             sendmail.Send_Email_Task(email, "Task-to-do " + brief, bodyCC, "huedinh@savvyadjusters.vn");
-                            SaveLogTracking(magdv, gdv.LayTenTheoMa(magdv)+ " gửi tin nhắn cho "+ ten+" đã kiểm tra SR01", idclaim);
+                            SaveLogTracking(magdv, gdv.LayTenTheoMa(magdv)+ " gửi tin nhắn cho "+ ten+" đã kiểm tra " + report, idclaim);
                             Response.Write("<script>parent.closeDialog();</script>");
 
                         }

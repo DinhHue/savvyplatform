@@ -15,13 +15,13 @@
     <script type="text/javascript">
         function MoveToURL()  
         {
-            var contentPage = '<iframe style="width:100%; height:100% ; border:none;" src="../Messages/submitreport.aspx"></iframe>'
+            var contentPage = '<iframe style="width:100%; height:100% ; border:none;" src="../Messages/submitreport.aspx?report=SR01"></iframe>'
             $("#w_MessageClaim").html(contentPage); 
             $('#w_MessageClaim').window('open');
             window.scrollTo(0, 0);
         }
         function SendChecked() {
-            var contentPage = '<iframe style="width:100%; height:100% ; border:none;" src="../Messages/checkedreport.aspx"></iframe>'
+            var contentPage = '<iframe style="width:100%; height:100% ; border:none;" src="../Messages/checkedreport.aspx?report=SR01"></iframe>'
             $("#w_CheckClaim").html(contentPage);
             $('#w_CheckClaim').window('open');
             window.scrollTo(0, 0);
