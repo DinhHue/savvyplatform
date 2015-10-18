@@ -747,9 +747,13 @@
         }
     </script>
     <div id="tool_bottom" runat="server" class="tool_bottom" >
-        <button class="btn" onclick="printPDF();" >Export to PDF</button>
-        <button class="btn" onclick="window.open('../Pages/reportIR_word.aspx','_blank');">Export To Word</button>
-
+        <button class="btn" onclick="printPDF();" >Export to PDF</button> &nbsp;&nbsp;&nbsp;  &nbsp
+        <button class="btn" onclick="window.open('../Pages/reportIR_word.aspx','_blank');">Export To Word</button> &nbsp;&nbsp;&nbsp;  &nbsp
+        <asp:Button class="btn" ID="btnPrepareIR" runat="server" Text="Preparer" 
+            onclick="btnPrepareIR_Click" />  
+            &nbsp;&nbsp;&nbsp;  &nbsp
+        <asp:Button class="btn" ID="btnCheckIR" runat="server" Text="Checker" 
+            onclick="btnCheckIR_Click"/>
     </div>
     <div style="height:40px;"></div>
     <!--end tool bottom-->

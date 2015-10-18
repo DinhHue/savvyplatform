@@ -50,9 +50,6 @@
 
 
             });
-
-
-
         }
 
     </script>
@@ -757,9 +754,13 @@
         }
     </script>
     <div id="tool_bottom" runat="server" class="tool_bottom" >
-        <button class="btn" onclick="printPDF();" >Export to PDF</button>
-        <button class="btn" onclick="window.open('../Pages/reportPR_word.aspx','_blank');">Export To Word</button>
-          </div>
+        <button class="btn" onclick="printPDF();" >Export to PDF</button>&nbsp;&nbsp;&nbsp;  &nbsp
+        <button class="btn" onclick="window.open('../Pages/reportPR_word.aspx','_blank');">Export To Word</button>&nbsp;&nbsp;&nbsp;  &nbsp
+        <asp:Button class="btn" ID="btnPreparePR" runat="server" Text="Preparer" 
+            onclick="btnPreparePR_Click"  />  
+            &nbsp;&nbsp;&nbsp;  &nbsp
+        <asp:Button class="btn" ID="btnCheckPR" runat="server" Text="Checker" onclick="btnCheckILA_Click"/>
+    </div>
     <div id="w_UpdateField" class="easyui-window" title="Update" data-options="modal:false,closed:true,iconCls:'icon-save'" style="width:650px;height:490px;padding:0px;"></div>
     <div id="w_UpdateFieldSmall" class="easyui-window" title="Update" data-options="modal:false,closed:true,iconCls:'icon-save'" style="width:450px;height:300px;padding:0px;"></div>
   

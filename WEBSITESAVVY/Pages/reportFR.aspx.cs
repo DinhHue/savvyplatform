@@ -42,6 +42,8 @@ namespace WEBSITESAVVY.Pages
         public void loadData()
         {
             DataRow row = claimDao.LayInFoReportNormal(mClaimID);
+            loadSIGNPre(mClaimID);
+            loadSIGNCheck(mClaimID);
             if (row != null)
             {
                 lblTenClaim.Text = "FR_" + row["TenClaim"].ToString();
@@ -177,6 +179,81 @@ namespace WEBSITESAVVY.Pages
             }
             catch (Exception ex)
             { }
+        }
+        void loadSIGNPre(string claimID)
+        {
+            DataRow row = claimDao.InfoSignatureFRPre(claimID);
+            if (row != null)
+            {
+                lblNguoiBaoCao.Text = row[0].ToString();
+                lblChucVuNguoiBC.Text = row[1].ToString();
+
+            }
+        }
+        void loadSIGNCheck(string claimID)
+        {
+            DataRow row = claimDao.InfoSignatureFRCheck(claimID);
+            if (row != null)
+            {
+
+                lblNguoiCheckBC.Text = row[0].ToString();
+                lblChucvuNguoiCheck.Text = row[1].ToString();
+            }
+        }
+        protected void btnPreparePR_Click(object sender, EventArgs e)
+        {
+            HttpCookie ck = Request.Cookies["MaGDV"];
+            if (ck == null)
+            {
+                Response.Write("<script> alert('Please login again!');</script>");
+
+            }
+            else
+            {
+                string id = "";
+                if (Session["ThamChieu"] != null)
+                    id = Session["ThamChieu"].ToString();
+                else
+                    Response.Write("<script> alert('Come back home page and select Claim No again!');</script>");
+                DataTable dt = new DataTable();
+                int idgdv = int.Parse(Request.Cookies["MaGDV"].Value);
+                bool up = claimDao.UpdatePrepareFR(id, idgdv);
+                if (up == true)
+                {
+
+                    loadSIGNPre(id);
+                }
+                else
+                    Response.Write("<script> alert('Update preparer error!');</script>");
+            }
+        }
+
+        protected void btnCheckPR_Click(object sender, EventArgs e)
+        {
+            HttpCookie ck = Request.Cookies["MaGDV"];
+            if (ck == null)
+            {
+                Response.Write("<script> alert('Please login again!');</script>");
+
+            }
+            else
+            {
+                string id = "";
+                if (Session["ThamChieu"] != null)
+                    id = Session["ThamChieu"].ToString();
+                else
+                    Response.Write("<script> alert('Come back home page and select Claim No again!');</script>");
+                DataTable dt = new DataTable();
+                int idgdv = int.Parse(Request.Cookies["MaGDV"].Value);
+                bool up = claimDao.UpdateCheckFR(id, idgdv);
+                if (up == true)
+                {
+
+                    loadSIGNCheck(id);
+                }
+                else
+                    Response.Write("<script> alert('Update preparer error!');</script>");
+            }
         }
 
     }
