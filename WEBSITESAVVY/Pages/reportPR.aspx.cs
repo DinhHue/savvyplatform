@@ -199,6 +199,17 @@ namespace WEBSITESAVVY.Pages
 
                 lblNguoiCheckBC.Text = row[0].ToString();
                 lblChucvuNguoiCheck.Text = row[1].ToString();
+                loadSIGNDirector();
+            }
+        }
+        void loadSIGNDirector()
+        {
+            DataRow row = claimDao.InfoSignatureDirector();
+            if (row != null)
+            {
+
+                lblNguoiPheDuyet.Text = row[0].ToString();
+                lblChucvuNguoiPheDuyet.Text = row[1].ToString();
             }
         }
         protected void btnPreparePR_Click(object sender, EventArgs e)

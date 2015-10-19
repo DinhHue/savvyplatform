@@ -42,7 +42,7 @@ namespace WEBSITESAVVY.Pages
                 TimLHTT(key);
             if (rdTimKiem.SelectedValue == "PolicyName")
                 TimPolicy(key);
-            if (rdTimKiem.SelectedValue == "Brief")
+            if (rdTimKiem.SelectedValue == "Brief") 
                 TimBrief(key);
             if (rdTimKiem.SelectedValue == "DKBS")
                 TimDKBS(key);
