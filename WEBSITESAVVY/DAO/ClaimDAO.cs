@@ -2242,6 +2242,17 @@ namespace WEBSITESAVVY.DAO
                 dr = dt.Rows[0];
             return dr;
         }
+        public DataRow InfoSignatureDirector()
+        {
+            string sql = "sp_Info_GiamDoc";
+           
+            DataTable dt = new DataTable();
+            dt = SqlDataAcessHelper.exStoreNoParas(sql);
+            DataRow dr = null;
+            if (dt.Rows.Count > 0)
+                dr = dt.Rows[0];
+            return dr;
+        }
         public bool UpdateTBCQCN(string idclaim, string status)
         { 
             string sql="sp_Claimm_UpdateTBCQCN";
@@ -2275,7 +2286,7 @@ namespace WEBSITESAVVY.DAO
         {
             string sql = "sp_KhachHang_Search";
             List<SqlParameter> ds = new List<SqlParameter>();
-            ds.Add(new SqlParameter("@key ", key));           
+            ds.Add(new SqlParameter("@key", key));           
             return SqlDataAcessHelper.exStoreParas(sql, ds);
         }
         public DataTable SearchLHTT(string key)
