@@ -161,7 +161,8 @@ namespace WEBSITESAVVY.Messages
                         {
                             sendmail.Send_Email_Task(email, "Task-to-do " + brief, bodyCC, "huedinh@savvyadjusters.vn");
                             SaveLogTracking(magdv, gdv.LayTenTheoMa(magdv) + " gửi tin nhắn cho " + ten + " nhờ kiểm tra " + report, idclaim);
-                            Response.Write("<script> window.parent.closeDialog(); </script>");
+
+                            Response.Write("<script> window.parent.closeAllDialog(); </script>");
                            
                         }
                     }

@@ -4,8 +4,14 @@
 
 <html>
 <head>
-	<meta charset="UTF-8">
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
 	<title>Claim Detail</title>
+
+    
+
     <link rel="stylesheet" type="text/css" href="../Content/themes/default/easyui.css"/>
 	<!--<link rel="stylesheet" type="text/css" href="../Content/themes/bootstrap/easyui.css">-->
 	<link rel="stylesheet" type="text/css" href="../Content/themes/icon.css"/>
@@ -14,8 +20,11 @@
 	<script type="text/javascript" src="../Scripts/jquery.easyui.min.js"></script>
 
 
+
+
     <script type="text/javascript">
 
+        var report = "";
 
         function closeDialog() {
             //$('.panel-tool-close').trigger("click");
@@ -63,29 +72,46 @@
         function loadReport(index) {
 
             var Link = "";
+            report = ""
             if (index == 0)
                 Link = "../Pages/generalinformation.aspx";
             if (index == 1)
                 Link = "../Pages/sitephoto.aspx";
-			if(index == 2)
-				Link = "../Pages/reportSR01.aspx";
-			else if(index == 3)
-				Link = "../Pages/reportILA.aspx";
-			else if(index == 4)
-				Link = "../Pages/reportPR.aspx";
-			else if(index == 5)
-			    Link = "../Pages/reportIR.aspx";
-			else if(index == 6)
-			    Link = "../Pages/reportFR.aspx";
-			else if(index == 7)
-			    Link = "../Pages/reportFFR.aspx";
-			else if(index == 8)
-			    Link = "../Pages/listworksheet.aspx";
-			else if (index == 9)
-			    link = "../Pages/task.aspx";
+            if (index == 2) {
+                Link = "../Pages/reportSR01.aspx";
+                report = "SR01"
+            }
+            else if (index == 3) {
+                Link = "../Pages/reportILA.aspx";
+                report = "ILA"
+            }
+            else if (index == 4) {
+                Link = "../Pages/reportPR.aspx";
+                report = "PR"
+            }
+            else if (index == 5) {
+                Link = "../Pages/reportIR.aspx";
+                report = "IR"
+            }
+            else if (index == 6) {
+                Link = "../Pages/reportFR.aspx";
+                report = "FR"
+            }
+            else if (index == 7) {
+                Link = "../Pages/reportFFR.aspx";
+                report = "FFR"
+            }
+            else if (index == 8)
+                Link = "../Pages/listworksheet.aspx";
+            else if (index == 9)
+                link = "../Pages/task.aspx";
 
 			if (Link != "")
 			    $("#frameCenter").attr("src", Link);
+
+			if (report === "") $("#choose").hide();
+			else $("#choose").show();
+
         }
 
 
@@ -140,6 +166,26 @@
             });
         }
 
+
+        function SendSubmit() {
+            if (report != "") {
+                var url = "../Messages/submitreport.aspx?report=" + report;
+                var contentPage = '<iframe style="width:100%; height:100% ; border:none;" src="' + url + '"></iframe>'
+                $("#w_MessageClaim").html(contentPage);
+                $('#w_MessageClaim').window('open');
+                window.scrollTo(0, 0);
+            }
+        }
+        function SendChecked() {
+            if (report != "") {
+                var url = "../Messages/checkedreport.aspx?report=" + report;
+                var contentPage = '<iframe style="width:100%; height:100% ; border:none;" src="' + url + '"></iframe>'
+                $("#w_CheckClaim").html(contentPage);
+                $('#w_CheckClaim').window('open');
+                window.scrollTo(0, 0);
+            }
+        }
+
     </script>
 
     <script type="text/javascript">
@@ -174,8 +220,10 @@
 						<a href="../Pages/ListWeeklyReport.aspx" class="easyui-linkbutton" data-options="plain:true" ><span class="button-menu">Weekly Update</span></a>
 						<a href="javascript:void(0)" onclick="$('#w_NewClaim').window('open')" class="easyui-linkbutton" data-options="plain:true"><span class="button-menu">New Claim</span></a>
 					    <a href="../Pages/News.aspx"class="easyui-linkbutton" data-options="plain:true" ><span class="button-menu">Blogs</span></a>
+                        <a href="#" id="choose" style="display:none" class="easyui-splitbutton" class="easyui-linkbutton" data-options="menu:'#mm2', plain:false" class="button-menu" ><span ><span>Choose<span></span></a>
                      </td>
-                    <td><div style="float:right">
+                    <td>
+                        <div style="float:right">
 							<a class="easyui-splitbutton" href="#" class="easyui-linkbutton" data-options="menu:'#mmProfile', plain:false">
                             <span><span style="color:#444">
                             <asp:Label ID="lblName" runat="server" Text=""></asp:Label> <asp:Label 
@@ -184,7 +232,8 @@
                         NavigateUrl="~/Pages/Login.aspx"></asp:HyperLink>
                         
                             </span></span></a>
-						</div></td>
+						</div>
+                    </td>
 				</tr>
 			</table>
         </div>
@@ -193,6 +242,13 @@
               <%--  <li><a class="easyui-linkbutton" href="../Pages/SubHome.aspx" data-options="plain:true">Riot_Home</a></li>--%>
 			    <li><a class="easyui-linkbutton" href="../Pages/ClaimFollow.aspx" data-options="plain:true">Claim Following</a></li>
 				<li><a class="easyui-linkbutton" href="../Pages/BillingProcess.aspx" data-options="plain:true">Claim Billing</a></li>
+            </ul>
+        </div>
+
+        <div id="mm2" class="menu-content" style="width:200px;"><%//200 %>
+			<ul>
+			    <li><a class="easyui-linkbutton" href="javascript:SendSubmit()" data-options="plain:true">Submit</a></li>
+				<li><a class="easyui-linkbutton" href="javascript:SendChecked()" data-options="plain:true">Checked</a></li>
             </ul>
         </div>
 
@@ -367,5 +423,8 @@
     <!-- default popup -->
     <div id="w_Popup" class="easyui-window" title="Popup" data-options="modal:false,closed:true,iconCls:''" style="width:800px;height:490px;padding:0px;"></div>
 
+    <!-- popup status submit/checked -->
+    <div id="w_MessageClaim" class="easyui-window" title=" Submit to ..."  data-options="modal:true,closed:true,iconCls:'icon-add'" style="width:550px;height:250px;">submit</div>
+    <div id="w_CheckClaim" class="easyui-window" title=" Checked, send message to ..."  data-options="modal:true,closed:true,iconCls:'icon-add'" style="width:550px;height:400px;">checked</div>
 </body>
 </html>

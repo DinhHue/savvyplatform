@@ -51,11 +51,11 @@ namespace WEBSITESAVVY.Messages
                 Response.Write("<script> alert(' Error: " + ex.Message + "');</script>");
             }
         }
-        void loadTB(string id, string type)
+        void loadTB(string id, string report)
         {
-            if (dldao.LayThongBao(type , id) != null)
+            if (dldao.LayThongBao(report, id) != null)
             {
-                DataRow dr = dldao.LayThongBao(type, id);
+                DataRow dr = dldao.LayThongBao(report, id);
                 txtThongBao.Text = dr["DienGiai"].ToString();
                 txtNgay.Text = dr["Ngay"].ToString();
                 lblGDV.Text = dr["TenGDV"].ToString();
@@ -159,7 +159,7 @@ namespace WEBSITESAVVY.Messages
                         {
                             sendmail.Send_Email_Task(email, "Task-to-do " + brief, bodyCC, "huedinh@savvyadjusters.vn");
                             SaveLogTracking(magdv, gdv.LayTenTheoMa(magdv)+ " gửi tin nhắn cho "+ ten+" đã kiểm tra " + report, idclaim);
-                            Response.Write("<script>parent.closeDialog();</script>");
+                            Response.Write("<script>parent.closeAllDialog();</script>");
 
                         }
                     }
