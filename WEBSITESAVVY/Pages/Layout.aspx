@@ -9,7 +9,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<title>Claim Detail</title>
-    
+
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
     <link rel="stylesheet" type="text/css" href="../Content/themes/default/easyui.css"/>
 	<!--<link rel="stylesheet" type="text/css" href="../Content/themes/bootstrap/easyui.css">-->
 	<link rel="stylesheet" type="text/css" href="../Content/themes/icon.css"/>
@@ -17,7 +19,33 @@
 	<script type="text/javascript" src="../Scripts/jquery.min.js"></script>
 	<script type="text/javascript" src="../Scripts/jquery.easyui.min.js"></script>
 
-    
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+
+    <style type="text/css">
+        iframe
+        {
+            border:1px solid #BCBCBC;
+        }
+        .frame
+        {
+            border:1px solid #BCBCBC;
+            width:100%;
+            height:100%;
+        }
+        .modal-header {
+            padding: 8px 15px;
+        }
+        .modal-body {
+            padding: 10px;
+        }
+        .contentDialog
+        {
+            height:350px;
+        }
+        
+    </style>
+
     <script type="text/javascript">
 
         var report = "";
@@ -31,6 +59,7 @@
 
         function closeAllDialog() {
             $('.panel-tool-close').trigger("click");
+            $('.close').trigger("click");
         }
 
         function reloaData() {
@@ -169,18 +198,22 @@
             if (report != "") {
                 var url = "../Messages/submitreport.aspx?report=" + report;
                 var contentPage = '<iframe style="width:100%; height:100% ; border:none;" src="' + url + '"></iframe>'
-                $("#w_MessageClaim").html(contentPage);
-                $('#w_MessageClaim').window('open');
-                window.scrollTo(0, 0);
+                //$("#w_MessageClaim").html(contentPage);
+                //$('#w_MessageClaim').window('open');
+                //window.scrollTo(0, 0);
+                $('#titleStatus').html("Submit to...");
+                $('.contentDialog').html(contentPage);
             }
         }
         function SendChecked() {
             if (report != "") {
                 var url = "../Messages/checkedreport.aspx?report=" + report;
                 var contentPage = '<iframe style="width:100%; height:100% ; border:none;" src="' + url + '"></iframe>'
-                $("#w_CheckClaim").html(contentPage);
-                $('#w_CheckClaim').window('open');
-                window.scrollTo(0, 0);
+                //$("#w_CheckClaim").html(contentPage);
+                //$('#w_CheckClaim').window('open');
+                //window.scrollTo(0, 0);
+                $('#titleStatus').html('Checked, send message to ...');
+                $('.contentDialog').html(contentPage);
             }
         }
 
@@ -218,7 +251,6 @@
 						<a href="../Pages/ListWeeklyReport.aspx" class="easyui-linkbutton" data-options="plain:true" ><span class="button-menu">Weekly Update</span></a>
 						<a href="javascript:void(0)" onclick="$('#w_NewClaim').window('open')" class="easyui-linkbutton" data-options="plain:true"><span class="button-menu">New Claim</span></a>
 					    <a href="../Pages/News.aspx"class="easyui-linkbutton" data-options="plain:true" ><span class="button-menu">Blogs</span></a>
-                        <a href="#" id="choose" style="display:none" class="easyui-splitbutton" class="easyui-linkbutton" data-options="menu:'#mm2', plain:false" class="button-menu" ><span ><span>Choose<span></span></a>
                      </td>
                     <td>
                         <div style="float:right">
@@ -243,12 +275,6 @@
             </ul>
         </div>
 
-        <div id="mm2" class="menu-content" style="width:200px;"><%//200 %>
-			<ul>
-			    <li><a class="easyui-linkbutton" href="javascript:SendSubmit()" data-options="plain:true">Submit</a></li>
-				<li><a class="easyui-linkbutton" href="javascript:SendChecked()" data-options="plain:true">Checked</a></li>
-            </ul>
-        </div>
 
         <div id="mmProfile" class="menu-content" style="width:200px;">
             <ul>
@@ -396,7 +422,19 @@
 		</div>
 	</div>
 	<!--<div data-options="region:'east',split:true,collapsed:true,title:'East'" style="width:100px;padding:10px;">east region</div>-->
-	<div data-options="region:'south',border:true" style="height:20px;background:#E0ECFF;padding:2px;">Savvy Adjuster JSC
+	<div data-options="region:'south',border:true" style="background:#E0ECFF;padding:4px; overflow:hidden;font-size:16px">
+        Savvy Adjuster JSC
+
+    <div class="dropdown"  style="float:right; display:none" id="choose" >
+        <button class="btn btn-default dropdown-toggle" style="padding:2px 12px" type="button" data-toggle="dropdown">Choose...
+        <span class="caret"></span></button>
+        <ul class="dropdown-menu dropdown-menu-right" style="position:fixed; top:auto; bottom:20px; right:20px;" >
+            <li><a data-toggle="modal" data-target="#myModal" onclick="SendSubmit();" href="javascript:void() " >Submit</a></li>
+			<li><a data-toggle="modal" data-target="#myModal" onclick="SendChecked();" href="javascript:void() " >Checked</a></li>
+
+        </ul>
+    </div>
+
     </div>
 	<div id="layoutContent" data-options="region:'center',title:'Report'">
         <iframe id="frameCenter" src="../Pages/generalinformation.aspx" ></iframe>
@@ -424,5 +462,21 @@
     <!-- popup status submit/checked -->
     <div id="w_MessageClaim" class="easyui-window" title=" Submit to ..."  data-options="modal:true,closed:true,iconCls:'icon-add'" style="width:550px;height:250px;">submit</div>
     <div id="w_CheckClaim" class="easyui-window" title=" Checked, send message to ..."  data-options="modal:true,closed:true,iconCls:'icon-add'" style="width:550px;height:400px;">checked</div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">
+                        &times;</button>
+                    <h4 id="titleStatus" class="modal-title">
+                        Submit </h4>
+                </div>
+                <div class="modal-body contentDialog">Loading...</div>
+            </div>
+        </div>
+    </div>
+
 </body>
 </html>
