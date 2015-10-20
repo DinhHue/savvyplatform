@@ -4,8 +4,12 @@
 
 <html>
 <head>
-	<meta charset="UTF-8">
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
 	<title>Claim Detail</title>
+    
     <link rel="stylesheet" type="text/css" href="../Content/themes/default/easyui.css"/>
 	<!--<link rel="stylesheet" type="text/css" href="../Content/themes/bootstrap/easyui.css">-->
 	<link rel="stylesheet" type="text/css" href="../Content/themes/icon.css"/>
@@ -13,9 +17,10 @@
 	<script type="text/javascript" src="../Scripts/jquery.min.js"></script>
 	<script type="text/javascript" src="../Scripts/jquery.easyui.min.js"></script>
 
-
+    
     <script type="text/javascript">
 
+        var report = "";
 
         function closeDialog() {
             //$('.panel-tool-close').trigger("click");
@@ -63,29 +68,46 @@
         function loadReport(index) {
 
             var Link = "";
+            report = ""
             if (index == 0)
                 Link = "../Pages/generalinformation.aspx";
             if (index == 1)
                 Link = "../Pages/sitephoto.aspx";
-			if(index == 2)
-				Link = "../Pages/reportSR01.aspx";
-			else if(index == 3)
-				Link = "../Pages/reportILA.aspx";
-			else if(index == 4)
-				Link = "../Pages/reportPR.aspx";
-			else if(index == 5)
-			    Link = "../Pages/reportIR.aspx";
-			else if(index == 6)
-			    Link = "../Pages/reportFR.aspx";
-			else if(index == 7)
-			    Link = "../Pages/reportFFR.aspx";
-			else if(index == 8)
-			    Link = "../Pages/listworksheet.aspx";
-			else if (index == 9)
-			    link = "../Pages/task.aspx";
+            if (index == 2) {
+                Link = "../Pages/reportSR01.aspx";
+                report = "SR01"
+            }
+            else if (index == 3) {
+                Link = "../Pages/reportILA.aspx";
+                report = "ILA"
+            }
+            else if (index == 4) {
+                Link = "../Pages/reportPR.aspx";
+                report = "PR"
+            }
+            else if (index == 5) {
+                Link = "../Pages/reportIR.aspx";
+                report = "IR"
+            }
+            else if (index == 6) {
+                Link = "../Pages/reportFR.aspx";
+                report = "FR"
+            }
+            else if (index == 7) {
+                Link = "../Pages/reportFFR.aspx";
+                report = "FFR"
+            }
+            else if (index == 8)
+                Link = "../Pages/listworksheet.aspx";
+            else if (index == 9)
+                link = "../Pages/task.aspx";
 
 			if (Link != "")
 			    $("#frameCenter").attr("src", Link);
+
+			if (report === "") $("#choose").hide();
+			else $("#choose").show();
+
         }
 
 
@@ -98,6 +120,8 @@
             var parentWindow = $('#w_UpdateField').parent(".panel");
             if (type == "date")
                 parentWindow = $('#w_UpdateFieldSmall').parent(".panel");
+//            if (type == "sorttext")
+//                parentWindow = $('#w_UpdateFieldSmall').parent(".panel");
 
             var title = $(parentWindow).children().children()[0];
             var strTitle = $($(obj).children().children()[0]).html();
@@ -115,7 +139,7 @@
             param += "&title=" + strTitle;
 
             var content = "<iframe src='../Pages/ClaimUpdateFieldPop.aspx" + param + "'></iframe>";
-
+           
             if (type == "date") {
                 $('#w_UpdateFieldSmall').html(content);
                 $('#w_UpdateFieldSmall').window('open');
@@ -138,6 +162,26 @@
                 timeout: 4000,
                 showType: 'slide'
             });
+        }
+
+
+        function SendSubmit() {
+            if (report != "") {
+                var url = "../Messages/submitreport.aspx?report=" + report;
+                var contentPage = '<iframe style="width:100%; height:100% ; border:none;" src="' + url + '"></iframe>'
+                $("#w_MessageClaim").html(contentPage);
+                $('#w_MessageClaim').window('open');
+                window.scrollTo(0, 0);
+            }
+        }
+        function SendChecked() {
+            if (report != "") {
+                var url = "../Messages/checkedreport.aspx?report=" + report;
+                var contentPage = '<iframe style="width:100%; height:100% ; border:none;" src="' + url + '"></iframe>'
+                $("#w_CheckClaim").html(contentPage);
+                $('#w_CheckClaim').window('open');
+                window.scrollTo(0, 0);
+            }
         }
 
     </script>
@@ -174,8 +218,10 @@
 						<a href="../Pages/ListWeeklyReport.aspx" class="easyui-linkbutton" data-options="plain:true" ><span class="button-menu">Weekly Update</span></a>
 						<a href="javascript:void(0)" onclick="$('#w_NewClaim').window('open')" class="easyui-linkbutton" data-options="plain:true"><span class="button-menu">New Claim</span></a>
 					    <a href="../Pages/News.aspx"class="easyui-linkbutton" data-options="plain:true" ><span class="button-menu">Blogs</span></a>
+                        <a href="#" id="choose" style="display:none" class="easyui-splitbutton" class="easyui-linkbutton" data-options="menu:'#mm2', plain:false" class="button-menu" ><span ><span>Choose<span></span></a>
                      </td>
-                    <td><div style="float:right">
+                    <td>
+                        <div style="float:right">
 							<a class="easyui-splitbutton" href="#" class="easyui-linkbutton" data-options="menu:'#mmProfile', plain:false">
                             <span><span style="color:#444">
                             <asp:Label ID="lblName" runat="server" Text=""></asp:Label> <asp:Label 
@@ -184,7 +230,8 @@
                         NavigateUrl="~/Pages/Login.aspx"></asp:HyperLink>
                         
                             </span></span></a>
-						</div></td>
+						</div>
+                    </td>
 				</tr>
 			</table>
         </div>
@@ -193,6 +240,13 @@
               <%--  <li><a class="easyui-linkbutton" href="../Pages/SubHome.aspx" data-options="plain:true">Riot_Home</a></li>--%>
 			    <li><a class="easyui-linkbutton" href="../Pages/ClaimFollow.aspx" data-options="plain:true">Claim Following</a></li>
 				<li><a class="easyui-linkbutton" href="../Pages/BillingProcess.aspx" data-options="plain:true">Claim Billing</a></li>
+            </ul>
+        </div>
+
+        <div id="mm2" class="menu-content" style="width:200px;"><%//200 %>
+			<ul>
+			    <li><a class="easyui-linkbutton" href="javascript:SendSubmit()" data-options="plain:true">Submit</a></li>
+				<li><a class="easyui-linkbutton" href="javascript:SendChecked()" data-options="plain:true">Checked</a></li>
             </ul>
         </div>
 
@@ -215,7 +269,7 @@
                 <ol type="1" >
                     <li><a href="../Pages/basicinforpop.aspx?type=SR01" class="easyui-linkbutton" data-options="plain:true" onclick="return showPopup(this);">
                         Basic Infomation</a></li>
-                     <li><a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true" key="NgayBatDauGiamDinh" onclick="updateField(this);" >Date Site Survey</a></li>
+                     <li><a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true" key="NgayBatDauGiamDinh" type="date" onclick="updateField(this);" >Date Site Survey</a></li>
 				    <li><a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true" key="DienBienTonThat" onclick="updateField(this);"  >
                         Circumstances</a></li>
 				    <li><a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true" key="PhamViTonThat" onclick="updateField(this);"  >
@@ -226,29 +280,29 @@
                         Summary of Loss </a></li>
                     <li><a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true" key="GhiChuLoaiHinhTonThat" onclick="updateField(this);"  >
                        Other type of loss</a></li>
-				    <li><a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true" key="GhiChuTBCQCN" onclick="updateField(this);"  >
+				    <li><a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true" key="GhiChuTBCQCN" type="date" onclick="updateField(this);"  >
                        Further notes</a></li>
-                    <li><a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true" key="DuPhongTonThat" onclick="updateField(this);"  >
+                    <li><a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true" key="DuPhongTonThat" type="date" onclick="updateField(this);"  >
                        Estimated Loss / Initial Reserve </a></li>
                     <li><a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true" key="YKienGDVSR01" onclick="updateField(this);">
 						Loss Adjuster’s Remark</a></li>
-				    <li><a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true" key="GioKhaoSatHienTruong" onclick="updateField(this);" >
+				    <li><a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true" key="GioKhaoSatHienTruong" type="date" onclick="updateField(this);" >
                         Time complete survey(VN)</a></li>
-                    <li><a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true" key="GioKhaoSatHienTruongEN" onclick="updateField(this);" >
+                    <li><a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true" key="GioKhaoSatHienTruongEN" type="date" onclick="updateField(this);" >
                         Time complete survey(EN)</a></li>
                 </ol>
 			</div>	
 			<div id="ILA" title="ILA" >
 				<ol type="1" >
-                    <%--<li><a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true" key="ILADATE" type="date"  onclick="updateField(this);">
+                 <%--   <li><a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true" key="ILADATE" type="date"  onclick="updateField(this);">
 						Date issue</a></li>--%>
-                    <li><a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true" key="ILADATE"  onclick="updateField(this);">
+                    <li><a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true" key="ILADATE" type="date" onclick="updateField(this);">
 						Date issue</a></li>
 				    <li><a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true" key="DienBienTonThat" onclick="updateField(this);">
 						Circumstances</a></li>
 				    <li><a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true" key="PhamViTonThat" onclick="updateField(this);">
 						Extent of Loss</a></li>
-                          <li><a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true" key="DuPhongTonThat" onclick="updateField(this);"  >
+                          <li><a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true" key="DuPhongTonThat" type="date" onclick="updateField(this);"  >
                        Estimated Loss / Initial Reserve </a></li>
 				    <li><a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true" key="DePhongVaKhuyenCaoILA" onclick="updateField(this);">
 						Recommendation </a></li>
@@ -263,7 +317,7 @@
             <div id="PR" title="PR" >
 				<ol type="1">
                     <li><a href="../Pages/basicinforPR.aspx?type=PR" class="easyui-linkbutton" data-options="plain:true" onclick="return showPopup(this);">Basic Infomation </a></li>
-                    <li><a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true" key="PRDate" title="Date Prepare Report - PR" onclick="updateField(this);">Date Prepare Report</a></li>
+                    <li><a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true" key="PRDate" title="Date Prepare Report - PR" type="date" onclick="updateField(this);">Date Prepare Report</a></li>
 				    <li><a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true" key="A1" title="Introduction - PR" onclick="updateField(this);">Introduction</a></li>
 				    <li><a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true" key="GioiThieu" onclick="updateField(this);">Insured </a></li>
 				    <li><a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true" key="DienBienTonThat" onclick="updateField(this);">Circumstance</a></li>
@@ -279,7 +333,7 @@
 			</div>
 			<div title="IR" >
 				<ol type="1">
-                    <li><a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true" key="IRDate" onclick="updateField(this);">Date Prepare Report</a></li>
+                    <li><a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true" key="IRDate" type="date" onclick="updateField(this);">Date Prepare Report</a></li>
                      <li><a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true" key="TamUngBoiThuong" onclick="updateField(this);">Interim Payment</a></li>
 				    <li><a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true" key="ExecutiveSummaryIR" onclick="updateField(this);">Executive Summary</a></li>
 				    <li><a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true" key="K" onclick="updateField(this);">Claim Handling TimeLine</a></li>
@@ -292,7 +346,7 @@
 			</div>
 			<div title="FR" >
 				<ol type="1">
-                    <li><a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true" key="FRDate" onclick="updateField(this);">Date Prepare Report</a></li>
+                    <li><a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true" key="FRDate"type="date" onclick="updateField(this);">Date Prepare Report</a></li>
                     <li><a href="../Pages/BasicFR.aspx?type=FR" class="easyui-linkbutton" data-options="plain:true" onclick="return showPopup(this);">General Information</a></li>
 				    <li><a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true" key="ExecutiveSummaryFR" onclick="updateField(this);">Executive Summary</a></li>
 				    <li><a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true" key="K" onclick="updateField(this);">Claim handling Process</a></li>
@@ -306,7 +360,7 @@
 			</div>
             <div title="FFR" >
 				<ol type="1">
-                    <%-- <li><a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true" key="FFRDate" onclick="updateField(this);">Date Prepare Report</a></li>--%>
+                    <li><a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true" key="FFRDate" type="date" onclick="updateField(this);">Date Prepare Report</a></li>
                      <li><a href="../Pages/BasicFR.aspx?type=FR" class="easyui-linkbutton" data-options="plain:true" onclick="return showPopup(this);">General Information</a></li>
                      <li><a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true" key="ExecutiveSummaryFR" onclick="updateField(this);">Executive Summary</a></li>
 				    <li><a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true" key="GioiThieu" onclick="updateField(this);">Insured </a></li>
@@ -362,10 +416,13 @@
     </div>
 
     <div id="w_UpdateField" class="easyui-window" title="Update" data-options="modal:false,closed:true,iconCls:'icon-save'" style="width:650px;height:490px;padding:0px;"></div>
-    <div id="w_UpdateFieldSmall" class="easyui-window" title="Update" data-options="modal:false,closed:true,iconCls:'icon-save'" style="width:450px;height:300px;padding:0px;"></div>
+    <div id="w_UpdateFieldSmall" class="easyui-window" title="Update" data-options="modal:false,closed:true,iconCls:'icon-save'" style="width:350px;height:200px;padding:0px;"></div>
 
     <!-- default popup -->
     <div id="w_Popup" class="easyui-window" title="Popup" data-options="modal:false,closed:true,iconCls:''" style="width:800px;height:490px;padding:0px;"></div>
 
+    <!-- popup status submit/checked -->
+    <div id="w_MessageClaim" class="easyui-window" title=" Submit to ..."  data-options="modal:true,closed:true,iconCls:'icon-add'" style="width:550px;height:250px;">submit</div>
+    <div id="w_CheckClaim" class="easyui-window" title=" Checked, send message to ..."  data-options="modal:true,closed:true,iconCls:'icon-add'" style="width:550px;height:400px;">checked</div>
 </body>
 </html>

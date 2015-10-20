@@ -41,8 +41,9 @@ namespace WEBSITESAVVY.Pages
                     {
                         txtValue.TextMode = TextBoxMode.SingleLine;
                         txtValue.Height = 22;
-                        CalendarExtenderInput.Enabled = true;
+                       // CalendarExtenderInput.Enabled = true;
                     }
+                   
                     HiddenTitle.Value = title;
                     hiddenClaimID.Value = claimID;
                     hiddenKey.Value = key;

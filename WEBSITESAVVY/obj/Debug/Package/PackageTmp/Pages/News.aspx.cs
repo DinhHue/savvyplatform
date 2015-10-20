@@ -25,8 +25,6 @@ namespace WEBSITESAVVY.Pages
                 fillDataNews();
             }
         }
-
-
         public void fillDataNewsHot()
         {
             repeaterList.DataSource = daoNews.GetListHotLimit(10);

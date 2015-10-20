@@ -2276,11 +2276,12 @@ namespace WEBSITESAVVY.DAO
             ds.Add(new SqlParameter("@idclaim",idclaim));
             DataTable dt = new DataTable();
             dt = SqlDataAcessHelper.exStoreParas(sql, ds);
+            DataRow dr = null;
             if (dt.Rows.Count > 0)
             {
-                return dt.Rows[0];
+                dr=dt.Rows[0];
             }
-            return null;
+            return dr;
         }
         public DataTable SearchNDBH(string key)
         {

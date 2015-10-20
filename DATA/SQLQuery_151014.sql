@@ -33,7 +33,8 @@ begin
 	select * from CHUKY where ID_Claim =@idclaim
 end
 go
-ALTER proc [dbo].[sp_Claim_Select_ChuCkyFFRCheck]
+
+create proc sp_Claim_Select_ChuCkyFFRCheck
 @idclaim varchar(10)
 as
 begin
@@ -42,4 +43,12 @@ begin
 	where cl.ID_Claim=@idclaim and cl.ID_GDVCheckFFR=gdvffrC.ID_GDV
 	and gdvffrC.ID_ChucVu=cvffrC.ID_ChucVu 
 	
+end
+
+create proc sp_Info_GiamDoc
+as
+begin
+	select gdv.FullName as TenGD, cv.TenChucVu as CVGD
+	from GIAMDINHVIEN gdv,  CHUCVU cv
+	where gdv.ID_ChucVu=cv.ID_ChucVu and cv.TenChucVu='Managing Director'
 end

@@ -9,6 +9,53 @@
 	<link rel="stylesheet" type="text/css" href="../Content/themes/icon.css"/>
 
     <script type="text/javascript" src="../js/jquery-1.4.min.js"></script>
+    
+    <script type="text/javascript" src="../tinymce/tinymce.min.js"></script>
+
+    <script type="text/javascript">
+        
+        function cancel(obj)
+        {
+            var key = $(obj).attr("key");
+            $("#lbl" + key).show();
+            $("#panel" + key).hide();
+        };
+
+        function editField(obj) {
+            var key = $(obj).attr("key");
+
+            <%  if(isLock)  Response.Write("return;");    %>
+
+            $("#lbl" + key).hide();
+            $("#panel" + key).show();
+
+            window.location.href = "#" + key;
+
+            tinymce.init({
+                selector: "#txt" + key,
+                plugins: [
+                        "advlist autolink autosave link image lists charmap print preview hr anchor pagebreak spellchecker",
+                        "searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime image imagetools media nonbreaking",
+                        "table contextmenu directionality emoticons textcolor paste fullpage textcolor colorpicker textpattern example"
+                ],
+
+                toolbar1: "newdocument fullpage | bold italic underline strikethrough | alignleft aligncenter alignright alignjustify | styleselect formatselect fontselect fontsizeselect",
+                toolbar2: "cut copy paste | searchreplace | bullist numlist | outdent indent | undo redo | image media code preview | forecolor backcolor | print fullscreen |",
+                toolbar3: "",
+
+                menubar: false,
+                toolbar_items_size: 'small',
+
+                image_advtab: true,
+
+
+            });
+
+
+
+        }
+
+    </script>
 
     <style type="text/css">
         @page :first {
@@ -173,6 +220,18 @@
         
         
         </style>
+
+    <style type="text/css">
+        .hiden
+        {
+            display:none ;
+        }
+        .panelUpdate *
+        {
+            font-size:14px !important;
+        }
+
+    </style>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -573,82 +632,158 @@
         <div class="box" >
             <h3 id="ExecutiveSummaryFR" key="ExecutiveSummaryFR" title="Executive Summary" onclick="parent.updateField(this);">I. TÓM TẮT VỤ VIỆC</h3>
             <div>
-                <asp:Label ID="lblExecutiveSummaryFR" runat="server" Width="100%" ></asp:Label>
+                <asp:Label ID="lblExecutiveSummaryFR" key="ExecutiveSummaryFR" onclick="editField(this)" runat="server" Width="100%" ></asp:Label>
+                <asp:Panel ID="panelExecutiveSummaryFR" CssClass="panelUpdate hiden" runat="server">
+                    <asp:TextBox ID="txtExecutiveSummaryFR" CssClass="hiden" TextMode="MultiLine" Height="250px" runat="server" />
+                    <div style="margin-top:10px">
+                        <asp:Button key="ExecutiveSummaryFR" onclick="btnUpdate_Click" Text="Update" runat="server"/>
+                        <input key="ExecutiveSummaryFR" type="button" value="Cancel" onclick="cancel(this)" />
+                    </div>
+                </asp:Panel>
             </div>
         </div>
 
         <div class="box" >
             <h3 id="K" key="K" title="Claim handling Process" onclick="parent.updateField(this);">II. QUÁ TRÌNH XỬ LÝ VÀ KHIẾU NẠI</h3>
-            <div><asp:Label ID="lblK" runat="server" Width="100%" ></asp:Label></div>
+            <div>
+                <asp:Label ID="lblK" key="K" onclick="editField(this)" runat="server" Width="100%" ></asp:Label>
+                <asp:Panel ID="panelK" CssClass="panelUpdate hiden" runat="server">
+                    <asp:TextBox ID="txtK" CssClass="hiden" TextMode="MultiLine" Height="250px" runat="server" />
+                    <div style="margin-top:10px">
+                        <asp:Button key="K" onclick="btnUpdate_Click" Text="Update" runat="server"/>
+                        <input key="K" type="button" value="Cancel" onclick="cancel(this)" />
+                    </div>
+                </asp:Panel>
+            </div>
         </div>
 
 
         <div class="box" >
             <h3 id="C3FR" key="C3FR" title="Cause of loss" onclick="parent.updateField(this);">III. NGUYÊN NHÂN</h3>
-            <div><asp:Label ID="lblC3FR" runat="server" Width="100%" ></asp:Label></div>
+            <div>
+                <asp:Label ID="lblC3FR" key="C3FR" onclick="editField(this)" runat="server" Width="100%" ></asp:Label>
+                <asp:Panel ID="panelC3FR" CssClass="panelUpdate hiden" runat="server">
+                    <asp:TextBox ID="txtC3FR" CssClass="hiden" TextMode="MultiLine" Height="250px" runat="server" />
+                    <div style="margin-top:10px">
+                        <asp:Button key="C3FR"  onclick="btnUpdate_Click" Text="Update" runat="server"/>
+                        <input key="C3FR"  type="button" value="Cancel" onclick="cancel(this)" />
+                    </div>
+                </asp:Panel>
+            </div>
         </div>
 
         <div class="box" >
             <h3 id="E2" key="E2" title="Policy liability" onclick="parent.updateField(this);">IV. PHẠM VI BẢO HIỂM</h3>
-            <div><asp:Label ID="lblE2" runat="server" Width="100%" ></asp:Label></div>
+            <div>
+                <asp:Label ID="lblE2" key="E2" onclick="editField(this)" runat="server" Width="100%" ></asp:Label>
+                <asp:Panel ID="panelE2" CssClass="panelUpdate hiden" runat="server">
+                    <asp:TextBox ID="txtE2" CssClass="hiden" TextMode="MultiLine" Height="250px" runat="server" />
+                    <div style="margin-top:10px">
+                        <asp:Button key="E2"  onclick="btnUpdate_Click" Text="Update" runat="server"/>
+                        <input key="E2"  type="button" value="Cancel" onclick="cancel(this)" />
+                    </div>
+                </asp:Panel>
+            </div>
         </div>
 
         <div class="box" >
             <h3 id="B1" key="B1" title="Claim amount and proposed settlement" onclick="parent.updateField(this);">V. YÊU CẦU BỒI THƯỜNG VÀ ĐỀ XUẤT TÍNH TOÁN</h3>
-            <div><asp:Label ID="lblB1" runat="server" Width="100%" ></asp:Label></div>
+            <div>
+                <asp:Label ID="lblB1" key="B1" onclick="editField(this)" runat="server" Width="100%" ></asp:Label>
+                <asp:Panel ID="panelB1" CssClass="panelUpdate hiden" runat="server">
+                    <asp:TextBox ID="txtB1" CssClass="hiden" TextMode="MultiLine" Height="250px" runat="server" />
+                    <div style="margin-top:10px">
+                        <asp:Button key="B1"  onclick="btnUpdate_Click" Text="Update" runat="server"/>
+                        <input key="B1"  type="button" value="Cancel" onclick="cancel(this)" />
+                    </div>
+                </asp:Panel>
+            </div>
         </div>
 
 
         <div class="box" >
             <h3 id="H" key="H" title="Salvage" onclick="parent.updateField(this);">VI. GIÁ TRỊ THU HỒI</h3>
-            <div><asp:Label ID="lblH" runat="server" Width="100%" ></asp:Label></div>
+            <div>
+                <asp:Label ID="lblH" key="H" onclick="editField(this)" runat="server" Width="100%" ></asp:Label>
+                <asp:Panel ID="panelH" CssClass="panelUpdate hiden" runat="server">
+                    <asp:TextBox ID="txtH" CssClass="hiden" TextMode="MultiLine" Height="250px" runat="server" />
+                    <div style="margin-top:10px">
+                        <asp:Button key="H"   onclick="btnUpdate_Click" Text="Update" runat="server"/>
+                        <input key="H"   type="button" value="Cancel" onclick="cancel(this)" />
+                    </div>
+                </asp:Panel>
+            </div>
         </div>
 
         <div class="box" >
             <h3 id="B2" key="B2" title="Final Proposed Settlement" onclick="parent.updateField(this);">VII. ĐỀ XUẤT CHUNG CUỘC</h3>
-            <div><asp:Label ID="lblB2" runat="server" Width="100%" ></asp:Label></div>
+            <div>
+                <asp:Label ID="lblB2" key="B2" onclick="editField(this)" runat="server" Width="100%" ></asp:Label>
+                <asp:Panel ID="panelB2" CssClass="panelUpdate hiden" runat="server">
+                    <asp:TextBox ID="txtB2" CssClass="hiden" TextMode="MultiLine" Height="250px" runat="server" />
+                    <div style="margin-top:10px">
+                        <asp:Button key="B2"  onclick="btnUpdate_Click" Text="Update" runat="server"/>
+                        <input key="B2"  type="button" value="Cancel" onclick="cancel(this)" />
+                    </div>
+                </asp:Panel>
+            </div>
         </div>
 
         <div class="box" >
             <h3 id="Conclution" key="Conclution" title="Conclusion" onclick="parent.updateField(this);">VIII. KẾT LUẬN</h3>
-            <div><asp:Label ID="lblConclution" runat="server" Width="100%" ></asp:Label></div>
+            <div>
+                <asp:Label ID="lblConclution" key="Conclution" onclick="editField(this)" runat="server" Width="100%" ></asp:Label>
+                <asp:Panel ID="panelConclution" CssClass="panelUpdate hiden" runat="server">
+                    <asp:TextBox ID="txtConclution" CssClass="hiden" TextMode="MultiLine" Height="250px" runat="server" />
+                    <div style="margin-top:10px">
+                        <asp:Button key="Conclution"  onclick="btnUpdate_Click" Text="Update" runat="server"/>
+                        <input key="Conclution"  type="button" value="Cancel" onclick="cancel(this)" />
+                    </div>
+                </asp:Panel>
+            </div>
         </div>
          <table width="100%">
                     <tr>
-                        <td width="40%" style="padding-left: 10px">
+                        <td width="35%" style="padding-left: 10px">
                             <asp:Label ID="Label35" runat="server" Font-Bold="True" Text="Người báo cáo"></asp:Label>
                             <br />
                             <asp:Label ID="Label34" runat="server" Font-Italic="True" Text="Prepared by"></asp:Label>
                         </td>
-                        <td>
-                            &nbsp;</td>
-                        <td align="center" width="40%">
+                        <td align="center">
+                            <asp:Label ID="Label42" runat="server" Font-Bold="True" Text="Người kiểm tra"></asp:Label>
+                            <br />
+                            <asp:Label ID="Label43" runat="server" Font-Italic="True" 
+                                Text="Checked  by"></asp:Label>
+                        </td>
+                        <td align="center" width="35%">
                             <asp:Label ID="Label36" runat="server" Font-Bold="True" Text="Phê duyệt bởi"></asp:Label>
                             <br />
                             <asp:Label ID="Label37" runat="server" Font-Italic="True" 
-                                Text="Checked &amp; Approved  by"></asp:Label>
+                                Text=" Approved  by"></asp:Label>
                         </td>
                     </tr>
                     <tr>
-                        <td width="40%" style="padding-left: 10px">
+                        <td width="35%" style="padding-left: 10px">
                             <asp:Label ID="lblNguoiBaoCao" runat="server" Font-Bold="True" 
                                 ForeColor="#000066"></asp:Label>
                         </td>
-                        <td>
-                            &nbsp;</td>
-                        <td align="center" width="40%">
+                        <td align="center">
                             <asp:Label ID="lblNguoiCheckBC" runat="server" Font-Bold="True" 
+                                ForeColor="#000066"></asp:Label>
+                        </td>
+                        <td align="center" width="35%">
+                            <asp:Label ID="lblNguoiPheDuyet" runat="server" Font-Bold="True" 
                                 ForeColor="#000066"></asp:Label>
                         </td>
                     </tr>
                     <tr>
-                        <td width="40%" style="padding-left: 10px">
+                        <td width="35%" style="padding-left: 10px">
                             <br />
                             <br />
                         </td>
                         <td>
                             &nbsp;</td>
-                        <td align="center" width="40%">
+                        <td align="center" width="35%">
                             <br />
                             <br />
                             <br />
@@ -656,32 +791,39 @@
                     </tr>
                     <tr>
                         <td style="font-size: 10px; font-style: italic; padding-left: 10px;" 
-                            width="40%">
+                            width="35%">
                             <asp:Label ID="Label38" runat="server" Text="(Chữ ký / Signature)"></asp:Label>
                         </td>
                         <td style="font-size: 10px; text-align: center; font-style: italic">
-                            &nbsp;</td>
+                            <asp:Label ID="Label44" runat="server" Text="(Chữ ký / Signature)"></asp:Label>
+                        </td>
                         <td align="center" 
-                            style="font-size: 10px; text-align: center; font-style: italic" width="40%">
+                            style="font-size: 10px; text-align: center; font-style: italic" 
+                            width="35%">
                             <asp:Label ID="Label39" runat="server" Text="(Chữ ký / Signature)"></asp:Label>
                         </td>
                     </tr>
                     <tr>
                         <td class="style2" 
                             style="font-size: 12px; color: #000066; font-style: italic; padding-left: 10px;" 
-                            width="40%">
+                            width="35%">
                             <asp:Label ID="Label40" runat="server" Text="(Chức vụ (Job Title):"></asp:Label>
                             <br />
                             <asp:Label ID="lblChucVuNguoiBC" runat="server" Font-Bold="True" 
                                 ForeColor="#000066"></asp:Label>
                         </td>
-                        <td class="style2" style="font-size: 11px; color: #000066; font-style: italic">
-                        </td>
-                        <td class="style2" align="center" 
-                            style="font-size: 12px; color: #000066; font-style: italic" width="40%">
-                            <asp:Label ID="Label41" runat="server" Text="(Chức vụ (Job Title):"></asp:Label>
+                        <td class="style2" style="font-size: 12px; color: #000066; font-style: italic" 
+                            align="center">
+                            <asp:Label ID="Label45" runat="server" Text="(Chức vụ (Job Title):"></asp:Label>
                             <br />
                             <asp:Label ID="lblChucvuNguoiCheck" runat="server" Font-Bold="True" 
+                                ForeColor="#000066"></asp:Label>
+                        </td>
+                        <td class="style2" align="center" 
+                            style="font-size: 12px; color: #000066; font-style: italic" width="35%">
+                            <asp:Label ID="Label41" runat="server" Text="(Chức vụ (Job Title):"></asp:Label>
+                            <br />
+                            <asp:Label ID="lblChucvuNguoiPheDuyet" runat="server" Font-Bold="True" 
                                 ForeColor="#000066"></asp:Label>
                         </td>
                     </tr>
@@ -696,8 +838,13 @@
             }
         </script>
         <div id="tool_bottom" runat="server" class="tool_bottom" >
-            <button class="btn" onclick="printPDF();" >Export to PDF</button>
-            <button class="btn" onclick="window.open('../Pages/reportFR_word.aspx','_blank');">Export To Word</button>
+            <button class="btn" onclick="printPDF();" >Export to PDF</button>   &nbsp;&nbsp;&nbsp;  &nbsp
+            <button class="btn" onclick="window.open('../Pages/reportFR_word.aspx','_blank');">Export To Word</button>   &nbsp;&nbsp;&nbsp;  &nbsp
+            <asp:Button class="btn" ID="btnPreparePR" runat="server" Text="Preparer" 
+                onclick="btnPreparePR_Click" />  
+            &nbsp;&nbsp;&nbsp;  &nbsp
+        <asp:Button class="btn" ID="btnCheckPR" runat="server" Text="Checker" 
+                onclick="btnCheckPR_Click" />
         </div>
         <div style="height:40px;"></div>
         <!--end tool bottom-->

@@ -2058,6 +2058,70 @@ namespace WEBSITESAVVY.DAO
             ds.Add(new SqlParameter("@idgdv", idgdv));
             return SqlDataAcessHelper.exNonStoreParas(sql, ds);
         }
+        public bool UpdatePreparePR(string idclaim, int idgdv)
+        {
+            string sql = "sp_CLAIM_Update_GDVPR";
+            List<SqlParameter> ds = new List<SqlParameter>();
+            ds.Add(new SqlParameter("@idclaim", idclaim));
+            ds.Add(new SqlParameter("@idgdv", idgdv));
+            return SqlDataAcessHelper.exNonStoreParas(sql, ds);
+        }
+        public bool UpdateCheckPR(string idclaim, int idgdv)
+        {
+            string sql = "sp_CLAIM_Update_GDVPRCheck";
+            List<SqlParameter> ds = new List<SqlParameter>();
+            ds.Add(new SqlParameter("@idclaim", idclaim));
+            ds.Add(new SqlParameter("@idgdv", idgdv));
+            return SqlDataAcessHelper.exNonStoreParas(sql, ds);
+        }
+        public bool UpdatePrepareIR(string idclaim, int idgdv)
+        {
+            string sql = "sp_CLAIM_Update_GDVIR";
+            List<SqlParameter> ds = new List<SqlParameter>();
+            ds.Add(new SqlParameter("@idclaim", idclaim));
+            ds.Add(new SqlParameter("@idgdv", idgdv));
+            return SqlDataAcessHelper.exNonStoreParas(sql, ds);
+        }
+        public bool UpdateCheckIR(string idclaim, int idgdv)
+        {
+            string sql = "sp_CLAIM_Update_GDVIRCheck";
+            List<SqlParameter> ds = new List<SqlParameter>();
+            ds.Add(new SqlParameter("@idclaim", idclaim));
+            ds.Add(new SqlParameter("@idgdv", idgdv));
+            return SqlDataAcessHelper.exNonStoreParas(sql, ds);
+        }
+        public bool UpdatePrepareFR(string idclaim, int idgdv)
+        {
+            string sql = "sp_CLAIM_Update_GDVFR";
+            List<SqlParameter> ds = new List<SqlParameter>();
+            ds.Add(new SqlParameter("@idclaim", idclaim));
+            ds.Add(new SqlParameter("@idgdv", idgdv));
+            return SqlDataAcessHelper.exNonStoreParas(sql, ds);
+        }
+        public bool UpdateCheckFR(string idclaim, int idgdv)
+        {
+            string sql = "sp_CLAIM_Update_GDVFRCheck";
+            List<SqlParameter> ds = new List<SqlParameter>();
+            ds.Add(new SqlParameter("@idclaim", idclaim));
+            ds.Add(new SqlParameter("@idgdv", idgdv));
+            return SqlDataAcessHelper.exNonStoreParas(sql, ds);
+        }
+        public bool UpdatePrepareFFR(string idclaim, int idgdv)
+        {
+            string sql = "sp_CLAIM_Update_GDVFFR";
+            List<SqlParameter> ds = new List<SqlParameter>();
+            ds.Add(new SqlParameter("@idclaim", idclaim));
+            ds.Add(new SqlParameter("@idgdv", idgdv));
+            return SqlDataAcessHelper.exNonStoreParas(sql, ds);
+        }
+        public bool UpdateCheckFFR(string idclaim, int idgdv)
+        {
+            string sql = "sp_CLAIM_Update_GDVFFRCheck";
+            List<SqlParameter> ds = new List<SqlParameter>();
+            ds.Add(new SqlParameter("@idclaim", idclaim));
+            ds.Add(new SqlParameter("@idgdv", idgdv));
+            return SqlDataAcessHelper.exNonStoreParas(sql, ds);
+        }
         public DataRow InfoSignatureILAPre(string idclaim)
         {
             string sql = "sp_Claim_Select_ChuCkyILAPre";
@@ -2077,6 +2141,113 @@ namespace WEBSITESAVVY.DAO
             ds.Add(new SqlParameter("@idclaim", idclaim));
             DataTable dt = new DataTable();
             dt = SqlDataAcessHelper.exStoreParas(sql, ds);
+            DataRow dr = null;
+            if (dt.Rows.Count > 0)
+                dr = dt.Rows[0];
+            return dr;
+        }
+        public DataRow InfoSignaturePRPre(string idclaim)
+        {
+            string sql = "sp_Claim_Select_ChuCkyPRPre";
+            List<SqlParameter> ds = new List<SqlParameter>();
+            ds.Add(new SqlParameter("@idclaim", idclaim));
+            DataTable dt = new DataTable();
+            dt = SqlDataAcessHelper.exStoreParas(sql, ds);
+            DataRow dr = null;
+            if (dt.Rows.Count > 0)
+                dr = dt.Rows[0];
+            return dr;
+        }
+        public DataRow InfoSignaturePRCheck(string idclaim)
+        {
+            string sql = "sp_Claim_Select_ChuCkyPRCheck";
+            List<SqlParameter> ds = new List<SqlParameter>();
+            ds.Add(new SqlParameter("@idclaim", idclaim));
+            DataTable dt = new DataTable();
+            dt = SqlDataAcessHelper.exStoreParas(sql, ds);
+            DataRow dr = null;
+            if (dt.Rows.Count > 0)
+                dr = dt.Rows[0];
+            return dr;
+        }
+        public DataRow InfoSignatureIRPre(string idclaim)
+        {
+            string sql = "sp_Claim_Select_ChuCkyIR";
+            List<SqlParameter> ds = new List<SqlParameter>();
+            ds.Add(new SqlParameter("@idclaim", idclaim));
+            DataTable dt = new DataTable();
+            dt = SqlDataAcessHelper.exStoreParas(sql, ds);
+            DataRow dr = null;
+            if (dt.Rows.Count > 0)
+                dr = dt.Rows[0];
+            return dr;
+        }
+        public DataRow InfoSignatureIRCheck(string idclaim)
+        {
+            string sql = "sp_Claim_Select_ChuCkyIRCheck";
+            List<SqlParameter> ds = new List<SqlParameter>();
+            ds.Add(new SqlParameter("@idclaim", idclaim));
+            DataTable dt = new DataTable();
+            dt = SqlDataAcessHelper.exStoreParas(sql, ds);
+            DataRow dr = null;
+            if (dt.Rows.Count > 0)
+                dr = dt.Rows[0];
+            return dr;
+        }
+        public DataRow InfoSignatureFRPre(string idclaim)
+        {
+            string sql = "sp_Claim_Select_ChuCkyFR";
+            List<SqlParameter> ds = new List<SqlParameter>();
+            ds.Add(new SqlParameter("@idclaim", idclaim));
+            DataTable dt = new DataTable();
+            dt = SqlDataAcessHelper.exStoreParas(sql, ds);
+            DataRow dr = null;
+            if (dt.Rows.Count > 0)
+                dr = dt.Rows[0];
+            return dr;
+        }
+        public DataRow InfoSignatureFRCheck(string idclaim)
+        {
+            string sql = "sp_Claim_Select_ChuCkyFRCheck";
+            List<SqlParameter> ds = new List<SqlParameter>();
+            ds.Add(new SqlParameter("@idclaim", idclaim));
+            DataTable dt = new DataTable();
+            dt = SqlDataAcessHelper.exStoreParas(sql, ds);
+            DataRow dr = null;
+            if (dt.Rows.Count > 0)
+                dr = dt.Rows[0];
+            return dr;
+        }
+        public DataRow InfoSignatureFFRPre(string idclaim)
+        {
+            string sql = "sp_Claim_Select_ChuCkyFFR";
+            List<SqlParameter> ds = new List<SqlParameter>();
+            ds.Add(new SqlParameter("@idclaim", idclaim));
+            DataTable dt = new DataTable();
+            dt = SqlDataAcessHelper.exStoreParas(sql, ds);
+            DataRow dr = null;
+            if (dt.Rows.Count > 0)
+                dr = dt.Rows[0];
+            return dr;
+        }
+        public DataRow InfoSignatureFFRCheck(string idclaim)
+        {
+            string sql = "sp_Claim_Select_ChuCkyFFRCheck";
+            List<SqlParameter> ds = new List<SqlParameter>();
+            ds.Add(new SqlParameter("@idclaim", idclaim));
+            DataTable dt = new DataTable();
+            dt = SqlDataAcessHelper.exStoreParas(sql, ds);
+            DataRow dr = null;
+            if (dt.Rows.Count > 0)
+                dr = dt.Rows[0];
+            return dr;
+        }
+        public DataRow InfoSignatureDirector()
+        {
+            string sql = "sp_Info_GiamDoc";
+           
+            DataTable dt = new DataTable();
+            dt = SqlDataAcessHelper.exStoreNoParas(sql);
             DataRow dr = null;
             if (dt.Rows.Count > 0)
                 dr = dt.Rows[0];
@@ -2105,17 +2276,18 @@ namespace WEBSITESAVVY.DAO
             ds.Add(new SqlParameter("@idclaim",idclaim));
             DataTable dt = new DataTable();
             dt = SqlDataAcessHelper.exStoreParas(sql, ds);
+            DataRow dr = null;
             if (dt.Rows.Count > 0)
             {
-                return dt.Rows[0];
+                dr=dt.Rows[0];
             }
-            return null;
+            return dr;
         }
         public DataTable SearchNDBH(string key)
         {
             string sql = "sp_KhachHang_Search";
             List<SqlParameter> ds = new List<SqlParameter>();
-            ds.Add(new SqlParameter("@key ", key));           
+            ds.Add(new SqlParameter("@key", key));           
             return SqlDataAcessHelper.exStoreParas(sql, ds);
         }
         public DataTable SearchLHTT(string key)

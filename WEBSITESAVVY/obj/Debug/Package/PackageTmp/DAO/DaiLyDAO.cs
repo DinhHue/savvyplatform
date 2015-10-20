@@ -328,6 +328,15 @@ namespace WEBSITESAVVY.DAO
             return SqlDataAcessHelper.exNonStoreParas(sql, ds);
         }
 
+        public string KiemTraTinhTrang(string idclaim, string report)
+        {
+            string sql = "sp_DAILYTODO_KiemTraTinhTrang";
+            List<SqlParameter> ds = new List<SqlParameter>();
+            ds.Add(new SqlParameter("@idclaim", idclaim));
+            ds.Add(new SqlParameter("@report", report));
+            return (string)SqlDataAcessHelper.exScalarStore(sql, ds);
+        }
+
         public DataRow SelectMessageReport(string idclaim, string report)
         {
             string sql = "sp_DAILYTODO_SelectRP";

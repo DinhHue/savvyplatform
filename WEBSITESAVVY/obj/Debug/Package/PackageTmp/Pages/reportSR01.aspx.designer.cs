@@ -760,76 +760,40 @@ namespace WEBSITESAVVY.Pages {
         protected global::System.Web.UI.WebControls.Label Label53;
         
         /// <summary>
-        /// Label59 control.
+        /// DaiDien1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label59;
+        protected global::System.Web.UI.WebControls.Label DaiDien1;
         
         /// <summary>
-        /// Label58 control.
+        /// DaiDien2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label58;
+        protected global::System.Web.UI.WebControls.Label DaiDien2;
         
         /// <summary>
-        /// Label57 control.
+        /// DaiDien3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label57;
+        protected global::System.Web.UI.WebControls.Label DaiDien3;
         
         /// <summary>
-        /// Label56 control.
+        /// DaiDien4 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label56;
-        
-        /// <summary>
-        /// lblNguoiBaoCao control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblNguoiBaoCao;
-        
-        /// <summary>
-        /// lblNguoiBaoCao0 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblNguoiBaoCao0;
-        
-        /// <summary>
-        /// lblNguoiBaoCao1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblNguoiBaoCao1;
-        
-        /// <summary>
-        /// lblDaiDienSAVVY control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblDaiDienSAVVY;
+        protected global::System.Web.UI.WebControls.Label DaiDien4;
         
         /// <summary>
         /// Label38 control.
@@ -868,6 +832,42 @@ namespace WEBSITESAVVY.Pages {
         protected global::System.Web.UI.WebControls.Label Label39;
         
         /// <summary>
+        /// TenDaiDien1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label TenDaiDien1;
+        
+        /// <summary>
+        /// TenDaiDien2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label TenDaiDien2;
+        
+        /// <summary>
+        /// TenDaiDien3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label TenDaiDien3;
+        
+        /// <summary>
+        /// TenDaiDien4 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label TenDaiDien4;
+        
+        /// <summary>
         /// Label40 control.
         /// </summary>
         /// <remarks>
@@ -877,13 +877,13 @@ namespace WEBSITESAVVY.Pages {
         protected global::System.Web.UI.WebControls.Label Label40;
         
         /// <summary>
-        /// lblChucVuNguoiBC control.
+        /// ChucVuDaiDien1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblChucVuNguoiBC;
+        protected global::System.Web.UI.WebControls.Label ChucVuDaiDien1;
         
         /// <summary>
         /// Label45 control.
@@ -895,13 +895,13 @@ namespace WEBSITESAVVY.Pages {
         protected global::System.Web.UI.WebControls.Label Label45;
         
         /// <summary>
-        /// lblChucVuNguoiBC0 control.
+        /// ChucVuDaiDien2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblChucVuNguoiBC0;
+        protected global::System.Web.UI.WebControls.Label ChucVuDaiDien2;
         
         /// <summary>
         /// Label46 control.
@@ -913,13 +913,13 @@ namespace WEBSITESAVVY.Pages {
         protected global::System.Web.UI.WebControls.Label Label46;
         
         /// <summary>
-        /// lblChucVuNguoiBC1 control.
+        /// ChucVuDaiDien3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblChucVuNguoiBC1;
+        protected global::System.Web.UI.WebControls.Label ChucVuDaiDien3;
         
         /// <summary>
         /// Label41 control.
@@ -931,13 +931,13 @@ namespace WEBSITESAVVY.Pages {
         protected global::System.Web.UI.WebControls.Label Label41;
         
         /// <summary>
-        /// lblChucVuDaiDienSAVVY control.
+        /// ChucVuDaiDien4 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblChucVuDaiDienSAVVY;
+        protected global::System.Web.UI.WebControls.Label ChucVuDaiDien4;
         
         /// <summary>
         /// tool_bottom control.

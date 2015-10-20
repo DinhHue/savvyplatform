@@ -16,34 +16,31 @@ namespace WEBSITESAVVY.Messages
         ClaimDAO cl= new ClaimDAO();
         SendMailDAO sendmail = new SendMailDAO();
         DaiLyDAO dldao = new DaiLyDAO();
+
+        public static string report = "";
+
         protected void Page_Load(object sender, EventArgs e)
         {
             try
             {
-                if (Session["ThamChieu"].ToString() != null)
+                if (!IsPostBack)
                 {
-                    loadGDV();
-                    string id = Session["ThamChieu"].ToString();
-                    //if (dldao.LayThongBao("SR01", id) != null)
-                    //{
-                    //    panelthongbao.Visible = true;
-                    //    loadTB(id);
-                    //    panelSubmit.Visible = false;
-                    //}
-                    //else
-                    //{   
-                    //    panelthongbao.Visible = false;
-                    //     panelSubmit.Visible = true;
-                    //}
-                    string tt = LayTinhTrang(id, "SR01");
-                    if (tt == "No")
-                        loadTB(id);
-                    if (tt == "Yes")
-                        loadMessage(id, "SR01");
-                    if (tt == null)
+                    if (Session["ThamChieu"].ToString() != null)
                     {
-                        panelchecked.Visible = false;
-                        panelthongbao.Visible = false;
+                        report = Request.QueryString["report"].ToString();
+
+                        loadGDV();
+                        string id = Session["ThamChieu"].ToString();
+                        string tt = LayTinhTrang(id, report);
+                        if (tt == "No")
+                            loadTB(id, report);
+                        if (tt == "Yes")
+                            loadMessage(id, report);
+                        if (tt == null)
+                        {
+                            panelchecked.Visible = false;
+                            panelthongbao.Visible = false;
+                        }
                     }
                 }
             }
@@ -52,11 +49,11 @@ namespace WEBSITESAVVY.Messages
                 Response.Write("<script> alert('"+ex.Message+"');</script>");
             }
         }
-        void loadTB(string id)
+        void loadTB(string id, string report)
         {
-            if (dldao.LayThongBao("SR01", id) != null)
+            if (dldao.LayThongBao(report , id) != null)
             {
-                DataRow dr = dldao.LayThongBao("SR01", id);
+                DataRow dr = dldao.LayThongBao(report , id);
                 txtThongBao.Text = dr["DienGiai"].ToString();
                 txtNgay.Text = dr["Ngay"].ToString();
                 //lblGDV.Text = dr["TenGDV"].ToString();
@@ -133,7 +130,7 @@ namespace WEBSITESAVVY.Messages
                     dldto.Lev = 1;
                     dldto.Ngay = DateTime.Parse(DateTime.Now.ToShortDateString());
                     dldto.Deadline = DateTime.Parse(DateTime.Now.ToShortDateString());
-                    dldto.Report = "SR01";
+                    dldto.Report = report;
                     int gdvnhan = int.Parse(drDSGDV.SelectedItem.Value.ToString());
                     if (gdvnhan != 0)
                     {
@@ -163,8 +160,9 @@ namespace WEBSITESAVVY.Messages
                         if (them == true)
                         {
                             sendmail.Send_Email_Task(email, "Task-to-do " + brief, bodyCC, "huedinh@savvyadjusters.vn");
-                            SaveLogTracking(magdv, gdv.LayTenTheoMa(magdv) + " gửi tin nhắn cho " + ten + " nhờ kiểm tra SR01", idclaim);
-                            Response.Write("<script> window.parent.closeDialog(); </script>");
+                            SaveLogTracking(magdv, gdv.LayTenTheoMa(magdv) + " gửi tin nhắn cho " + ten + " nhờ kiểm tra " + report, idclaim);
+
+                            Response.Write("<script> window.parent.closeAllDialog(); </script>");
                            
                         }
                     }

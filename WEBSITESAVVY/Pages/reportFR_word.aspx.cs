@@ -21,9 +21,36 @@ namespace WEBSITESAVVY.Pages
                 mClaimID = Session["ThamChieu"].ToString();
                 loadData();
                 exportToWord();
+                LoadSIG(mClaimID);
             }
         }
+        void LoadSIG(string claimID)
+        {
+            DataRow row = claimDao.InfoSignatureIRPre(claimID);
+            if (row != null)
+            {
+                lblNguoiBaoCao.Text = row[0].ToString();
+                lblChucVuNguoiBC.Text = row[1].ToString();
 
+            }
+
+            DataRow row1 = claimDao.InfoSignatureIRCheck(claimID);
+            if (row1 != null)
+            {
+
+                lblNguoiCheckBC.Text = row[0].ToString();
+                lblChucvuNguoiCheck.Text = row[1].ToString();
+            }
+
+            DataRow row2 = claimDao.InfoSignatureDirector();
+            if (row2 != null)
+            {
+
+                lblNguoiPheDuyet.Text = row[0].ToString();
+                lblChucvuNguoiPheDuyet.Text = row[1].ToString();
+            }
+
+        }
         public void loadData()
         {
             DataRow row = claimDao.LayInFoReportNormal(mClaimID);

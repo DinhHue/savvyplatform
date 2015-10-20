@@ -1592,6 +1592,7 @@
       <DependentUpon>ClaimDetail.Master</DependentUpon>
     </Compile>
     <Compile Include="DAO\ChiTietThietHaiDAO.cs" />
+    <Compile Include="DAO\CHUKYDAO.cs" />
     <Compile Include="DAO\CommentDAO.cs" />
     <Compile Include="DAO\DaiLyDAO.cs" />
     <Compile Include="DAO\DanhMucThietHaiDAO.cs" />
@@ -1625,6 +1626,7 @@
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
     <Compile Include="DTO\ChiTietThietHaiDTO.cs" />
+    <Compile Include="DTO\CHUKYDTO.cs" />
     <Compile Include="DTO\CommentDTO.cs" />
     <Compile Include="DTO\DAILYDTO.cs" />
     <Compile Include="DTO\DanhMucThietHaiDTO.cs" />
@@ -3116,7 +3118,7 @@
         <WebProjectProperties>
           <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>53144</DevelopmentServerPort>
+          <DevelopmentServerPort>60727</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>
           </IISUrl>
