@@ -26,6 +26,7 @@
         iframe
         {
             border:1px solid #BCBCBC;
+            box-sizing: inherit;
         }
         .frame
         {
