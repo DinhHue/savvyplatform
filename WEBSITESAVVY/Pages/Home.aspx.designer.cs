@@ -130,6 +130,24 @@ namespace WEBSITESAVVY.Pages {
         protected global::System.Web.UI.WebControls.Button btnClosed;
         
         /// <summary>
+        /// drDonViBH control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList drDonViBH;
+        
+        /// <summary>
+        /// btnXemDonViBH control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnXemDonViBH;
+        
+        /// <summary>
         /// drStatus control.
         /// </summary>
         /// <remarks>

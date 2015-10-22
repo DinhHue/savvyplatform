@@ -93,23 +93,24 @@
                             Width="100px" onclick="btnClosed_Click" CssClass="btnThem" />
                     </td>
                 </tr>
-                <%-- tìm kiếm theo đơn vị BH, tăng rate, giảm rate --%><%--<tr >
+                <%-- tìm kiếm theo đơn vị BH, tăng rate, giảm rate --%>
+                <tr >
                     <td class="left">
                         Đơn Vị Bảo Hiểm : :</td>
                     <td class="righthome" colspan="2">
-                        <asp:DropDownList ID="drDonViBH" runat="server" Width="15%">
+                        <asp:DropDownList ID="drDonViBH" runat="server" Width="100px" CssClass="input">
                         </asp:DropDownList>
                         &nbsp;&nbsp;
                         <asp:Button ID="btnXemDonViBH" runat="server" Height="30px" Text="View" 
                             Width="100px" CssClass="btn" onclick="btnXemDonViBH_Click" />
                         &nbsp;&nbsp;
-                        <asp:Button ID="btnDownrate" runat="server" Height="30px" Text="- Rate" 
+                    <%--    <asp:Button ID="btnDownrate" runat="server" Height="30px" Text="- Rate" 
                             Width="100px" CssClass="btn" onclick="btnDownrate_Click" />
                         &nbsp;&nbsp;
                         <asp:Button ID="btnUprate" runat="server" Height="30px" Text="+ Rate" 
                             Width="100px" CssClass="btn" onclick="btnUprate_Click" />
-                        &nbsp;</td>
-                </tr>--%>
+                        &nbsp;--%></td>
+                </tr>
                 
                 <tr >
                     <td class="left">

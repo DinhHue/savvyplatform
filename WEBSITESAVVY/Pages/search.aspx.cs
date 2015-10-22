@@ -26,7 +26,8 @@ namespace WEBSITESAVVY.Pages
                     if (Request.QueryString["key"] != null)
                     {
                         string key = Request.QueryString["key"].ToString();
-                        txtTuKhoa.Text = key;
+                        //string c = string.Format("N'{0}'", key);
+                        //txtTuKhoa.Text = c;
                         TimAllClaim(key);
                     }
                 }
@@ -36,18 +37,19 @@ namespace WEBSITESAVVY.Pages
         protected void btnTiemKiem_Click(object sender, EventArgs e)
         {
             string key = txtTuKhoa.Text.Trim();
+            string c = string.Format("N'{0}'", key);
             if (rdTimKiem.SelectedValue == "NDBH")
-                TimKhachHang(key);
+                TimKhachHang(c);
             if (rdTimKiem.SelectedValue == "LHTT")
-                TimLHTT(key);
+                TimLHTT(c);
             if (rdTimKiem.SelectedValue == "PolicyName")
-                TimPolicy(key);
+                TimPolicy(c);
             if (rdTimKiem.SelectedValue == "Brief") 
-                TimBrief(key);
+                TimBrief(c);
             if (rdTimKiem.SelectedValue == "DKBS")
-                TimDKBS(key);
-            else
-                TimAllClaim(key);
+                TimDKBS(c);
+            if(rdTimKiem.SelectedValue=="")
+                TimAllClaim(c);
         }
         void TimKhachHang(string key)
         {

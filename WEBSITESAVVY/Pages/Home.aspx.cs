@@ -29,7 +29,7 @@ namespace WEBSITESAVVY.Pages
                     if (uprate == false)
                         Response.Write("<script> alert('Web page can't reduce rate of claim!');</script>");
                     loadPending();
-                    //loadMaHoa();
+                    LoadMaHoa();
                     loadStatus();
                     loadGDV();
                 }
@@ -97,6 +97,14 @@ namespace WEBSITESAVVY.Pages
             drStatus.DataTextField = "TenGiaiDoan";
             drStatus.DataValueField = "ID_GiaiDoanHoanThanh";
             drStatus.DataBind();
+        }
+
+        protected void LoadMaHoa()
+        {
+            drDonViBH.DataSource = dv.DSDVMaHoa();
+            drDonViBH.DataTextField = "MaHoa";
+            drDonViBH.DataValueField = "ID_DonVi";
+            drDonViBH.DataBind();
         }
        
         protected void btnTiemKiem_Click(object sender, EventArgs e)
@@ -319,6 +327,12 @@ namespace WEBSITESAVVY.Pages
         {
             string key = txtTuKhoa.Text;
             Response.Redirect("~/Pages/search.aspx?key="+key);
+        }
+
+        protected void btnXemDonViBH_Click(object sender, EventArgs e)
+        {
+            string mahoa=drDonViBH.SelectedItem.ToString();
+            loadTheoMaHoa(mahoa);
         }
 
        
