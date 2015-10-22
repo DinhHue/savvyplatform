@@ -32,6 +32,7 @@
             window.location.href = "#" + key;
 
             tinymce.init({
+                forced_root_block : '',
                 selector: "#txt" + key,
                 plugins: [
                         "advlist autolink autosave link image lists charmap print preview hr anchor pagebreak spellchecker",

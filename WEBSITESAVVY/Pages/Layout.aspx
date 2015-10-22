@@ -100,6 +100,7 @@
             report = ""
             if (index == 0)
                 Link = "../Pages/generalinformation.aspx";
+                
             if (index == 1)
                 Link = "../Pages/sitephoto.aspx";
             if (index == 2) {
@@ -220,7 +221,7 @@
     </script>
 
     <script type="text/javascript">
-        var ClaimName = '<%= claimName %>';
+       var ClaimName = '<%= claimName %>';
         $(document).ready(function () {
 
             $("#panelMenu").accordion({
@@ -249,8 +250,9 @@
 						<a href="../Pages/QuanLyQuiTrinh.aspx" class="easyui-linkbutton" data-options="plain:true"><span class="button-menu">Memos</span></a>
 						<a href="../Pages/DAILYTODO.aspx" class="easyui-linkbutton" data-options="plain:true"><span class="button-menu">To-do-list</span></a>
 						<a href="../Pages/ListWeeklyReport.aspx" class="easyui-linkbutton" data-options="plain:true" ><span class="button-menu">Weekly Update</span></a>
+                        <a href="../Pages/trackinglog.aspx" class="easyui-linkbutton" data-options="plain:true" ><span class="button-menu">Events</span></a>
 						<a href="javascript:void(0)" onclick="$('#w_NewClaim').window('open')" class="easyui-linkbutton" data-options="plain:true"><span class="button-menu">New Claim</span></a>
-					    <a href="../Pages/News.aspx"class="easyui-linkbutton" data-options="plain:true" ><span class="button-menu">Blogs</span></a>
+					    <a href="http://blog.savvyadjusters.com/"class="easyui-linkbutton" data-options="plain:true" ><span class="button-menu">Blogs</span></a>
                      </td>
                     <td>
                         <div style="float:right">
@@ -430,14 +432,13 @@
         <span class="caret"></span></button>
         <ul class="dropdown-menu dropdown-menu-right" style="position:fixed; top:auto; bottom:20px; right:20px;" >
             <li><a data-toggle="modal" data-target="#myModal" onclick="SendSubmit();" href="javascript:void() " >Submit</a></li>
-			<li><a data-toggle="modal" data-target="#myModal" onclick="SendChecked();" href="javascript:void() " >Checked</a></li>
-
+			<li><a data-toggle="modal" data-target="#myModal" onclick="SendChecked();" href="javascript:void() " >Checked</a></li>            
         </ul>
     </div>
 
     </div>
-	<div id="layoutContent" data-options="region:'center',title:'Report'">
-        <iframe id="frameCenter" src="../Pages/generalinformation.aspx" ></iframe>
+	<div id="layoutContent" data-options="region:'center',title:'General Information'">
+        <iframe id="frameCenter" title="General Information" src="../Pages/generalinformation.aspx" ></iframe>
 	</div>
 
     <!-- window -->

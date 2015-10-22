@@ -11,6 +11,7 @@
 
     <script type="text/javascript">
         tinymce.init({
+            forced_root_block : '',
             selector: "textarea",
             plugins: [
                     "advlist autolink autosave link image lists charmap print preview hr anchor pagebreak spellchecker",

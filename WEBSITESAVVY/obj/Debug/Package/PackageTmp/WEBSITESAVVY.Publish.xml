@@ -39,10 +39,12 @@
     <file relUrl="DAO/TheLoaiSumDAO.cs" publishTime="09/04/2015 13:43:17" />
     <file relUrl="ckeditor/plugins/devtools/lang/no.js" publishTime="09/04/2015 13:43:25" />
     <file relUrl="ckeditor/images/spacer.gif" publishTime="09/04/2015 13:43:24" />
+    <file relUrl="Pages/timesheetsummary.aspx.cs" publishTime="09/04/2015 13:43:23" />
     <file relUrl="tinymce/plugins/media/moxieplayer.swf" publishTime="09/16/2015 15:19:47" />
     <file relUrl="images/jquerybubblepopup-theme/all-green/bottom-right.png" publishTime="09/04/2015 13:43:29" />
     <file relUrl="images/ambitios_pic11.jpg" publishTime="09/04/2015 13:43:28" />
     <file relUrl="images/jquerybubblepopup-theme/all-azure/ie/tail-right.gif" publishTime="09/04/2015 13:43:29" />
+    <file relUrl="Content/themes/black/tooltip.css" publishTime="09/04/2015 13:43:16" />
     <file relUrl="images/jquerybubblepopup-theme/all-blue/ie/top-left.gif" publishTime="09/04/2015 13:43:29" />
     <file relUrl="ckeditor/lang/th.js" publishTime="09/04/2015 13:43:25" />
     <file relUrl="Library/AjaxControlToolkit.Binary.NET4/AjaxControlToolkit.dll" publishTime="09/04/2015 13:43:17" />
@@ -58,7 +60,6 @@
     <file relUrl="images/ambitios_button_bgs3.gif" publishTime="09/04/2015 13:43:28" />
     <file relUrl="bin/pt/AjaxControlToolkit.resources.dll" publishTime="09/04/2015 13:43:17" />
     <file relUrl="images/jquerybubblepopup-theme/all-violet/ie/bottom-middle.gif" publishTime="09/04/2015 13:43:29" />
-    <file relUrl="ckeditor/skins/v2/images/dialog_sides.png" publishTime="09/04/2015 13:43:28" />
     <file relUrl="images/ambitios_big_pic.gif" publishTime="09/04/2015 13:43:28" />
     <file relUrl="Library/AjaxControlToolkit.Binary.NET4/cs/AjaxControlToolkit.resources.dll" publishTime="09/04/2015 13:43:17" />
     <file relUrl="ckeditor/plugins/a11yhelp/lang/cs.js" publishTime="09/04/2015 13:43:25" />
@@ -87,12 +88,11 @@
     <file relUrl="Pages/trackinglog.aspx.designer.cs" publishTime="09/04/2015 13:43:23" />
     <file relUrl="Content/themes/gray/window.css" publishTime="09/04/2015 13:43:16" />
     <file relUrl="Account/Register.aspx.designer.cs" publishTime="09/04/2015 13:43:16" />
-    <file relUrl="WEBSITESAVVY.Publish.xml" publishTime="10/06/2015 12:01:16" />
+    <file relUrl="WEBSITESAVVY.Publish.xml" publishTime="10/20/2015 09:55:02" />
     <file relUrl="Library/itextsharp.dll" publishTime="09/04/2015 13:43:18" />
     <file relUrl="Content/themes/bootstrap/images/loading.gif" publishTime="09/04/2015 13:43:16" />
     <file relUrl="Styles/Site.css" publishTime="09/04/2015 13:43:23" />
     <file relUrl="Manage/ManageUnit.aspx" publishTime="09/04/2015 13:43:18" />
-    <file relUrl="DTO/DaiDienDTO.cs" publishTime="09/04/2015 13:43:17" />
     <file relUrl="bin/CKEditor.NET.dll" publishTime="09/04/2015 13:43:18" />
     <file relUrl="WEBSITESAVVY.csproj" publishTime="10/13/2015 09:43:44" />
     <file relUrl="images/login.jpg" publishTime="09/04/2015 13:43:30" />
@@ -105,13 +105,14 @@
     <file relUrl="Content/themes/bootstrap/slider.css" publishTime="09/04/2015 13:43:16" />
     <file relUrl="Content/themes/bootstrap/textbox.css" publishTime="09/04/2015 13:43:16" />
     <file relUrl="bin/cs/AjaxControlToolkit.resources.dll" publishTime="09/04/2015 13:43:17" />
-    <file relUrl="images/ambitios_button3_bgs2_hover.png" publishTime="09/04/2015 13:43:28" />
+    <file relUrl="Pages/ClaimSummaryOfLossPop.aspx.cs" publishTime="09/04/2015 13:43:20" />
     <file relUrl="images/baner.jpg" publishTime="09/04/2015 13:43:29" />
     <file relUrl="tinymce/plugins/example/dialog.html" publishTime="09/16/2015 15:19:47" />
     <file relUrl="Content/themes/gray/tree.css" publishTime="09/04/2015 13:43:16" />
     <file relUrl="Content/themes/gray/datebox.css" publishTime="09/04/2015 13:43:16" />
     <file relUrl="Content/themes/bootstrap/calendar.css" publishTime="09/04/2015 13:43:16" />
     <file relUrl="Pages/DiaryMoi.aspx.cs" publishTime="09/04/2015 13:43:20" />
+    <file relUrl="ckeditor/plugins/a11yhelp/lang/de.js" publishTime="09/04/2015 13:43:25" />
     <file relUrl="DTO/IncomeDTO.cs" publishTime="09/04/2015 13:43:17" />
     <file relUrl="ckeditor/plugins/iframedialog/plugin.js" publishTime="09/04/2015 13:43:26" />
     <file relUrl="ckeditor/plugins/specialchar/lang/de.js" publishTime="09/04/2015 13:43:26" />
@@ -158,15 +159,17 @@
     <file relUrl="ckeditor/plugins/devtools/lang/et.js" publishTime="09/04/2015 13:43:25" />
     <file relUrl="images/ambitios_medium_pic1.jpg" publishTime="09/04/2015 13:43:28" />
     <file relUrl="Pages/listworksheet.aspx.cs" publishTime="09/04/2015 13:43:22" />
-    <file relUrl="Pages/reportPR.aspx" publishTime="10/19/2015 10:58:20" />
+    <file relUrl="Pages/reportPR.aspx" publishTime="10/21/2015 08:13:19" />
     <file relUrl="tinymce/tinymce.min.js" publishTime="09/16/2015 15:19:47" />
     <file relUrl="DAO/LossListDAO.cs" publishTime="09/04/2015 13:43:17" />
     <file relUrl="Pages/QuiTrinhMoi.aspx.cs" publishTime="09/04/2015 13:43:21" />
     <file relUrl="Pages/discussionclaim.aspx" publishTime="09/04/2015 13:43:22" />
     <file relUrl="Content/themes/metro/progressbar.css" publishTime="09/04/2015 13:43:16" />
     <file relUrl="Pages/SubHome.aspx" publishTime="09/04/2015 13:43:21" />
+    <file relUrl="Pages/stopworking.aspx.designer.cs" publishTime="09/11/2015 10:08:56" />
     <file relUrl="images/jquerybubblepopup-theme/all-green/bottom-middle.png" publishTime="09/04/2015 13:43:29" />
     <file relUrl="js/images/ui-bg_glass_55_fbf9ee_1x400.png" publishTime="09/04/2015 13:43:30" />
+    <file relUrl="images/ambitios_button3_bgs2_hover.png" publishTime="09/04/2015 13:43:28" />
     <file relUrl="Pages/FormDraft.aspx" publishTime="09/04/2015 13:43:21" />
     <file relUrl="Manage/QuanLyMenhGia.aspx.designer.cs" publishTime="09/04/2015 13:43:18" />
     <file relUrl="Pages/NewTimeSheet.aspx.designer.cs" publishTime="09/04/2015 13:43:21" />
@@ -185,7 +188,6 @@
     <file relUrl="piecemaker/flash.js" publishTime="09/04/2015 13:43:31" />
     <file relUrl="Content/themes/default/images/searchbox_button.png" publishTime="09/04/2015 13:43:16" />
     <file relUrl="tinymce/plugins/emoticons/img/smiley-wink.gif" publishTime="09/16/2015 15:19:47" />
-    <file relUrl="Uploads/Images/DSC_0936.jpg" publishTime="10/19/2015 10:29:10" />
     <file relUrl="images/jquerybubblepopup-theme/green/ie/bottom-middle.gif" publishTime="09/04/2015 13:43:29" />
     <file relUrl="images/ambitios_related_05.jpg" publishTime="09/04/2015 13:43:28" />
     <file relUrl="Content/themes/default/datagrid.css" publishTime="09/04/2015 13:43:16" />
@@ -342,7 +344,6 @@
     <file relUrl="Content/themes/metro/images/searchbox_button.png" publishTime="09/04/2015 13:43:16" />
     <file relUrl="images/jquerybubblepopup-theme/azure/tail-bottom.png" publishTime="09/04/2015 13:43:29" />
     <file relUrl="ckeditor/plugins/a11yhelp/lang/vi.js" publishTime="09/04/2015 13:43:25" />
-    <file relUrl="Library/AjaxControlToolkit.Binary.NET4/AjaxControlToolkitSampleSite.zip" publishTime="09/04/2015 13:43:17" />
     <file relUrl="Pages/ManageClaim.aspx.designer.cs" publishTime="09/04/2015 13:43:21" />
     <file relUrl="Pages/SummaryClaimDetail.aspx" publishTime="09/04/2015 13:43:21" />
     <file relUrl="Content/themes/black/panel.css" publishTime="09/04/2015 13:43:16" />
@@ -422,7 +423,7 @@
     <file relUrl="Uc/OtherInsured.ascx" publishTime="09/04/2015 13:43:24" />
     <file relUrl="images/jquerybubblepopup-theme/all-green/tail-right.png" publishTime="09/04/2015 13:43:29" />
     <file relUrl="ckeditor/plugins/placeholder/lang/it.js" publishTime="09/04/2015 13:43:26" />
-    <file relUrl="images/jquerybubblepopup-theme/green/tail-right.png" publishTime="09/04/2015 13:43:29" />
+    <file relUrl="DTO/SitePhotoDTO.cs" publishTime="09/21/2015 15:05:32" />
     <file relUrl="Manage/QuanLyGiamDinhVien.aspx.cs" publishTime="09/04/2015 13:43:18" />
     <file relUrl="Content/themes/metro/images/pagination_icons.png" publishTime="09/04/2015 13:43:16" />
     <file relUrl="Pages/newtimesheetpop.aspx" publishTime="09/04/2015 13:43:22" />
@@ -435,7 +436,7 @@
     <file relUrl="ckeditor/plugins/placeholder/lang/fr.js" publishTime="09/04/2015 13:43:26" />
     <file relUrl="images/ambitios_pic4.jpg" publishTime="09/04/2015 13:43:28" />
     <file relUrl="Content/themes/icons/clear.png" publishTime="09/04/2015 13:43:16" />
-    <file relUrl="Pages/reportFFR.aspx" publishTime="10/19/2015 10:58:20" />
+    <file relUrl="Pages/reportFFR.aspx" publishTime="10/21/2015 08:13:19" />
     <file relUrl="Pages/KhoiPhucMatKhau.aspx.designer.cs" publishTime="09/04/2015 13:43:21" />
     <file relUrl="ckeditor/lang/zh.js" publishTime="09/04/2015 13:43:25" />
     <file relUrl="images/features_06.jpg" publishTime="09/04/2015 13:43:29" />
@@ -452,7 +453,6 @@
     <file relUrl="ckeditor/plugins/smiley/images/cry_smile.gif" publishTime="09/04/2015 13:43:26" />
     <file relUrl="images/prettyPhoto/dark_rounded/btnPrevious.png" publishTime="09/04/2015 13:43:30" />
     <file relUrl="images/jquerybubblepopup-theme/all-grey/top-middle.png" publishTime="09/04/2015 13:43:29" />
-    <file relUrl="Pages/StaticsticsTimeSheet.aspx.cs" publishTime="09/04/2015 13:43:21" />
     <file relUrl="Pages/ErrorLogin.aspx" publishTime="09/04/2015 13:43:21" />
     <file relUrl="Content/themes/bootstrap/spinner.css" publishTime="09/04/2015 13:43:16" />
     <file relUrl="tinymce/skins/lightgray/skin.ie7.min.css" publishTime="09/16/2015 15:19:47" />
@@ -477,7 +477,6 @@
     <file relUrl="ckeditor/plugins/a11yhelp/lang/en.js" publishTime="09/04/2015 13:43:25" />
     <file relUrl="css/color.css" publishTime="09/04/2015 13:43:28" />
     <file relUrl="Content/themes/black/linkbutton.css" publishTime="09/04/2015 13:43:16" />
-    <file relUrl="Pages/Login.aspx" publishTime="09/04/2015 13:43:21" />
     <file relUrl="Manage/CapNhatDonViBaoHiem.aspx.designer.cs" publishTime="09/04/2015 13:43:18" />
     <file relUrl="tinymce/plugins/textpattern/plugin.min.js" publishTime="09/16/2015 15:19:47" />
     <file relUrl="images/ambitios_row_tile_sub_right.gif" publishTime="09/04/2015 13:43:28" />
@@ -508,10 +507,11 @@
     <file relUrl="Pages/updatetimesheetpop.aspx" publishTime="09/04/2015 13:43:23" />
     <file relUrl="Content/themes/default/panel.css" publishTime="09/04/2015 13:43:16" />
     <file relUrl="ckeditor/plugins/placeholder/lang/nb.js" publishTime="09/04/2015 13:43:26" />
+    <file relUrl="images/jquerybubblepopup-theme/green/tail-right.png" publishTime="09/04/2015 13:43:29" />
     <file relUrl="ckeditor/skins/office2003/images/sprites_ie6.png" publishTime="09/04/2015 13:43:28" />
     <file relUrl="Library/AjaxControlToolkit.Binary.NET4/he/AjaxControlToolkit.resources.dll" publishTime="09/04/2015 13:43:17" />
     <file relUrl="Uc/OtherInsured.ascx.cs" publishTime="09/04/2015 13:43:24" />
-    <file relUrl="Pages/reportSR01.aspx" publishTime="10/19/2015 10:58:20" />
+    <file relUrl="Pages/reportSR01.aspx" publishTime="10/21/2015 08:32:47" />
     <file relUrl="Content/themes/gray/dialog.css" publishTime="09/04/2015 13:43:16" />
     <file relUrl="Content/themes/gray/slider.css" publishTime="09/04/2015 13:43:16" />
     <file relUrl="DAO/LinhVucTonThatDAO.cs" publishTime="09/04/2015 13:43:17" />
@@ -528,6 +528,7 @@
     <file relUrl="Pages/ucNewClaim.ascx.designer.cs" publishTime="09/04/2015 13:43:23" />
     <file relUrl="ckeditor/plugins/specialchar/lang/el.js" publishTime="09/04/2015 13:43:26" />
     <file relUrl="ckeditor/lang/ko.js" publishTime="09/04/2015 13:43:25" />
+    <file relUrl="Pages/updatecoverhome.aspx.designer.cs" publishTime="09/04/2015 13:43:23" />
     <file relUrl="images/jquerybubblepopup-theme/all-azure/ie/tail-bottom.gif" publishTime="09/04/2015 13:43:29" />
     <file relUrl="Pages/WeeklyReport.aspx" publishTime="09/04/2015 13:43:22" />
     <file relUrl="images/jquerybubblepopup-theme/all-blue/ie/top-middle.gif" publishTime="09/04/2015 13:43:29" />
@@ -612,6 +613,7 @@
     <file relUrl="ckeditor/lang/uk.js" publishTime="09/04/2015 13:43:25" />
     <file relUrl="images/ambitios_button3_bgs1.gif" publishTime="09/04/2015 13:43:28" />
     <file relUrl="images/next-icon.png" publishTime="09/30/2015 09:49:21" />
+    <file relUrl="tinymce/plugins/visualblocks/plugin.min.js" publishTime="09/16/2015 15:19:47" />
     <file relUrl="Pages/docsrequestn.aspx.cs" publishTime="09/04/2015 13:43:22" />
     <file relUrl="Content/themes/black/images/accordion_arrows.png" publishTime="09/04/2015 13:43:16" />
     <file relUrl="Content/themes/metro/slider.css" publishTime="09/04/2015 13:43:16" />
@@ -635,7 +637,7 @@
     <file relUrl="images/jquerybubblepopup-theme/all-grey/middle-left.png" publishTime="09/04/2015 13:43:29" />
     <file relUrl="Manage/CLAIM_PERMISSION.aspx.designer.cs" publishTime="09/04/2015 13:43:18" />
     <file relUrl="js/jquery-1.4.min.js" publishTime="09/04/2015 13:43:30" />
-    <file relUrl="Pages/reportIR.aspx" publishTime="10/19/2015 10:58:20" />
+    <file relUrl="Pages/reportIR.aspx" publishTime="10/21/2015 08:13:19" />
     <file relUrl="images/jquerybubblepopup-theme/all-blue/top-right.png" publishTime="09/04/2015 13:43:29" />
     <file relUrl="ckeditor/plugins/devtools/lang/de.js" publishTime="09/04/2015 13:43:25" />
     <file relUrl="Content/themes/default/slider.css" publishTime="09/04/2015 13:43:16" />
@@ -671,7 +673,6 @@
     <file relUrl="DTO/CommentDTO.cs" publishTime="09/21/2015 12:07:12" />
     <file relUrl="Pages/WeeklyReportDanhSach.aspx.cs" publishTime="09/04/2015 13:43:22" />
     <file relUrl="Manage/QuanLyClaim.aspx.designer.cs" publishTime="09/04/2015 13:43:18" />
-    <file relUrl="Manage/newincome.aspx" publishTime="09/04/2015 13:43:18" />
     <file relUrl="Pages/DeXuatBoiThuong.aspx" publishTime="09/04/2015 13:43:20" />
     <file relUrl="Pages/reportFR_word.aspx.cs" publishTime="10/19/2015 09:35:05" />
     <file relUrl="ckeditor/lang/gl.js" publishTime="09/04/2015 13:43:25" />
@@ -709,7 +710,6 @@
     <file relUrl="images/jquerybubblepopup-theme/all-green/tail-left.png" publishTime="09/04/2015 13:43:29" />
     <file relUrl="Pages/ViewWR.aspx.cs" publishTime="09/04/2015 13:43:22" />
     <file relUrl="Pages/DoiMatKhau.aspx.designer.cs" publishTime="09/04/2015 13:43:20" />
-    <file relUrl="Manage/QuanLyNhaBaoHiem.aspx.cs" publishTime="09/04/2015 13:43:18" />
     <file relUrl="css/superfish.css" publishTime="09/04/2015 13:43:28" />
     <file relUrl="ckeditor/plugins/styles/styles/default.js" publishTime="09/04/2015 13:43:26" />
     <file relUrl="Manage/CapNhatDonViBaoHiem.aspx" publishTime="09/04/2015 13:43:18" />
@@ -794,11 +794,11 @@
     <file relUrl="ckeditor/plugins/devtools/lang/hr.js" publishTime="09/04/2015 13:43:25" />
     <file relUrl="images/jquerybubblepopup-theme/violet/ie/middle-left.gif" publishTime="09/04/2015 13:43:29" />
     <file relUrl="Pages/NewsDetail.aspx.designer.cs" publishTime="09/30/2015 09:49:21" />
+    <file relUrl="Pages/bordereauclaimprint.aspx" publishTime="09/04/2015 13:43:22" />
     <file relUrl="tinymce/plugins/fullscreen/plugin.min.js" publishTime="09/16/2015 15:19:47" />
     <file relUrl="Uc/A22QuanLyKhieuNai.ascx" publishTime="09/04/2015 13:43:23" />
     <file relUrl="tinymce/plugins/link/plugin.min.js" publishTime="09/16/2015 15:19:47" />
     <file relUrl="Manage/QuanLyGiaiDoanGiamDinh.aspx.designer.cs" publishTime="09/04/2015 13:43:18" />
-    <file relUrl="images/jquerybubblepopup-theme/all-violet/top-right.png" publishTime="09/04/2015 13:43:29" />
     <file relUrl="Pages/ClaimBordereau.aspx" publishTime="09/04/2015 13:43:19" />
     <file relUrl="Pages/NewsMyPost.aspx.designer.cs" publishTime="09/30/2015 09:49:21" />
     <file relUrl="Pages/ClaimUpdateFieldPop.aspx.designer.cs" publishTime="09/04/2015 13:43:20" />
@@ -880,6 +880,7 @@
     <file relUrl="Uc/A131Circumstance.ascx" publishTime="09/04/2015 13:43:23" />
     <file relUrl="Content/themes/icons/large_clipart.png" publishTime="09/04/2015 13:43:16" />
     <file relUrl="Content/themes/gray/images/panel_tools.png" publishTime="09/04/2015 13:43:16" />
+    <file relUrl="Pages/ListviewJob.aspx.cs" publishTime="09/04/2015 13:43:21" />
     <file relUrl="mobile/WebForm1.aspx.designer.cs" publishTime="09/04/2015 13:43:30" />
     <file relUrl="tinymce/skins/lightgray/skin.min.css" publishTime="09/16/2015 15:19:47" />
     <file relUrl="images/jquerybubblepopup-theme/all-blue/ie/tail-top.gif" publishTime="09/04/2015 13:43:29" />
@@ -940,10 +941,9 @@
     <file relUrl="_notes/dwsync.xml" publishTime="09/04/2015 13:43:24" />
     <file relUrl="js/jquery.prettyPhoto.js" publishTime="09/04/2015 13:43:30" />
     <file relUrl="tinymce/plugins/spellchecker/plugin.min.js" publishTime="09/16/2015 15:19:47" />
-    <file relUrl="Pages/reportSR01.aspx.designer.cs" publishTime="10/13/2015 09:43:44" />
+    <file relUrl="Pages/reportSR01.aspx.designer.cs" publishTime="10/21/2015 08:24:18" />
     <file relUrl="ckeditor/plugins/forms/dialogs/textarea.js" publishTime="09/04/2015 13:43:26" />
     <file relUrl="Content/themes/black/filebox.css" publishTime="09/04/2015 13:43:16" />
-    <file relUrl="images/header page.jpg" publishTime="09/04/2015 13:43:29" />
     <file relUrl="Pages/generalinformation.aspx.cs" publishTime="09/04/2015 13:50:20" />
     <file relUrl="Uploads/Images/DSC_0962.jpg" publishTime="10/19/2015 10:29:27" />
     <file relUrl="Pages/timesheetsummary.aspx" publishTime="09/04/2015 13:43:23" />
@@ -1004,7 +1004,7 @@
     <file relUrl="ckeditor/plugins/smiley/images/thumbs_down.gif" publishTime="09/04/2015 13:43:26" />
     <file relUrl="piecemaker/piecemakerCSS.css" publishTime="09/04/2015 13:43:31" />
     <file relUrl="Manage/QuanLyChucVu.aspx.designer.cs" publishTime="09/04/2015 13:43:18" />
-    <file relUrl="Manage/QuanLyTaskAssiged.aspx.cs" publishTime="09/04/2015 13:43:18" />
+    <file relUrl="Content/themes/gray/linkbutton.css" publishTime="09/04/2015 13:43:16" />
     <file relUrl="piecemaker/flashobject.js" publishTime="09/04/2015 13:43:31" />
     <file relUrl="Pages/detailclaim.aspx" publishTime="09/04/2015 13:43:22" />
     <file relUrl="Content/themes/black/calendar.css" publishTime="09/04/2015 13:43:16" />
@@ -1028,7 +1028,7 @@
     <file relUrl="ckeditor/plugins/adobeair/plugin.js" publishTime="09/04/2015 13:43:25" />
     <file relUrl="Uc/ClaimSettlement.ascx.designer.cs" publishTime="09/04/2015 13:43:23" />
     <file relUrl="images/prettyPhoto/facebook/contentPatternTop.png" publishTime="09/04/2015 13:43:30" />
-    <file relUrl="Pages/Layout.aspx" publishTime="10/19/2015 14:14:25" />
+    <file relUrl="Pages/Layout.aspx" publishTime="10/21/2015 08:31:08" />
     <file relUrl="ckeditor/plugins/showblocks/images/block_blockquote.png" publishTime="09/04/2015 13:43:26" />
     <file relUrl="images/jquerybubblepopup-theme/all-blue/ie/tail-right.gif" publishTime="09/04/2015 13:43:29" />
     <file relUrl="packages.config" publishTime="09/04/2015 13:43:31" />
@@ -1095,6 +1095,7 @@
     <file relUrl="Pages/reportIR_word.aspx" publishTime="10/19/2015 09:30:52" />
     <file relUrl="ckeditor/plugins/devtools/plugin.js" publishTime="09/04/2015 13:43:25" />
     <file relUrl="images/jquerybubblepopup-theme/violet/tail-bottom.png" publishTime="09/04/2015 13:43:30" />
+    <file relUrl="ckeditor/lang/eu.js" publishTime="09/04/2015 13:43:25" />
     <file relUrl="Pages/XemWeeklyReport.aspx" publishTime="09/04/2015 13:43:22" />
     <file relUrl="ckeditor/plugins/showblocks/images/block_h3.png" publishTime="09/04/2015 13:43:26" />
     <file relUrl="images/jquerybubblepopup-theme/black/bottom-middle.png" publishTime="09/04/2015 13:43:29" />
@@ -1108,7 +1109,6 @@
     <file relUrl="images/ambitios_pic12.jpg" publishTime="09/04/2015 13:43:28" />
     <file relUrl="Content/themes/default/menu.css" publishTime="09/04/2015 13:43:16" />
     <file relUrl="Pages/EditInitialLossAdive.aspx.designer.cs" publishTime="09/04/2015 13:43:21" />
-    <file relUrl="About.aspx.designer.cs" publishTime="09/04/2015 13:43:15" />
     <file relUrl="images/jquerybubblepopup-theme/black/tail-left.png" publishTime="09/04/2015 13:43:29" />
     <file relUrl="Library/AjaxControlToolkit.Binary.NET4/SanitizerProviders/HtmlAgilityPack.dll" publishTime="09/04/2015 13:43:17" />
     <file relUrl="Content/themes/metro/splitbutton.css" publishTime="09/04/2015 13:43:16" />
@@ -1126,7 +1126,7 @@
     <file relUrl="ckeditor/lang/bn.js" publishTime="09/04/2015 13:43:24" />
     <file relUrl="Scripts/jquery-1.4.4-vsdoc.js" publishTime="09/04/2015 13:43:23" />
     <file relUrl="images/ambitios_marker2.png" publishTime="09/04/2015 13:43:28" />
-    <file relUrl="tinymce/plugins/visualblocks/plugin.min.js" publishTime="09/16/2015 15:19:47" />
+    <file relUrl="Pages/typedocsrequest.aspx.designer.cs" publishTime="09/04/2015 13:43:23" />
     <file relUrl="images/jquerybubblepopup-theme/grey/middle-left.png" publishTime="09/04/2015 13:43:29" />
     <file relUrl="Manage/QuanLyCongTacTimeSheet.aspx" publishTime="09/04/2015 13:43:18" />
     <file relUrl="Pages/basicinforPR.aspx.designer.cs" publishTime="09/04/2015 13:43:22" />
@@ -1135,7 +1135,6 @@
     <file relUrl="tinymce/plugins/emoticons/img/smiley-tongue-out.gif" publishTime="09/16/2015 15:19:47" />
     <file relUrl="KeepAlive.ashx.cs" publishTime="09/04/2015 13:43:17" />
     <file relUrl="DTO/TimeSheetDTO.cs" publishTime="09/04/2015 13:43:17" />
-    <file relUrl="images/ambitios_small_pic63.jpg" publishTime="09/04/2015 13:43:29" />
     <file relUrl="Pages/SiteSurveyRecordView.aspx" publishTime="09/04/2015 13:43:21" />
     <file relUrl="Content/themes/black/progressbar.css" publishTime="09/04/2015 13:43:16" />
     <file relUrl="mobile/InformationForm.aspx.designer.cs" publishTime="09/04/2015 13:43:30" />
@@ -1143,7 +1142,7 @@
     <file relUrl="ckeditor/plugins/devtools/lang/en.js" publishTime="09/04/2015 13:43:25" />
     <file relUrl="ckeditor/plugins/uicolor/lang/pt-br.js" publishTime="09/04/2015 13:43:28" />
     <file relUrl="Manage/QuanLyNguoiDaiDien.aspx.cs" publishTime="09/04/2015 13:43:18" />
-    <file relUrl="Pages/reportFR.aspx" publishTime="10/19/2015 10:58:20" />
+    <file relUrl="Pages/reportFR.aspx" publishTime="10/21/2015 08:13:19" />
     <file relUrl="tinymce/plugins/tabfocus/plugin.min.js" publishTime="09/16/2015 15:19:47" />
     <file relUrl="images/metro-icons/rss.png" publishTime="09/04/2015 13:43:30" />
     <file relUrl="ckeditor/lang/pt.js" publishTime="09/04/2015 13:43:25" />
@@ -1199,7 +1198,7 @@
     <file relUrl="Styles/CssForm.css" publishTime="10/01/2015 11:30:48" />
     <file relUrl="ckeditor/plugins/placeholder/lang/vi.js" publishTime="09/04/2015 13:43:26" />
     <file relUrl="Pages/task.aspx.cs" publishTime="09/04/2015 13:43:23" />
-    <file relUrl="Pages/typedocsrequest.aspx.designer.cs" publishTime="09/04/2015 13:43:23" />
+    <file relUrl="Pages/StaticsticsTimeSheet.aspx.cs" publishTime="09/04/2015 13:43:21" />
     <file relUrl="DAO/PrintHelper.cs" publishTime="09/04/2015 13:43:17" />
     <file relUrl="ckeditor/skins/kama/images/dialog_sides.png" publishTime="09/04/2015 13:43:28" />
     <file relUrl="images/ambitios_share_button.gif" publishTime="09/04/2015 13:43:28" />
@@ -1224,10 +1223,11 @@
     <file relUrl="Pages/updateweeklyreport.aspx.cs" publishTime="09/04/2015 13:43:23" />
     <file relUrl="Global.asax.cs" publishTime="09/04/2015 13:43:17" />
     <file relUrl="Pages/trackinglog.aspx" publishTime="09/11/2015 13:48:09" />
-    <file relUrl="Content/themes/gray/linkbutton.css" publishTime="09/04/2015 13:43:16" />
+    <file relUrl="images/ambitios_pic3.png" publishTime="09/04/2015 13:43:28" />
     <file relUrl="images/ambitios_row2_bg_g_left.gif" publishTime="09/04/2015 13:43:28" />
     <file relUrl="DAO/QuiTrinhDAO.cs" publishTime="09/04/2015 13:43:17" />
     <file relUrl="images/jquerybubblepopup-theme/azure/tail-top.png" publishTime="09/04/2015 13:43:29" />
+    <file relUrl="Content/themes/black/images/datagrid_icons.png" publishTime="09/04/2015 13:43:16" />
     <file relUrl="Pages/ErrorPage.aspx.cs" publishTime="09/04/2015 13:43:21" />
     <file relUrl="Content/themes/metro/images/combo_arrow.png" publishTime="09/04/2015 13:43:16" />
     <file relUrl="Pages/Procedures.aspx.designer.cs" publishTime="09/04/2015 13:43:21" />
@@ -1256,12 +1256,12 @@
     <file relUrl="Scripts/jquery.bpopup-0.7.0.min.js" publishTime="09/04/2015 13:43:23" />
     <file relUrl="bin/zh-CHT/AjaxControlToolkit.resources.dll" publishTime="09/04/2015 13:43:18" />
     <file relUrl="Manage/QuanLyNguoiDaiDien.aspx" publishTime="09/04/2015 13:43:18" />
-    <file relUrl="Pages/ClaimSummaryOfLossPop.aspx.cs" publishTime="09/04/2015 13:43:20" />
     <file relUrl="ckeditor/plugins/forms/dialogs/textfield.js" publishTime="09/04/2015 13:43:26" />
     <file relUrl="Pages/NewsManagerPopup.aspx" publishTime="10/01/2015 08:29:34" />
     <file relUrl="Pages/FormDraft.aspx.designer.cs" publishTime="09/04/2015 13:43:21" />
     <file relUrl="ckeditor/plugins/showblocks/images/block_div.png" publishTime="09/04/2015 13:43:26" />
     <file relUrl="tinymce/plugins/preview/plugin.min.js" publishTime="09/16/2015 15:19:47" />
+    <file relUrl="images/jquerybubblepopup-theme/all-blue/top-left.png" publishTime="09/04/2015 13:43:29" />
     <file relUrl="ckeditor/lang/ru.js" publishTime="09/04/2015 13:43:25" />
     <file relUrl="images/edit icon.png" publishTime="09/04/2015 13:43:29" />
     <file relUrl="Manage/QuanLyLoaiHinhTonThat.aspx.designer.cs" publishTime="09/04/2015 13:43:18" />
@@ -1288,7 +1288,7 @@
     <file relUrl="Pages/ChangePass.aspx.designer.cs" publishTime="09/04/2015 13:43:18" />
     <file relUrl="images/jquerybubblepopup-theme/grey/bottom-middle.png" publishTime="09/04/2015 13:43:29" />
     <file relUrl="images/jquerybubblepopup-theme/azure/ie/tail-bottom.gif" publishTime="09/04/2015 13:43:29" />
-    <file relUrl="Pages/News.aspx" publishTime="10/05/2015 11:37:19" />
+    <file relUrl="images/header page.jpg" publishTime="09/04/2015 13:43:29" />
     <file relUrl="Pages/KhaoSatRuiRo.aspx" publishTime="09/04/2015 13:43:21" />
     <file relUrl="Pages/AdjustSummary.aspx" publishTime="09/04/2015 13:43:18" />
     <file relUrl="images/jquerybubblepopup-theme/violet/tail-top.png" publishTime="09/04/2015 13:43:30" />
@@ -1424,7 +1424,7 @@
     <file relUrl="images/jquerybubblepopup-theme/azure/ie/top-right.gif" publishTime="09/04/2015 13:43:29" />
     <file relUrl="Pages/DeXuatBoiThuong.aspx.cs" publishTime="09/04/2015 13:43:20" />
     <file relUrl="Pages/WeeklyReport.aspx.designer.cs" publishTime="09/04/2015 13:43:22" />
-    <file relUrl="Pages/bordereauclaimprint.aspx" publishTime="09/04/2015 13:43:22" />
+    <file relUrl="ckeditor/skins/v2/images/dialog_sides.png" publishTime="09/04/2015 13:43:28" />
     <file relUrl="ckeditor/skins/office2003/images/sprites.png" publishTime="09/04/2015 13:43:28" />
     <file relUrl="images/ava2.jpg" publishTime="09/04/2015 13:43:29" />
     <file relUrl="Pages/QuanLyQuiTrinh.aspx.cs" publishTime="09/04/2015 13:43:21" />
@@ -1557,7 +1557,7 @@
     <file relUrl="Pages/NewWeeklyReport.aspx.cs" publishTime="09/04/2015 13:43:21" />
     <file relUrl="Content/themes/metro/dialog.css" publishTime="09/04/2015 13:43:16" />
     <file relUrl="Manage/newincome.aspx.designer.cs" publishTime="09/04/2015 13:43:18" />
-    <file relUrl="images/detail_icon.png" publishTime="09/04/2015 13:43:29" />
+    <file relUrl="Pages/DonViBaoHiemMoi.aspx.designer.cs" publishTime="09/04/2015 13:43:21" />
     <file relUrl="Manage/ManageUnit.aspx.cs" publishTime="09/04/2015 13:43:18" />
     <file relUrl="Pages/ChiTietNguoiDaiDien.aspx" publishTime="09/04/2015 13:43:18" />
     <file relUrl="ckeditor/plugins/specialchar/dialogs/specialchar.js" publishTime="09/04/2015 13:43:26" />
@@ -1573,10 +1573,10 @@
     <file relUrl="mobile/InformationForm.aspx.cs" publishTime="09/04/2015 13:43:30" />
     <file relUrl="Pages/sitephoto.aspx" publishTime="09/23/2015 14:46:03" />
     <file relUrl="images/jquerybubblepopup-theme/grey/tail-top.png" publishTime="09/04/2015 13:43:29" />
-    <file relUrl="ckeditor/plugins/a11yhelp/lang/de.js" publishTime="09/04/2015 13:43:25" />
+    <file relUrl="images/ambitios_small_pic63.jpg" publishTime="09/04/2015 13:43:29" />
     <file relUrl="images/checked_icon.jpg" publishTime="09/04/2015 13:43:29" />
     <file relUrl="DTO/HangMucDTO.cs" publishTime="09/04/2015 13:43:17" />
-    <file relUrl="DAO/TienDoXuLyDAO.cs" publishTime="09/04/2015 13:43:17" />
+    <file relUrl="DTO/DaiDienDTO.cs" publishTime="09/04/2015 13:43:17" />
     <file relUrl="Pages/TimesheetBillingSummary.aspx.designer.cs" publishTime="09/04/2015 13:43:22" />
     <file relUrl="Account/ChangePassword.aspx" publishTime="09/04/2015 13:43:15" />
     <file relUrl="ckeditor/skins/office2003/images/dialog_sides.png" publishTime="09/04/2015 13:43:28" />
@@ -1587,7 +1587,7 @@
     <file relUrl="Uc/A12Insured.ascx" publishTime="09/04/2015 13:43:23" />
     <file relUrl="Messages/submitreport.aspx" publishTime="10/02/2015 14:58:08" />
     <file relUrl="Pages/NewsMyPost.aspx.cs" publishTime="10/02/2015 08:41:44" />
-    <file relUrl="Content/themes/black/tooltip.css" publishTime="09/04/2015 13:43:16" />
+    <file relUrl="images/jquerybubblepopup-theme/all-violet/top-right.png" publishTime="09/04/2015 13:43:29" />
     <file relUrl="tinymce/plugins/emoticons/img/smiley-cry.gif" publishTime="09/16/2015 15:19:47" />
     <file relUrl="Pages/ClaimDetail1.aspx.designer.cs" publishTime="09/04/2015 13:43:19" />
     <file relUrl="ckeditor/plugins/templates/templates/images/template3.gif" publishTime="09/04/2015 13:43:27" />
@@ -1595,7 +1595,7 @@
     <file relUrl="mobile/Loginm.aspx" publishTime="09/04/2015 13:43:30" />
     <file relUrl="Pages/NewsManager.aspx.designer.cs" publishTime="09/21/2015 12:07:12" />
     <file relUrl="Content/themes/icons/edit_remove.png" publishTime="09/04/2015 13:43:16" />
-    <file relUrl="bin/WEBSITESAVVY.dll" publishTime="10/19/2015 14:16:02" />
+    <file relUrl="bin/WEBSITESAVVY.dll" publishTime="10/21/2015 08:26:23" />
     <file relUrl="Uc/UcQuanLyCongTacTimeSheet.ascx" publishTime="09/04/2015 13:43:24" />
     <file relUrl="Scripts/jquery.validate-vsdoc.js" publishTime="09/04/2015 13:43:23" />
     <file relUrl="images/jquerybubblepopup-theme/all-blue/bottom-right.png" publishTime="09/04/2015 13:43:29" />
@@ -1628,10 +1628,10 @@
     <file relUrl="Uc/NhaBaoHiem.ascx.designer.cs" publishTime="09/04/2015 13:43:24" />
     <file relUrl="mobile/WebForm1.aspx" publishTime="09/04/2015 13:43:30" />
     <file relUrl="images/jquerybubblepopup-theme/azure/ie/tail-right.gif" publishTime="09/04/2015 13:43:29" />
-    <file relUrl="Messages/checkedreport.aspx.designer.cs" publishTime="10/02/2015 14:50:42" />
     <file relUrl="Pages/newitemworksheetpop.aspx" publishTime="09/04/2015 13:43:22" />
     <file relUrl="ckeditor/skins/kama/icons_rtl.png" publishTime="09/04/2015 13:43:28" />
     <file relUrl="Uc/Task.ascx.cs" publishTime="09/04/2015 13:43:24" />
+    <file relUrl="Manage/QuanLyTaskAssiged.aspx.cs" publishTime="09/04/2015 13:43:18" />
     <file relUrl="mobile/Loginm.aspx.designer.cs" publishTime="09/04/2015 13:43:30" />
     <file relUrl="Pages/InformationForm.aspx.designer.cs" publishTime="09/04/2015 13:43:21" />
     <file relUrl="ckeditor/plugins/uicolor/lang/da.js" publishTime="09/04/2015 13:43:27" />
@@ -1667,10 +1667,10 @@
     <file relUrl="Content/themes/black/pagination.css" publishTime="09/04/2015 13:43:16" />
     <file relUrl="images/jquerybubblepopup-theme/all-green/bottom-left.png" publishTime="09/04/2015 13:43:29" />
     <file relUrl="Uc/PolicyLaibility.ascx.cs" publishTime="09/04/2015 13:43:24" />
-    <file relUrl="ckeditor/lang/eu.js" publishTime="09/04/2015 13:43:25" />
+    <file relUrl="Uploads/Images/DSC_0936.jpg" publishTime="10/19/2015 10:29:10" />
     <file relUrl="Pages/basicinforPR.aspx" publishTime="09/04/2015 13:43:22" />
     <file relUrl="Pages/TimeSheet.aspx" publishTime="10/06/2015 10:20:03" />
-    <file relUrl="Pages/ClaimUpdateFieldPop.aspx" publishTime="09/14/2015 13:32:01" />
+    <file relUrl="Pages/ClaimUpdateFieldPop.aspx" publishTime="10/21/2015 08:13:19" />
     <file relUrl="Pages/News.aspx.designer.cs" publishTime="09/29/2015 10:06:04" />
     <file relUrl="Pages/Print.aspx.cs" publishTime="09/04/2015 13:43:21" />
     <file relUrl="Pages/newtimesheetpop.aspx.cs" publishTime="09/04/2015 13:43:22" />
@@ -1710,7 +1710,7 @@
     <file relUrl="ckeditor/plugins/table/dialogs/table.js" publishTime="09/04/2015 13:43:26" />
     <file relUrl="images/metro-icons/loading.gif" publishTime="09/04/2015 13:43:30" />
     <file relUrl="Scripts/json2.js" publishTime="09/04/2015 13:43:23" />
-    <file relUrl="images/jquerybubblepopup-theme/all-blue/top-left.png" publishTime="09/04/2015 13:43:29" />
+    <file relUrl="images/detail_icon.png" publishTime="09/04/2015 13:43:29" />
     <file relUrl="DTO/CongTacPhongChayDTO.cs" publishTime="09/04/2015 13:43:17" />
     <file relUrl="ckeditor/plugins/specialchar/lang/eo.js" publishTime="09/04/2015 13:43:26" />
     <file relUrl="Content/themes/icons/mini_refresh.png" publishTime="09/04/2015 13:43:16" />
@@ -1720,7 +1720,7 @@
     <file relUrl="Uc/Task.ascx" publishTime="09/04/2015 13:43:24" />
     <file relUrl="Content/themes/default/menubutton.css" publishTime="09/04/2015 13:43:16" />
     <file relUrl="images/ambitios_arrow_top.gif" publishTime="09/04/2015 13:43:28" />
-    <file relUrl="DTO/SitePhotoDTO.cs" publishTime="09/21/2015 15:05:32" />
+    <file relUrl="Manage/newincome.aspx" publishTime="09/04/2015 13:43:18" />
     <file relUrl="Uc/LossHistory.ascx" publishTime="09/04/2015 13:43:24" />
     <file relUrl="images/jquerybubblepopup-theme/all-blue/ie/tail-bottom.gif" publishTime="09/04/2015 13:43:29" />
     <file relUrl="DTO/QuanLyHutThuocDTO.cs" publishTime="09/04/2015 13:43:17" />
@@ -1779,7 +1779,7 @@
     <file relUrl="images/ambitios_share_button_hover.gif" publishTime="09/04/2015 13:43:28" />
     <file relUrl="images/jquerybubblepopup-theme/green/ie/top-middle.gif" publishTime="09/04/2015 13:43:29" />
     <file relUrl="Content/themes/gray/messager.css" publishTime="09/04/2015 13:43:16" />
-    <file relUrl="Pages/updatecoverhome.aspx.designer.cs" publishTime="09/04/2015 13:43:23" />
+    <file relUrl="Pages/Login.aspx" publishTime="09/04/2015 13:43:21" />
     <file relUrl="ckeditor/lang/mk.js" publishTime="09/04/2015 13:43:25" />
     <file relUrl="ckeditor/plugins/uicolor/lang/en.js" publishTime="09/04/2015 13:43:28" />
     <file relUrl="images/ambitios_pic51.jpg" publishTime="09/04/2015 13:43:28" />
@@ -1816,7 +1816,7 @@
     <file relUrl="images/ambitios_row_tile_sub.gif" publishTime="09/04/2015 13:43:28" />
     <file relUrl="DTO/CongTacAnNinhDTO.cs" publishTime="09/04/2015 13:43:17" />
     <file relUrl="images/ambitios_row_top_g.gif" publishTime="09/04/2015 13:43:28" />
-    <file relUrl="Content/themes/black/images/datagrid_icons.png" publishTime="09/04/2015 13:43:16" />
+    <file relUrl="Pages/News.aspx" publishTime="10/05/2015 11:37:19" />
     <file relUrl="images/jquerybubblepopup-theme/azure/ie/bottom-middle.gif" publishTime="09/04/2015 13:43:29" />
     <file relUrl="Pages/listworksheet.aspx" publishTime="09/04/2015 13:43:22" />
     <file relUrl="images/ambitios_small_pic62.jpg" publishTime="09/04/2015 13:43:29" />
@@ -1880,7 +1880,7 @@
     <file relUrl="Pages/reportSR01.aspx.cs" publishTime="10/12/2015 16:17:10" />
     <file relUrl="Pages/SummaryClaimDetail.aspx.designer.cs" publishTime="09/04/2015 13:43:21" />
     <file relUrl="DAO/CHUKYDAO.cs" publishTime="10/12/2015 15:10:48" />
-    <file relUrl="images/ambitios_pic3.png" publishTime="09/04/2015 13:43:28" />
+    <file relUrl="DAO/TienDoXuLyDAO.cs" publishTime="09/04/2015 13:43:17" />
     <file relUrl="Content/themes/gray/combobox.css" publishTime="09/04/2015 13:43:16" />
     <file relUrl="images/jquerybubblepopup-theme/all-grey/ie/top-left.gif" publishTime="09/04/2015 13:43:29" />
     <file relUrl="Content/themes/icons/large_smartart.png" publishTime="09/04/2015 13:43:16" />
@@ -1900,18 +1900,18 @@
     <file relUrl="Content/themes/bootstrap/images/panel_tools.png" publishTime="09/04/2015 13:43:16" />
     <file relUrl="Content/themes/gray/images/spinner_arrows.png" publishTime="09/04/2015 13:43:16" />
     <file relUrl="Pages/InitialLossAdvice.aspx.cs" publishTime="09/04/2015 13:43:21" />
-    <file relUrl="Pages/ListviewJob.aspx.cs" publishTime="09/04/2015 13:43:21" />
+    <file relUrl="Library/AjaxControlToolkit.Binary.NET4/AjaxControlToolkitSampleSite.zip" publishTime="09/04/2015 13:43:17" />
     <file relUrl="Pages/timesheetsummary.aspx.designer.cs" publishTime="09/04/2015 13:43:23" />
     <file relUrl="Content/themes/metro/numberbox.css" publishTime="09/04/2015 13:43:16" />
     <file relUrl="ckeditor/plugins/smiley/images/confused_smile.gif" publishTime="09/04/2015 13:43:26" />
-    <file relUrl="Pages/DonViBaoHiemMoi.aspx.designer.cs" publishTime="09/04/2015 13:43:21" />
+    <file relUrl="Manage/QuanLyNhaBaoHiem.aspx.cs" publishTime="09/04/2015 13:43:18" />
     <file relUrl="images/jquerybubblepopup-theme/azure/top-left.png" publishTime="09/04/2015 13:43:29" />
     <file relUrl="Pages/Uploads.aspx" publishTime="09/14/2015 11:43:56" />
     <file relUrl="Pages/NewsMyPost.aspx" publishTime="10/02/2015 08:41:44" />
     <file relUrl="images/ambitios_small_pic.gif" publishTime="09/04/2015 13:43:28" />
     <file relUrl="Pages/WebForm1.aspx.designer.cs" publishTime="09/04/2015 13:43:22" />
     <file relUrl="Pages/ClaimSummaryOfLossPop.aspx.designer.cs" publishTime="09/04/2015 13:43:20" />
-    <file relUrl="Pages/timesheetsummary.aspx.cs" publishTime="09/04/2015 13:43:23" />
+    <file relUrl="Uc/Salvage.ascx.designer.cs" publishTime="09/04/2015 13:43:24" />
     <file relUrl="images/metro-icons/shopping.png" publishTime="09/04/2015 13:43:30" />
     <file relUrl="images/jquerybubblepopup-theme/all-violet/ie/tail-right.gif" publishTime="09/04/2015 13:43:29" />
     <file relUrl="ckeditor/plugins/uicolor/lang/nb.js" publishTime="09/04/2015 13:43:28" />
@@ -1970,7 +1970,7 @@
     <file relUrl="ckeditor/plugins/placeholder/lang/et.js" publishTime="09/04/2015 13:43:26" />
     <file relUrl="images/jquerybubblepopup-theme/grey/ie/middle-right.gif" publishTime="09/04/2015 13:43:29" />
     <file relUrl="Uc/CoverInfomation.ascx.cs" publishTime="09/04/2015 13:43:23" />
-    <file relUrl="Pages/stopworking.aspx.designer.cs" publishTime="09/11/2015 10:08:56" />
+    <file relUrl="About.aspx.designer.cs" publishTime="09/04/2015 13:43:15" />
     <file relUrl="Pages/basicinforpop.aspx.designer.cs" publishTime="09/04/2015 13:43:22" />
     <file relUrl="Content/themes/default/images/spinner_arrows.png" publishTime="09/04/2015 13:43:16" />
     <file relUrl="images/ambitios_pic45.jpg" publishTime="09/04/2015 13:43:28" />
@@ -2032,7 +2032,7 @@
     <file relUrl="Uc/ExecutiveSummary.ascx.cs" publishTime="09/04/2015 13:43:24" />
     <file relUrl="Pages/LogOut.aspx" publishTime="09/04/2015 13:43:21" />
     <file relUrl="Pages/DaiDienDonViBaoHiem.aspx" publishTime="09/04/2015 13:43:20" />
-    <file relUrl="Uc/Salvage.ascx.designer.cs" publishTime="09/04/2015 13:43:24" />
+    <file relUrl="Messages/checkedreport.aspx.designer.cs" publishTime="10/02/2015 14:50:42" />
     <file relUrl="DTO/ChiTietThietHaiDTO.cs" publishTime="09/04/2015 13:43:17" />
     <file relUrl="Scripts/jquery.tablednd.js" publishTime="09/04/2015 13:43:23" />
     <file relUrl="images/banner.jpg" publishTime="09/04/2015 13:43:29" />

@@ -757,36 +757,17 @@
             }
           </script>
         <div id="tool_bottom" runat="server" class="tool_bottom" >
-            <asp:Menu ID="Menu1" runat="server" BackColor="#B5C7DE" 
-                DynamicHorizontalOffset="2" Font-Names="Times New Roman" Font-Size="16px" 
-                ForeColor="#284E98" RenderingMode="List" StaticSubMenuIndent="5px" 
-                CssClass="menufo">
-                <DynamicHoverStyle BackColor="#284E98" ForeColor="White"/>
-                <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
-                <DynamicMenuStyle BackColor="#B5C7DE" />
-                <DynamicSelectedStyle BackColor="#507CD1" />
-                <Items>
-                    <asp:MenuItem Text="Choose" Value="Choose">
-                        <asp:MenuItem Text="Submit" Value="Submit" NavigateUrl="javascript:MoveToURL();" ></asp:MenuItem>
-                        <asp:MenuItem Text="Checked / Approved" Value="Checked" NavigateUrl="javascript: SendChecked();"></asp:MenuItem>
-                       <%-- <asp:MenuItem Text="Approved" Value="Approved"></asp:MenuItem>--%>
-                        <asp:MenuItem Text="Export to PDF" Value="Export to PDF" NavigateUrl="javascript:printPDF();"></asp:MenuItem>
-                    </asp:MenuItem>
-                </Items>
-                <StaticHoverStyle BackColor="#284E98" ForeColor="White" />
-                <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
-                <StaticSelectedStyle BackColor="#507CD1" />
-            </asp:Menu>
-          <%--  <%#DataBinder.Eval(Container.DataItem, "TenHangMuc") %>  --%>            
+           <button  class="btn" onclick="printPDF();" >Export to PDF</button> 
+          
         </div>
         <div style="height:40px;"></div>
         <!--end tool bottom-->
 
         </form>
         
-      <div id="w_MessageClaim" class="easyui-window" title=" Submit to ..."  data-options="modal:true,closed:true,iconCls:'icon-add'" style="width:550px;height:250px;">abc</div>
+ <%--     <div id="w_MessageClaim" class="easyui-window" title=" Submit to ..."  data-options="modal:true,closed:true,iconCls:'icon-add'" style="width:550px;height:250px;">abc</div>
        <div id="w_CheckClaim" class="easyui-window" title=" Checked, send message to ..."  data-options="modal:true,closed:true,iconCls:'icon-add'" style="width:550px;height:400px;">abc</div>
-
+--%>
         <script type="text/javascript">
 
             function getString(array, start, end) {
