@@ -134,12 +134,20 @@
             else if (index == 9)
                 link = "../Pages/task.aspx";
 
-			if (Link != "")
-			    $("#frameCenter").attr("src", Link);
+            if (Link !== "") {
+
+                $("#frameCenter").fadeOut(500, function () {
+                    $("#frameCenter").attr("src", Link);
+                });
+            }
 
 			if (report === "") $("#choose").hide();
 			else $("#choose").show();
 
+        }
+
+        function onFinished() {
+            $("#frameCenter").fadeIn();
         }
 
 
@@ -220,6 +228,8 @@
             }
         }
 
+
+
     </script>
 
     <script type="text/javascript">
@@ -241,9 +251,10 @@
 
         });
 
+
     </script>
 </head>
-<body class="easyui-layout">
+<body class="easyui-layout" >
 	<div data-options="region:'north',border:false" style="height:inherit;padding:0 0 2px 0; overflow:hidden;">
 		 <div class="easyui-panel" style="padding:5px;background: url('../images/ambitios_header_bg.gif'); width:100%">
             <div class="logo" >SAVVY ADJUSTERS JSC</div>
@@ -443,8 +454,10 @@
     </div>
 
     </div>
-	<div id="layoutContent" data-options="region:'center',title:'General Information'">
-        <iframe id="frameCenter" title="General Information" src="../Pages/generalinformation.aspx" ></iframe>
+	<div id="layoutContent" data-options="region:'center',title:'General Information'" style="position:relative;" >
+
+        <iframe id="frameCenter" title="General Information"  onload="onFinished()"  ></iframe>
+
 	</div>
 
     <!-- window -->

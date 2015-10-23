@@ -217,19 +217,14 @@
         
         }
         
-       
-        
-    </style>  
-        
-
-    <style type="text/css">
         .hiden
         {
             display:none ;
         }
         
+    </style>  
+        
 
-    </style>
 </head>
 <body >
     
@@ -435,8 +430,16 @@
                                             <td class="style6"><asp:CheckBox ID="ck9" runat="server" Text=" "   /></td>
                                             <td class="style7"><asp:CheckBox ID="ck10" runat="server" Text=" "   /></td>
                                             <td rowspan="2">
-                                                <asp:Label ID="lblGhiChuLoaiHinhTonThat" runat="server" Text=" " 
-                                                    Width="88px"  CssClass="field_input" ></asp:Label> </td>
+                                                <asp:Label ID="lblGhiChuLoaiHinhTonThat" key="GhiChuLoaiHinhTonThat" type="SingleLine" onclick="editField(this)" runat="server" Width="88px" Text=" "
+                                                     CssClass="field_input dislay-block" Font-Bold="False" ></asp:Label>
+                                                <asp:Panel ID="panelGhiChuLoaiHinhTonThat" Width="88px"  CssClass="panelUpdate hiden" runat="server">
+                                                    <asp:TextBox ID="txtGhiChuLoaiHinhTonThat" CssClass="hiden" TextMode="SingleLine"  Width="100%" runat="server" />
+                                                    <div style="margin-top:10px">
+                                                        <asp:Button  key="GhiChuLoaiHinhTonThat" onclick="btnUpdate_Click" Text="Update" runat="server"/>
+                                                        <input  key="GhiChuLoaiHinhTonThat" type="button" value="Cancel" onclick="cancel(this)" />
+                                                    </div>
+                                                </asp:Panel>
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td><asp:Label ID="Label21" runat="server" 

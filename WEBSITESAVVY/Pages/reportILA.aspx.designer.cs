@@ -94,6 +94,24 @@ namespace WEBSITESAVVY.Pages {
         protected global::System.Web.UI.WebControls.Label lblPolicyNO;
         
         /// <summary>
+        /// panelPolicyNO control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel panelPolicyNO;
+        
+        /// <summary>
+        /// txtPolicyNO control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtPolicyNO;
+        
+        /// <summary>
         /// Label4 control.
         /// </summary>
         /// <remarks>
@@ -128,6 +146,24 @@ namespace WEBSITESAVVY.Pages {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblEffective;
+        
+        /// <summary>
+        /// panelEffective control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel panelEffective;
+        
+        /// <summary>
+        /// txtEffective control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtEffective;
         
         /// <summary>
         /// Label6 control.
@@ -247,22 +283,31 @@ namespace WEBSITESAVVY.Pages {
         protected global::System.Web.UI.WebControls.Label Label11;
         
         /// <summary>
-        /// lblDiaDiemTonThat control.
+        /// lblPremises control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblDiaDiemTonThat;
+        protected global::System.Web.UI.WebControls.Label lblPremises;
         
         /// <summary>
-        /// Label14 control.
+        /// panelPremises control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label14;
+        protected global::System.Web.UI.WebControls.Panel panelPremises;
+        
+        /// <summary>
+        /// txtPremises control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtPremises;
         
         /// <summary>
         /// lblDOL control.
@@ -272,6 +317,24 @@ namespace WEBSITESAVVY.Pages {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblDOL;
+        
+        /// <summary>
+        /// panelDOL control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel panelDOL;
+        
+        /// <summary>
+        /// txtDOL control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtDOL;
         
         /// <summary>
         /// Label13 control.
@@ -382,6 +445,24 @@ namespace WEBSITESAVVY.Pages {
         protected global::System.Web.UI.WebControls.Label lblGhiChuLoaiHinhTonThat;
         
         /// <summary>
+        /// panelGhiChuLoaiHinhTonThat control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel panelGhiChuLoaiHinhTonThat;
+        
+        /// <summary>
+        /// txtGhiChuLoaiHinhTonThat control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtGhiChuLoaiHinhTonThat;
+        
+        /// <summary>
         /// Label21 control.
         /// </summary>
         /// <remarks>
@@ -490,6 +571,24 @@ namespace WEBSITESAVVY.Pages {
         protected global::System.Web.UI.WebControls.Label lblDienBienTonThat;
         
         /// <summary>
+        /// panelDienBienTonThat control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel panelDienBienTonThat;
+        
+        /// <summary>
+        /// txtDienBienTonThat control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtDienBienTonThat;
+        
+        /// <summary>
         /// Label20 control.
         /// </summary>
         /// <remarks>
@@ -508,31 +607,31 @@ namespace WEBSITESAVVY.Pages {
         protected global::System.Web.UI.WebControls.CheckBox checkBoxThongBao;
         
         /// <summary>
-        /// Label22 control.
+        /// lblGhiChuTBCQCN control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label22;
+        protected global::System.Web.UI.WebControls.Label lblGhiChuTBCQCN;
         
         /// <summary>
-        /// lblGhiChuThem control.
+        /// panelGhiChuTBCQCN control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblGhiChuThem;
+        protected global::System.Web.UI.WebControls.Panel panelGhiChuTBCQCN;
         
         /// <summary>
-        /// Label16 control.
+        /// txtGhiChuTBCQCN control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label16;
+        protected global::System.Web.UI.WebControls.TextBox txtGhiChuTBCQCN;
         
         /// <summary>
         /// lblPhamViTonThat control.
@@ -542,6 +641,24 @@ namespace WEBSITESAVVY.Pages {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblPhamViTonThat;
+        
+        /// <summary>
+        /// panelPhamViTonThat control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel panelPhamViTonThat;
+        
+        /// <summary>
+        /// txtPhamViTonThat control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtPhamViTonThat;
         
         /// <summary>
         /// Label17 control.
@@ -560,6 +677,24 @@ namespace WEBSITESAVVY.Pages {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblDuPhongTonThat;
+        
+        /// <summary>
+        /// panelDuPhongTonThat control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel panelDuPhongTonThat;
+        
+        /// <summary>
+        /// txtDuPhongTonThat control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtDuPhongTonThat;
         
         /// <summary>
         /// Label19 control.
@@ -587,6 +722,24 @@ namespace WEBSITESAVVY.Pages {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblPhuLucGiamDinh;
+        
+        /// <summary>
+        /// panelPhuLucGiamDinh control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel panelPhuLucGiamDinh;
+        
+        /// <summary>
+        /// txtPhuLucGiamDinh control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtPhuLucGiamDinh;
         
         /// <summary>
         /// Label18 control.
@@ -625,13 +778,31 @@ namespace WEBSITESAVVY.Pages {
         protected global::System.Web.UI.WebControls.Label Label33;
         
         /// <summary>
-        /// lblDePhongKhuyenCao control.
+        /// lblDePhongVaKhuyenCaoILA control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblDePhongKhuyenCao;
+        protected global::System.Web.UI.WebControls.Label lblDePhongVaKhuyenCaoILA;
+        
+        /// <summary>
+        /// panelDePhongVaKhuyenCaoILA control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel panelDePhongVaKhuyenCaoILA;
+        
+        /// <summary>
+        /// txtDePhongVaKhuyenCaoILA control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtDePhongVaKhuyenCaoILA;
         
         /// <summary>
         /// gvDanhMucThietHai control.
@@ -652,13 +823,31 @@ namespace WEBSITESAVVY.Pages {
         protected global::System.Web.UI.WebControls.GridView gvYKienYCo;
         
         /// <summary>
-        /// YkienGDV control.
+        /// lblYKienGDV control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label YkienGDV;
+        protected global::System.Web.UI.WebControls.Label lblYKienGDV;
+        
+        /// <summary>
+        /// panelYKienGDV control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel panelYKienGDV;
+        
+        /// <summary>
+        /// txtYKienGDV control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtYKienGDV;
         
         /// <summary>
         /// lblDescriptionGioKhaoSat control.

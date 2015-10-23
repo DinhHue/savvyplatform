@@ -6,6 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data;
 using WEBSITESAVVY.DAO;
+using WEBSITESAVVY.DTO;
 
 namespace WEBSITESAVVY.Pages
 {
@@ -13,18 +14,21 @@ namespace WEBSITESAVVY.Pages
     {
         private ClaimDAO claimDao = new ClaimDAO();
         private static String mClaimID = "";
+        public bool isLock = false;
 
         protected void Page_Load(object sender, EventArgs e)
         {
             //if (Request.QueryString["claimID"] != null)
             //        mClaimID = Request.QueryString["claimID"];
-            if (Session["ThamChieu"] != null)
+            if (!IsPostBack)
             {
-                string idclaim = Session["ThamChieu"].ToString();
-                mClaimID = idclaim;
-                loadData(mClaimID);
-                loadDanhMucThietHai(mClaimID);
-               
+                if (Session["ThamChieu"] != null)
+                {
+                    string idclaim = Session["ThamChieu"].ToString();
+                    mClaimID = idclaim;
+                    loadData(mClaimID);
+                    loadDanhMucThietHai(mClaimID);
+                }
             }
         }
         void loadckLHTT(int idck)
@@ -65,10 +69,13 @@ namespace WEBSITESAVVY.Pages
                 lblGiamDinhVien.Text = row["FullName"].ToString();
 
                 lblTenNhaBH.Text = row["TenNhaBH"].ToString();
+
                 lblPolicyNO.Text = row["PolicyNo"].ToString();
+                txtPolicyNO.Text = lblPolicyNO.Text;
 
                 lblTenDonVi.Text = row["TenDonVi"].ToString();
                 lblEffective.Text= row["Effective"].ToString();
+                txtEffective.Text = lblEffective.Text;
 
                 lblInsured.Text  = row["TenKhachHang"].ToString();
                 lblFaxNo.Text    = row["Fax"].ToString();
@@ -79,25 +86,42 @@ namespace WEBSITESAVVY.Pages
                 lblDienThoai.Text   = row["DienThoai"].ToString();
                 lblEmail.Text       = row["Email"].ToString();
 
-                lblDiaDiemTonThat.Text = row["Premises"].ToString();
+                lblPremises.Text = row["Premises"].ToString();
+                txtPremises.Text = lblPremises.Text;
+
                 lblDOL.Text            = row["DOL"].ToString();
+                txtDOL.Text = lblDOL.Text;
                 int i = int.Parse(row["ID_LoaiHinhTonThat"].ToString());
                 loadckLHTT(i);
                 lblGhiChuLoaiHinhTonThat.Text = row["GhiChuLoaiHinhTonThat"].ToString();
+                txtGhiChuLoaiHinhTonThat.Text = lblGhiChuLoaiHinhTonThat.Text;
 
                 lblDienBienTonThat.Text = row["DienBienTonThat"].ToString();
+                txtDienBienTonThat.Text = lblDienBienTonThat.Text;
                 if (row["ThongBaoCQCN"].ToString().Trim().ToUpper() == "YES")
                     checkBoxThongBao.Checked = true;
                 else
                     checkBoxThongBao.Checked = false;
-                lblGhiChuThem.Text = row["GhiChuTBCQCN"].ToString();
+
+                lblGhiChuTBCQCN.Text = row["GhiChuTBCQCN"].ToString();
+                txtGhiChuTBCQCN.Text = lblGhiChuTBCQCN.Text;
 
                 lblPhamViTonThat.Text  = row["PhamViTonThat"].ToString();
+                txtPhamViTonThat.Text = lblPhamViTonThat.Text;
                 lblDuPhongTonThat.Text = row["DuPhongTonThat"].ToString();
+                txtDuPhongTonThat.Text = lblDuPhongTonThat.Text;
+
                 lblPhuLucGiamDinh.Text = row["PhuLucDinhKem"].ToString();
+                txtPhuLucGiamDinh.Text = lblPhuLucGiamDinh.Text;
+
                 lblTenClaim1.Text = "ILA_" + row["TenClaim"].ToString();
-                lblDePhongKhuyenCao.Text = row["DePhongVaKhuyenCaoILA"].ToString();
-                YkienGDV.Text = row["YKienGDV"].ToString();
+
+                lblDePhongVaKhuyenCaoILA.Text = row["DePhongVaKhuyenCaoILA"].ToString();
+                txtDePhongVaKhuyenCaoILA.Text = lblDePhongVaKhuyenCaoILA.Text;
+
+                lblYKienGDV.Text = row["YKienGDV"].ToString();
+                txtYKienGDV.Text = lblYKienGDV.Text;
+
                 String decription = "Công tác giám định hiện trường kết thúc lúc [XXX]. Các bước tiếp theo trong tiến trình thu thập thông tin / đánh giá tổn thất và xác định trách nhiệm của Hợp đồng bảo hiểm sẽ được chúng tôi liên tục cập nhật để Quý Công ty Bảo hiểm nắm bắt thông tin xử lý thuận tiện nhất. ";
                 String decriptionEn = "Following completion of our preliminary site survey dated [XXXX] as above stated, our further reports shall follow with updated progress in respect of the requested information obtained, damage assessment and available loss adjustment for Insurers’ convenient review and consideration.";
                 String gioKhaoSat   = row["GioKhaoSatHienTruong"].ToString();
@@ -235,6 +259,59 @@ namespace WEBSITESAVVY.Pages
                     }
                 }
             }
+        }
+
+        protected void btnUpdate_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                mClaimID = Session["ThamChieu"].ToString();
+                int claimID = int.Parse(mClaimID);
+
+                Button btn = (Button)sender;
+                string key = btn.Attributes["key"];
+
+                TextBox txtValue = (TextBox)FindControl("txt" + key);
+                string value = txtValue.Text;
+                string title = "";
+
+                if (value.Contains("'"))
+                {
+                    value = value.Replace("'", "&#39;");
+                }
+                claimDao.updateClaimField(mClaimID, key, value);
+                //sm.sendNoiDungClaim("Report_Update", TenGDV(), value,key, claimID);
+                //sm.UpdateClaim("Report_Update", TenGDV(), value, key, claimID);
+                int maGDV = int.Parse(Request.Cookies["MaGDV"].Value);
+                GiamDinhVienDAO gdv = new GiamDinhVienDAO();
+                string noidung = gdv.LayTenTheoMa(maGDV) + " edited " + title + " of " + claimID + ".";
+                SaveLogTracking(maGDV, noidung, mClaimID);
+
+
+                Response.Redirect(Request.RawUrl + "#" + key);
+
+            }
+            catch (Exception ex)
+            {
+                Response.Write("<script>alert('Error', 'Error update data');</script>");
+            }
+        }
+
+
+        void SaveLogTracking(int maGDV, string noidung, string maclaim)
+        {
+            try
+            {
+                TrackingDTO tr = new TrackingDTO();
+                TrackingDAO trdao = new TrackingDAO();
+                tr.MaGDV = maGDV;
+                tr.NoiDung = noidung;
+                tr.TimeReal = DateTime.Now;
+                tr.MaClaim = maclaim;
+                trdao.InsertTracking(tr);
+            }
+            catch (Exception ex)
+            { }
         }
 
 
