@@ -223,10 +223,14 @@
     </script>
 
     <script type="text/javascript">
-       var ClaimName = '<%= claimName %>';
-        $(document).ready(function () {
+        var ClaimName = '<%= claimName %>';
 
-            $("#panelMenu").accordion({
+        $(document).ready(function () {
+            //Load default
+            var title = "General Information   [" + ClaimName + "]"
+            $(".layout-panel-center .panel-title").html(title);
+            loadReport(0);
+            $("#panelMenu").accordion({             
                 onSelect: function (title, index) {
                     //alert(title +"_"+ index);
                     title += "   [" + ClaimName + "]"
@@ -451,10 +455,10 @@
     <div id="w_NewClaim" class="easyui-window" title="New claim" data-options="modal:true,closed:true,iconCls:'icon-add'" style="width:650px;height:490px;padding:0px;">
         <iframe src="../Pages/NewClaimpop.aspx" ></iframe>
     </div>
-
+<%--
     <div id="w_Submit" class="easyui-window" title="Submit to ..." data-options="modal:true,closed:true,iconCls:'icon-add'" style="width:650px;height:490px;padding:0px;">
         <iframe src="../Messages/submitreport.aspx"></iframe>
-    </div>
+    </div>--%>
 
     <div id="w_UpdateField" class="easyui-window" title="Update" data-options="modal:false,closed:true,iconCls:'icon-save'" style="width:650px;height:490px;padding:0px;"></div>
     <div id="w_UpdateFieldSmall" class="easyui-window" title="Update" data-options="modal:false,closed:true,iconCls:'icon-save'" style="width:350px;height:200px;padding:0px;"></div>
