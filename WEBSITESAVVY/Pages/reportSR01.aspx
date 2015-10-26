@@ -221,7 +221,11 @@
         {
             display:none ;
         }
-        
+        .label-edit
+        {
+            cursor:pointer;
+            min-height:20px;
+        }
     </style>  
         
 
@@ -282,7 +286,7 @@
                                     CssClass="align-right bg_text" ></asp:Label>
 
                                 <asp:Label ID="lblPolicyNO" key="PolicyNO" type="SingleLine" onclick="editField(this)" runat="server" Text="POLICY NO." 
-                                    Width="269px"  CssClass="field_input align-center" ></asp:Label>
+                                    Width="269px"  CssClass="field_input label-edit align-center" ></asp:Label>
                                 
                                 <asp:Panel ID="panelPolicyNO" Width="269px"  CssClass="panelUpdate hiden" runat="server">
                                     <asp:TextBox ID="txtPolicyNO" CssClass="hiden" TextMode="SingleLine"  Width="100%" runat="server" />
@@ -307,7 +311,7 @@
                                     CssClass="align-right bg_text" ></asp:Label>
 
                                 <asp:Label ID="lblEffective" key="Effective" type="SingleLine" onclick="editField(this)" runat="server" Text="Effective" 
-                                    Width="269px"  CssClass="field_input align-center" ></asp:Label>
+                                    Width="269px"  CssClass="field_input label-edit align-center" ></asp:Label>
                                 <asp:Panel ID="panelEffective" Width="269px"  CssClass="panelUpdate hiden" runat="server">
                                     <asp:TextBox ID="txtEffective" CssClass="hiden" TextMode="SingleLine"  Width="100%" runat="server" />
                                     <div style="margin-top:10px">
@@ -381,7 +385,7 @@
                                 
                                 <asp:Label ID="lblPremises" key="Premises" type="SingleLine" onclick="editField(this)" runat="server" 
                                     Text="DIA DIEM TON THAT" Width="456px" 
-                                    CssClass="field_input"  ></asp:Label>
+                                    CssClass="field_input label-edit"  ></asp:Label>
 
                                 <asp:Panel ID="panelPremises" Width="456px" CssClass="panelUpdate hiden" runat="server">
                                     <asp:TextBox ID="txtPremises" CssClass="hiden" TextMode="SingleLine"  Width="100%" runat="server" />
@@ -397,7 +401,7 @@
                                     CssClass="align-right bg_text" ></asp:Label>
                                 
                                 <asp:Label ID="lblDOL" key="DOL" type="SingleLine" onclick="editField(this)" runat="server" Text="NGAY TON THAT" 
-                                    Width="221px"  CssClass="field_input align-center" Font-Bold="false" ></asp:Label>
+                                    Width="221px"  CssClass="field_input label-edit align-center" Font-Bold="false" ></asp:Label>
                                 <asp:Panel ID="panelDOL" Width="221px" CssClass="panelUpdate hiden" runat="server">
                                     <asp:TextBox ID="txtDOL" CssClass="hiden" TextMode="SingleLine"  Width="100%" runat="server" />
                                     <div style="margin-top:10px">
@@ -431,7 +435,7 @@
                                             <td class="style7"><asp:CheckBox ID="ck10" runat="server" Text=" "   /></td>
                                             <td rowspan="2">
                                                 <asp:Label ID="lblGhiChuLoaiHinhTonThat" key="GhiChuLoaiHinhTonThat" type="SingleLine" onclick="editField(this)" runat="server" Width="88px" Text=" "
-                                                     CssClass="field_input dislay-block" Font-Bold="False" ></asp:Label>
+                                                     CssClass="field_input label-edit dislay-block" Font-Bold="False" ></asp:Label>
                                                 <asp:Panel ID="panelGhiChuLoaiHinhTonThat" Width="88px"  CssClass="panelUpdate hiden" runat="server">
                                                     <asp:TextBox ID="txtGhiChuLoaiHinhTonThat" CssClass="hiden" TextMode="SingleLine"  Width="100%" runat="server" />
                                                     <div style="margin-top:10px">
@@ -484,7 +488,7 @@
                                         <td style="vertical-align:bottom" class="style1">
 
                                             <asp:Label ID="lblDienBienTonThat" key="DienBienTonThat" type="MultiLine" onclick="editField(this)" runat="server" Width="802px" Text=" "
-                                                 CssClass="field_input dislay-block" Font-Bold="False" ></asp:Label>
+                                                 CssClass="field_input label-edit dislay-block" Font-Bold="False" ></asp:Label>
                                             <asp:Panel ID="panelDienBienTonThat" Width="802px"  CssClass="panelUpdate hiden" runat="server">
                                                 <asp:TextBox ID="txtDienBienTonThat" CssClass="hiden" TextMode="MultiLine" Height="150px" Width="100%" runat="server" />
                                                 <div style="margin-top:10px">
@@ -515,7 +519,7 @@
                                             <td>
 
                                                 <asp:Label ID="lblGhiChuTBCQCN" key="GhiChuTBCQCN" type="MultiLine" onclick="editField(this)" runat="server" Text="GHI CHÚ THÊM" 
-                                                    Width="537px"  CssClass="field_input align-left" Font-Bold="False"  Height="60px" ></asp:Label>
+                                                    Width="537px"  CssClass="field_input label-edit align-left" Font-Bold="False"  Height="60px" ></asp:Label>
                                                 
                                                 <asp:Panel ID="panelGhiChuTBCQCN" Width="537px"  CssClass="panelUpdate hiden" runat="server">
                                                     <asp:TextBox ID="txtGhiChuTBCQCN" CssClass="hiden" TextMode="MultiLine" Height="150px" Width="100%" runat="server" />
@@ -543,7 +547,7 @@
                                         <td style="vertical-align:bottom" class="style1">
                                             
                                             <asp:Label ID="lblPhamViTonThat" key="PhamViTonThat" type="MultiLine" onclick="editField(this)" runat="server"
-                                                 CssClass="field_input dislay-block" Font-Bold="false" Text=" " Width="807px" ></asp:Label>
+                                                 CssClass="field_input label-edit dislay-block" Font-Bold="false" Text=" " Width="807px" ></asp:Label>
 
 
                                             <asp:Panel ID="panelPhamViTonThat" Width="807px" CssClass="panelUpdate hiden" runat="server">
@@ -570,7 +574,7 @@
 
                                     <asp:Label ID="lblDuPhongTonThat" key="DuPhongTonThat" type="SingleLine" onclick="editField(this)" runat="server" 
                                         Text="UOC TINH TON THAT" Width="217px" Font-Bold="True"
-                                        CssClass="field_input" ForeColor="#006600" ></asp:Label>
+                                        CssClass="field_input label-edit" ForeColor="#006600" ></asp:Label>
 
                                     <asp:Panel ID="panelDuPhongTonThat" Width="217px"  CssClass="panelUpdate hiden" runat="server">
                                         <asp:TextBox ID="txtDuPhongTonThat" CssClass="hiden" TextMode="SingleLine"  Width="100%" runat="server" />
@@ -651,7 +655,7 @@
 
                     <asp:Label ID="lblDePhongVaKhuyenCao" key="DePhongVaKhuyenCao" type="MultiLine" onclick="editField(this)" runat="server" 
                          Text="Đề phòng khuyến cáo" 
-                         Width="99%" CssClass="field_input"  ></asp:Label>
+                         Width="99%" CssClass="field_input label-edit"  ></asp:Label>
                                                 
                     <asp:Panel ID="panelDePhongVaKhuyenCao" Width="99%"  CssClass="panelUpdate hiden" runat="server">
                         <asp:TextBox ID="txtDePhongVaKhuyenCao" CssClass="hiden" TextMode="MultiLine" Height="150px" Width="100%" runat="server" />

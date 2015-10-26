@@ -80,21 +80,40 @@ namespace WEBSITESAVVY.Pages
                 lblDiaChiKH.Text = row["DiaChi"].ToString();
                 lblLinhVucKinhDoanh.Text = row["LinhVucKinhDoanh"].ToString();
                 lblPremises.Text = row["Premises"].ToString();
+                txtPremises.Text = lblPremises.Text;
+
                 lblDOL.Text = row["DOL"].ToString();
+                txtDOL.Text = lblDOL.Text;
+
                 lblSortCause.Text = row["SortCause"].ToString();
+                txtSortCause.Text = lblSortCause.Text;
+
                 lblPhamViTonThat.Text = row["PhamViTonThat"].ToString();
-                lblNamPolicy.Text = row["NamePolicy"].ToString();
+                txtPhamViTonThat.Text = lblPhamViTonThat.Text;
+
+                lblNamePolicy.Text = row["NamePolicy"].ToString();
+                txtNamePolicy.Text = lblNamePolicy.Text;
 
                 lblSumInSured.Text = row["SumInSured"].ToString();
+                txtSumInSured.Text = lblSumInSured.Text;
                 lblEffective.Text = row["Effective"].ToString();
+                txtEffective.Text = lblEffective.Text;
                 lblMucMienThuong.Text = row["MucMienThuong"].ToString();
+                txtMucMienThuong.Text = lblMucMienThuong.Text;
 
                 lblDKBX.Text = row["DKBS"].ToString();
+                txtDKBX.Text = lblDKBX.Text;
+
                 if (row["KhieuNai"].ToString() != null && row["KhieuNai"].ToString().Trim() != "")
+                {
                     lblKhieuNai.Text = row["KhieuNai"].ToString();
+                    txtKhieuNai.Text = lblKhieuNai.Text;
+                }
                 else
                     lblKhieuNai.Text = "(Đang cập nhật)";
+
                 lblDuPhongBoiThuong.Text = row["DuPhongBoiThuong"].ToString();
+                txtDuPhongBoiThuong.Text = lblDuPhongBoiThuong.Text;
 
                 //load nội dung
                 lblGioiThieu.Text = row["GioiThieu"].ToString();

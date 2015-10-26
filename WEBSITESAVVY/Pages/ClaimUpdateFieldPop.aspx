@@ -37,6 +37,17 @@
         {   
             vertical-align:top;
         }
+        
+        html, body
+        {
+            padding:0;
+            margin:0;
+        }
+        
+        .tool_bottom
+        {
+	        padding:5px; position: fixed; bottom: 0px; left: 0px; background:#EAEAEA; width:100%; border-top:1px solid #DDD; text-align:center;
+        }
    </style>
 </head>
 <body>
@@ -44,17 +55,18 @@
         <asp:ScriptManager ID="ScriptManager1" runat="server">
             </asp:ScriptManager>
 
-    <div>
+    <div style="margin-bottom:30px">
         <asp:HiddenField id="hiddenClaimID" runat="server" />
         <asp:HiddenField id="hiddenKey" runat="server" />
         <asp:HiddenField id="HiddenTitle" runat="server" />
-        <asp:TextBox ID="txtValue" runat="server" TextMode="MultiLine"  Width="98%" Height="370px" CssClass="top input" >  </asp:TextBox> <br />
+        <asp:TextBox ID="txtValue" runat="server" TextMode="MultiLine"  Width="98%" Height="290px" CssClass="top input" >  </asp:TextBox> <br />
 
             <ajaxToolkit:CalendarExtender ID="CalendarExtenderInput" runat="server" 
               Enabled="false" Format="yyyy-MM-dd" TargetControlID="txtValue">
                 </ajaxToolkit:CalendarExtender>
     </div>
-    <div >
+
+    <div class="tool_bottom" >
         <asp:Button ID="btnUpdate" runat="server" CssClass="btn" Text="Update" 
             onclick="btnUpdate_Click" />
     </div>

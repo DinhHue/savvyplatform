@@ -21,39 +21,50 @@
         };
 
         function editField(obj) {
+
             var key = $(obj).attr("key");
 
             <%  if(isLock)  Response.Write("return;");    %>
 
             $("#lbl" + key).hide();
             $("#panel" + key).show();
+            $("#panel" + key).css("display", "inline-table");
 
             window.location.href = "#" + key;
 
-            tinymce.init({
-                forced_root_block : '',
-                selector: "#txt" + key,
-                plugins: [
-                        "advlist autolink autosave link image lists charmap print preview hr anchor pagebreak spellchecker",
-                        "searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime image imagetools media nonbreaking",
-                        "table contextmenu directionality emoticons textcolor paste fullpage textcolor colorpicker textpattern example"
-                ],
+            
 
-                toolbar1: "newdocument fullpage | bold italic underline strikethrough | alignleft aligncenter alignright alignjustify | styleselect formatselect fontselect fontsizeselect",
-                toolbar2: "cut copy paste | searchreplace | bullist numlist | outdent indent | undo redo | image media code preview | forecolor backcolor | print fullscreen |",
-                toolbar3: "",
+            var type = $(obj).attr("type");
+            if(type === "SingleLine")
+            {
+                $("#txt" + key).show();
+            }
+            else
+            {
+    
+                tinymce.init({
+                    forced_root_block : '',
+                    selector: "#txt" + key,
+                    plugins: [
+                            "advlist autolink autosave link image lists charmap print preview hr anchor pagebreak spellchecker",
+                            "searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime image imagetools media nonbreaking",
+                            "table contextmenu directionality emoticons textcolor paste fullpage textcolor colorpicker textpattern example"
+                    ],
 
-                menubar: false,
-                toolbar_items_size: 'small',
+                    toolbar1: "newdocument fullpage | bold italic underline strikethrough | alignleft aligncenter alignright alignjustify | styleselect formatselect fontselect fontsizeselect",
+                    toolbar2: "cut copy paste | searchreplace | bullist numlist | outdent indent | undo redo | image media code preview | forecolor backcolor | print fullscreen |",
+                    toolbar3: "",
 
-                image_advtab: true,
+                    menubar: false,
+                    toolbar_items_size: 'small',
+
+                    image_advtab: true,
 
 
-            });
+                });
+            }
+        };
 
-
-
-        }
 
     </script>
 
@@ -227,9 +238,15 @@
         {
             display:none ;
         }
+        
         .panelUpdate *
         {
-            font-size:14px !important;
+            font-size:16px !important;
+        }
+        
+        .panelUpdate
+        {
+            width:100%;
         }
 
     </style>
