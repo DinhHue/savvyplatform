@@ -22,38 +22,48 @@
         };
 
         function editField(obj) {
+
             var key = $(obj).attr("key");
 
             <%  if(isLock)  Response.Write("return;");    %>
 
             $("#lbl" + key).hide();
             $("#panel" + key).show();
+            $("#panel" + key).css("display", "inline-table");
 
             window.location.href = "#" + key;
 
-            tinymce.init({
-                forced_root_block : '',
-                selector: "#txt" + key,
-                plugins: [
-                        "advlist autolink autosave link image lists charmap print preview hr anchor pagebreak spellchecker",
-                        "searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime image imagetools media nonbreaking",
-                        "table contextmenu directionality emoticons textcolor paste fullpage textcolor colorpicker textpattern example"
-                ],
+            
 
-                toolbar1: "newdocument fullpage | bold italic underline strikethrough | alignleft aligncenter alignright alignjustify | styleselect formatselect fontselect fontsizeselect",
-                toolbar2: "cut copy paste | searchreplace | bullist numlist | outdent indent | undo redo | image media code preview | forecolor backcolor | print fullscreen |",
-                toolbar3: "",
+            var type = $(obj).attr("type");
+            if(type === "SingleLine")
+            {
+                $("#txt" + key).show();
+            }
+            else
+            {
+    
+                tinymce.init({
+                    forced_root_block : '',
+                    selector: "#txt" + key,
+                    plugins: [
+                            "advlist autolink autosave link image lists charmap print preview hr anchor pagebreak spellchecker",
+                            "searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime image imagetools media nonbreaking",
+                            "table contextmenu directionality emoticons textcolor paste fullpage textcolor colorpicker textpattern example"
+                    ],
 
-                menubar: false,
-                toolbar_items_size: 'small',
+                    toolbar1: "newdocument fullpage | bold italic underline strikethrough | alignleft aligncenter alignright alignjustify | styleselect formatselect fontselect fontsizeselect",
+                    toolbar2: "cut copy paste | searchreplace | bullist numlist | outdent indent | undo redo | image media code preview | forecolor backcolor | print fullscreen |",
+                    toolbar3: "",
 
-                image_advtab: true,
+                    menubar: false,
+                    toolbar_items_size: 'small',
+
+                    image_advtab: true,
 
 
-            });
-
-
-
+                });
+            }
         }
 
     </script>
@@ -227,9 +237,21 @@
         {
             display:none ;
         }
+        
+        .label-edit
+        {
+            cursor:pointer;
+            min-height:20px;
+        }
+        
         .panelUpdate *
         {
-            font-size:14px !important;
+            font-size:16px !important;
+        }
+        
+        .panelUpdate
+        {
+            width:100%;
         }
 
     </style>
@@ -633,7 +655,7 @@
         <div class="box" >
             <h3 id="ExecutiveSummaryFR" key="ExecutiveSummaryFR" title="Executive Summary" onclick="parent.updateField(this);">I. TÓM TẮT VỤ VIỆC</h3>
             <div>
-                <asp:Label ID="lblExecutiveSummaryFR" key="ExecutiveSummaryFR" onclick="editField(this)" runat="server" Width="100%" ></asp:Label>
+                <asp:Label ID="lblExecutiveSummaryFR" key="ExecutiveSummaryFR" onclick="editField(this)" CssClass="label-edit"  runat="server" Width="100%" ></asp:Label>
                 <asp:Panel ID="panelExecutiveSummaryFR" CssClass="panelUpdate hiden" runat="server">
                     <asp:TextBox ID="txtExecutiveSummaryFR" CssClass="hiden" TextMode="MultiLine" Height="250px" runat="server" />
                     <div style="margin-top:10px">
@@ -647,7 +669,7 @@
         <div class="box" >
             <h3 id="K" key="K" title="Claim handling Process" onclick="parent.updateField(this);">II. QUÁ TRÌNH XỬ LÝ VÀ KHIẾU NẠI</h3>
             <div>
-                <asp:Label ID="lblK" key="K" onclick="editField(this)" runat="server" Width="100%" ></asp:Label>
+                <asp:Label ID="lblK" key="K" onclick="editField(this)" CssClass="label-edit"  runat="server" Width="100%" ></asp:Label>
                 <asp:Panel ID="panelK" CssClass="panelUpdate hiden" runat="server">
                     <asp:TextBox ID="txtK" CssClass="hiden" TextMode="MultiLine" Height="250px" runat="server" />
                     <div style="margin-top:10px">
@@ -662,7 +684,7 @@
         <div class="box" >
             <h3 id="C3FR" key="C3FR" title="Cause of loss" onclick="parent.updateField(this);">III. NGUYÊN NHÂN</h3>
             <div>
-                <asp:Label ID="lblC3FR" key="C3FR" onclick="editField(this)" runat="server" Width="100%" ></asp:Label>
+                <asp:Label ID="lblC3FR" key="C3FR" onclick="editField(this)" CssClass="label-edit"  runat="server" Width="100%" ></asp:Label>
                 <asp:Panel ID="panelC3FR" CssClass="panelUpdate hiden" runat="server">
                     <asp:TextBox ID="txtC3FR" CssClass="hiden" TextMode="MultiLine" Height="250px" runat="server" />
                     <div style="margin-top:10px">
@@ -676,7 +698,7 @@
         <div class="box" >
             <h3 id="E2" key="E2" title="Policy liability" onclick="parent.updateField(this);">IV. PHẠM VI BẢO HIỂM</h3>
             <div>
-                <asp:Label ID="lblE2" key="E2" onclick="editField(this)" runat="server" Width="100%" ></asp:Label>
+                <asp:Label ID="lblE2" key="E2" onclick="editField(this)" CssClass="label-edit" runat="server" Width="100%" ></asp:Label>
                 <asp:Panel ID="panelE2" CssClass="panelUpdate hiden" runat="server">
                     <asp:TextBox ID="txtE2" CssClass="hiden" TextMode="MultiLine" Height="250px" runat="server" />
                     <div style="margin-top:10px">
@@ -690,7 +712,7 @@
         <div class="box" >
             <h3 id="B1" key="B1" title="Claim amount and proposed settlement" onclick="parent.updateField(this);">V. YÊU CẦU BỒI THƯỜNG VÀ ĐỀ XUẤT TÍNH TOÁN</h3>
             <div>
-                <asp:Label ID="lblB1" key="B1" onclick="editField(this)" runat="server" Width="100%" ></asp:Label>
+                <asp:Label ID="lblB1" key="B1" onclick="editField(this)" CssClass="label-edit" runat="server" Width="100%" ></asp:Label>
                 <asp:Panel ID="panelB1" CssClass="panelUpdate hiden" runat="server">
                     <asp:TextBox ID="txtB1" CssClass="hiden" TextMode="MultiLine" Height="250px" runat="server" />
                     <div style="margin-top:10px">
@@ -705,7 +727,7 @@
         <div class="box" >
             <h3 id="H" key="H" title="Salvage" onclick="parent.updateField(this);">VI. GIÁ TRỊ THU HỒI</h3>
             <div>
-                <asp:Label ID="lblH" key="H" onclick="editField(this)" runat="server" Width="100%" ></asp:Label>
+                <asp:Label ID="lblH" key="H" onclick="editField(this)" CssClass="label-edit" runat="server" Width="100%" ></asp:Label>
                 <asp:Panel ID="panelH" CssClass="panelUpdate hiden" runat="server">
                     <asp:TextBox ID="txtH" CssClass="hiden" TextMode="MultiLine" Height="250px" runat="server" />
                     <div style="margin-top:10px">
@@ -719,7 +741,7 @@
         <div class="box" >
             <h3 id="B2" key="B2" title="Final Proposed Settlement" onclick="parent.updateField(this);">VII. ĐỀ XUẤT CHUNG CUỘC</h3>
             <div>
-                <asp:Label ID="lblB2" key="B2" onclick="editField(this)" runat="server" Width="100%" ></asp:Label>
+                <asp:Label ID="lblB2" key="B2" onclick="editField(this)" CssClass="label-edit" runat="server" Width="100%" ></asp:Label>
                 <asp:Panel ID="panelB2" CssClass="panelUpdate hiden" runat="server">
                     <asp:TextBox ID="txtB2" CssClass="hiden" TextMode="MultiLine" Height="250px" runat="server" />
                     <div style="margin-top:10px">
@@ -733,7 +755,7 @@
         <div class="box" >
             <h3 id="Conclution" key="Conclution" title="Conclusion" onclick="parent.updateField(this);">VIII. KẾT LUẬN</h3>
             <div>
-                <asp:Label ID="lblConclution" key="Conclution" onclick="editField(this)" runat="server" Width="100%" ></asp:Label>
+                <asp:Label ID="lblConclution" key="Conclution" onclick="editField(this)" CssClass="label-edit" runat="server" Width="100%" ></asp:Label>
                 <asp:Panel ID="panelConclution" CssClass="panelUpdate hiden" runat="server">
                     <asp:TextBox ID="txtConclution" CssClass="hiden" TextMode="MultiLine" Height="250px" runat="server" />
                     <div style="margin-top:10px">
