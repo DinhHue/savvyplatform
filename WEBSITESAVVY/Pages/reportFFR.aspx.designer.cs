@@ -10,7 +10,7 @@
 namespace WEBSITESAVVY.Pages {
     
     
-    public partial class reportSP {
+    public partial class reportFFR {
         
         /// <summary>
         /// form1 control.

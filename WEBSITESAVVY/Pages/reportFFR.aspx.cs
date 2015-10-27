@@ -10,7 +10,7 @@ using WEBSITESAVVY.DTO;
 
 namespace WEBSITESAVVY.Pages
 {
-    public partial class reportSP : System.Web.UI.Page
+    public partial class reportFFR : System.Web.UI.Page
     {
         public static string mClaimID = "";
         private ClaimDAO claimDao = new ClaimDAO();

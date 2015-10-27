@@ -21,6 +21,6 @@ D:\GitCode\WEBSITESAVVY\bin\ru\AjaxControlToolkit.resources.dll
 D:\GitCode\WEBSITESAVVY\bin\tr-TR\AjaxControlToolkit.resources.dll
 D:\GitCode\WEBSITESAVVY\bin\zh-CHS\AjaxControlToolkit.resources.dll
 D:\GitCode\WEBSITESAVVY\bin\zh-CHT\AjaxControlToolkit.resources.dll
-D:\GitCode\WEBSITESAVVY\obj\Debug\WEBSITESAVVY.csprojResolveAssemblyReference.cache
 D:\GitCode\WEBSITESAVVY\obj\Debug\WEBSITESAVVY.dll
 D:\GitCode\WEBSITESAVVY\obj\Debug\WEBSITESAVVY.pdb
+D:\GitCode\WEBSITESAVVY\obj\Debug\WEBSITESAVVY.csprojResolveAssemblyReference.cache

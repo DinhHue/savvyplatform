@@ -22,5 +22,16 @@ namespace WEBSITESAVVY.DAO
             }
             return dr;
         }
+        public void UpdateChuKy(string claimID, string key, string value)
+        {
+            string sql = "sp_ChuKy_UpdateField";
+            List<SqlParameter> ds = new List<SqlParameter>();
+
+            ds.Add(new SqlParameter("@idclaim", claimID));
+            ds.Add(new SqlParameter("@key", key));
+            ds.Add(new SqlParameter("@value", value));
+
+            SqlDataAcessHelper.exNonStoreParas(sql, ds);
+        }
     }
 }
