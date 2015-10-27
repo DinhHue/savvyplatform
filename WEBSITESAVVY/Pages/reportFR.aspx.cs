@@ -81,7 +81,7 @@ namespace WEBSITESAVVY.Pages
                 lblDOL.Text     = row["DOL"].ToString();
                 lblSortCause.Text = row["SortCause"].ToString();
                 lblPhamViTonThat.Text = row["PhamViTonThat"].ToString();
-                lblNamPolicy.Text = row["NamePolicy"].ToString();
+                lblNamePolicy.Text = row["NamePolicy"].ToString();
 
                 lblSumInSured.Text = row["SumInSured"].ToString();
                 lblEffective.Text = row["Effective"].ToString();
@@ -94,7 +94,7 @@ namespace WEBSITESAVVY.Pages
                     lblKhieuNai.Text = "(Đang cập nhật)";
 
 
-                lbTonThatHopLy.Text = row["ThietHaiHopLy"].ToString();
+                lblThietHaiHopLy.Text = row["ThietHaiHopLy"].ToString();
                 lblTonThatHopLe.Text = row["TonThatHopLe"].ToString();
                 lblTruGiaTriThuHoi.Text = row["TruGiaTriThuHoi"].ToString();
                 lblTamUngBoiThuong.Text  = row["TamUngBoiThuong"].ToString();

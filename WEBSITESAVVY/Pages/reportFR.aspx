@@ -32,7 +32,7 @@
             $("#panel" + key).css("display", "inline-table");
 
             window.location.href = "#" + key;
-
+            $("#txt" + key).val($("#lbl" + key).html());
             
 
             var type = $(obj).attr("type");
@@ -405,8 +405,16 @@
                             </td>
                             <td>:</td>
                             <td >
-                                <asp:Label ID="lblPremises" runat="server" Width="570px" 
-                                    CssClass="field_input" Font-Bold=False ></asp:Label>
+                                <asp:Label ID="lblPremises" key="Premises" type="SingleLine" onclick="editField(this)" runat="server" Width="570px" 
+                                    CssClass="field_input label-edit" Font-Bold=False ></asp:Label>
+
+                                <asp:Panel ID="panelPremises" Width="570px" CssClass="panelUpdate hiden" runat="server">
+                                    <asp:TextBox ID="txtPremises" CssClass="hiden" TextMode="SingleLine"  Width="100%" runat="server" />
+                                    <div style="margin-top:10px">
+                                        <asp:Button  key="Premises" onclick="btnUpdate_Click" Text="Update" runat="server"/>
+                                        <input  key="Premises" type="button" value="Cancel" onclick="cancel(this)" />
+                                    </div>
+                                </asp:Panel>
                             </td>
                         </tr>
 
@@ -418,8 +426,16 @@
                             </td>
                             <td>:</td>
                             <td >
-                                <asp:Label ID="lblDOL" runat="server" Width="570px" 
-                                    CssClass="field_input" Font-Bold=False ></asp:Label>
+                                <asp:Label ID="lblDOL" key="DOL" type="SingleLine" onclick="editField(this)" runat="server" Width="570px" 
+                                    CssClass="field_input label-edit" Font-Bold=False ></asp:Label>
+
+                                <asp:Panel ID="panelDOL" Width="570px" CssClass="panelUpdate hiden" runat="server">
+                                    <asp:TextBox ID="txtDOL" CssClass="hiden" TextMode="SingleLine"  Width="100%" runat="server" />
+                                    <div style="margin-top:10px">
+                                        <asp:Button  key="DOL" onclick="btnUpdate_Click" Text="Update" runat="server"/>
+                                        <input  key="DOL" type="button" value="Cancel" onclick="cancel(this)" />
+                                    </div>
+                                </asp:Panel>
                             </td>
                         </tr>
 
@@ -431,8 +447,16 @@
                             </td>
                             <td>:</td>
                             <td >
-                                <asp:Label ID="lblSortCause" runat="server" Width="570px" 
-                                    CssClass="field_input" Font-Bold=False ></asp:Label>
+                                <asp:Label ID="lblSortCause" key="SortCause" type="SingleLine" onclick="editField(this)" runat="server" Width="570px" 
+                                    CssClass="field_input label-edit" Font-Bold=False ></asp:Label>
+
+                                <asp:Panel ID="panelSortCause" Width="570px" CssClass="panelUpdate hiden" runat="server">
+                                    <asp:TextBox ID="txtSortCause" CssClass="hiden" TextMode="SingleLine"  Width="100%" runat="server" />
+                                    <div style="margin-top:10px">
+                                        <asp:Button key="SortCause" onclick="btnUpdate_Click" Text="Update" runat="server"/>
+                                        <input  key="SortCause" type="button" value="Cancel" onclick="cancel(this)" />
+                                    </div>
+                                </asp:Panel>
                             </td>
                         </tr>
 
@@ -444,8 +468,16 @@
                             </td>
                             <td>:</td>
                             <td >
-                                <asp:Label ID="lblPhamViTonThat" runat="server" Width="570px" 
-                                    CssClass="field_input" Font-Bold=False ></asp:Label>
+                                <asp:Label ID="lblPhamViTonThat" key="PhamViTonThat" type="MultiLine" onclick="editField(this)" runat="server" Width="570px" 
+                                    CssClass="field_input label-edit" Font-Bold=False ></asp:Label>
+
+                                <asp:Panel ID="panelPhamViTonThat" Width="570px" CssClass="panelUpdate hiden" runat="server">
+                                    <asp:TextBox ID="txtPhamViTonThat" CssClass="hiden" TextMode="MultiLine"  Width="100%" runat="server" />
+                                    <div style="margin-top:10px">
+                                        <asp:Button key="PhamViTonThat" onclick="btnUpdate_Click" Text="Update" runat="server"/>
+                                        <input  key="PhamViTonThat" type="button" value="Cancel" onclick="cancel(this)" />
+                                    </div>
+                                </asp:Panel>
                             </td>
                         </tr>
 
@@ -457,21 +489,62 @@
                             </td>
                             <td>:</td>
                             <td >
-                                <asp:Label ID="lblNamPolicy" runat="server" Width="570px" 
-                                    CssClass="field_input" Font-Bold="true" ></asp:Label><br />
+   
+                                <asp:Label ID="lblNamePolicy" key="NamePolicy" type="SingleLine" onclick="editField(this)" runat="server" Width="570px" 
+                                    CssClass="field_input" Font-Bold=False ></asp:Label>
+
+                                <asp:Panel ID="panelNamePolicy" Width="570px" CssClass="panelUpdate hiden" runat="server">
+                                    <asp:TextBox ID="txtNamePolicy" CssClass="hiden" TextMode="SingleLine"  Width="100%" runat="server" />
+                                    <div style="margin-top:10px">
+                                        <asp:Button  key="NamePolicy" onclick="btnUpdate_Click" Text="Update" runat="server"/>
+                                        <input  key="NamePolicy" type="button" value="Cancel" onclick="cancel(this)" />
+                                    </div>
+                                </asp:Panel>
+                                
+                                <br />
 
                                 <table>
                                     <tr>
                                         <td><span><b>1. <u>Tổng số tiền bảo hiểm:</u></b></span></td>
-                                        <td><asp:Label ID="lblSumInSured" runat="server" Width="354px"  Font-Bold=False ></asp:Label></td>
+                                        <td>
+
+                                            <asp:Label ID="lblSumInSured" key="SumInSured" type="SingleLine" onclick="editField(this)" CssClass="label-edit" runat="server" Width="354px" Font-Bold=False ></asp:Label>
+
+                                            <asp:Panel ID="panelSumInSured" Width="354px" CssClass="panelUpdate hiden" runat="server">
+                                                <asp:TextBox ID="txtSumInSured" CssClass="hiden" TextMode="SingleLine"  Width="100%" runat="server" />
+                                                <div style="margin-top:10px">
+                                                    <asp:Button  key="SumInSured" onclick="btnUpdate_Click" Text="Update" runat="server"/>
+                                                    <input  key="SumInSured" type="button" value="Cancel" onclick="cancel(this)" />
+                                                </div>
+                                            </asp:Panel>
+                                        </td>
                                     </tr>
                                     <tr>
                                         <td><span><b>2. <u>Thời hạn bảo hiểm:</u></b></span> </td>
-                                        <td><asp:Label ID="lblEffective" runat="server"  Width="354px" Font-Bold=False ></asp:Label></td>
+                                        <td>
+                                            <asp:Label ID="lblEffective" key="Effective" runat="server" type="SingleLine" onclick="editField(this)" CssClass="label-edit"  Width="354px" Font-Bold=False ></asp:Label>
+                                        
+                                            <asp:Panel ID="panelEffective" Width="354px" CssClass="panelUpdate hiden" runat="server">
+                                                <asp:TextBox ID="txtEffective" CssClass="hiden" TextMode="SingleLine"  Width="100%" runat="server" />
+                                                <div style="margin-top:10px">
+                                                    <asp:Button  key="Effective" onclick="btnUpdate_Click" Text="Update" runat="server"/>
+                                                    <input  key="Effective" type="button" value="Cancel" onclick="cancel(this)" />
+                                                </div>
+                                            </asp:Panel>
+                                        </td>
                                     </tr>
                                     <tr>
                                         <td><span><b>3. <u>Mức miễn thưởng:</u></b></span> </td>
-                                        <td><asp:Label ID="lblMucMienThuong" runat="server" Width="354px" Font-Bold=False ></asp:Label></td>
+                                        <td>
+                                            <asp:Label ID="lblMucMienThuong" key="MucMienThuong" type="SingleLine" onclick="editField(this)" CssClass="label-edit" runat="server" Width="354px" Font-Bold=False ></asp:Label>
+                                            <asp:Panel ID="panelMucMienThuong" Width="354px" CssClass="panelUpdate hiden" runat="server">
+                                                <asp:TextBox ID="txtMucMienThuong" CssClass="hiden" TextMode="SingleLine"  Width="100%" runat="server" />
+                                                <div style="margin-top:10px">
+                                                    <asp:Button  key="MucMienThuong" onclick="btnUpdate_Click" Text="Update" runat="server"/>
+                                                    <input  key="MucMienThuong" type="button" value="Cancel" onclick="cancel(this)" />
+                                                </div>
+                                            </asp:Panel>
+                                        </td>
                                     </tr>
                                 </table>
 
@@ -482,13 +555,21 @@
                         <tr>
                             <td>
                                 <asp:Label ID="Label19"  runat="server" 
-                                    Text="ĐIỀU KHOẢN BỔ XUNG" 
+                                    Text="ĐIỀU KHOẢN BỔ SUNG" 
                                     Width="260px" CssClass=" bg_text" ></asp:Label>
                             </td>
                             <td>:</td>
                             <td >
-                                <asp:Label ID="lblDKBX" runat="server" Width="570px" 
-                                    CssClass="align-left" Font-Bold=False ></asp:Label>
+                                <asp:Label ID="lblDKBX" key="DKBX" type="SingleLine" onclick="editField(this)" CssClass="label-edit align-left" runat="server" Width="570px" 
+                                    Font-Bold=False ></asp:Label>
+
+                                <asp:Panel ID="panelDKBX" Width="570px" CssClass="panelUpdate hiden" runat="server">
+                                    <asp:TextBox ID="txtDKBX" CssClass="hiden" TextMode="SingleLine"  Width="100%" runat="server" />
+                                    <div style="margin-top:10px">
+                                        <asp:Button  key="DKBX" onclick="btnUpdate_Click" Text="Update" runat="server"/>
+                                        <input  key="DKBX" type="button" value="Cancel" onclick="cancel(this)" />
+                                    </div>
+                                </asp:Panel>
                             </td>
                         </tr>
 
@@ -500,8 +581,15 @@
                             </td>
                             <td>:</td>
                             <td >
-                                <asp:Label ID="lblKhieuNai" runat="server" Width="570px" 
-                                    CssClass="field_input" Font-Bold="true" ></asp:Label>
+                                <asp:Label ID="lblKhieuNai" key="KhieuNai" type="SingleLine" onclick="editField(this)" CssClass="label-edit" runat="server" Width="570px" 
+                                     Font-Bold="true" ></asp:Label>
+                                <asp:Panel ID="panelKhieuNai" Width="570px" CssClass="panelUpdate hiden" runat="server">
+                                    <asp:TextBox ID="txtKhieuNai" CssClass="hiden" TextMode="SingleLine"  Width="100%" runat="server" />
+                                    <div style="margin-top:10px">
+                                        <asp:Button  key="KhieuNai" onclick="btnUpdate_Click" Text="Update" runat="server"/>
+                                        <input  key="KhieuNai" type="button" value="Cancel" onclick="cancel(this)" />
+                                    </div>
+                                </asp:Panel>
                             </td>
                         </tr>
 
@@ -513,8 +601,17 @@
                             </td>
                             <td>:</td>
                             <td >
-                                <asp:Label ID="lbTonThatHopLy" runat="server" Width="570px" 
-                                    CssClass="field_input" Font-Bold="True" Font-Size="22px" ></asp:Label>
+                                
+                                <asp:Label ID="lblThietHaiHopLy" key="ThietHaiHopLy" type="SingleLine" onclick="editField(this)" runat="server" Width="570px" 
+                                    CssClass="field_input label-edit" Font-Bold="true" Font-Size="22px" ></asp:Label>
+
+                                <asp:Panel ID="panelThietHaiHopLy" Width="570px" CssClass="panelUpdate hiden" runat="server">
+                                    <asp:TextBox ID="txtThietHaiHopLy" CssClass="hiden" TextMode="SingleLine"  Width="100%" runat="server" />
+                                    <div style="margin-top:10px">
+                                        <asp:Button  key="ThietHaiHopLy" onclick="btnUpdate_Click" Text="Update" runat="server"/>
+                                        <input  key="ThietHaiHopLy" type="button" value="Cancel" onclick="cancel(this)" />
+                                    </div>
+                                </asp:Panel>
                             </td>
                         </tr>
 
@@ -527,8 +624,18 @@
                             </td>
                             <td>:</td>
                             <td >
-                                <asp:Label ID="lblTonThatHopLe" runat="server" Width="570px" 
-                                    CssClass="field_input" Font-Bold="True" Font-Size="22px" ></asp:Label>
+                                <asp:Label ID="lblTonThatHopLe" key="TonThatHopLe" type="SingleLine" onclick="editField(this)"  runat="server" Width="570px" 
+                                    CssClass="field_input label-edit" Font-Bold="True" Font-Size="22px" ></asp:Label>
+
+                                <asp:Panel ID="panelTonThatHopLe" Width="570px" CssClass="panelUpdate hiden" runat="server">
+                                    <asp:TextBox ID="txtTonThatHopLe" CssClass="hiden" TextMode="SingleLine"  Width="100%" runat="server" />
+                                    <div style="margin-top:10px">
+                                        <asp:Button  key="TonThatHopLe" onclick="btnUpdate_Click" Text="Update" runat="server"/>
+                                        <input  key="TonThatHopLe" type="button" value="Cancel" onclick="cancel(this)" />
+                                    </div>
+                                </asp:Panel>
+
+
                             </td>
                         </tr>
 
@@ -540,8 +647,15 @@
                             </td>
                             <td>:</td>
                             <td >
-                                <asp:Label  ID="lblTruGiaTriThuHoi" runat="server" Width="570px" 
-                                    CssClass="field_input" Font-Bold="True"  Font-Size="22px" ></asp:Label>
+                                <asp:Label  ID="lblTruGiaTriThuHoi"  key="TruGiaTriThuHoi" type="SingleLine" onclick="editField(this)"  runat="server" Width="570px" 
+                                    CssClass="field_input label-edit" Font-Bold="True"  Font-Size="22px" ></asp:Label>
+                                <asp:Panel ID="panelTruGiaTriThuHoi" Width="570px" CssClass="panelUpdate hiden" runat="server">
+                                    <asp:TextBox ID="txtTruGiaTriThuHoi" CssClass="hiden" TextMode="SingleLine"  Width="100%" runat="server" />
+                                    <div style="margin-top:10px">
+                                        <asp:Button  key="TruGiaTriThuHoi" onclick="btnUpdate_Click" Text="Update" runat="server"/>
+                                        <input  key="TruGiaTriThuHoi" type="button" value="Cancel" onclick="cancel(this)" />
+                                    </div>
+                                </asp:Panel>
                             </td>
                         </tr>
 
@@ -553,8 +667,15 @@
                             </td>
                             <td>:</td>
                             <td>
-                                <asp:Label ID="lblTamUngBoiThuong" runat="server" Width="570px" 
-                                    CssClass="field_input" Font-Bold="True" Font-Size="22px" ></asp:Label>
+                                <asp:Label ID="lblTamUngBoiThuong" key="TamUngBoiThuong" type="SingleLine" onclick="editField(this)"  runat="server" Width="570px" 
+                                    CssClass="field_input label-edit" Font-Bold="True" Font-Size="22px" ></asp:Label>
+                                <asp:Panel ID="panelTamUngBoiThuong" Width="570px" CssClass="panelUpdate hiden" runat="server">
+                                    <asp:TextBox ID="txtTamUngBoiThuong" CssClass="hiden" TextMode="SingleLine"  Width="100%" runat="server" />
+                                    <div style="margin-top:10px">
+                                        <asp:Button  key="TamUngBoiThuong" onclick="btnUpdate_Click" Text="Update" runat="server"/>
+                                        <input  key="TamUngBoiThuong" type="button" value="Cancel" onclick="cancel(this)" />
+                                    </div>
+                                </asp:Panel>
                             </td>
                         </tr>
 
@@ -566,8 +687,16 @@
                             </td>
                             <td>:</td>
                             <td >
-                                <asp:Label ID="lblTruMienThuong" runat="server" Width="570px" 
-                                    CssClass="field_input" Font-Bold="True" Font-Size="22px" ></asp:Label>
+                                <asp:Label ID="lblTruMienThuong"  key="TruMienThuong" type="SingleLine" onclick="editField(this)"  runat="server" Width="570px" 
+                                    CssClass="field_input label-edit" Font-Bold="True" Font-Size="22px" ></asp:Label>
+
+                                <asp:Panel ID="panelTruMienThuong" Width="570px" CssClass="panelUpdate hiden" runat="server">
+                                    <asp:TextBox ID="txtTruMienThuong" CssClass="hiden" TextMode="SingleLine"  Width="100%" runat="server" />
+                                    <div style="margin-top:10px">
+                                        <asp:Button key="TruMienThuong" onclick="btnUpdate_Click" Text="Update" runat="server"/>
+                                        <input  key="TruMienThuong" type="button" value="Cancel" onclick="cancel(this)" />
+                                    </div>
+                                </asp:Panel>
                             </td>
                         </tr>
 
@@ -579,8 +708,18 @@
                             </td>
                             <td>:</td>
                             <td >
-                                <asp:Label ID="lblBoiThuong" runat="server" Width="570px" 
-                                    CssClass="field_input" Font-Bold="True" Font-Size="22px" ></asp:Label>
+                                <asp:Label ID="lblBoiThuong" key="BoiThuong" type="SingleLine" onclick="editField(this)"  runat="server" Width="570px" 
+                                    CssClass="field_input label-edit" Font-Bold="True" Font-Size="22px" ></asp:Label>
+
+                                <asp:Panel ID="panelBoiThuong" Width="570px" CssClass="panelUpdate hiden" runat="server">
+                                    <asp:TextBox ID="txtBoiThuong" CssClass="hiden" TextMode="SingleLine"  Width="100%" runat="server" />
+                                    <div style="margin-top:10px">
+                                        <asp:Button  key="BoiThuong" onclick="btnUpdate_Click" Text="Update" runat="server"/>
+                                        <input  key="BoiThuong" type="button" value="Cancel" onclick="cancel(this)" />
+                                    </div>
+                                </asp:Panel>
+
+                                
                             </td>
                         </tr>
 
