@@ -147,7 +147,8 @@ namespace WEBSITESAVVY.Pages
                 txtDePhongVaKhuyenCao.Text = lblDePhongVaKhuyenCao.Text;
 
 
-                YkienGDV.Text = row["YKienGDVSR01"].ToString();
+                lblYKienGDVSR01.Text = row["YKienGDVSR01"].ToString();
+                txtYKienGDVSR01.Text = row["YKienGDVSR01"].ToString();
                 String decription = "Công tác giám định hiện trường kết thúc lúc [XXX]. Các bước tiếp theo trong tiến trình thu thập thông tin / đánh giá tổn thất và xác định trách nhiệm của Hợp đồng bảo hiểm sẽ được chúng tôi liên tục cập nhật để Quý Công ty Bảo hiểm nắm bắt thông tin xử lý thuận tiện nhất. ";
                 String decriptionEn = "Following completion of our preliminary site survey dated [XXXX] as above stated, our further reports shall follow with updated progress in respect of the requested information obtained, damage assessment and available loss adjustment for Insurers’ convenient review and consideration.";
                 String gioKhaoSat = row["GioKhaoSatHienTruong"].ToString();
@@ -191,7 +192,7 @@ namespace WEBSITESAVVY.Pages
                 {
                     id = Session["ThamChieu"].ToString();
 
-                    if (!checkBoxThongBao.Checked)
+                    if (checkBoxThongBao.Checked==true)
                     {
                         string stt = "Yes";
                         bool up = claimDao.UpdateTBCQCN(id, stt);
@@ -214,18 +215,31 @@ namespace WEBSITESAVVY.Pages
             DataRow dr = ck.SelectChuKy(idclaim);
             if (dr != null)
             {
-                DaiDien1.Text = dr["DaiDien1"].ToString();
-                DaiDien2.Text = dr["DaiDien2"].ToString();
-                DaiDien3.Text = dr["DaiDien3"].ToString();
-                DaiDien4.Text = dr["DaiDien4"].ToString();
-                TenDaiDien1.Text = dr["TenDaiDien1"].ToString();
-                TenDaiDien2.Text = dr["TenDaiDien2"].ToString();
-                TenDaiDien3.Text = dr["TenDaiDien3"].ToString();
-                TenDaiDien4.Text = dr["TenDaiDien4"].ToString();
-                ChucVuDaiDien1.Text = dr["ChucVuDaiDien1"].ToString();
-                ChucVuDaiDien2.Text = dr["ChucVuDaiDien2"].ToString();
-                ChucVuDaiDien3.Text = dr["ChucVuDaiDien3"].ToString();
-                ChucVuDaiDien4.Text = dr["ChucVuDaiDien4"].ToString();
+                lblDaiDien1.Text = dr["DaiDien1"].ToString();
+                txtDaiDien1.Text = dr["DaiDien1"].ToString();
+                lblDaiDien2.Text = dr["DaiDien2"].ToString();
+                txtDaiDien2.Text = dr["DaiDien2"].ToString();
+                lblDaiDien3.Text = dr["DaiDien3"].ToString();
+                txtDaiDien3.Text = dr["DaiDien3"].ToString();
+                lblDaiDien4.Text = dr["DaiDien4"].ToString();
+                lblDaiDien4.Text = dr["DaiDien4"].ToString();
+                lblTenDaiDien1.Text = dr["TenDaiDien1"].ToString();
+                txtTenDaiDien1.Text = dr["TenDaiDien1"].ToString();
+                lblTenDaiDien2.Text = dr["TenDaiDien2"].ToString();
+                lblTenDaiDien2.Text = dr["TenDaiDien2"].ToString();
+                txtTenDaiDien2.Text = dr["TenDaiDien2"].ToString();
+                lblTenDaiDien3.Text = dr["TenDaiDien3"].ToString();                
+                txtTenDaiDien3.Text = dr["TenDaiDien3"].ToString();
+                lblTenDaiDien4.Text = dr["TenDaiDien4"].ToString();
+                txtTenDaiDien4.Text = dr["TenDaiDien4"].ToString();
+                lblChucVuDaiDien1.Text = dr["ChucVuDaiDien1"].ToString();
+                txtChucVuDaiDien1.Text = dr["ChucVuDaiDien1"].ToString();
+                lblChucVuDaiDien2.Text = dr["ChucVuDaiDien2"].ToString();
+                txtChucVuDaiDien2.Text = dr["ChucVuDaiDien2"].ToString();
+                lblChucVuDaiDien3.Text = dr["ChucVuDaiDien3"].ToString();
+                txtChucVuDaiDien3.Text = dr["ChucVuDaiDien3"].ToString();
+                lblChucVuDaiDien4.Text = dr["ChucVuDaiDien4"].ToString();
+                txtChucVuDaiDien4.Text = dr["ChucVuDaiDien4"].ToString();
             }
         }
 
@@ -266,7 +280,40 @@ namespace WEBSITESAVVY.Pages
             }
         }
 
+        protected void btnUpdateDaiDien_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                mClaimID = Session["ThamChieu"].ToString();
+                int claimID = int.Parse(mClaimID);
 
+                Button btn = (Button)sender;
+                string key = btn.Attributes["key"];
+
+                TextBox txtValue = (TextBox)FindControl("txt" + key);
+                string value = txtValue.Text;
+                string title = "";
+
+                if (value.Contains("'"))
+                {
+                    value = value.Replace("'", "&#39;");
+                }
+                //claimDao.updateClaimField(mClaimID, key, value);
+                ck.UpdateChuKy(mClaimID, key, value);
+                //sm.sendNoiDungClaim("Report_Update", TenGDV(), value,key, claimID);
+                //sm.UpdateClaim("Report_Update", TenGDV(), value, key, claimID);
+                int maGDV = int.Parse(Request.Cookies["MaGDV"].Value);
+                GiamDinhVienDAO gdv = new GiamDinhVienDAO();
+                string noidung = gdv.LayTenTheoMa(maGDV) + " edited " + title + " of " + claimID + ".";
+                SaveLogTracking(maGDV, noidung, mClaimID);
+                Response.Redirect(Request.RawUrl + "#" + key);
+
+            }
+            catch (Exception ex)
+            {
+                Response.Write("<script>alert('Error', 'Error update data');</script>");
+            }
+        }
         void SaveLogTracking(int maGDV, string noidung, string maclaim)
         {
             try

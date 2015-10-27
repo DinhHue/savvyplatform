@@ -18,8 +18,6 @@
 	<link rel="stylesheet" type="text/css" href="../css/claim.css"/>
 	<script type="text/javascript" src="../js/jquery-1.11.3.min.js"></script>
 	<script type="text/javascript" src="../Scripts/jquery.easyui.min.js"></script>
-
-
     <script type="text/javascript" src="../js/bootstrap.min.js"></script>
 
 
@@ -144,7 +142,8 @@
 			if (report === "") $("#choose").hide();
 			else $("#choose").show();
 
-        }
+
+        }
 
         function onFinished() {
             $("#frameCenter").fadeIn();
