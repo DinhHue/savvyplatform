@@ -527,7 +527,7 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td><span><b>3. <u>Mức miễn thường:</u></b></span> </td>
+                                        <td><span><b>3. <u>Mức miễn thưởng:</u></b></span> </td>
                                         <td>
                                             <asp:Label ID="lblMucMienThuong" key="MucMienThuong" type="SingleLine" onclick="editField(this)" CssClass="label-edit" runat="server" Width="354px" Font-Bold=False ></asp:Label>
                                             <asp:Panel ID="panelMucMienThuong" Width="354px" CssClass="panelUpdate hiden" runat="server">
@@ -896,9 +896,7 @@
             &nbsp;&nbsp;&nbsp;  &nbsp
         <asp:Button class="btn" ID="btnCheckPR" runat="server" Text="Checker" onclick="btnCheckILA_Click"/>
     </div>
-    <div id="w_UpdateField" class="easyui-window" title="Update" data-options="modal:false,closed:true,iconCls:'icon-save'" style="width:650px;height:490px;padding:0px;display:none;"></div>
-    <div id="w_UpdateFieldSmall" class="easyui-window" title="Update" data-options="modal:false,closed:true,iconCls:'icon-save'" style="width:450px;height:300px;padding:0px;display:none;"></div>
-  
+
     <div style="height:40px;"></div>
 
     </form>

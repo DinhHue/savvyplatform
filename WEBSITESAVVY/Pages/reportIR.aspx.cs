@@ -84,7 +84,7 @@ namespace WEBSITESAVVY.Pages
                 lblDOL.Text     = row["DOL"].ToString();
                 lblSortCause.Text = row["SortCause"].ToString();
                 lblPhamViTonThat.Text = row["PhamViTonThat"].ToString();
-                lblNamPolicy.Text = row["NamePolicy"].ToString();
+                lblNamePolicy.Text = row["NamePolicy"].ToString();
 
                 lblSumInSured.Text = row["SumInSured"].ToString();
                 lblEffective.Text = row["Effective"].ToString();
