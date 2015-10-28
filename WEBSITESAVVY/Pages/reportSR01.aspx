@@ -328,44 +328,87 @@
                                 <asp:Label ID="Label6" runat="server" 
                                     Text="Người được BH <br/><i>Insured</i>" 
                                     Width="130px" CssClass=" bg_text" ></asp:Label>
-                                <asp:Label ID="lblInsured" runat="server" 
+                                <asp:Label ID="lblTenKhachHang" runat="server" key="TenKhachHang" 
+                                    type="SingleLine" onclick="editField(this)"
                                     Text="NGUOI DUOC BAO HIEM" Width="395px" 
-                                    CssClass="field_input" Font-Bold="true" ></asp:Label></td>
+                                    CssClass="field_input label-edit" Font-Bold="True" ></asp:Label>
+                                     <asp:Panel ID="panelTenKhachHang" Width="395px"  CssClass="panelUpdate hiden" runat="server">
+                                    <asp:TextBox ID="txtTenKhachHang" CssClass="hiden" TextMode="SingleLine"  Width="100%" runat="server" />
+                                    <div style="margin-top:10px">
+                                        <asp:Button ID="Button14" key="TenKhachHang" onclick="btnUpdateKhachHang_Click" Text="Update" runat="server"/>
+                                        <input  key="TenKhachHang" type="button" value="Cancel" onclick="cancel(this)" />
+                                    </div>
+                                </asp:Panel>
+                                    </td>
                             <td ><asp:Label ID="Label8" runat="server"
                                     Text="Số Fax <br/><i>Fax No.</i>" Width="110px"  
                                     CssClass="align-right bg_text" ></asp:Label>
-                                <asp:Label ID="lblFaxNo" runat="server" Text="Fax No." 
-                                    Width="269px"  CssClass="field_input align-center" ></asp:Label></td>
+                                <asp:Label ID="lblFax" runat="server" Text="Fax No." key="Fax" type="SingleLine" onclick="editField(this)"
+                                    Width="269px"  CssClass="field_input label-edit align-center" ></asp:Label>
+                                      <asp:Panel ID="panelFax" Width="250px"  CssClass="panelUpdate hiden" runat="server">
+                                    <asp:TextBox ID="txtFax" CssClass="hiden" TextMode="SingleLine"  Width="100%" runat="server" />
+                                    <div style="margin-top:10px">
+                                        <asp:Button ID="Button15" key="Fax" onclick="btnUpdateKhachHang_Click" Text="Update" runat="server"/>
+                                        <input  key="Fax" type="button" value="Cancel" onclick="cancel(this)" />
+                                    </div>
+                                </asp:Panel>
+                                    </td>
                         </tr>
                         <tr>
                             <td colspan="3" >
                                 <asp:Label ID="Label7" runat="server" 
                                     Text="Địa chỉ <br/><i>Address</i>" 
                                     Width="130px" CssClass="bg_text" ></asp:Label>
-                                <asp:Label ID="lblAddress" runat="server" Width="811px" 
-                                    CssClass="field_input" ></asp:Label></td>
+                                <asp:Label ID="lblDiaChi" runat="server" Width="811px" key="DiaChi" type="SingleLine" onclick="editField(this)"
+                                    CssClass="field_input label-edit" ></asp:Label>
+                                      <asp:Panel ID="panelDiaChi" Width="395px"  CssClass="panelUpdate hiden" runat="server">
+                                    <asp:TextBox ID="txtDiaChi" CssClass="hiden" TextMode="SingleLine"  Width="100%" runat="server" />
+                                    <div style="margin-top:10px">
+                                        <asp:Button ID="Button16" key="DiaChi" onclick="btnUpdateKhachHang_Click" Text="Update" runat="server"/>
+                                        <input  key="DiaChi" type="button" value="Cancel" onclick="cancel(this)" />
+                                    </div>
+                                </asp:Panel>
+                                    </td>
                         </tr>
                         <tr>
                             <td colspan="3" >
                                 <asp:Label ID="Label9" runat="server" 
                                     Text="Người liên hệ <br/><i>Contact Person</i>" 
                                     Width="130px" CssClass=" bg_text" ></asp:Label>
-                                <asp:Label ID="lblNguoiLienHe" runat="server" 
+                                <asp:Label ID="lblTenNguoiDaiDien" runat="server"  key="TenNguoiDaiDien" type="SingleLine" onclick="editField(this)"
                                     Text="NGUOI LIEN HE" Width="217px" 
-                                    CssClass="field_input"  ></asp:Label>
-
+                                    CssClass="field_input  label-edit"  ></asp:Label>
+                                    <asp:Panel ID="panelTenNguoiDaiDien" Width="215px"  CssClass="panelUpdate hiden" runat="server">
+                                    <asp:TextBox ID="txtTenNguoiDaiDien" CssClass="hiden" TextMode="SingleLine"  Width="100%" runat="server" />
+                                    <div style="margin-top:10px">
+                                        <asp:Button ID="Button17" key="TenNguoiDaiDien" onclick="btnUpdateKhachHang_Click" Text="Update" runat="server"/>
+                                        <input  key="TenNguoiDaiDien" type="button" value="Cancel" onclick="cancel(this)" />
+                                    </div>
+                                     </asp:Panel>
                                 <asp:Label  runat="server"
                                     Text="Số điện thoại <br/><i>Phone No.</i>" Width="99px"  
                                     CssClass=" bg_text" ></asp:Label>
-                                <asp:Label ID="lblDienThoai" runat="server" Text="PHONE " 
-                                    Width="121px"  CssClass="field_input align-center" ></asp:Label>
-
-                                
+                                <asp:Label ID="lblDienThoai" runat="server" Text="PHONE " key="DienThoai" type="SingleLine" onclick="editField(this)"
+                                    Width="121px"  CssClass="field_input label-edit" ></asp:Label>
+                                    <asp:Panel ID="panelDienThoai" Width="120px"  CssClass="panelUpdate hiden" runat="server">
+                                    <asp:TextBox ID="txtDienThoai" CssClass="hiden" TextMode="SingleLine"  Width="100%" runat="server" />
+                                    <div style="margin-top:10px">
+                                        <asp:Button ID="Button18" key="DienThoai" onclick="btnUpdateKhachHang_Click" Text="Update" runat="server"/>
+                                        <input  key="DienThoai" type="button" value="Cancel" onclick="cancel(this)" />
+                                    </div>
+                                 </asp:Panel>
                                 <asp:Label ID="Label12" runat="server"
                                     Text="Thư điện tử <br/><i>Email</i>" Width="91px"  
                                     CssClass="align-right bg_text" ></asp:Label>
-                                <asp:Label ID="lblEmail" runat="server" Text="EMAIL" 
-                                    Width="221px"  CssClass="field_input align-center" ></asp:Label>
+                                <asp:Label ID="lblEmail" runat="server" Text="EMAIL" key="Email"  type="SingleLine" onclick="editField(this)"
+                                    Width="221px"  CssClass="field_input label-edit" ></asp:Label>
+                                     <asp:Panel ID="panelEmail" Width="220px"  CssClass="panelUpdate hiden" runat="server">
+                                    <asp:TextBox ID="txtEmail" CssClass="hiden" TextMode="SingleLine"  Width="100%" runat="server" />
+                                    <div style="margin-top:10px">
+                                        <asp:Button ID="Button19" key="Email" onclick="btnUpdateKhachHang_Click" Text="Update" runat="server"/>
+                                        <input  key="Email" type="button" value="Cancel" onclick="cancel(this)" />
+                                    </div>
+                                 </asp:Panel>
                             </td>
                         </tr>
 
@@ -519,11 +562,11 @@
                                                     CssClass="align-right bg_text" ></asp:Label></td>
                                             <td>
 
-                                                <asp:Label ID="lblGhiChuTBCQCN" key="GhiChuTBCQCN" type="MultiLine" onclick="editField(this)" runat="server" Text="GHI CHÚ THÊM" 
-                                                    Width="537px"  CssClass="field_input label-edit align-left" Font-Bold="False"  Height="60px" ></asp:Label>
+                                                <asp:Label ID="lblGhiChuTBCQCN" key="GhiChuTBCQCN" type="SingleLine" onclick="editField(this)" runat="server" Text="GHI CHÚ THÊM" 
+                                                    Width="537px"  CssClass="field_input label-edit align-left" Font-Bold="False"></asp:Label>
                                                 
-                                                <asp:Panel ID="panelGhiChuTBCQCN" Width="537px"  CssClass="panelUpdate hiden" runat="server">
-                                                    <asp:TextBox ID="txtGhiChuTBCQCN" CssClass="hiden" TextMode="MultiLine" Height="150px" Width="100%" runat="server" />
+                                                <asp:Panel ID="panelGhiChuTBCQCN" Width="535px"  CssClass="panelUpdate hiden" runat="server">
+                                                    <asp:TextBox ID="txtGhiChuTBCQCN" CssClass="hiden" TextMode="SingleLine" Width="100%" runat="server" />
                                                     <div style="margin-top:10px">
                                                         <asp:Button key="GhiChuTBCQCN" onclick="btnUpdate_Click" Text="Update" runat="server"/>
                                                         <input  key="GhiChuTBCQCN" type="button" value="Cancel" onclick="cancel(this)" />
@@ -746,7 +789,7 @@
                     <span class="field_input">
                     <asp:Label ID="lblYKienGDVSR01" key="YKienGDVSR01" type="MultiLine" onclick="editField(this)" runat="server" 
                          Text="Ý Kiến GDV" 
-                         Width="99%" CssClass="field_input"  ></asp:Label>
+                         Width="99%" CssClass="field_input label-edit"  ></asp:Label>
                                                 
                     <asp:Panel ID="panelYKienGDVSR01" Width="99%"  CssClass="panelUpdate hiden" runat="server">
                         <asp:TextBox ID="txtYKienGDVSR01" CssClass="hiden" TextMode="MultiLine" Height="150px" Width="100%" runat="server" />
@@ -792,7 +835,9 @@
                     
                     <tr>
                         <td width="25%" style="padding-left: 10px" align="center">
-                            <asp:Label ID="lblDaiDien1"  key="DaiDien1" type="SingleLine" onclick="editField(this)" runat="server" Font-Bold="True">DaiDien1</asp:Label>                  
+                            <asp:Label ID="lblDaiDien1"  key="DaiDien1" type="SingleLine" 
+                                onclick="editField(this)" runat="server" Font-Bold="True" 
+                                CssClass="field_input label-edit" Width="90%">DaiDien1</asp:Label>                  
                              <asp:Panel ID="panelDaiDien1" Width="221px" CssClass="panelUpdate hiden" runat="server">
                                     <asp:TextBox ID="txtDaiDien1" CssClass="hiden" TextMode="SingleLine"  Width="100%" runat="server" />
                                     <div style="margin-top:10px">
@@ -802,7 +847,9 @@
                                 </asp:Panel>
                         </td>
                         <td width="25%" align="center">
-                              <asp:Label ID="lblDaiDien2"  key="DaiDien2" type="SingleLine" onclick="editField(this)" runat="server" Font-Bold="True">DaiDien2</asp:Label>                  
+                              <asp:Label ID="lblDaiDien2"  key="DaiDien2" type="SingleLine" 
+                                  onclick="editField(this)" runat="server" Font-Bold="True" 
+                                  CssClass="field_input label-edit" Width="90%">DaiDien2</asp:Label>                  
                              <asp:Panel ID="panelDaiDien2" Width="221px" CssClass="panelUpdate hiden" runat="server">
                                     <asp:TextBox ID="txtDaiDien2" CssClass="hiden" TextMode="SingleLine"  Width="100%" runat="server" />
                                     <div style="margin-top:10px">
@@ -812,7 +859,9 @@
                                 </asp:Panel>
                             </td>
                         <td width="25%" align="center">                           
-                              <asp:Label ID="lblDaiDien3"  key="DaiDien3" type="SingleLine" onclick="editField(this)" runat="server" Font-Bold="True">DaiDien3</asp:Label>                  
+                              <asp:Label ID="lblDaiDien3"  key="DaiDien3" type="SingleLine" 
+                                  onclick="editField(this)" runat="server" Font-Bold="True" 
+                                  CssClass="field_input label-edit" Width="90%">DaiDien3</asp:Label>                  
                              <asp:Panel ID="panelDaiDien3" Width="221px" CssClass="panelUpdate hiden" runat="server">
                                     <asp:TextBox ID="txtDaiDien3" CssClass="hiden" TextMode="SingleLine"  Width="100%" runat="server" />
                                     <div style="margin-top:10px">
@@ -822,7 +871,9 @@
                                 </asp:Panel>
                         </td>
                         <td align="center" width="25%">                           
-                            <asp:Label ID="lblDaiDien4"  key="DaiDien4" type="SingleLine" onclick="editField(this)" runat="server" Font-Bold="True">DaiDien4</asp:Label>                  
+                            <asp:Label ID="lblDaiDien4"  key="DaiDien4" type="SingleLine" 
+                                onclick="editField(this)" runat="server" Font-Bold="True" 
+                                CssClass="field_input label-edit" Width="90%">DaiDien4</asp:Label>                  
                              <asp:Panel ID="panelDaiDien4" Width="221px" CssClass="panelUpdate hiden" runat="server">
                                     <asp:TextBox ID="txtDaiDien4" CssClass="hiden" TextMode="SingleLine"  Width="100%" runat="server" />
                                     <div style="margin-top:10px">
@@ -868,8 +919,10 @@
                     </tr>
                     <tr>
                         <td width="25%" style="padding-left: 10px" align="center">
-                              <asp:Label ID="lblTenDaiDien1"  key="TenDaiDien1" type="SingleLine" onclick="editField(this)" runat="server" Font-Bold="True">TenDaiDien1</asp:Label>                  
-                             <asp:Panel ID="panel1" Width="221px" CssClass="panelUpdate hiden" runat="server">
+                              <asp:Label ID="lblTenDaiDien1"  key="TenDaiDien1" type="SingleLine" 
+                                  onclick="editField(this)" runat="server" Font-Bold="True" 
+                                  CssClass="field_input label-edit" Width="90%">TenDaiDien1</asp:Label>                  
+                             <asp:Panel ID="panelTenDaiDien1" Width="221px" CssClass="panelUpdate hiden" runat="server">
                                     <asp:TextBox ID="txtTenDaiDien1" CssClass="hiden" TextMode="SingleLine"  Width="100%" runat="server" />
                                     <div style="margin-top:10px">
                                         <asp:Button ID="Button6"  key="TenDaiDien1" onclick="btnUpdateDaiDien_Click" Text="Update" runat="server"/>
@@ -878,8 +931,10 @@
                                 </asp:Panel>
                         </td>
                         <td align="center" width="25%">                         
-                                 <asp:Label ID="lblTenDaiDien2"  key="TenDaiDien2" type="SingleLine" onclick="editField(this)" runat="server" Font-Bold="True">TenDaiDien2</asp:Label>                  
-                             <asp:Panel ID="panel2" Width="221px" CssClass="panelUpdate hiden" runat="server">
+                                 <asp:Label ID="lblTenDaiDien2"  key="TenDaiDien2" type="SingleLine" 
+                                     onclick="editField(this)" runat="server" Font-Bold="True" 
+                                     CssClass="field_input label-edit" Width="90%">TenDaiDien2</asp:Label>                  
+                             <asp:Panel ID="panelTenDaiDien2" Width="221px" CssClass="panelUpdate hiden" runat="server">
                                     <asp:TextBox ID="txtTenDaiDien2" CssClass="hiden" TextMode="SingleLine"  Width="100%" runat="server" />
                                     <div style="margin-top:10px">
                                         <asp:Button ID="Button7"  key="TenDaiDien2" onclick="btnUpdateDaiDien_Click" Text="Update" runat="server"/>
@@ -888,8 +943,10 @@
                                 </asp:Panel>
                         </td>
                         <td align="center" width="25%">
-                            <asp:Label ID="lblTenDaiDien3"  key="TenDaiDien3" type="SingleLine" onclick="editField(this)" runat="server" Font-Bold="True">TenDaiDien3</asp:Label>                  
-                             <asp:Panel ID="panel3" Width="221px" CssClass="panelUpdate hiden" runat="server">
+                            <asp:Label ID="lblTenDaiDien3"  key="TenDaiDien3" type="SingleLine" 
+                                onclick="editField(this)" runat="server" Font-Bold="True" 
+                                CssClass="field_input label-edit" Width="90%">TenDaiDien3</asp:Label>                  
+                             <asp:Panel ID="panelTenDaiDien3" Width="221px" CssClass="panelUpdate hiden" runat="server">
                                     <asp:TextBox ID="txtTenDaiDien3" CssClass="hiden" TextMode="SingleLine"  Width="100%" runat="server" />
                                     <div style="margin-top:10px">
                                         <asp:Button ID="Button8"  key="TenDaiDien3" onclick="btnUpdateDaiDien_Click" Text="Update" runat="server"/>
@@ -898,8 +955,10 @@
                                 </asp:Panel>
                         </td>
                         <td align="center" width="25%">
-                                <asp:Label ID="lblTenDaiDien4"  key="TenDaiDien4" type="SingleLine" onclick="editField(this)" runat="server" Font-Bold="True">TenDaiDien4</asp:Label>                  
-                             <asp:Panel ID="panel4" Width="221px" CssClass="panelUpdate hiden" runat="server">
+                                <asp:Label ID="lblTenDaiDien4"  key="TenDaiDien4" type="SingleLine" 
+                                    onclick="editField(this)" runat="server" Font-Bold="True" 
+                                    CssClass="field_input label-edit" Width="90%">TenDaiDien4</asp:Label>                  
+                             <asp:Panel ID="panelTenDaiDien4" Width="221px" CssClass="panelUpdate hiden" runat="server">
                                     <asp:TextBox ID="txtTenDaiDien4" CssClass="hiden" TextMode="SingleLine"  Width="100%" runat="server" />
                                     <div style="margin-top:10px">
                                         <asp:Button ID="Button9"  key="TenDaiDien4" onclick="btnUpdateDaiDien_Click" Text="Update" runat="server"/>
@@ -916,8 +975,10 @@
                             <asp:Label ID="Label40" runat="server" Text="(Chức vụ (Job Title):" 
                                 ForeColor="Black"></asp:Label>
                             <br />
-                                <asp:Label ID="lblChucVuDaiDien1"  key="ChucVuDaiDien1" type="SingleLine" onclick="editField(this)" runat="server" Font-Bold="True">ChucVuDaiDien1</asp:Label>                  
-                             <asp:Panel ID="panel5" Width="221px" CssClass="panelUpdate hiden" runat="server">
+                                <asp:Label ID="lblChucVuDaiDien1"  key="ChucVuDaiDien1" type="SingleLine" 
+                                onclick="editField(this)" runat="server" Font-Bold="True" 
+                                CssClass="field_input label-edit" Width="90%">ChucVuDaiDien1</asp:Label>                  
+                             <asp:Panel ID="panelChucVuDaiDien1" Width="221px" CssClass="panelUpdate hiden" runat="server">
                                     <asp:TextBox ID="txtChucVuDaiDien1" CssClass="hiden" TextMode="SingleLine"  Width="100%" runat="server" />
                                     <div style="margin-top:10px">
                                         <asp:Button ID="Button10"  key="ChucVuDaiDien1" onclick="btnUpdateDaiDien_Click" Text="Update" runat="server"/>
@@ -930,8 +991,10 @@
                             <asp:Label ID="Label45" runat="server" Text="(Chức vụ (Job Title):" 
                                 ForeColor="Black"></asp:Label>
                             <br />
-                           <asp:Label ID="lblChucVuDaiDien2"  key="ChucVuDaiDien2" type="SingleLine" onclick="editField(this)" runat="server" Font-Bold="True">ChucVuDaiDien2</asp:Label>                  
-                             <asp:Panel ID="panel6" Width="221px" CssClass="panelUpdate hiden" runat="server">
+                           <asp:Label ID="lblChucVuDaiDien2"  key="ChucVuDaiDien2" type="SingleLine" 
+                                onclick="editField(this)" runat="server" Font-Bold="True" 
+                                CssClass="field_input label-edit" Width="90%">ChucVuDaiDien2</asp:Label>                  
+                             <asp:Panel ID="panelChucVuDaiDien2" Width="221px" CssClass="panelUpdate hiden" runat="server">
                                     <asp:TextBox ID="txtChucVuDaiDien2" CssClass="hiden" TextMode="SingleLine"  Width="100%" runat="server" />
                                     <div style="margin-top:10px">
                                         <asp:Button ID="Button11"  key="ChucVuDaiDien2" onclick="btnUpdateDaiDien_Click" Text="Update" runat="server"/>
@@ -944,8 +1007,10 @@
                             <asp:Label ID="Label46" runat="server" Text="(Chức vụ (Job Title):" 
                                 ForeColor="Black"></asp:Label>
                             <br />
-                                <asp:Label ID="lblChucVuDaiDien3"  key="ChucVuDaiDien3" type="SingleLine" onclick="editField(this)" runat="server" Font-Bold="True">ChucVuDaiDien3</asp:Label>                  
-                             <asp:Panel ID="panel7" Width="221px" CssClass="panelUpdate hiden" runat="server">
+                                <asp:Label ID="lblChucVuDaiDien3"  key="ChucVuDaiDien3" type="SingleLine" 
+                                onclick="editField(this)" runat="server" Font-Bold="True" 
+                                CssClass="field_input label-edit" Width="90%">ChucVuDaiDien3</asp:Label>                  
+                             <asp:Panel ID="panelChucVuDaiDien3" Width="221px" CssClass="panelUpdate hiden" runat="server">
                                     <asp:TextBox ID="txtChucVuDaiDien3" CssClass="hiden" TextMode="SingleLine"  Width="100%" runat="server" />
                                     <div style="margin-top:10px">
                                         <asp:Button ID="Button12"  key="ChucVuDaiDien3" onclick="btnUpdateDaiDien_Click" Text="Update" runat="server"/>
@@ -960,8 +1025,10 @@
                             <asp:Label ID="Label41" runat="server" Text="(Chức vụ (Job Title):" 
                                 ForeColor="Black"></asp:Label>
                             <br />
-                            <asp:Label ID="lblChucVuDaiDien4"  key="ChucVuDaiDien4" type="SingleLine" onclick="editField(this)" runat="server" Font-Bold="True">ChucVuDaiDien4</asp:Label>                  
-                             <asp:Panel ID="panel8" Width="221px" CssClass="panelUpdate hiden" runat="server">
+                            <asp:Label ID="lblChucVuDaiDien4"  key="ChucVuDaiDien4" type="SingleLine" 
+                                onclick="editField(this)" runat="server" Font-Bold="True" 
+                                CssClass="field_input label-edit" Width="90%">ChucVuDaiDien4</asp:Label>                  
+                             <asp:Panel ID="panelChucVuDaiDien4" Width="221px" CssClass="panelUpdate hiden" runat="server">
                                     <asp:TextBox ID="txtChucVuDaiDien4" CssClass="hiden" TextMode="SingleLine"  Width="100%" runat="server" />
                                     <div style="margin-top:10px">
                                         <asp:Button ID="Button13"  key="ChucVuDaiDien4" onclick="btnUpdateDaiDien_Click" Text="Update" runat="server"/>
