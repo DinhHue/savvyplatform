@@ -31,6 +31,19 @@ namespace WEBSITESAVVY.DAO
             dt = SqlDataAcessHelper.exStoreNoParas(sql);
             return dt;
         }
+
+        
+         public void UpdateKhachHang(int ID, string key, string value)
+        {
+            string sql = "sp_KHACHHANG_UpdateField";
+            List<SqlParameter> ds = new List<SqlParameter>();
+
+            ds.Add(new SqlParameter("@id", ID));
+            ds.Add(new SqlParameter("@key", key));
+            ds.Add(new SqlParameter("@value", value));
+
+            SqlDataAcessHelper.exNonStoreParas(sql, ds);
+        }
         public bool KhachHangMoi(KhachHangDTO kh)
         {
             string sql= "sp_KhachHangMoi";
@@ -78,6 +91,24 @@ namespace WEBSITESAVVY.DAO
                     ma = temp;                
             }
             return ma+1;
+        }
+
+        public int LayMaKHClaim(string maclaim)
+        {
+            string sql = "sp_KhachHang_LayMaClaim";
+            List<SqlParameter> ds = new List<SqlParameter>();
+            ds.Add(new SqlParameter("@idclaim", maclaim));
+            int ma = 0;
+            DataTable dt = new DataTable();
+            dt = SqlDataAcessHelper.exStoreParas(sql,ds);
+            if (dt.Rows.Count > 0)
+            {
+                DataRow dr = dt.Rows[0];
+                if(dr[0]!=null)
+                   int.TryParse(dr[0].ToString(), out ma);
+               
+            }
+            return ma;
         }
         public DataTable DSNguoiDBHTheoDonVi(int madv)
         {

@@ -440,7 +440,6 @@ namespace WEBSITESAVVY.DAO
             string sql = "sp_Timesheet_DSGDV_ID";
             List<SqlParameter> ds = new List<SqlParameter>();
             ds.Add(new SqlParameter("@idclaim", thamchieu));
-
             return SqlDataAcessHelper.exStoreParas(sql, ds);
         }
 
