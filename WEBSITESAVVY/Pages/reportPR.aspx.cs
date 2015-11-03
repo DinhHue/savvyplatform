@@ -20,7 +20,7 @@ namespace WEBSITESAVVY.Pages
         public static string claimName = "";
 
         public bool isLock = false;
-
+        KhachHangDAO kh = new KhachHangDAO();
         SendMailDAO sm = new SendMailDAO();
         GiamDinhVienDAO gdv = new GiamDinhVienDAO();
 
@@ -55,9 +55,23 @@ namespace WEBSITESAVVY.Pages
 
                 //lblNgayMoPR.Text = row["NgayBatDauGiamDinh"].ToString();
                 //lblNgayMoPR.Text = "Ngày " + DateTime.Now.Day + " tháng " + DateTime.Now.Month + " năm " + DateTime.Now.Year;
-                lblNgayMoPR.Text = row["PRDate"].ToString();
-                //lblRefKH.Text    = row["RefKH"].ToString();   
-                lblRefKH.Text = "Chưa thông báo";
+                string ngayPR = row["PRDate"].ToString();
+                if (ngayPR != "")
+                {
+                    lblPRDate.Text = ngayPR;
+                    txtPRDate.Text = ngayPR;
+                }
+                else
+                    lblPRDate.Text = "Ngày dd/mm/yyy.";
+                string tc = row["RefKH"].ToString(); 
+                if(tc!="")
+                {
+                    lblRefKH.Text = tc;
+                    txtRefKH.Text = tc;
+                }
+                else
+                    lblRefKH.Text = "Chưa thông báo";
+
                 lblTenNhaBH.Text = row["TenNhaBH"].ToString();
                 lblTenDonVi.Text = row["TenDonVi"].ToString();
                 lblDiaChiNBH.Text = row["DiaChiDV"].ToString();
@@ -101,8 +115,8 @@ namespace WEBSITESAVVY.Pages
                 lblMucMienThuong.Text = row["MucMienThuong"].ToString();
                 txtMucMienThuong.Text = lblMucMienThuong.Text;
 
-                lblDKBX.Text = row["DKBS"].ToString();
-                txtDKBX.Text = lblDKBX.Text;
+                lblDKBS.Text = row["DKBS"].ToString();
+                txtDKBS.Text = lblDKBS.Text;
 
                 if (row["KhieuNai"].ToString() != null && row["KhieuNai"].ToString().Trim() != "")
                 {
@@ -190,7 +204,36 @@ namespace WEBSITESAVVY.Pages
             }
         }
 
+        protected void btnUpdateKhachHang_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                mClaimID = Session["ThamChieu"].ToString();
 
+                int maKH = (int)kh.LayMaKHClaim(mClaimID);
+                Button btn = (Button)sender;
+                string key = btn.Attributes["key"];
+
+                TextBox txtValue = (TextBox)FindControl("txt" + key);
+                string value = txtValue.Text;
+                string title = "";
+
+                if (value.Contains("'"))
+                {
+                    value = value.Replace("'", "&#39;");
+                }
+                kh.UpdateKhachHang(maKH, key, value);
+                int maGDV = int.Parse(Request.Cookies["MaGDV"].Value);
+                GiamDinhVienDAO gdv = new GiamDinhVienDAO();
+                string noidung = gdv.LayTenTheoMa(maGDV) + " edited " + title + " of " + mClaimID + ".";
+                SaveLogTracking(maGDV, noidung, mClaimID);
+                Response.Redirect(Request.RawUrl + "#" + key);
+            }
+            catch (Exception ex)
+            {
+                Response.Write("<script>alert('Error', 'Error update data');</script>");
+            }
+        }
         void SaveLogTracking(int maGDV, string noidung, string maclaim)
         {
             try

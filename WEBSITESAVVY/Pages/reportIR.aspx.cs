@@ -50,11 +50,23 @@ namespace WEBSITESAVVY.Pages
             {
                 lblTenClaim.Text = "IR_" + row["TenClaim"].ToString();
                 lblTenClaim1.Text = lblTenClaim.Text;
-                //lblNgayMoPR.Text = row["NgayBatDauGiamDinh"].ToString();
-                //lblNgayMoPR.Text = "Ngày " + DateTime.Now.Day + " tháng " + DateTime.Now.Month + " năm " + DateTime.Now.Year;
-                //lblRefKH.Text    = row["RefKH"].ToString();   
-                lblNgayMoPR.Text = row["IRDate"].ToString();
-                lblRefKH.Text = "Chưa thông báo";
+                string ngayIR  = row["IRDate"].ToString();
+                if (ngayIR != "")
+                {
+                    lblIRDate.Text = ngayIR;
+                    txtIRDate.Text = ngayIR;
+                }
+                else
+                    lblIRDate.Text = "Ngày dd/mm/yyy.";
+                string tc = row["RefKH"].ToString();
+                if (tc != "")
+                {
+                    lblRefKH.Text = tc;
+                    txtRefKH.Text = tc;
+                }
+                else
+                    lblRefKH.Text = "Chưa thông báo";
+
                 lblTenNhaBH.Text = row["TenNhaBH"].ToString();
                 lblTenDonVi.Text = row["TenDonVi"].ToString();
                 lblDiaChiNBH.Text = row["DiaChiDV"].ToString();
@@ -89,7 +101,8 @@ namespace WEBSITESAVVY.Pages
                 lblSumInSured.Text = row["SumInSured"].ToString();
                 lblEffective.Text = row["Effective"].ToString();
                 lblMucMienThuong.Text = row["MucMienThuong"].ToString();
-                lblDKBX.Text = row["DKBS"].ToString();
+                lblDKBS.Text = row["DKBS"].ToString();
+                txtDKBS.Text = lblDKBS.Text;
                 if (row["KhieuNai"].ToString() != null && row["KhieuNai"].ToString().Trim() != "")
                     lblKhieuNai.Text = row["KhieuNai"].ToString();
                 else

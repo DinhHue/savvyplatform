@@ -58,13 +58,21 @@ namespace WEBSITESAVVY.Pages
             if (row != null)
             {
                 lblTenClaim.Text = "PR_" + row["TenClaim"].ToString();
-                //lblTenClaim1.Text = lblTenClaim.Text;
-
-                //lblNgayMoPR.Text = row["NgayBatDauGiamDinh"].ToString();
-                //lblNgayMoPR.Text = "Ngày " + DateTime.Now.Day + " tháng " + DateTime.Now.Month + " năm " + DateTime.Now.Year;
-                //lblRefKH.Text    = row["RefKH"].ToString();   
-                lblNgayMoPR.Text = row["PRDate"].ToString();
-                lblRefKH.Text = "Chưa thông báo";
+                
+                string ngayPR = row["PRDate"].ToString();
+                if (ngayPR != "")
+                {
+                   lblNgayMoPR.Text = ngayPR;                   
+                }
+                else
+                    lblNgayMoPR.Text = "Ngày dd/mm/yyy.";
+                string tc = row["RefKH"].ToString();
+                if (tc != "")
+                {
+                    lblRefKH.Text = tc;
+                 }
+                else
+                    lblRefKH.Text = "Chưa thông báo";
                 lblTenNhaBH.Text = row["TenNhaBH"].ToString();
                 lblTenDonVi.Text = row["TenDonVi"].ToString();
                 lblDiaChiNBH.Text = row["DiaChiDV"].ToString();

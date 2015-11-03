@@ -168,7 +168,7 @@ namespace WEBSITESAVVY.Pages
                             if (themclaim == true)
                             {
                                 
-                                //sm.SendNewClaim(clm, khdto, tendonvi, tengdv);                                
+                                sm.SendNewClaim(clm, khdto, tendonvi, tengdv);                                
                                 Session["IDClaim"] = mcl;
                                 Session["ThamChieu"] = mcl;
                                 int GDVThem = int.Parse(Request.Cookies["MaGDV"].Value);

@@ -269,19 +269,32 @@
                     <div style="float:left; width:65%; clear:both;"><img src="../images/banner.jpg" width="100%" alt="" /></div>
             
                     <div>
-                        <asp:Label ID="lblNgayMoPR" runat="server" Text="Ngày 5/3/2014."
-                              CssClass="title_2" Width="581px" 
-                            Font-Size="18px" ></asp:Label>
+                       <asp:Label ID="lblFFRDate" runat="server" key="FFRDate" type="SingleLine" onclick="editField(this)" 
+                              CssClass="field_input label-edit title_2" Width="581px" Font-Size="18px" ></asp:Label>
+                              <asp:Panel ID="panelFFRDate" Width="400px"  CssClass="panelUpdate hiden" runat="server">
+                                    <asp:TextBox ID="txtFFRDate" CssClass="hiden" TextMode="SingleLine"  Width="100%" runat="server" />
+                                    <div style="margin-top:10px">
+                                        <asp:Button ID="Button21" key="FFRDate" onclick="btnUpdate_Click" Text="Update" runat="server"/>
+                                        <input  key="FFRDate" type="button" value="Cancel" onclick="cancel(this)" />
+                                    </div>
+                                </asp:Panel> 
                     </div>
                     <div style="text-align:center; margin-bottom:15px">
                         <table style="width:100%">
                             <tr valign="middle">
-                                <td class="align-left" style="width:50%"><i><u>Tham chiếu KH:</u> <asp:Label 
+                                <td class="align-left" style="width:50%"><i><u>Tham chiếu KH:</u><asp:Label 
                                         ID="lblRefKH" runat="server" 
-                                    Width="279px"  CssClass="field_input" ></asp:Label> </i>
-
+                                    Width="279px"  key="RefKH" type="SingleLine" onclick="editField(this)" 
+                              CssClass="field_input label-edit" ></asp:Label> 
+                                    <asp:Panel ID="panelRefKH" Width="275px" CssClass="panelUpdate hiden" runat="server">
+                                    <asp:TextBox ID="txtRefKH" CssClass="hiden" TextMode="SingleLine"  Width="100%" runat="server" />
+                                    <div style="margin-top:10px">
+                                        <asp:Button ID="Button4" key="RefKH" onclick="btnUpdate_Click" Text="Update" runat="server"/>
+                                        <input  key="RefKH" type="button" value="Cancel" onclick="cancel(this)" />
+                                    </div>
+                                </asp:Panel></i>
                                 
-                                    </i></td>
+                                   </td>
                                 <td class="align-left" style="color:#006600;"><i><u>Tham chiếu Savvy:</u> </i><asp:Label ID="lblTenClaim" runat="server" 
                                     Text="SR01+ CL.TENCLAIM" Width="275px" 
                                     ForeColor="#006600" Font-Bold=True CssClass="field_input" ></asp:Label></td>
@@ -764,7 +777,7 @@
 
 
         <div class="box" >
-            <h3 id="ExecutiveSummaryFR" key="ExecutiveSummaryFR" title="Executive Summary" onclick="parent.updateField(this);">I. TÓM TẮT VỤ VIỆC</h3>
+            <h3 id="ExecutiveSummaryFR" key="ExecutiveSummaryFR" title="Executive Summary" >I. TÓM TẮT VỤ VIỆC</h3>
             <div>
                 <asp:Label ID="lblExecutiveSummaryFR" key="ExecutiveSummaryFR" onclick="editField(this)"  CssClass="label-edit" runat="server" Width="100%" ></asp:Label>
                 <asp:Panel ID="panelExecutiveSummaryFR" CssClass="panelUpdate hiden" runat="server">
@@ -778,7 +791,7 @@
         </div>
 
         <div class="box" >
-            <h3 id="GioiThieu" key="GioiThieu" title="Insured" onclick="parent.updateField(this);">II. NGƯỜI ĐƯỢC BẢO HIỂM </h3>
+            <h3 id="GioiThieu" key="GioiThieu" title="Insured" >II. NGƯỜI ĐƯỢC BẢO HIỂM </h3>
             <div>
                 <asp:Label ID="lblGioiThieu" key="GioiThieu" onclick="editField(this)" CssClass="label-edit"  runat="server" Width="100%" ></asp:Label>
                 <asp:Panel ID="panelGioiThieu" CssClass="panelUpdate hiden" runat="server">
@@ -792,7 +805,7 @@
         </div>
 
         <div class="box" >
-            <h3 id="K" key="K" title="Claim handling Process" onclick="parent.updateField(this);">III. QUÁ TRÌNH XỬ LÝ VÀ KHIẾU NẠI</h3>
+            <h3 id="K" key="K" title="Claim handling Process" >III. QUÁ TRÌNH XỬ LÝ VÀ KHIẾU NẠI</h3>
             <div>
                 <asp:Label ID="lblK" key="K" onclick="editField(this)" CssClass="label-edit" runat="server" Width="100%" ></asp:Label>
                 <asp:Panel ID="panelK" CssClass="panelUpdate hiden" runat="server">
@@ -806,7 +819,7 @@
         </div>
 
         <div class="box" >
-            <h3 id="C1" key="DienBienTonThat" title="Circumstance" onclick="parent.updateField(this);">IV. DIỄN BIẾN TỔN THẤT</h3>
+            <h3 id="C1" key="DienBienTonThat" title="Circumstance" >IV. DIỄN BIẾN TỔN THẤT</h3>
             <div>
                 <asp:Label ID="lblDienBienTonThat" key="DienBienTonThat" onclick="editField(this)" CssClass="label-edit" runat="server" Width="100%" ></asp:Label>
                 <asp:Panel ID="panelDienBienTonThat" CssClass="panelUpdate hiden" runat="server">
@@ -820,7 +833,7 @@
         </div>
 
         <div class="box" >
-            <h3 id="C3" key="C3FR" title="Cause of loss" onclick="parent.updateField(this);">V. NGUYÊN NHÂN</h3>
+            <h3 id="C3" key="C3FR" title="Cause of loss">V. NGUYÊN NHÂN</h3>
             <div>
                 <asp:Label ID="lblC3FR" key="C3FR" onclick="editField(this)" CssClass="label-edit" runat="server" Width="100%" ></asp:Label>
                 <asp:Panel ID="panelC3FR" CssClass="panelUpdate hiden" runat="server">
@@ -834,7 +847,7 @@
         </div>
 
         <div class="box" >
-            <h3 id="E1" key="E2" title="Policy liability" onclick="parent.updateField(this);">VI. PHẠM VI BẢO HIỂM</h3>
+            <h3 id="E1" key="E2" title="Policy liability" >VI. PHẠM VI BẢO HIỂM</h3>
             <div>
                 <asp:Label ID="lblE2" key="E2" onclick="editField(this)"  CssClass="label-edit" runat="server" Width="100%" ></asp:Label>
                 <asp:Panel ID="panelE2" CssClass="panelUpdate hiden" runat="server">
@@ -848,7 +861,7 @@
         </div>
 
         <div class="box" >
-            <h3 id="D1" key="D1" title="Extent of Damage" onclick="parent.updateField(this);">VII. PHẠM VI VÀ MỨC ĐỘ THIỆT HẠI</h3>
+            <h3 id="D1" key="D1" title="Extent of Damage" >VII. PHẠM VI VÀ MỨC ĐỘ THIỆT HẠI</h3>
             <div>
                 <asp:Label ID="lblD1" key="D1" onclick="editField(this)" CssClass="label-edit" runat="server" Width="100%" ></asp:Label>
                 <asp:Panel ID="panelD1" CssClass="panelUpdate hiden" runat="server">
@@ -862,7 +875,7 @@
         </div>
 
         <div class="box" >
-            <h3 id="B1" key="B1" title="Claim amount and proposed settlement" onclick="parent.updateField(this);">VIII. YÊU CẦU BỒI THƯỜNG VÀ ĐỀ XUẤT TÍNH TOÁN</h3>
+            <h3 id="B1" key="B1" title="Claim amount and proposed settlement" >VIII. YÊU CẦU BỒI THƯỜNG VÀ ĐỀ XUẤT TÍNH TOÁN</h3>
             <div>
                 <asp:Label ID="lblB1" key="B1" onclick="editField(this)" CssClass="label-edit" runat="server" Width="100%" ></asp:Label>
                 <asp:Panel ID="panelB1" CssClass="panelUpdate hiden" runat="server">
@@ -876,7 +889,7 @@
         </div>
 
         <div class="box" >
-            <h3 id="G" key="G" title="Other Insurance" onclick="parent.updateField(this);">IX. ĐƠN BẢO HIỂM KHÁC</h3>
+            <h3 id="G" key="G" title="Other Insurance" >IX. ĐƠN BẢO HIỂM KHÁC</h3>
             <div>
                 <asp:Label ID="lblG" key="G" onclick="editField(this)" CssClass="label-edit"  runat="server" Width="100%" ></asp:Label>
                 <asp:Panel ID="panelG" CssClass="panelUpdate hiden" runat="server">
@@ -890,7 +903,7 @@
         </div>
 
         <div class="box" >
-            <h3 id="H" key="H" title="Salvage" onclick="parent.updateField(this);">X. GIÁ TRỊ THU HỒI</h3>
+            <h3 id="H" key="H" title="Salvage" >X. GIÁ TRỊ THU HỒI</h3>
             <div>
                 <asp:Label ID="lblH" key="H" onclick="editField(this)" CssClass="label-edit" runat="server" Width="100%" ></asp:Label>
                 <asp:Panel ID="panelH" CssClass="panelUpdate hiden" runat="server">
@@ -904,7 +917,7 @@
         </div>
 
         <div class="box" >
-            <h3 id="B2"  key="B2" title="Final Proposed Settlement" onclick="parent.updateField(this);">XI. ĐỀ XUẤT CHUNG CUỘC</h3>
+            <h3 id="B2"  key="B2" title="Final Proposed Settlement" >XI. ĐỀ XUẤT CHUNG CUỘC</h3>
             <div>
                 <asp:Label ID="lblB2" key="B2" onclick="editField(this)"  CssClass="label-edit" runat="server" Width="100%" ></asp:Label>
                 <asp:Panel ID="panelB2" CssClass="panelUpdate hiden" runat="server">
@@ -918,7 +931,7 @@
         </div>
 
         <div class="box" >
-            <h3 id="Conclution"  key="Conclution" title="Conclution" onclick="parent.updateField(this);">XII. KẾT LUẬN</h3>
+            <h3 id="Conclution"  key="Conclution" title="Conclution" >XII. KẾT LUẬN</h3>
             <div>
                 <asp:Label ID="lblConclution"  key="Conclution" onclick="editField(this)" CssClass="label-edit"  runat="server" Width="100%" ></asp:Label>
                 <asp:Panel ID="panelConclution" CssClass="panelUpdate hiden" runat="server">

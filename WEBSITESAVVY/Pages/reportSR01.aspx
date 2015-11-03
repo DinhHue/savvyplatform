@@ -242,9 +242,17 @@
                     <div style="text-align:center;width:65%" align="center"><img src="../images/banner.jpg" width="100%" alt="" /></div>
             
                     <div style="clear:both" class="align-right">
-                        <asp:Label ID="lblNgayGiamDinh" runat="server" Text="Ngày 5/3/2014."
-                              CssClass="align-right title_2" ForeColor="#006600" 
+                        <asp:Label ID="lblNgayBatDauGiamDinh" key="NgayBatDauGiamDinh" runat="server" Text="Ngày 5/3/2014." type="SingleLine" onclick="editField(this)" 
+                              CssClass="field_input label-edit align-right" ForeColor="#006600" 
                             Font-Size="18px" ></asp:Label>
+
+                                <asp:Panel ID="panelNgayBatDauGiamDinh" Width="269px"  CssClass="panelUpdate hiden" runat="server">
+                                    <asp:TextBox ID="txtNgayBatDauGiamDinh" CssClass="hiden" TextMode="SingleLine"  Width="100%" runat="server" />
+                                    <div style="margin-top:10px">
+                                        <asp:Button ID="Button21" key="NgayBatDauGiamDinh" onclick="btnUpdate_Click" Text="Update" runat="server"/>
+                                        <input  key="NgayBatDauGiamDinh" type="button" value="Cancel" onclick="cancel(this)" />
+                                    </div>
+                                </asp:Panel> 
                     </div>
                     <div style="text-align:center; color:#006600">
                         <h1 style="margin-top:0px;">BIÊN BẢN GIÁM ĐỊNH HIỆN TRƯỜNG <br />
@@ -262,7 +270,15 @@
                             <td class="style3" >
                                 <asp:Label ID="lblTenClaim" runat="server" 
                                     Text="SR01+ CL.TENCLAIM" Width="240px" 
-                                    ForeColor="#006600" Font-Bold=True CssClass="field_input" ></asp:Label>
+                                    ForeColor="#006600" Font-Bold="True" key="TenClaim" CssClass="field_input"  type="SingleLine" onclick="editField(this)" runat="server"></asp:Label>
+
+                                     <asp:Panel ID="panelTenClaim" Width="269px"  CssClass="panelUpdate hiden" runat="server">
+                                    <asp:TextBox ID="txtTenClaim" CssClass="hiden" TextMode="SingleLine"  Width="100%" runat="server" />
+                                    <div style="margin-top:10px">
+                                        <asp:Button ID="Button20" key="TenClaim" onclick="btnUpdate_Click" Text="Update" runat="server"/>
+                                        <input  key="TenClaim" type="button" value="Cancel" onclick="cancel(this)" />
+                                    </div>
+                                </asp:Panel> 
                                     </td>
                             <td valign="top"  >
                                 <div style="float:left;">

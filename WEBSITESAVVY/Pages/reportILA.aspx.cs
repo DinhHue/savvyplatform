@@ -15,7 +15,7 @@ namespace WEBSITESAVVY.Pages
         private ClaimDAO claimDao = new ClaimDAO();
         private static String mClaimID = "";
         public bool isLock = false;
-
+        KhachHangDAO kh = new KhachHangDAO();
         protected void Page_Load(object sender, EventArgs e)
         {
             //if (Request.QueryString["claimID"] != null)
@@ -64,7 +64,15 @@ namespace WEBSITESAVVY.Pages
             if (row != null)
             {
                 //lblNgayGiamDinh.Text = "Ngày " + DateTime.Now.ToString("dd/MM/yyyy") ;
-                lblNgayGiamDinh.Text = row["ILADATE"].ToString();
+                string ngaybaocao = row["ILADATE"].ToString();
+                if (ngaybaocao != "")
+                {
+                    lblILADATE.Text = ngaybaocao;
+                    txtILADATE.Text = ngaybaocao;
+                }
+                else
+                    lblILADATE.Text = "Ngày dd/mm/yyy.";
+
                 lblTenClaim.Text = "ILA_" + row["TenClaim"].ToString();
                 lblGiamDinhVien.Text = row["FullName"].ToString();
 
@@ -77,15 +85,22 @@ namespace WEBSITESAVVY.Pages
                 lblEffective.Text= row["Effective"].ToString();
                 txtEffective.Text = lblEffective.Text;
 
-                lblInsured.Text  = row["TenKhachHang"].ToString();
-                lblFaxNo.Text    = row["Fax"].ToString();
+                lblTenKhachHang.Text  = row["TenKhachHang"].ToString();
+                txtTenKhachHang.Text = row["TenKhachHang"].ToString();
 
-                lblAddress.Text  = row["DiaChi"].ToString();
+                lblFax.Text    = row["Fax"].ToString();
+                txtFax.Text = row["Fax"].ToString();
 
-                lblNguoiLienHe.Text = row["TenNguoiDaiDien"].ToString();
+                lblDiaChi.Text  = row["DiaChi"].ToString();
+                txtDiaChi.Text = row["DiaChi"].ToString();
+
+                lblTenNguoiDaiDien.Text = row["TenNguoiDaiDien"].ToString();
+                txtTenNguoiDaiDien.Text = row["TenNguoiDaiDien"].ToString();
+
                 lblDienThoai.Text   = row["DienThoai"].ToString();
-                lblEmail.Text       = row["Email"].ToString();
-
+                txtDienThoai.Text = row["DienThoai"].ToString();
+                lblEmail.Text = row["Email"].ToString();
+                txtEmail.Text = row["Email"].ToString();
                 lblPremises.Text = row["Premises"].ToString();
                 txtPremises.Text = lblPremises.Text;
 
@@ -111,8 +126,8 @@ namespace WEBSITESAVVY.Pages
                 lblDuPhongTonThat.Text = row["DuPhongTonThat"].ToString();
                 txtDuPhongTonThat.Text = lblDuPhongTonThat.Text;
 
-                lblPhuLucGiamDinh.Text = row["PhuLucDinhKem"].ToString();
-                txtPhuLucGiamDinh.Text = lblPhuLucGiamDinh.Text;
+                lblPhuLucDinhKem.Text = row["PhuLucDinhKem"].ToString();
+                txtPhuLucDinhKem.Text = lblPhuLucDinhKem.Text;
 
                 lblTenClaim1.Text = "ILA_" + row["TenClaim"].ToString();
 
@@ -242,8 +257,8 @@ namespace WEBSITESAVVY.Pages
                 if (Session["ThamChieu"] != null)
                 {
                     id = Session["ThamChieu"].ToString();
-                    
-                    if (!checkBoxThongBao.Checked )
+
+                    if (checkBoxThongBao.Checked == true)
                     {
                         string stt = "Yes";
                         bool up = claimDao.UpdateTBCQCN(id, stt);
@@ -297,7 +312,36 @@ namespace WEBSITESAVVY.Pages
             }
         }
 
+        protected void btnUpdateKhachHang_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                mClaimID = Session["ThamChieu"].ToString();
 
+                int maKH = (int)kh.LayMaKHClaim(mClaimID);
+                Button btn = (Button)sender;
+                string key = btn.Attributes["key"];
+
+                TextBox txtValue = (TextBox)FindControl("txt" + key);
+                string value = txtValue.Text;
+                string title = "";
+
+                if (value.Contains("'"))
+                {
+                    value = value.Replace("'", "&#39;");
+                }
+                kh.UpdateKhachHang(maKH, key, value);
+                int maGDV = int.Parse(Request.Cookies["MaGDV"].Value);
+                GiamDinhVienDAO gdv = new GiamDinhVienDAO();
+                string noidung = gdv.LayTenTheoMa(maGDV) + " edited " + title + " of " + mClaimID + ".";
+                SaveLogTracking(maGDV, noidung, mClaimID);
+                Response.Redirect(Request.RawUrl + "#" + key);
+            }
+            catch (Exception ex)
+            {
+                Response.Write("<script>alert('Error', 'Error update data');</script>");
+            }
+        }
         void SaveLogTracking(int maGDV, string noidung, string maclaim)
         {
             try

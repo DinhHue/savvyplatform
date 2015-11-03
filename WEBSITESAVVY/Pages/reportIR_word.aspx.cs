@@ -60,8 +60,22 @@ namespace WEBSITESAVVY.Pages
                 //lblNgayMoPR.Text = row["NgayBatDauGiamDinh"].ToString();
                 //lblNgayMoPR.Text = "Ngày " + DateTime.Now.Day + " tháng " + DateTime.Now.Month + " năm " + DateTime.Now.Year;
                 //lblRefKH.Text    = row["RefKH"].ToString();   
-                lblNgayMoPR.Text = row["IRDate"].ToString();
-                lblRefKH.Text = "Chưa thông báo";
+                string ngayIR = row["IRDate"].ToString();
+                if (ngayIR != "")
+                {
+                    lblIRDate.Text = ngayIR;
+                  
+                }
+                else
+                    lblIRDate.Text = "Ngày dd/mm/yyy.";
+                string tc = row["RefKH"].ToString();
+                if (tc != "")
+                {
+                    lblRefKH.Text = tc;
+                
+                }
+                else
+                    lblRefKH.Text = "Chưa thông báo";
                 lblTenNhaBH.Text = row["TenNhaBH"].ToString();
                 lblTenDonVi.Text = row["TenDonVi"].ToString();
                 lblDiaChiNBH.Text = row["DiaChiDV"].ToString();

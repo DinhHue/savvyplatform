@@ -200,7 +200,7 @@
 
             
                     <div style="line-height:1.5;">
-                        <asp:Label ID="lblNgayMoPR" runat="server" Text="Ngày 5/3/2014."
+                        <asp:Label ID="lblFRDate" runat="server" Text="Ngày 5/3/2014."
                               CssClass="title_2" Width="581px" 
                             Font-Size="15px" ></asp:Label>
                     </div>

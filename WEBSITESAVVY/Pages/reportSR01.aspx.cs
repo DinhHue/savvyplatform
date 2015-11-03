@@ -91,9 +91,16 @@ namespace WEBSITESAVVY.Pages
             if (row != null)
             {
                 //lblNgayGiamDinh.Text = "Ngày " + DateTime.Now.ToString("dd/MM/yyyy");
-               
-                lblNgayGiamDinh.Text = row["NgayBatDauGiamDinh"].ToString();
+                string ngaygiamdinh = row["NgayBatDauGiamDinh"].ToString();
+                if (ngaygiamdinh != "")
+                {
+                    lblNgayBatDauGiamDinh.Text = ngaygiamdinh;
+                    txtNgayBatDauGiamDinh.Text = row["NgayBatDauGiamDinh"].ToString();
+                }
+                else
+                    lblNgayBatDauGiamDinh.Text = "Ngày dd/mm/yyy.";
                 lblTenClaim.Text = "SR01_" + row["TenClaim"].ToString();
+                txtTenClaim.Text = row["TenClaim"].ToString();
                 lblGiamDinhVien.Text = row["FullName"].ToString();
 
                 lblTenNhaBH.Text = row["TenNhaBH"].ToString();
