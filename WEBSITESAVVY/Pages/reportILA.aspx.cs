@@ -14,6 +14,7 @@ namespace WEBSITESAVVY.Pages
     {
         private ClaimDAO claimDao = new ClaimDAO();
         private static String mClaimID = "";
+        private DaiLyDAO dailyDao = new DaiLyDAO();
         public bool isLock = false;
         KhachHangDAO kh = new KhachHangDAO();
         protected void Page_Load(object sender, EventArgs e)
@@ -26,6 +27,14 @@ namespace WEBSITESAVVY.Pages
                 {
                     string idclaim = Session["ThamChieu"].ToString();
                     mClaimID = idclaim;
+
+                    string done = dailyDao.KiemTraTinhTrang(mClaimID, "ILA");
+                    if (done != null && done.ToLower() == "yes")
+                    {
+                        isLock = true;
+                    }
+
+
                     loadData(mClaimID);
                     loadDanhMucThietHai(mClaimID);
                 }
