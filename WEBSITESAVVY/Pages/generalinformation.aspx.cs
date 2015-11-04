@@ -36,7 +36,7 @@ namespace WEBSITESAVVY.Pages
                             lblPolicyNo.Text = row["PolicyNo"].ToString();
                             lblSubsidiary.Text = row["TenDonVi"].ToString();
                             lblEffective.Text = row["Effective"].ToString();
-                            lblTypeofPolicy.Text = row["TypePolicy"].ToString();
+                            lblTypeofPolicy.Text = row["NamePolicy"].ToString();
                             lblAdress.Text = row["DiaChi"].ToString();
                             lblNguoiDaiDien.Text = row["TenNguoiDaiDien"].ToString();
                             lblDienThoai.Text = row["DienThoai"].ToString();
@@ -46,10 +46,10 @@ namespace WEBSITESAVVY.Pages
                             lblSuminsured.Text = row["SumInsured"].ToString();
                             lblDeductible.Text = row["TruMienThuong"].ToString();
                             lblClaimsum.Text = row["KhieuNai"].ToString();
-                            lblpayment.Text = row["BoiThuong"].ToString();
-                            lbllossestimate.Text = row["TonThatHopLe"].ToString();
+                            lblpayment.Text = row["TamUngBoiThuong"].ToString();
+                            lbllossestimate.Text = row["DuPhongTonThat"].ToString();
                             lblReserve.Text = row["DuPhongBoiThuong"].ToString();
-                            lblsettlement.Text = row["TruGiaTriThuHoi"].ToString();
+                            lblsettlement.Text = row["BoiThuong"].ToString();
                             lblSR01date.Text = row["NgayBatDauGiamDinh"].ToString();
                             lblILAdate.Text = row["ILADATE"].ToString();
                             lblPRDate.Text = row["PRDate"].ToString();

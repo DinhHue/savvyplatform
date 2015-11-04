@@ -241,10 +241,11 @@
                     <div style="height:30px"></div>
                     <div style="text-align:center;width:65%" align="center"><img src="../images/banner.jpg" width="100%" alt="" /></div>
             
-                    <div style="clear:both" class="align-right">
-                        <asp:Label ID="lblNgayBatDauGiamDinh" key="NgayBatDauGiamDinh" runat="server" Text="Ngày 5/3/2014." type="SingleLine" onclick="editField(this)" 
-                              CssClass="field_input label-edit align-right" ForeColor="#006600" 
-                            Font-Size="18px" ></asp:Label>
+                    <div style="clear:both; font-size: 18px; color: #006600; text-align: right;" 
+                        class="align-right">
+                       Ngày <asp:Label ID="lblNgayBatDauGiamDinh" 
+                            key="NgayBatDauGiamDinh" runat="server" Text="5/3/2014." type="SingleLine" onclick="editField(this)" 
+                              CssClass="label-edit align-right" ></asp:Label>
 
                                 <asp:Panel ID="panelNgayBatDauGiamDinh" Width="269px"  CssClass="panelUpdate hiden" runat="server">
                                     <asp:TextBox ID="txtNgayBatDauGiamDinh" CssClass="hiden" TextMode="SingleLine"  Width="100%" runat="server" />
@@ -286,9 +287,17 @@
                                         Text="Giám định viên <i>Surveyor</i>" Width="123px"  
                                         CssClass="align-right bg_text" ></asp:Label>
                                 </div>
-                                <asp:Label ID="lblGiamDinhVien" runat="server" Text="GIAM DINH VIEN" 
-                                    Width="252px"  ForeColor="#006600" Font-Bold="True"
-                                    CssClass="field_input align-center" Height="40px" ></asp:Label></td>
+                                <asp:Label ID="lblSR01GDV" runat="server" Text="GIAM DINH VIEN" 
+                                    Width="252px"  ForeColor="#006600" Font-Bold="True" key="SR01GDV" type="SingleLine" onclick="editField(this)" 
+                                    CssClass="field_input label-edit align-center" Height="40px" ></asp:Label>
+                                      <asp:Panel ID="panelSR01GDV" Width="250px"  CssClass="panelUpdate hiden" runat="server">
+                                    <asp:TextBox ID="txtSR01GDV" CssClass="hiden" TextMode="SingleLine"  Width="100%" runat="server" />
+                                    <div style="margin-top:10px">
+                                        <asp:Button ID="Button24" key="SR01GDV" onclick="btnUpdate_Click" Text="Update" runat="server"/>
+                                        <input  key="SR01GDV" type="button" value="Cancel" onclick="cancel(this)" />
+                                    </div>
+                                </asp:Panel> 
+                                    </td>
                         </tr>
                         <tr>
                             <td colspan="2" class="style1" >
@@ -650,12 +659,15 @@
                                         CssClass="align-right bg_text" ></asp:Label>
                                 </div>
                                 <div style="float:left; width:42%">
-                                    
-                                    <asp:Label ID="lblBienBanGiamDinh" runat="server" Text="Biên bản giám định hiện trường;" 
-                                        Width="389px"  CssClass="field_input " Font-Bold="false" ></asp:Label><br />
-                                    
-                                    <asp:Label ID="lblPhuLucGiamDinh" runat="server" Text="Phụ lục ảnh giám định hiện trường." 
-                                        Width="389px"  CssClass="field_input " Font-Bold="false"  ></asp:Label>
+                                   <asp:Label ID="lblPhuLucDinhKemSR01" runat="server" key="PhuLucDinhKemSR01" type="MultiLine" onclick="editField(this)"  Text="Phụ lục ảnh giám định hiện trường." 
+                                        Width="389px"  CssClass="field_input label-edit" Font-Bold="false"  ></asp:Label>
+                                         <asp:Panel ID="panelPhuLucDinhKemSR01" Width="350px"  CssClass="panelUpdate hiden" runat="server">
+                                        <asp:TextBox ID="txtPhuLucDinhKemSR01" CssClass="hiden" TextMode="MultiLine" Height="150px"  Width="100%" runat="server" />
+                                        <div style="margin-top:10px">
+                                            <asp:Button ID="Button25" key="PhuLucDinhKemSR01" onclick="btnUpdate_Click" Text="Update" runat="server"/>
+                                            <input  key="PhuLucDinhKemSR01" type="button" value="Cancel" onclick="cancel(this)" />
+                                        </div>
+                                    </asp:Panel>
                                 </div>
                                
                                 <div style="clear:both;"><br /></div>
@@ -816,13 +828,34 @@
                     </asp:Panel>
                     </span>
                     <br />
-
-                    <asp:Label ID="lblDescriptionGioKhaoSat" runat="server" 
-                         Text="Công tác giám định hiện trường kết thúc lúc  cl.GioKhaoSatHienTruong. Các bước tiếp theo trong tiến trình thu thập thông tin / đánh giá tổn thất và xác định trách nhiệm của Hợp đồng bảo hiểm sẽ được chúng tôi liên tục cập nhật để Quý Công ty Bảo hiểm nắm bắt thông tin xử lý thuận tiện nhất. " 
-                         Width="99%" CssClass="field_input" Font-Bold=False ></asp:Label>
-                    <asp:Label ID="lblDescriptionGioKhaoSatEN" runat="server" 
-                         Text="Following completion of our preliminary site survey dated       as above stated, our further reports shall follow with updated progress in respect of the requested information obtained, damage assessment and available loss adjustment for Insurers’ convenient review and consideration." 
-                         Width="99%" CssClass="field_input" Font-Italic="True" Font-Bold="False" ></asp:Label>
+                    <div class="field_input" style="text-align: justify; width: 99%;">
+                    Công tác giám định hiện trường kết thúc lúc
+                    <asp:Label ID="lblGioKhaoSatHienTruong" runat="server"  key="GioKhaoSatHienTruong" type="SingleLine"  onclick="editField(this)"
+                         Text="GioKhaoSatHienTruong" CssClass="field_input label-edit" ></asp:Label>
+                             <asp:Panel ID="panelGioKhaoSatHienTruong" Width="99%"  CssClass="panelUpdate hiden" runat="server">
+                        <asp:TextBox ID="txtGioKhaoSatHienTruong" CssClass="hiden" TextMode="SingleLine" Width="200px" runat="server" />
+                        <div style="margin-top:10px">
+                            <asp:Button ID="Button22"  key="GioKhaoSatHienTruong" onclick="btnUpdate_Click" Text="Update" runat="server"/>
+                            <input key="GioKhaoSatHienTruong" type="button" value="Cancel" onclick="cancel(this)" />
+                        </div>
+                    </asp:Panel>
+                         .
+                         Các bước tiếp theo trong tiến trình thu thập thông tin / đánh giá tổn thất và xác định trách nhiệm của Hợp đồng bảo hiểm sẽ được chúng tôi liên tục cập nhật để Quý Công ty Bảo hiểm nắm bắt thông tin xử lý thuận tiện nhất. 
+                   
+                        <br />
+                        Following completion of our preliminary site survey dated 
+                    <asp:Label ID="lblGioKhaoSatHienTruongEN" runat="server" key="GioKhaoSatHienTruongEN"  type="SingleLine" onclick="editField(this)"
+                         Text= "GioKhaoSatHienTruongEN" CssClass="field_input label-edit" Font-Italic="True" Font-Bold="False" ></asp:Label>
+                          <asp:Panel ID="panelGioKhaoSatHienTruongEN" Width="99%"  CssClass="panelUpdate hiden" runat="server">
+                        <asp:TextBox ID="txtGioKhaoSatHienTruongEN" CssClass="hiden" TextMode="SingleLine" Width="200px" runat="server" />
+                        <div style="margin-top:10px">
+                            <asp:Button ID="Button23"  key="GioKhaoSatHienTruongEN" onclick="btnUpdate_Click" Text="Update" runat="server"/>
+                            <input key="GioKhaoSatHienTruongEN" type="button" value="Cancel" onclick="cancel(this)" />
+                        </div>
+                    </asp:Panel>
+                          as above stated, our further reports shall follow with updated progress in respect of the requested information obtained, damage assessment and available loss adjustment for Insurers’ convenient review and consideration.
+                         
+                         </div>
                 </div>
                   <table width="100%">
                     <tr>

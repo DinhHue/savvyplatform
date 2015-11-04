@@ -187,7 +187,7 @@
 
             
                     <div>
-                        <asp:Label ID="  lblIRDate" runat="server" Text="Ngày 5/3/2014."
+                        <asp:Label ID="lblIRDate" runat="server" Text="Ngày 5/3/2014."
                               CssClass="title_2" Width="581px" 
                             Font-Size="15px" ></asp:Label>
                     </div>

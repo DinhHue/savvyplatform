@@ -26,29 +26,29 @@ namespace WEBSITESAVVY.Pages
             }
         }
         void LoadSIG(string claimID)
-        {            
-            DataRow row = claimDao.InfoSignatureIRPre(claimID);
+        {
+            DataRow row = claimDao.InfoSignaturePRPre(claimID);
             if (row != null)
             {
                 lblNguoiBaoCao.Text = row[0].ToString();
                 lblChucVuNguoiBC.Text = row[1].ToString();
 
             }
-      
-            DataRow row1= claimDao.InfoSignatureIRCheck(claimID);
+
+            DataRow row1 = claimDao.InfoSignaturePRCheck(claimID);
             if (row1 != null)
             {
 
-                lblNguoiCheckBC.Text = row[0].ToString();
-                lblChucvuNguoiCheck.Text = row[1].ToString();
+                lblNguoiCheckBC.Text = row1[0].ToString();
+                lblChucvuNguoiCheck.Text = row1[1].ToString();
             }
-      
+
             DataRow row2 = claimDao.InfoSignatureDirector();
             if (row2 != null)
             {
 
-                lblNguoiPheDuyet.Text = row[0].ToString();
-                lblChucvuNguoiPheDuyet.Text = row[1].ToString();
+                lblNguoiPheDuyet.Text = row2[0].ToString();
+                lblChucvuNguoiPheDuyet.Text = row2[1].ToString();
             }
        
         }
@@ -59,7 +59,7 @@ namespace WEBSITESAVVY.Pages
             {
                 lblTenClaim.Text = "PR_" + row["TenClaim"].ToString();
                 
-                string ngayPR = row["PRDate"].ToString();
+                string ngayPR = "Ngày " + row["PRDate"].ToString();
                 if (ngayPR != "")
                 {
                    lblNgayMoPR.Text = ngayPR;                   
@@ -103,7 +103,7 @@ namespace WEBSITESAVVY.Pages
                 lblSumInSured.Text = row["SumInSured"].ToString();
                 lblEffective.Text = row["Effective"].ToString();
                 lblMucMienThuong.Text = row["MucMienThuong"].ToString();
-
+                lblTamUngBoiThuongPR.Text = row["TamUngBoiThuongPR"].ToString();
                 lblDKBX.Text = row["DKBS"].ToString();
                 if (row["KhieuNai"].ToString() != null && row["KhieuNai"].ToString().Trim() != "")
                     lblKhieuNai.Text = row["KhieuNai"].ToString();
@@ -121,6 +121,7 @@ namespace WEBSITESAVVY.Pages
                 lblG.Text = row["G"].ToString();
                 lblH.Text = row["H"].ToString();
                 lblI.Text = row["I"].ToString();
+                lblTheQuyenTruyDoi.Text = row["TheQuyenTruyDoi"].ToString();
                 lblTamUngBoiThuongText.Text=row["TamUngBoiThuongText"].ToString();
                 //lblTT.Text = "<p>  Các thông tin và diễn biến tiếp theo liên quan đến vụ tổn thất này sẽ tiếp tục được chúng tôi" +
                 //            "quan tâm theo dõi và sẽ định kỳ báo cáo để Nhà Bảo Hiểm nắm rõ.</p>" +

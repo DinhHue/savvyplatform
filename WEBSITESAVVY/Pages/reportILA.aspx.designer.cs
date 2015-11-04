@@ -85,13 +85,40 @@ namespace WEBSITESAVVY.Pages {
         protected global::System.Web.UI.WebControls.Label Label3;
         
         /// <summary>
-        /// lblGiamDinhVien control.
+        /// lblILAGDV control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblGiamDinhVien;
+        protected global::System.Web.UI.WebControls.Label lblILAGDV;
+        
+        /// <summary>
+        /// panelILAGDV control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel panelILAGDV;
+        
+        /// <summary>
+        /// txtILAGDV control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtILAGDV;
+        
+        /// <summary>
+        /// Button24 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Button24;
         
         /// <summary>
         /// Label2 control.
@@ -895,15 +922,6 @@ namespace WEBSITESAVVY.Pages {
         protected global::System.Web.UI.WebControls.Label Label19;
         
         /// <summary>
-        /// lblBienBanGiamDinh control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblBienBanGiamDinh;
-        
-        /// <summary>
         /// lblPhuLucDinhKem control.
         /// </summary>
         /// <remarks>
@@ -1093,22 +1111,76 @@ namespace WEBSITESAVVY.Pages {
         protected global::System.Web.UI.WebControls.Label Label37;
         
         /// <summary>
-        /// lblNguoiBaoCao control.
+        /// lblID_GDVILA control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblNguoiBaoCao;
+        protected global::System.Web.UI.WebControls.Label lblID_GDVILA;
         
         /// <summary>
-        /// lblNguoiCheckBC control.
+        /// panelID_GDVILA control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblNguoiCheckBC;
+        protected global::System.Web.UI.WebControls.Panel panelID_GDVILA;
+        
+        /// <summary>
+        /// drID_GDVILA control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList drID_GDVILA;
+        
+        /// <summary>
+        /// Button1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Button1;
+        
+        /// <summary>
+        /// lblID_GDVCheckILA control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblID_GDVCheckILA;
+        
+        /// <summary>
+        /// panelID_GDVCheckILA control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel panelID_GDVCheckILA;
+        
+        /// <summary>
+        /// drID_GDVCheckILA control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList drID_GDVCheckILA;
+        
+        /// <summary>
+        /// Button2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Button2;
         
         /// <summary>
         /// Label38 control.

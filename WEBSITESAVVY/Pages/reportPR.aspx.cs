@@ -55,11 +55,11 @@ namespace WEBSITESAVVY.Pages
 
                 //lblNgayMoPR.Text = row["NgayBatDauGiamDinh"].ToString();
                 //lblNgayMoPR.Text = "Ngày " + DateTime.Now.Day + " tháng " + DateTime.Now.Month + " năm " + DateTime.Now.Year;
-                string ngayPR = row["PRDate"].ToString();
+                string ngayPR = "Ngày " + row["PRDate"].ToString();
                 if (ngayPR != "")
                 {
                     lblPRDate.Text = ngayPR;
-                    txtPRDate.Text = ngayPR;
+                    txtPRDate.Text = row["PRDate"].ToString();
                 }
                 else
                     lblPRDate.Text = "Ngày dd/mm/yyy.";
@@ -114,7 +114,8 @@ namespace WEBSITESAVVY.Pages
                 txtEffective.Text = lblEffective.Text;
                 lblMucMienThuong.Text = row["MucMienThuong"].ToString();
                 txtMucMienThuong.Text = lblMucMienThuong.Text;
-
+                lblTamUngBoiThuongPR.Text = row["TamUngBoiThuongPR"].ToString();
+                txtTamUngBoiThuongPR.Text = row["TamUngBoiThuongPR"].ToString();
                 lblDKBS.Text = row["DKBS"].ToString();
                 txtDKBS.Text = lblDKBS.Text;
 
@@ -148,6 +149,8 @@ namespace WEBSITESAVVY.Pages
                 txtH.Text = lblH.Text;
                 lblI.Text = row["I"].ToString();
                 txtI.Text = lblI.Text;
+                lblTheQuyenTruyDoi.Text = row["TheQuyenTruyDoi"].ToString();
+                txtTheQuyenTruyDoi.Text = row["TheQuyenTruyDoi"].ToString();
                 lblTamUngBoiThuongText.Text = row["TamUngBoiThuongText"].ToString();
                 txtTamUngBoiThuongText.Text = lblTamUngBoiThuongText.Text;
                 //lblTT.Text = "<p>  Các thông tin và diễn biến tiếp theo liên quan đến vụ tổn thất này sẽ tiếp tục được chúng tôi" +

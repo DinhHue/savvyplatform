@@ -310,6 +310,24 @@ namespace WEBSITESAVVY.Pages {
         protected global::System.Web.UI.WebControls.Label lblKhieuNai;
         
         /// <summary>
+        /// Label1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label1;
+        
+        /// <summary>
+        /// lblTamUngBoiThuongPR control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblTamUngBoiThuongPR;
+        
+        /// <summary>
         /// Label23 control.
         /// </summary>
         /// <remarks>
@@ -398,6 +416,15 @@ namespace WEBSITESAVVY.Pages {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblH;
+        
+        /// <summary>
+        /// lblTheQuyenTruyDoi control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblTheQuyenTruyDoi;
         
         /// <summary>
         /// lblI control.

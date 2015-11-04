@@ -135,7 +135,7 @@
                         Width="100%"></asp:Label>
                 </td>
                 <td class="colrilbale">
-                    <asp:Label ID="Label17" runat="server" Text="Loss Estimate"></asp:Label></td>
+                    <asp:Label ID="Label17" runat="server" Text="Initial Reserve"></asp:Label></td>
                 <td class="colricont">
                     <asp:Label ID="lbllossestimate" runat="server" CssClass="field_input" 
                         Width="100%"></asp:Label>

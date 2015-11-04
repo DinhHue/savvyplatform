@@ -105,11 +105,17 @@ namespace WEBSITESAVVY.Pages
                     txtNgayBatDauGiamDinh.Text = row["NgayBatDauGiamDinh"].ToString();
                 }
                 else
-                    lblNgayBatDauGiamDinh.Text = "Ngày dd/mm/yyy.";
+                    lblNgayBatDauGiamDinh.Text = "dd/mm/yyy.";
                 lblTenClaim.Text = "SR01_" + row["TenClaim"].ToString();
                 txtTenClaim.Text = row["TenClaim"].ToString();
-                lblGiamDinhVien.Text = row["FullName"].ToString();
-
+                string tenLAGDV=row["SR01GDV"].ToString();
+                if (tenLAGDV != "")
+                {
+                    lblSR01GDV.Text = tenLAGDV;
+                    txtSR01GDV.Text = tenLAGDV;
+                }
+                else
+                    lblSR01GDV.Text = row["FullName"].ToString();
                 lblTenNhaBH.Text = row["TenNhaBH"].ToString();
 
                 lblPolicyNO.Text = row["PolicyNo"].ToString();
@@ -165,6 +171,8 @@ namespace WEBSITESAVVY.Pages
                 lblDuPhongTonThat.Text = row["DuPhongTonThat"].ToString();
                 txtDuPhongTonThat.Text = lblDuPhongTonThat.Text;
 
+                lblPhuLucDinhKemSR01.Text = row["PhuLucDinhKemSR01"].ToString();
+                txtPhuLucDinhKemSR01.Text = row["PhuLucDinhKemSR01"].ToString();
                 lblTenClaim1.Text = "SR01_" + row["TenClaim"].ToString();
 
                 lblDePhongVaKhuyenCao.Text = row["DePhongVaKhuyenCao"].ToString();
@@ -173,15 +181,29 @@ namespace WEBSITESAVVY.Pages
 
                 lblYKienGDVSR01.Text = row["YKienGDVSR01"].ToString();
                 txtYKienGDVSR01.Text = row["YKienGDVSR01"].ToString();
-                String decription = "Công tác giám định hiện trường kết thúc lúc [XXX]. Các bước tiếp theo trong tiến trình thu thập thông tin / đánh giá tổn thất và xác định trách nhiệm của Hợp đồng bảo hiểm sẽ được chúng tôi liên tục cập nhật để Quý Công ty Bảo hiểm nắm bắt thông tin xử lý thuận tiện nhất. ";
-                String decriptionEn = "Following completion of our preliminary site survey dated [XXXX] as above stated, our further reports shall follow with updated progress in respect of the requested information obtained, damage assessment and available loss adjustment for Insurers’ convenient review and consideration.";
+                //String decription = "Công tác giám định hiện trường kết thúc lúc [XXX]. Các bước tiếp theo trong tiến trình thu thập thông tin / đánh giá tổn thất và xác định trách nhiệm của Hợp đồng bảo hiểm sẽ được chúng tôi liên tục cập nhật để Quý Công ty Bảo hiểm nắm bắt thông tin xử lý thuận tiện nhất. ";
+                //String decriptionEn = "Following completion of our preliminary site survey dated [XXXX] as above stated, our further reports shall follow with updated progress in respect of the requested information obtained, damage assessment and available loss adjustment for Insurers’ convenient review and consideration.";
                 String gioKhaoSat = row["GioKhaoSatHienTruong"].ToString();
                 String giokhaosatEN = row["GioKhaoSatHienTruongEN"].ToString();
-                decription = decription.Replace("[XXX]", gioKhaoSat);
-                decriptionEn = decriptionEn.Replace("[XXXX]", giokhaosatEN);
 
-                lblDescriptionGioKhaoSat.Text = decription;
-                lblDescriptionGioKhaoSatEN.Text = decriptionEn;
+                //decription = decription.Replace("[XXX]", gioKhaoSat);
+                //decriptionEn = decriptionEn.Replace("[XXXX]", giokhaosatEN);
+                if (gioKhaoSat != "")
+                {
+                    lblGioKhaoSatHienTruong.Text = gioKhaoSat;
+                    txtGioKhaoSatHienTruong.Text = gioKhaoSat;
+                }
+                else
+                {
+                    lblGioKhaoSatHienTruong.Text = "giờ:phút, ngày dd/mm/yyyy";
+                }
+                if (giokhaosatEN != "")
+                {
+                    lblGioKhaoSatHienTruongEN.Text = giokhaosatEN;
+                    txtGioKhaoSatHienTruongEN.Text = giokhaosatEN;
+                }
+                else
+                    lblGioKhaoSatHienTruongEN.Text = "hrs:min on dd/mm/yyyy";
             }
         }
 

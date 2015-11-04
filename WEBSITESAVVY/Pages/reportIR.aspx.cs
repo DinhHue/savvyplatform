@@ -50,7 +50,7 @@ namespace WEBSITESAVVY.Pages
             {
                 lblTenClaim.Text = "IR_" + row["TenClaim"].ToString();
                 lblTenClaim1.Text = lblTenClaim.Text;
-                string ngayIR  = row["IRDate"].ToString();
+                string ngayIR  = "Ngày "+ row["IRDate"].ToString();
                 if (ngayIR != "")
                 {
                     lblIRDate.Text = ngayIR;

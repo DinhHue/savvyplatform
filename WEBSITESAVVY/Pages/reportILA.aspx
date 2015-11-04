@@ -219,9 +219,10 @@
                     <div style="height:30px"></div>
                     <div style="float:left; width:65%"><img src="../images/banner.jpg" width="100%" alt="" /></div>
             
-                    <div style="clear:both" class="align-right">
-                        <asp:Label ID="lblILADATE" runat="server" key="ILADATE" type="SingleLine" onclick="editField(this)" 
-                              CssClass="field_input label-edit align-right" ForeColor="#006600" Font-Size="18px" ></asp:Label>
+                   <div style="clear:both; font-size: 18px; color: #006600; text-align: right;" 
+                        class="align-right">
+                       Ngày <asp:Label ID="lblILADATE" runat="server" key="ILADATE" type="SingleLine" onclick="editField(this)" 
+                              CssClass="label-edit align-right" ></asp:Label>
                                 <asp:Panel ID="panelILADATE" Width="269px"  CssClass="panelUpdate hiden" runat="server">
                                     <asp:TextBox ID="txtILADATE" CssClass="hiden" TextMode="SingleLine"  Width="100%" runat="server" />
                                     <div style="margin-top:10px">
@@ -253,9 +254,17 @@
                                         Text="Giám định viên <i>Surveyor</i>" Width="123px"  
                                         CssClass="align-right bg_text" ></asp:Label>
                                 </div>
-                                <asp:Label ID="lblGiamDinhVien" runat="server" Text="GIAM DINH VIEN" 
-                                    Width="252px"  ForeColor="#006600" Font-Bold="True"
-                                    CssClass="field_input align-center" Height="40px" ></asp:Label></td>
+                               <asp:Label ID="lblILAGDV" runat="server" Text="GIAM DINH VIEN" 
+                                    Width="252px"  ForeColor="#006600" Font-Bold="True" key="ILAGDV" type="SingleLine" onclick="editField(this)" 
+                                    CssClass="field_input label-edit align-center" Height="40px" ></asp:Label>
+                                      <asp:Panel ID="panelILAGDV" Width="250px"  CssClass="panelUpdate hiden" runat="server">
+                                    <asp:TextBox ID="txtILAGDV" CssClass="hiden" TextMode="SingleLine"  Width="100%" runat="server" />
+                                    <div style="margin-top:10px">
+                                        <asp:Button ID="Button24" key="ILAGDV" onclick="btnUpdate_Click" Text="Update" runat="server"/>
+                                        <input  key="ILAGDV" type="button" value="Cancel" onclick="cancel(this)" />
+                                    </div>
+                                </asp:Panel> 
+                                    </td>
                         </tr>
                         <tr>
                             <td colspan="2" class="style1" >
@@ -621,15 +630,10 @@
                                         CssClass="align-right bg_text" ></asp:Label>
                                 </div>
                                 <div style="float:left; width:42%">
-                                    
-                                    <asp:Label ID="lblBienBanGiamDinh" runat="server" Text="Biên bản và phụ lục ảnh giám định hiện trường;" 
-                                        Width="389px"  CssClass="field_input " Font-Bold="False" ></asp:Label><br />
-                                    
-
-                                    <asp:Label ID="lblPhuLucDinhKem" key="PhuLucDinhKem" type="SingleLine" onclick="editField(this)" runat="server" Width="389px" Text=" "
+                                   <asp:Label ID="lblPhuLucDinhKem" key="PhuLucDinhKem" type="MultiLine" onclick="editField(this)" runat="server" Width="389px" Text=" "
                                             CssClass="field_input label-edit dislay-block" Font-Bold="False" ></asp:Label>
                                     <asp:Panel ID="panelPhuLucDinhKem" Width="389px"  CssClass="panelUpdate hiden" runat="server">
-                                        <asp:TextBox ID="txtPhuLucDinhKem" CssClass="hiden" TextMode="SingleLine"  Width="100%" runat="server" />
+                                        <asp:TextBox ID="txtPhuLucDinhKem" CssClass="hiden" TextMode="MultiLine"  Width="100%" Height="150px" runat="server" />
                                         <div style="margin-top:10px">
                                             <asp:Button  key="PhuLucDinhKem" onclick="btnUpdate_Click" Text="Update" runat="server"/>
                                             <input  key="PhuLucDinhKem" type="button" value="Cancel" onclick="cancel(this)" />
@@ -813,14 +817,30 @@
                     </tr>
                     <tr>
                         <td width="40%" style="padding-left: 10px">
-                            <asp:Label ID="lblNguoiBaoCao" runat="server" Font-Bold="True" 
+                            <asp:Label ID="lblID_GDVILA" runat="server" key="ID_GDVILA" type="SingeLine" CssClass="field_input label-edit"  onclick="editField(this)" Font-Bold="True" 
                                 ForeColor="#000066"></asp:Label>
+                                 <asp:Panel ID="panelID_GDVILA" Width="99%"  CssClass="panelUpdate hiden" runat="server">
+                                     <asp:DropDownList ID="drID_GDVILA"  Width="50%" runat="server">
+                                     </asp:DropDownList>
+                        <div style="margin-top:10px">
+                            <asp:Button ID="Button1"  key="ID_GDVILA" onclick="btnUpdateGDV_Click" Text="Update" runat="server"/>
+                            <input  key="ID_GDVILA" type="button" value="Cancel" onclick="cancel(this)" />
+                        </div>
+                    </asp:Panel>
                         </td>
                         <td>
                             &nbsp;</td>
                         <td align="center" width="40%">
-                            <asp:Label ID="lblNguoiCheckBC" runat="server" Font-Bold="True" 
+                            <asp:Label ID="lblID_GDVCheckILA"  key="ID_GDVCheckILA" type="SingeLine" CssClass="field_input label-edit"  onclick="editField(this)"  runat="server" Font-Bold="True" 
                                 ForeColor="#000066"></asp:Label>
+                                 <asp:Panel ID="panelID_GDVCheckILA" Width="99%"  CssClass="panelUpdate hiden" runat="server">
+                                     <asp:DropDownList ID="drID_GDVCheckILA"  Width="50%" runat="server">
+                                     </asp:DropDownList>
+                        <div style="margin-top:10px">
+                            <asp:Button ID="Button2"  key="ID_GDVCheckILA" onclick="btnUpdateGDVCheck_Click" Text="Update" runat="server"/>
+                            <input  key="ID_GDVCheckILA" type="button" value="Cancel" onclick="cancel(this)" />
+                        </div>
+                    </asp:Panel>
                         </td>
                     </tr>
                     <tr>

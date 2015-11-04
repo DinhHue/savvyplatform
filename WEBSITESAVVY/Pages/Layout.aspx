@@ -100,36 +100,36 @@
             report = ""
             if (index == 0)
                 Link = "../Pages/generalinformation.aspx";
-                
-            if (index == 1)
-                Link = "../Pages/sitephoto.aspx";
-            if (index == 2) {
+//                
+//            if (index == 1)
+//                Link = "../Pages/sitephoto.aspx";
+            if (index == 1) {
                 Link = "../Pages/reportSR01.aspx";
                 report = "SR01"
             }
-            else if (index == 3) {
+            else if (index == 2) {
                 Link = "../Pages/reportILA.aspx";
                 report = "ILA"
             }
-            else if (index == 4) {
+            else if (index == 3) {
                 Link = "../Pages/reportPR.aspx";
                 report = "PR"
             }
-            else if (index == 5) {
+            else if (index == 4) {
                 Link = "../Pages/reportIR.aspx";
                 report = "IR"
             }
-            else if (index == 6) {
+            else if (index == 5) {
                 Link = "../Pages/reportFR.aspx";
                 report = "FR"
             }
-            else if (index == 7) {
+            else if (index == 6) {
                 Link = "../Pages/reportFFR.aspx";
                 report = "FFR"
             }
-            else if (index == 8)
+            else if (index == 7)
                 Link = "../Pages/listworksheet.aspx";
-            else if (index == 9)
+            else if (index == 8)
                 link = "../Pages/task.aspx";
 
             if (Link !== "") {
@@ -306,14 +306,12 @@
 	<div data-options="region:'west',split:true,title:'Part of Claim'" style="width:25%">
 		<div id="panelMenu" class="easyui-accordion" data-options="fit:false,border:false" style="width:100%;">
             <div id="GeIn" title="General Information"  style="padding:0px;">            
-		    </div>
-            <div id="SP" title="Site Photos"  style="padding:0px;">            
-			</div>	
+		    </div>         
 			<div id="SR01" title="SR01"  style="padding:0px;">
                 <ol type="1" >
                     <li><a href="../Pages/basicinforpop.aspx?type=SR01" class="easyui-linkbutton" data-options="plain:true" onclick="return showPopup(this);">
                         Basic Infomation</a></li>
-                     <li><a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true" key="NgayBatDauGiamDinh" type="date" onclick="updateField(this);" >Date Site Survey</a></li>
+                   <%--  <li><a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true" key="NgayBatDauGiamDinh" type="date" onclick="updateField(this);" >Date Site Survey</a></li>--%>
 				    <li><a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true" key="DienBienTonThat" onclick="updateField(this);"  >
                         Circumstances</a></li>
 				    <li><a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true" key="PhamViTonThat" onclick="updateField(this);"  >
@@ -322,7 +320,7 @@
                         Recommendation </a></li>
 				    <li><a href="../Pages/ClaimSummaryOfLossPop.aspx?type=SR01" class="easyui-linkbutton" data-options="plain:true"  onclick="return showPopup(this);"  >
                         Summary of Loss </a></li>
-                    <li><a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true" key="GhiChuLoaiHinhTonThat" onclick="updateField(this);"  >
+                    <%--<li><a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true" key="GhiChuLoaiHinhTonThat" onclick="updateField(this);"  >
                        Other type of loss</a></li>
 				    <li><a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true" key="GhiChuTBCQCN" type="date" onclick="updateField(this);"  >
                        Further notes</a></li>
@@ -333,15 +331,15 @@
 				    <li><a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true" key="GioKhaoSatHienTruong" type="date" onclick="updateField(this);" >
                         Time complete survey(VN)</a></li>
                     <li><a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true" key="GioKhaoSatHienTruongEN" type="date" onclick="updateField(this);" >
-                        Time complete survey(EN)</a></li>
+                        Time complete survey(EN)</a></li>--%>
                 </ol>
 			</div>	
 			<div id="ILA" title="ILA" >
 				<ol type="1" >
                  <%--   <li><a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true" key="ILADATE" type="date"  onclick="updateField(this);">
 						Date issue</a></li>--%>
-                    <li><a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true" key="ILADATE" type="date" onclick="updateField(this);">
-						Date issue</a></li>
+                   <%-- <li><a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true" key="ILADATE" type="date" onclick="updateField(this);">
+						Date issue</a></li>--%>
 				    <li><a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true" key="DienBienTonThat" onclick="updateField(this);">
 						Circumstances</a></li>
 				    <li><a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true" key="PhamViTonThat" onclick="updateField(this);">
@@ -350,8 +348,8 @@
                        Estimated Loss / Initial Reserve </a></li>
 				    <li><a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true" key="DePhongVaKhuyenCaoILA" onclick="updateField(this);">
 						Recommendation </a></li>
-                         <li><a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true" key="PhuLucDinhKem" onclick="updateField(this);">
-						Appendix attached </a></li>
+                        <%-- <li><a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true" key="PhuLucDinhKem" onclick="updateField(this);">
+						Appendix attached </a></li>--%>
 				    <li><a href="../Pages/ClaimSummaryOfLossPop.aspx?type=ILA" class="easyui-linkbutton" data-options="plain:true" onclick="return showPopup(this);">
 						Summary of Loss </a></li>
 				    <li><a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true" key="YKienGDV" onclick="updateField(this);">
@@ -430,9 +428,11 @@
 			</div>
 			<div title="MORE ..." >
 				<ol type="1">
+
                     <li><a href="../Pages/docsrequestn.aspx" onclick="return loadContent(this);" class="easyui-linkbutton" data-options="plain:true" >Docs Request </a></li>
 				    <li><a href="../Pages/ViewWR.aspx" onclick="return loadContent(this);" class="easyui-linkbutton" data-options="plain:true">Weekly Update</a></li>
-				    <li><a href="../Pages/discussionclaim.aspx" onclick="return loadContent(this);" class="easyui-linkbutton" data-options="plain:true" >Internal Discussion </a></li>
+				    <li><a href="../Pages/sitephoto.aspx" onclick="return loadContent(this);" class="easyui-linkbutton" data-options="plain:true" >Site Photos </a></li>
+                    <li><a href="../Pages/discussionclaim.aspx" onclick="return loadContent(this);" class="easyui-linkbutton" data-options="plain:true" >Internal Discussion </a></li>
 				    <li><a href="../Pages/task.aspx" onclick="return loadContent(this);" class="easyui-linkbutton" data-options="plain:true">Task Assigned</a></li>
                     <li><a href="eventscase.aspx" onclick="return loadContent(this);" class="easyui-linkbutton" data-options="plain:true">Activity History</a></li>
                 </ol>

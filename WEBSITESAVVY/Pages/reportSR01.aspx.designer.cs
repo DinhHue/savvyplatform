@@ -121,13 +121,40 @@ namespace WEBSITESAVVY.Pages {
         protected global::System.Web.UI.WebControls.Label Label3;
         
         /// <summary>
-        /// lblGiamDinhVien control.
+        /// lblSR01GDV control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblGiamDinhVien;
+        protected global::System.Web.UI.WebControls.Label lblSR01GDV;
+        
+        /// <summary>
+        /// panelSR01GDV control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel panelSR01GDV;
+        
+        /// <summary>
+        /// txtSR01GDV control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtSR01GDV;
+        
+        /// <summary>
+        /// Button24 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Button24;
         
         /// <summary>
         /// Label2 control.
@@ -931,22 +958,40 @@ namespace WEBSITESAVVY.Pages {
         protected global::System.Web.UI.WebControls.Label Label19;
         
         /// <summary>
-        /// lblBienBanGiamDinh control.
+        /// lblPhuLucDinhKemSR01 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblBienBanGiamDinh;
+        protected global::System.Web.UI.WebControls.Label lblPhuLucDinhKemSR01;
         
         /// <summary>
-        /// lblPhuLucGiamDinh control.
+        /// panelPhuLucDinhKemSR01 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblPhuLucGiamDinh;
+        protected global::System.Web.UI.WebControls.Panel panelPhuLucDinhKemSR01;
+        
+        /// <summary>
+        /// txtPhuLucDinhKemSR01 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtPhuLucDinhKemSR01;
+        
+        /// <summary>
+        /// Button25 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Button25;
         
         /// <summary>
         /// Label18 control.
@@ -1066,22 +1111,76 @@ namespace WEBSITESAVVY.Pages {
         protected global::System.Web.UI.WebControls.Button Button1;
         
         /// <summary>
-        /// lblDescriptionGioKhaoSat control.
+        /// lblGioKhaoSatHienTruong control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblDescriptionGioKhaoSat;
+        protected global::System.Web.UI.WebControls.Label lblGioKhaoSatHienTruong;
         
         /// <summary>
-        /// lblDescriptionGioKhaoSatEN control.
+        /// panelGioKhaoSatHienTruong control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblDescriptionGioKhaoSatEN;
+        protected global::System.Web.UI.WebControls.Panel panelGioKhaoSatHienTruong;
+        
+        /// <summary>
+        /// txtGioKhaoSatHienTruong control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtGioKhaoSatHienTruong;
+        
+        /// <summary>
+        /// Button22 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Button22;
+        
+        /// <summary>
+        /// lblGioKhaoSatHienTruongEN control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblGioKhaoSatHienTruongEN;
+        
+        /// <summary>
+        /// panelGioKhaoSatHienTruongEN control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel panelGioKhaoSatHienTruongEN;
+        
+        /// <summary>
+        /// txtGioKhaoSatHienTruongEN control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtGioKhaoSatHienTruongEN;
+        
+        /// <summary>
+        /// Button23 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Button23;
         
         /// <summary>
         /// Label35 control.

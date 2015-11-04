@@ -158,6 +158,13 @@
         }  
       
         
+        .label-edit
+        {
+            cursor:pointer;
+            min-height:20px;
+        }
+        
+                
         </style>
 
 </head>
@@ -548,23 +555,19 @@
                                     CssClass="field_input" Font-Bold="True" Font-Size="16px" ></asp:Label>
                             </td>
                         </tr>
-<%--=======
-                    <tr style="vertical-align:top;">
-                        <td style="padding:5px; font-weight: bold; font-size:16px; width:225px">
-                            <asp:Label ID="Label21"  runat="server" 
-                                Text="KHIẾU NẠI CỦA NĐBH" 
-                                Width="225px" Font-Size="16px" ></asp:Label>
-                        </td>
-                        <td>:</td>
-                        <td   >
-                            <asp:Label ID="lblKhieuNai" runat="server" Width="370px" 
-                                CssClass="field_input" Font-Bold="True" Font-Size="16px" ></asp:Label>
-                        </td>
-                    </tr>
->>>>>>> .r145
---%>
-
-<%--<<<<<<< .mine--%>
+<tr>
+                            <td class="bg_text">
+                                <asp:Label ID="Label1"  runat="server" 
+                                    Text="TẠM ỨNG BỒI THƯỜNG" 
+                                    Width="260px" ></asp:Label>
+                            </td>
+                            <td>:</td>
+                            <td >
+                                <asp:Label ID="lblTamUngBoiThuongPR" 
+                                   CssClass=" field_input" runat="server" Width="570px" 
+                                    Font-Bold="True" Font-Size="16px" ></asp:Label>                                
+                            </td>
+                        </tr>
                         <tr style="vertical-align:top;">
                             <td style="padding:5px; font-weight: bold; font-size:20px; width:225px" >
                                 <asp:Label ID="Label23"  runat="server" 
@@ -610,61 +613,67 @@
                 <h3 style="text-align:center; font-size:22px; color:#006600; margin:20px 0px 0px 0">MỤC LỤC BÁO CÁO</h3>
                 <table style="font-size:16px;width:640px; margin:20px 0px">
                     <tr onclick="window.location.href ='#A1'">
-                        <td style="width:350px; font-size:16px" ><b>I. GIỚI THIỆU CHUNG</b></td>
+                        <td style="width:350px; font-size:16px" ><b>GIỚI THIỆU CHUNG</b></td>
                         <td style="text-align:right; font-size:16px" >.................................................................................................................</td>
                     </tr>
                 </table>
                 <table style="font-size:16px;width:640px; margin:20px 0px">
                     <tr  onclick="window.location.href ='#GioiThieu'">
-                        <td style="width:350px; font-size:16px"><b>II. NGƯỜI ĐƯỢC BẢO HIỂM</b></td>
+                        <td style="width:350px; font-size:16px"><b>NGƯỜI ĐƯỢC BẢO HIỂM</b></td>
                         <td style="text-align:right; font-size:16px" > ......................................................................................................</td>
                     </tr>
                 </table>
                 <table style="font-size:16px;width:640px; margin:20px 0px">
                     <tr  onclick="window.location.href ='#C1'">
-                        <td style="width:350px; font-size:16px"><b>III. DIỄN BIẾN</b></td>
+                        <td style="width:350px; font-size:16px"><b>DIỄN BIẾN</b></td>
                         <td style="text-align:right; font-size:16px"> ................................................................................................................................ </td>
                     </tr>
                 </table>
                 <table style="font-size:16px;width:640px; margin:20px 0px">
                     <tr  onclick="window.location.href ='#C3'">
-                        <td style="width:350px; font-size:16px"><b>IV. NGUYÊN NHÂN</b></td>
+                        <td style="width:350px; font-size:16px"><b>NGUYÊN NHÂN</b></td>
                         <td style="text-align:right;font-size:16px"> ....................................................................................................................... </td>
                     </tr>
                 </table>
                 <table style="font-size:16px;width:640px; margin:20px 0px">
                     <tr  onclick="window.location.href ='#E1'">
-                        <td style="width:350px; font-size:16px"><b>V. PHẠM VI BẢO HIỂM </b></td>
+                        <td style="width:350px; font-size:16px"><b>PHẠM VI BẢO HIỂM </b></td>
                         <td style="text-align:right; font-size:16px"> ............................................................................................................... </td>
                     </tr>
                 </table>
                 <table style="font-size:16px;width:640px; margin:20px 0px">
                     <tr  onclick="window.location.href ='#D1'">
-                        <td style="width:350px; font-size:16px"><b>VI. PHẠM VI VÀ MỨC ĐỘ THIỆT HẠI </b></td>
+                        <td style="width:350px; font-size:16px"><b>PHẠM VI VÀ MỨC ĐỘ THIỆT HẠI </b></td>
                         <td style="text-align:right;  font-size:16px"> ..................................................................................... </td>
                     </tr>
                 </table>
                 <table style="font-size:16px;width:640px; margin:20px 0px">
                     <tr  onclick="window.location.href ='#G'">
-                        <td style="width:350px; font-size:16px"><b>VII. ĐƠN BẢO HIỂM KHÁC </b></td>
+                        <td style="width:350px; font-size:16px"><b>ĐƠN BẢO HIỂM KHÁC </b></td>
                         <td style="text-align:right;  font-size:16px"> ........................................................................................................ </td>
                     </tr>
                 </table>
                 <table style="font-size:16px;width:640px; margin:20px 0px">
                     <tr  onclick="window.location.href ='#H'">
-                        <td style="width:350px; font-size:16px"><b>VIII. GIÁ TRỊ THU HỒI </b></td>
+                        <td style="width:350px; font-size:16px"><b>GIÁ TRỊ THU HỒI </b></td>
                         <td style="text-align:right;  font-size:16px"> ................................................................................................................ </td>
+                    </tr>
+                </table>
+                 <table style="font-size:16px;width:640px; margin:20px 0px">
+                    <tr  onclick="window.location.href ='#TheQuyenTruyDoi'">
+                        <td style="width:450px; font-size:16px"><b>THẾ QUYỀN TRUY ĐÒI BÊN THỨ BA </b></td>
+                        <td style="text-align:right;  font-size:16px"> .................................................................................................... </td>
                     </tr>
                 </table>
                 <table style="font-size:16px;width:640px; margin:20px 0px">
                     <tr  onclick="window.location.href ='#I'">
-                        <td style="width:450px; font-size:16px"><b>IX. DỰ PHÒNG BỒI THƯỜNG </b></td>
+                        <td style="width:450px; font-size:16px"><b>DỰ PHÒNG BỒI THƯỜNG </b></td>
                         <td style="text-align:right;  font-size:16px"> .................................................................................................... </td>
                     </tr>
                 </table>
                 <table style="font-size:16px;width:640px; margin:20px 0px">
                     <tr  onclick="window.location.href ='#TT'">
-                        <td style="width:350px; font-size:16px"><b>X. BÁO CÁO TIẾP THEO </b></td>
+                        <td style="width:350px; font-size:16px"><b>BÁO CÁO TIẾP THEO </b></td>
                         <td style="text-align:right;  font-size:16px"> ............................................................................................................... </td>
                     </tr>
                 </table>
@@ -674,59 +683,64 @@
         </div>
 
         <div class="box" style="font-size:16px" >
-            <h3 style="font-size:16px" id="A1">I. GIỚI THIỆU CHUNG</h3>
+            <h3 style="font-size:16px" id="A1">GIỚI THIỆU CHUNG</h3>
             <div>
                 <asp:Label ID="lblA1" runat="server" Width="650px" ></asp:Label>
             </div>
         </div>
 
         <div class="box" style="font-size:16px" >
-            <h3 id="GioiThieu">II. NGƯỜI ĐƯỢC BẢO HIỂM</h3>
+            <h3 id="GioiThieu">NGƯỜI ĐƯỢC BẢO HIỂM</h3>
             <div><asp:Label ID="lblGioiThieu" runat="server" Width="650px" ></asp:Label></div>
         </div>
 
         <div class="box" style="font-size:16px" >
-            <h3 id="C1">III. DIỄN BIẾN</h3>
+            <h3 id="C1">DIỄN BIẾN</h3>
             <div><asp:Label ID="lblC1" runat="server" Width="650px" ></asp:Label></div>
         </div>
 
         <div class="box" style="font-size:16px" >
-            <h3 id="C3">IV. NGUYÊN NHÂN</h3>
+            <h3 id="C3">NGUYÊN NHÂN</h3>
             <div><asp:Label ID="lblC3" runat="server" Width="650px" ></asp:Label></div>
         </div>
 
         <div class="box" style="font-size:16px" >
-            <h3 id="E1">V. PHẠM VI BẢO HIỂM</h3>
+            <h3 id="E1">PHẠM VI BẢO HIỂM</h3>
             <div><asp:Label ID="lblE1" runat="server" Width="650px" ></asp:Label></div>
         </div>
 
         <div class="box" >
-            <h3 id="D1">VI. PHẠM VI VÀ MỨC ĐỘ THIỆT HẠI</h3>
+            <h3 id="D1">PHẠM VI VÀ MỨC ĐỘ THIỆT HẠI</h3>
             <div><asp:Label ID="lblD1" runat="server" Width="650px" ></asp:Label></div>
         </div>
 
         <div class="box" >
-            <h3 id="G">VII. ĐƠN BẢO HIỂM KHÁC</h3>
+            <h3 id="G">ĐƠN BẢO HIỂM KHÁC</h3>
             <div><asp:Label ID="lblG" runat="server" Width="650px" ></asp:Label></div>
         </div>
 
         <div class="box" >
-            <h3 id="H">VIII. GIÁ TRỊ THU HỒI</h3>
+            <h3 id="H">GIÁ TRỊ THU HỒI</h3>
             <div><asp:Label ID="lblH" runat="server" Width="650px" ></asp:Label></div>
         </div>
-
         <div class="box" >
-            <h3 id="I">IX. DỰ PHÒNG BỒI THƯỜNG</h3>
+            <h3 id="TheQuyenTruyDoi">THẾ QUYỀN TRUY ĐÒI BÊN THỨ BA</h3>
+            <div>
+                <asp:Label ID="lblTheQuyenTruyDoi" key="TheQuyenTruyDoi" onclick="editField(this)" CssClass="label-edit"  runat="server" Width="100%" ></asp:Label>
+                </div>
+        </div>
+        <div class="box" >
+            <h3 id="I">DỰ PHÒNG BỒI THƯỜNG</h3>
             <div><asp:Label ID="lblI" runat="server" Width="650px" ></asp:Label></div>
         </div>
 
         <div class="box" >
-            <h3 id="TamUngBoiThuongText">X. TẠM ỨNG BỒI THƯỜNG</h3>
+            <h3 id="TamUngBoiThuongText">TẠM ỨNG BỒI THƯỜNG</h3>
             <div><asp:Label ID="lblTamUngBoiThuongText" runat="server" Width="650px" ></asp:Label></div>
         </div>
 
         <div class="box" >
-            <h3 id="TT">XI. BÁO CÁO TIẾP THEO</h3>
+            <h3 id="TT">BÁO CÁO TIẾP THEO</h3>
             <div style="text-align: justify"><%--<asp:Label ID="lblTT" runat="server" Width="850px" ></asp:Label>--%>
             <p>  Các thông tin và diễn biến tiếp theo liên quan đến vụ tổn thất này sẽ tiếp tục được chúng tôi quan tâm theo dõi và sẽ định kỳ báo cáo để Nhà Bảo Hiểm nắm rõ.</p><p>  Nếu Quý Công ty Bảo hiểm có bất kỳ câu hỏi hoặc yêu cầu nào khác liên quan đến công tác giám định vụ tổn thất này, xin vui lòng liên lạc với chúng tôi để được hỗ trợ tốt nhất.</p></div>
         </div>
@@ -803,13 +817,12 @@
                         </td>
                         <td class="style2" style="font-size: 12px; color: #000066; font-style: italic" 
                             align="center">
-                            <asp:Label ID="Label41" runat="server" Text="(Chức vụ (Job Title):"></asp:Label>
+                            <asp:Label ID="Label41" runat="server" Text="(Chức vụ (Job Title):"></asp:Label><br />
                             <asp:Label ID="lblChucvuNguoiCheck" runat="server" Font-Bold="True" 
                                 ForeColor="#000066"></asp:Label>
                         </td>
                         <td class="style2" align="center" 
                             style="font-size: 12px; color: #000066; font-style: italic" width="35%">
-                            <br />
                             <asp:Label ID="Label45" runat="server" Text="(Chức vụ (Job Title):"></asp:Label>
                             <br />
                             <asp:Label ID="lblChucvuNguoiPheDuyet" runat="server" Font-Bold="True" 

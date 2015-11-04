@@ -21,7 +21,7 @@ namespace WEBSITESAVVY.Pages
                 mClaimID = Session["ThamChieu"].ToString();
                 loadData();
                 LoadSIG(mClaimID);
-                exportToWord();
+               exportToWord();
             }
         }
         void LoadSIG(string claimID)
@@ -38,16 +38,16 @@ namespace WEBSITESAVVY.Pages
             if (row1 != null)
             {
 
-                lblNguoiCheckBC.Text = row[0].ToString();
-                lblChucvuNguoiCheck.Text = row[1].ToString();
+                lblNguoiCheckBC.Text = row1[0].ToString();
+                lblChucvuNguoiCheck.Text = row1[1].ToString();
             }
 
             DataRow row2 = claimDao.InfoSignatureDirector();
             if (row2 != null)
             {
 
-                lblNguoiPheDuyet.Text = row[0].ToString();
-                lblChucvuNguoiPheDuyet.Text = row[1].ToString();
+                lblNguoiPheDuyet.Text = row2[0].ToString();
+                lblChucvuNguoiPheDuyet.Text = row2[1].ToString();
             }
 
         }
@@ -60,7 +60,7 @@ namespace WEBSITESAVVY.Pages
                 //lblNgayMoPR.Text = row["NgayBatDauGiamDinh"].ToString();
                 //lblNgayMoPR.Text = "Ngày " + DateTime.Now.Day + " tháng " + DateTime.Now.Month + " năm " + DateTime.Now.Year;
                 //lblRefKH.Text    = row["RefKH"].ToString();   
-                string ngayIR = row["IRDate"].ToString();
+                string ngayIR = "Ngày " + row["IRDate"].ToString();
                 if (ngayIR != "")
                 {
                     lblIRDate.Text = ngayIR;

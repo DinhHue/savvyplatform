@@ -563,7 +563,7 @@
                         <tr>
                             <td>
                                 <asp:Label ID="Label19"  runat="server" 
-                                    Text="ĐIỀU KHOẢN BỔ XUNG" 
+                                    Text="ĐIỀU KHOẢN BỔ SUNG" 
                                     Width="260px" CssClass=" bg_text" ></asp:Label>
                             </td>
                             <td>:</td>

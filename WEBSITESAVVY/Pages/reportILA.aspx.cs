@@ -17,6 +17,7 @@ namespace WEBSITESAVVY.Pages
         private DaiLyDAO dailyDao = new DaiLyDAO();
         public bool isLock = false;
         KhachHangDAO kh = new KhachHangDAO();
+        GiamDinhVienDAO gdv = new GiamDinhVienDAO();
         protected void Page_Load(object sender, EventArgs e)
         {
             //if (Request.QueryString["claimID"] != null)
@@ -68,6 +69,7 @@ namespace WEBSITESAVVY.Pages
         {
             loadSIGNPre(claimID);
             loadSIGNCheck(claimID);
+            loadGDV();
             DataRow row = claimDao.LayInFoReportILA(claimID);
           
             if (row != null)
@@ -80,11 +82,17 @@ namespace WEBSITESAVVY.Pages
                     txtILADATE.Text = ngaybaocao;
                 }
                 else
-                    lblILADATE.Text = "Ngày dd/mm/yyy.";
+                    lblILADATE.Text = "dd/mm/yyy.";
 
                 lblTenClaim.Text = "ILA_" + row["TenClaim"].ToString();
-                lblGiamDinhVien.Text = row["FullName"].ToString();
-
+                string nguoiILA = row["ILAGDV"].ToString();
+                if (nguoiILA != "")
+                {
+                    lblILAGDV.Text = nguoiILA;
+                    txtILAGDV.Text = nguoiILA;
+                }
+                else
+                    lblILAGDV.Text=row["FullName"].ToString();
                 lblTenNhaBH.Text = row["TenNhaBH"].ToString();
 
                 lblPolicyNO.Text = row["PolicyNo"].ToString();
@@ -164,7 +172,7 @@ namespace WEBSITESAVVY.Pages
             DataRow row = claimDao.InfoSignatureILAPre(claimID);
             if (row != null)
             {
-                lblNguoiBaoCao.Text = row[0].ToString();
+                lblID_GDVILA.Text = row[0].ToString();
                 lblChucVuNguoiBC.Text = row[1].ToString();
               
             }
@@ -175,9 +183,20 @@ namespace WEBSITESAVVY.Pages
             if (row != null)
             {
                 
-                lblNguoiCheckBC.Text = row[0].ToString();
+                lblID_GDVCheckILA.Text = row[0].ToString();
                 lblChucvuNguoiCheck.Text = row[1].ToString();
             }
+        }
+        void loadGDV()
+        {
+            drID_GDVILA.DataSource = gdv.DanhSachGiamDinhVien();
+            drID_GDVILA.DataTextField = "TenGDV";
+            drID_GDVILA.DataValueField = "ID_GDV";
+            drID_GDVILA.DataBind();
+            drID_GDVCheckILA.DataSource = gdv.DanhSachGiamDinhVien();
+            drID_GDVCheckILA.DataTextField = "TenGDV";
+            drID_GDVCheckILA.DataValueField = "ID_GDV";
+            drID_GDVCheckILA.DataBind();
         }
         private void loadDanhMucThietHai(String claimID)
         {
@@ -201,6 +220,42 @@ namespace WEBSITESAVVY.Pages
             gvDanhMucThietHai.DataBind();
         }
         GiamDinhVienDAO gdvdao = new GiamDinhVienDAO();
+        protected void btnUpdateGDV_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                mClaimID = Session["ThamChieu"].ToString();
+                //int claimID = int.Parse(mClaimID);
+
+                Button btn = (Button)sender;
+                string key = btn.Attributes["key"];
+
+                DropDownList drValue = (DropDownList)FindControl("dr" + key);
+                int id = int.Parse(drValue.SelectedValue.ToString());
+                string title = "";
+
+                bool up = claimDao.UpdatePrepareILA(mClaimID, id);
+                if (up == true)
+                {
+                    loadSIGNPre(mClaimID);
+
+                }
+                else
+                    Response.Write("<script> alert('Update preparer error!');</script>");
+                int maGDV = int.Parse(Request.Cookies["MaGDV"].Value);
+                GiamDinhVienDAO gdv = new GiamDinhVienDAO();
+                string noidung = gdv.LayTenTheoMa(maGDV) + " edited " + title + " of " + mClaimID + ".";
+                SaveLogTracking(maGDV, noidung, mClaimID);
+
+
+                Response.Redirect(Request.RawUrl + "#" + key);
+
+            }
+            catch (Exception ex)
+            {
+                Response.Write("<script>alert('Error', 'Error update data');</script>");
+            }
+        }
         protected void btnPrepareILA_Click(object sender, EventArgs e)
         {
             
@@ -345,6 +400,42 @@ namespace WEBSITESAVVY.Pages
                 string noidung = gdv.LayTenTheoMa(maGDV) + " edited " + title + " of " + mClaimID + ".";
                 SaveLogTracking(maGDV, noidung, mClaimID);
                 Response.Redirect(Request.RawUrl + "#" + key);
+            }
+            catch (Exception ex)
+            {
+                Response.Write("<script>alert('Error', 'Error update data');</script>");
+            }
+        }
+        protected void btnUpdateGDVCheck_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                mClaimID = Session["ThamChieu"].ToString();
+                //int claimID = int.Parse(mClaimID);
+
+                Button btn = (Button)sender;
+                string key = btn.Attributes["key"];
+
+                DropDownList drValue = (DropDownList)FindControl("dr" + key);
+                int id = int.Parse(drValue.SelectedValue.ToString());
+                string title = "";
+
+                bool up = claimDao.UpdateCheckILA(mClaimID, id);
+                if (up == true)
+                {
+                    loadSIGNCheck(mClaimID);
+
+                }
+                else
+                    Response.Write("<script> alert('Update preparer error!');</script>");
+                int maGDV = int.Parse(Request.Cookies["MaGDV"].Value);
+                GiamDinhVienDAO gdv = new GiamDinhVienDAO();
+                string noidung = gdv.LayTenTheoMa(maGDV) + " edited " + title + " of " + mClaimID + ".";
+                SaveLogTracking(maGDV, noidung, mClaimID);
+
+
+                Response.Redirect(Request.RawUrl + "#" + key);
+
             }
             catch (Exception ex)
             {
