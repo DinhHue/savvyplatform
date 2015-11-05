@@ -54,10 +54,10 @@ namespace WEBSITESAVVY.Pages
                 if (ngayIR != "")
                 {
                     lblIRDate.Text = ngayIR;
-                    txtIRDate.Text = ngayIR;
+                    txtIRDate.Text = row["IRDate"].ToString();
                 }
                 else
-                    lblIRDate.Text = "Ngày dd/mm/yyy.";
+                    lblIRDate.Text = "dd/mm/yyy.";
                 string tc = row["RefKH"].ToString();
                 if (tc != "")
                 {

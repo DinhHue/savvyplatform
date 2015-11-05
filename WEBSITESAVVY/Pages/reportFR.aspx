@@ -634,7 +634,7 @@
                         <tr>
                             <td>
                                 <asp:Label  runat="server" 
-                                    Text="THUỘC PHẠM VI NBH" 
+                                    Text="THUỘC PHẠM VI HĐBH" 
                                     Width="260px" CssClass=" bg_text" ></asp:Label>
                             </td>
                             <td>:</td>
@@ -697,7 +697,7 @@
                         <tr>
                             <td>
                                 <asp:Label   runat="server" 
-                                    Text="TRỪ MỨC MIẾN THƯỞNG" 
+                                    Text="TRỪ MỨC MIẾN THƯỜNG" 
                                     Width="260px" CssClass=" bg_text" Font-Italic="True" ></asp:Label>
                             </td>
                             <td>:</td>
@@ -779,21 +779,21 @@
 
                 <h3 style="text-align:center; font-size:25px!important; color:#006600; margin:20px 0px 0px 0">MỤC LỤC BÁO CÁO</h3>
                                 <table style="cursor:pointer" cellpadding="20px" width="100%" >
-                    <tr><td onclick="window.location.href ='#ExecutiveSummaryFR'"><b style="float:left">I. TÓM TẮT VỤ VIỆC </b>
+                    <tr><td onclick="window.location.href ='#ExecutiveSummaryFR'"><b style="float:left">TÓM TẮT VỤ VIỆC </b>
                         <div style="float:right; text-align:right;" >..................................................................................................................................</div></td></tr>
-                    <tr><td onclick="window.location.href ='#K'"><b style="float:left">II. QUÁ TRÌNH XỬ LÝ VÀ KHIẾU NẠI </b>
+                    <tr><td onclick="window.location.href ='#K'"><b style="float:left">QUÁ TRÌNH XỬ LÝ VÀ KHIẾU NẠI </b>
                         <div style="float:right; text-align:right;" >......................................................................................................</div></td></tr>
-                    <tr><td onclick="window.location.href ='#C3FR'"><b style="float:left">III. NGUYÊN NHÂN </b>
+                    <tr><td onclick="window.location.href ='#C3FR'"><b style="float:left">NGUYÊN NHÂN </b>
                         <div style="float:right; text-align:right;" >......................................................................................................................................</div></td></tr>
-                    <tr><td onclick="window.location.href ='#E2'"><b style="float:left">IV. PHẠM VI BẢO HIỂM </b>
+                    <tr><td onclick="window.location.href ='#E2'"><b style="float:left">PHẠM VI BẢO HIỂM </b>
                         <div style="float:right; text-align:right;" >.............................................................................................................................</div></td></tr>
-                    <tr><td onclick="window.location.href ='#B1'"><b style="float:left">V. YÊU CẦU BỒI THƯỜNG VÀ ĐỀ XUẤT TÍNH TOÁN </b>
+                    <tr><td onclick="window.location.href ='#B1'"><b style="float:left">YÊU CẦU BỒI THƯỜNG VÀ ĐỀ XUẤT TÍNH TOÁN </b>
                         <div style="float:right; text-align:right;" >..........................................................................</div></td></tr>
-                    <tr><td onclick="window.location.href ='#H'"><b style="float:left">VI. GIÁ TRỊ THU HỒI&nbsp; </b>
+                    <tr><td onclick="window.location.href ='#H'"><b style="float:left">GIÁ TRỊ THU HỒI&nbsp; </b>
                         <div style="float:right; text-align:right;" >.................................................................................................................................</div></td></tr>
-                    <tr><td onclick="window.location.href ='#B2'"><b style="float:left">VII. ĐỀ XUẤT CHUNG CUỘC </b>
+                    <tr><td onclick="window.location.href ='#B2'"><b style="float:left">ĐỀ XUẤT CHUNG CUỘC </b>
                         <div style="float:right; text-align:right;" >.....................................................................................................................</div></td></tr>
-                    <tr><td onclick="window.location.href ='#Conclution'"><b style="float:left">VIII. KẾT LUẬN </b>
+                    <tr><td onclick="window.location.href ='#Conclution'"><b style="float:left">KẾT LUẬN </b>
                         <div style="float:right; text-align:right;" >............................................................................................................................................</div></td></tr>
                 
                 </table>
@@ -807,7 +807,7 @@
 
 
         <div class="box" >
-            <h3 id="ExecutiveSummaryFR" key="ExecutiveSummaryFR" title="Executive Summary" >I. TÓM TẮT VỤ VIỆC</h3>
+            <h3 id="ExecutiveSummaryFR" key="ExecutiveSummaryFR" title="Executive Summary" >TÓM TẮT VỤ VIỆC</h3>
             <div>
                 <asp:Label ID="lblExecutiveSummaryFR" key="ExecutiveSummaryFR" onclick="editField(this)" CssClass="label-edit"  runat="server" Width="100%" ></asp:Label>
                 <asp:Panel ID="panelExecutiveSummaryFR" CssClass="panelUpdate hiden" runat="server">
@@ -821,7 +821,7 @@
         </div>
 
         <div class="box" >
-            <h3 id="K" key="K" title="Claim handling Process">II. QUÁ TRÌNH XỬ LÝ VÀ KHIẾU NẠI</h3>
+            <h3 id="K" key="K" title="Claim handling Process">QUÁ TRÌNH XỬ LÝ VÀ KHIẾU NẠI</h3>
             <div>
                 <asp:Label ID="lblK" key="K" onclick="editField(this)" CssClass="label-edit"  runat="server" Width="100%" ></asp:Label>
                 <asp:Panel ID="panelK" CssClass="panelUpdate hiden" runat="server">
@@ -836,7 +836,7 @@
 
 
         <div class="box" >
-            <h3 id="C3FR" key="C3FR" title="Cause of loss">III. NGUYÊN NHÂN</h3>
+            <h3 id="C3FR" key="C3FR" title="Cause of loss">NGUYÊN NHÂN</h3>
             <div>
                 <asp:Label ID="lblC3FR" key="C3FR" onclick="editField(this)" CssClass="label-edit"  runat="server" Width="100%" ></asp:Label>
                 <asp:Panel ID="panelC3FR" CssClass="panelUpdate hiden" runat="server">
@@ -850,7 +850,7 @@
         </div>
 
         <div class="box" >
-            <h3 id="E2" key="E2" title="Policy liability" >IV. PHẠM VI BẢO HIỂM</h3>
+            <h3 id="E2" key="E2" title="Policy liability" >PHẠM VI BẢO HIỂM</h3>
             <div>
                 <asp:Label ID="lblE2" key="E2" onclick="editField(this)" CssClass="label-edit" runat="server" Width="100%" ></asp:Label>
                 <asp:Panel ID="panelE2" CssClass="panelUpdate hiden" runat="server">
@@ -864,7 +864,7 @@
         </div>
 
         <div class="box" >
-            <h3 id="B1" key="B1" title="Claim amount and proposed settlement">V. YÊU CẦU BỒI THƯỜNG VÀ ĐỀ XUẤT TÍNH TOÁN</h3>
+            <h3 id="B1" key="B1" title="Claim amount and proposed settlement">YÊU CẦU BỒI THƯỜNG VÀ ĐỀ XUẤT TÍNH TOÁN</h3>
             <div>
                 <asp:Label ID="lblB1" key="B1" onclick="editField(this)" CssClass="label-edit" runat="server" Width="100%" ></asp:Label>
                 <asp:Panel ID="panelB1" CssClass="panelUpdate hiden" runat="server">
@@ -875,11 +875,8 @@
                     </div>
                 </asp:Panel>
             </div>
-        </div>
-
-
-        <div class="box" >
-            <h3 id="H" key="H" title="Salvage" >VI. GIÁ TRỊ THU HỒI</h3>
+            <h3 id="H" key="H" title="Salvage" >
+                GIÁ TRỊ THU HỒI</h3>
             <div>
                 <asp:Label ID="lblH" key="H" onclick="editField(this)" CssClass="label-edit" runat="server" Width="100%" ></asp:Label>
                 <asp:Panel ID="panelH" CssClass="panelUpdate hiden" runat="server">
@@ -890,10 +887,8 @@
                     </div>
                 </asp:Panel>
             </div>
-        </div>
-
-        <div class="box" >
-            <h3 id="B2" key="B2" title="Final Proposed Settlement" >VII. ĐỀ XUẤT CHUNG CUỘC</h3>
+            <h3 id="B2" key="B2" title="Final Proposed Settlement" >
+                ĐỀ XUẤT CHUNG CUỘC</h3>
             <div>
                 <asp:Label ID="lblB2" key="B2" onclick="editField(this)" CssClass="label-edit" runat="server" Width="100%" ></asp:Label>
                 <asp:Panel ID="panelB2" CssClass="panelUpdate hiden" runat="server">
@@ -907,7 +902,7 @@
         </div>
 
         <div class="box" >
-            <h3 id="Conclution" key="Conclution" title="Conclusion" >VIII. KẾT LUẬN</h3>
+            <h3 id="Conclution" key="Conclution" title="Conclusion" >KẾT LUẬN</h3>
             <div>
                 <asp:Label ID="lblConclution" key="Conclution" onclick="editField(this)" CssClass="label-edit" runat="server" Width="100%" ></asp:Label>
                 <asp:Panel ID="panelConclution" CssClass="panelUpdate hiden" runat="server">

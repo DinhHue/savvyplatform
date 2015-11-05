@@ -384,7 +384,7 @@
                                         <td><asp:Label ID="lblEffective" runat="server"  Width="195px" Font-Bold=False ></asp:Label></td>
                                     </tr>
                                     <tr>
-                                        <td><span><b>3. <u>Mức miễn thưởng:</u></b></span> </td>
+                                        <td><span><b>3. <u>Mức miễn thường:</u></b></span> </td>
                                         <td><asp:Label ID="lblMucMienThuong" runat="server" Width="195px" Font-Bold=False ></asp:Label></td>
                                     </tr>
                                 </table>
@@ -396,7 +396,7 @@
                         <tr style="vertical-align:top; font-size:16px;">
                             <td style="padding:5px; font-weight: bold; width:200px;">
                                 <asp:Label ID="Label19"  runat="server" 
-                                    Text="ĐIỀU KHOẢN BỔ XUNG" 
+                                    Text="ĐIỀU KHOẢN BỔ SUNG" 
                                     Width="200px" CssClass=" bg_text" ></asp:Label>
                             </td>
                             <td>:</td>

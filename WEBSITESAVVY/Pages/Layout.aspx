@@ -359,7 +359,7 @@
             <div id="PR" title="PR" >
 				<ol type="1">
                     <li><a href="../Pages/basicinforPR.aspx?type=PR" class="easyui-linkbutton" data-options="plain:true" onclick="return showPopup(this);">Basic Infomation </a></li>
-                    <li><a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true" key="PRDate" title="Date Prepare Report - PR" type="date" onclick="updateField(this);">Date Prepare Report</a></li>
+                   <%-- <li><a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true" key="PRDate" title="Date Prepare Report - PR" type="date" onclick="updateField(this);">Date Prepare Report</a></li>--%>
 				    <li><a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true" key="A1" title="Introduction - PR" onclick="updateField(this);">Introduction</a></li>
 				    <li><a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true" key="GioiThieu" onclick="updateField(this);">Insured </a></li>
 				    <li><a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true" key="DienBienTonThat" onclick="updateField(this);">Circumstance</a></li>
@@ -375,8 +375,8 @@
 			</div>
 			<div title="IR" >
 				<ol type="1">
-                    <li><a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true" key="IRDate" type="date" onclick="updateField(this);">Date Prepare Report</a></li>
-                     <li><a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true" key="TamUngBoiThuong" onclick="updateField(this);">Interim Payment</a></li>
+                    <%--<li><a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true" key="IRDate" type="date" onclick="updateField(this);">Date Prepare Report</a></li>
+                     <li><a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true" key="TamUngBoiThuong" onclick="updateField(this);">Interim Payment</a></li>--%>
 				    <li><a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true" key="ExecutiveSummaryIR" onclick="updateField(this);">Executive Summary</a></li>
 				    <li><a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true" key="K" onclick="updateField(this);">Claim Handling TimeLine</a></li>
 				    <li><a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true" key="AdjustmentIR" onclick="updateField(this);">Outline of Claim Adjustment </a></li>
@@ -388,13 +388,13 @@
 			</div>
 			<div title="FR" >
 				<ol type="1">
-                    <li><a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true" key="FRDate"type="date" onclick="updateField(this);">Date Prepare Report</a></li>
+                  <%--  <li><a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true" key="FRDate"type="date" onclick="updateField(this);">Date Prepare Report</a></li>--%>
                     <li><a href="../Pages/BasicFR.aspx?type=FR" class="easyui-linkbutton" data-options="plain:true" onclick="return showPopup(this);">General Information</a></li>
 				    <li><a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true" key="ExecutiveSummaryFR" onclick="updateField(this);">Executive Summary</a></li>
 				    <li><a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true" key="K" onclick="updateField(this);">Claim handling Process</a></li>
 				    <li><a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true" key="C3FR" onclick="updateField(this);">Cause of loss</a></li>
 				    <li><a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true" key="E2" onclick="updateField(this);">Policy liability </a></li>
-				    <li><a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true" key="B1" onclick="updateField(this);">Claim amount and proposed settlement</a></li>
+				    <li><a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true" key="B1" onclick="updateField(this);">Outline of claim adjustment</a></li>
 				    <li><a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true" key="H" onclick="updateField(this);">Salvage</a></li>
 				    <li><a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true" key="B2" onclick="updateField(this);">Final Proposed Settlement</a></li>
 				    <li><a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true" key="Conclution" onclick="updateField(this);">Conclusion</a></li>
@@ -402,7 +402,7 @@
 			</div>
             <div title="FFR" >
 				<ol type="1">
-                    <li><a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true" key="FFRDate" type="date" onclick="updateField(this);">Date Prepare Report</a></li>
+                   <%-- <li><a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true" key="FFRDate" type="date" onclick="updateField(this);">Date Prepare Report</a></li>--%>
                      <li><a href="../Pages/BasicFR.aspx?type=FR" class="easyui-linkbutton" data-options="plain:true" onclick="return showPopup(this);">General Information</a></li>
                      <li><a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true" key="ExecutiveSummaryFR" onclick="updateField(this);">Executive Summary</a></li>
 				    <li><a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true" key="GioiThieu" onclick="updateField(this);">Insured </a></li>

@@ -404,7 +404,7 @@
                                         <td><asp:Label ID="lblEffective" runat="server"  Width="230px" Font-Bold=False ></asp:Label></td>
                                     </tr>
                                     <tr>
-                                        <td style="font-size:15px;"><span><b>3. <u>Mức miễn thưởng:</u></b></span> </td>
+                                        <td style="font-size:15px;"><span><b>3. <u>Mức miễn thường:</u></b></span> </td>
                                         <td><asp:Label ID="lblMucMienThuong" runat="server" Width="230px" Font-Bold=False ></asp:Label></td>
                                     </tr>
                                 </table>
@@ -416,7 +416,7 @@
                         <tr style="vertical-align:top; font-size:16px;">
                             <td style="padding:5px; font-weight: bold; width:210px;">
                                 <asp:Label   runat="server" 
-                                    Text="ĐIỀU KHOẢN BỔ XUNG" 
+                                    Text="ĐIỀU KHOẢN BỔ SUNG" 
                                     Width="200px" CssClass=" bg_text" ></asp:Label>
                             </td>
                             <td>:</td>
@@ -456,7 +456,7 @@
                         <tr style="vertical-align:top; font-size:16px;">
                             <td style="padding:5px; font-weight: bold; width:210px;">
                                 <asp:Label runat="server" 
-                                    Text="THUỘC PHẠM VI NBH" 
+                                    Text="THUỘC PHẠM VI HĐBH" 
                                     Width="200px" CssClass=" bg_text" ></asp:Label>
                             </td>
                             <td>:</td>
@@ -536,49 +536,49 @@
                     
                 <table style="font-size:16px;width:650px; margin:20px 0px">
                     <tr >
-                        <td style="width:180px; font-size:16px" ><b>I. TÓM TẮT VỤ VIỆC</b></td>
+                        <td style="width:180px; font-size:16px" ><b>TÓM TẮT VỤ VIỆC</b></td>
                         <td style="text-align:right; font-size:16px" >.....................................................................................................................</td>
                     </tr>
                 </table>     
                 <table style="font-size:16px;width:650px; margin:20px 0px">
                     <tr>
-                        <td style="width:350px; font-size:16px" ><b>II. QUÁ TRÌNH XỬ LÝ VÀ KHIẾU NẠI</b></td>
+                        <td style="width:350px; font-size:16px" ><b>QUÁ TRÌNH XỬ LÝ VÀ KHIẾU NẠI</b></td>
                         <td style="text-align:right; font-size:16px" >........................................................................................</td>
                     </tr>
                 </table>  
                 <table style="font-size:16px;width:650px; margin:20px 0px">
                     <tr >
-                        <td style="font-size:16px" class="style3" ><b>III. NGUYÊN NHÂN</b></td>
+                        <td style="font-size:16px" class="style3" ><b>NGUYÊN NHÂN</b></td>
                         <td style="text-align:right; font-size:16px" >.........................................................................................................................</td>
                     </tr>
                 </table>  
                 <table style="font-size:16px;width:650px; margin:20px 0px">
                     <tr>
-                        <td style="width:200px; font-size:16px" ><b>IV. PHẠM VI BẢO HIỂM</b></td>
+                        <td style="width:200px; font-size:16px" ><b>PHẠM VI BẢO HIỂM</b></td>
                         <td style="text-align:right; font-size:16px" >................................................................................................................</td>
                     </tr>
                 </table>  
                 <table style="font-size:16px;width:650px; margin:20px 0px">
                     <tr >
-                        <td style="font-size:16px" class="style2" ><b>V. YÊU CẦU BỒI THƯỜNG VÀ ĐỀ XUẤT TÍNH TOÁN</b></td>
+                        <td style="font-size:16px" class="style2" ><b>YÊU CẦU BỒI THƯỜNG VÀ ĐỀ XUẤT TÍNH TOÁN</b></td>
                         <td style="text-align:right; font-size:16px" >..........................................................</td>
                     </tr>
                 </table>         
                <table style="font-size:16px;width:650px; margin:20px 0px">
                     <tr >
-                        <td style="width:180px; font-size:16px" ><b>VI. GIÁ TRỊ THU HỒI</b></td>
+                        <td style="width:180px; font-size:16px" ><b>GIÁ TRỊ THU HỒI</b></td>
                         <td style="text-align:right; font-size:16px" >......................................................................................................................</td>
                     </tr>
                 </table>     
                 <table style="font-size:16px;width:650px; margin:20px 0px">
                     <tr >
-                        <td style="font-size:16px" class="style1" ><b>VII. ĐỀ XUẤT CHUNG CUỘC</b></td>
+                        <td style="font-size:16px" class="style1" ><b>ĐỀ XUẤT CHUNG CUỘC</b></td>
                         <td style="text-align:right; font-size:16px" >........................................................................................................</td>
                     </tr>
                 </table>    
                 <table style="font-size:16px;width:650px; margin:20px 0px">
                     <tr >
-                        <td style="width:150px; font-size:16px" ><b>VIII. KẾT LUẬN</b></td>
+                        <td style="width:150px; font-size:16px" ><b>KẾT LUẬN</b></td>
                         <td style="text-align:right; font-size:16px" >................................................................................................................................</td>
                     </tr>
                 </table>        
@@ -595,46 +595,46 @@
 
 
         <div class="box" >
-            <h3 id="ExecutiveSummaryFR">I. TÓM TẮT VỤ VIỆC</h3>
+            <h3 id="ExecutiveSummaryFR">TÓM TẮT VỤ VIỆC</h3>
             <div>
                 <asp:Label ID="lblExecutiveSummaryFR" runat="server" Width="100%" ></asp:Label>
             </div>
         </div>
 
         <div class="box" >
-            <h3 id="K">II. QUÁ TRÌNH XỬ LÝ VÀ KHIẾU NẠI</h3>
+            <h3 id="K">QUÁ TRÌNH XỬ LÝ VÀ KHIẾU NẠI</h3>
             <div><asp:Label ID="lblK" runat="server" Width="100%" ></asp:Label></div>
         </div>
 
 
         <div class="box" >
-            <h3 id="C3FR">III. NGUYÊN NHÂN</h3>
+            <h3 id="C3FR">NGUYÊN NHÂN</h3>
             <div><asp:Label ID="lblC3FR" runat="server" Width="100%" ></asp:Label></div>
         </div>
 
         <div class="box" >
-            <h3 id="E2">IV. PHẠM VI BẢO HIỂM</h3>
+            <h3 id="E2">PHẠM VI BẢO HIỂM</h3>
             <div><asp:Label ID="lblE2" runat="server" Width="100%" ></asp:Label></div>
         </div>
 
         <div class="box" >
-            <h3 id="B1">V. YÊU CẦU BỒI THƯỜNG VÀ ĐỀ XUẤT TÍNH TOÁN</h3>
+            <h3 id="B1">YÊU CẦU BỒI THƯỜNG VÀ ĐỀ XUẤT TÍNH TOÁN</h3>
             <div><asp:Label ID="lblB1" runat="server" Width="100%" ></asp:Label></div>
         </div>
 
 
         <div class="box" >
-            <h3 id="H">VI. GIÁ TRỊ THU HỒI</h3>
+            <h3 id="H">GIÁ TRỊ THU HỒI</h3>
             <div><asp:Label ID="lblH" runat="server" Width="100%" ></asp:Label></div>
         </div>
 
         <div class="box" >
-            <h3 id="B2">VII. ĐỀ XUẤT CHUNG CUỘC</h3>
+            <h3 id="B2">ĐỀ XUẤT CHUNG CUỘC</h3>
             <div><asp:Label ID="lblB2" runat="server" Width="100%" ></asp:Label></div>
         </div>
 
         <div class="box" >
-            <h3 id="Conclution">VIII. KẾT LUẬN</h3>
+            <h3 id="Conclution">KẾT LUẬN</h3>
             <div><asp:Label ID="lblConclution" runat="server" Width="100%" ></asp:Label></div>
         </div>
         
