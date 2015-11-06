@@ -55,14 +55,14 @@ namespace WEBSITESAVVY.Pages
 
                 //lblNgayMoPR.Text = row["NgayBatDauGiamDinh"].ToString();
                 //lblNgayMoPR.Text = "Ngày " + DateTime.Now.Day + " tháng " + DateTime.Now.Month + " năm " + DateTime.Now.Year;
-                string ngayPR = "Ngày " + row["PRDate"].ToString();
+                string ngayPR =  row["PRDate"].ToString();
                 if (ngayPR != "")
                 {
-                    lblPRDate.Text = ngayPR;
-                    txtPRDate.Text = row["PRDate"].ToString();
+                    lblPRDate.Text = "Ngày " + ngayPR;
+                    txtPRDate.Text = ngayPR;
                 }
                 else
-                    lblPRDate.Text = "Ngày dd/mm/yyy.";
+                    lblPRDate.Text = "Ngày dd/mm/yyyy.";
                 string tc = row["RefKH"].ToString(); 
                 if(tc!="")
                 {
@@ -126,9 +126,18 @@ namespace WEBSITESAVVY.Pages
                 }
                 else
                     lblKhieuNai.Text = "(Đang cập nhật)";
+                string duphongILA = row["DuPhongTonThat"].ToString();
 
-                lblDuPhongBoiThuong.Text = row["DuPhongBoiThuong"].ToString();
-                txtDuPhongBoiThuong.Text = lblDuPhongBoiThuong.Text;
+                if (row["DuPhongTonThatPR"].ToString() != "")
+                {
+                    lblDuPhongTonThatPR.Text = row["DuPhongTonThatPR"].ToString(); ;
+                    txtDuPhongTonThatPR.Text = lblDuPhongTonThatPR.Text;
+                }
+                else
+                {
+                    lblDuPhongTonThatPR.Text = duphongILA;
+                    txtDuPhongTonThatPR.Text = lblDuPhongTonThatPR.Text;
+                }
 
                 //load nội dung
                 lblGioiThieu.Text = row["GioiThieu"].ToString();
@@ -259,6 +268,8 @@ namespace WEBSITESAVVY.Pages
             {
                 lblNguoiBaoCao.Text = row[0].ToString();
                 lblChucVuNguoiBC.Text = row[1].ToString();
+                lblDienThoaiPre.Text = row[2].ToString();
+                lblEmailPre.Text = row[3].ToString();
 
             }
         }

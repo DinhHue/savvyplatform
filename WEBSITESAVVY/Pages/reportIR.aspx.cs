@@ -50,14 +50,14 @@ namespace WEBSITESAVVY.Pages
             {
                 lblTenClaim.Text = "IR_" + row["TenClaim"].ToString();
                 lblTenClaim1.Text = lblTenClaim.Text;
-                string ngayIR  = "Ngày "+ row["IRDate"].ToString();
+                string ngayIR = row["IRDate"].ToString();
                 if (ngayIR != "")
                 {
-                    lblIRDate.Text = ngayIR;
-                    txtIRDate.Text = row["IRDate"].ToString();
+                    lblIRDate.Text = "Ngày " + ngayIR;
+                    txtIRDate.Text = ngayIR;
                 }
                 else
-                    lblIRDate.Text = "dd/mm/yyy.";
+                    lblIRDate.Text = "Ngày dd/mm/yyyy.";
                 string tc = row["RefKH"].ToString();
                 if (tc != "")
                 {
@@ -107,7 +107,24 @@ namespace WEBSITESAVVY.Pages
                     lblKhieuNai.Text = row["KhieuNai"].ToString();
                 else
                     lblKhieuNai.Text = "(Đang cập nhật)";
-                lblDuPhongBoiThuong.Text = row["DuPhongBoiThuong"].ToString();
+                string duphongILA = row["DuPhongTonThat"].ToString();
+                string duphongPR = row["DuPhongTonThatPR"].ToString();
+                string duphongIR = row["DuPhongTonThatIR"].ToString(); 
+                if(duphongIR!="")
+                {
+                    lblDuPhongTonThatIR.Text = duphongIR;
+                    txtDuPhongTonThatIR.Text = duphongIR;
+                }
+                if (duphongIR == "" && duphongPR != "")
+                {
+                    lblDuPhongTonThatIR.Text = duphongPR;
+                    txtDuPhongTonThatIR.Text = duphongPR;
+                }
+                if (duphongIR == "" && duphongPR == "")
+                {
+                    lblDuPhongTonThatIR.Text = duphongILA;
+                    txtDuPhongTonThatIR.Text = duphongILA;
+                }
                 lblTamUngBoiThuong.Text  = row["TamUngBoiThuong"].ToString();
                 //load nội dung
                 lblExecutiveSummaryIR.Text = row["ExecutiveSummaryIR"].ToString();

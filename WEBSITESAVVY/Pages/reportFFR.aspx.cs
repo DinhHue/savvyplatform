@@ -54,11 +54,11 @@ namespace WEBSITESAVVY.Pages
                 string ngayIR = row["FFRDate"].ToString();
                 if (ngayIR != "")
                 {
-                    lblFFRDate.Text = ngayIR;
+                    lblFFRDate.Text = "Ngày " + ngayIR;
                     txtFFRDate.Text = ngayIR;
                 }
                 else
-                    lblFFRDate.Text = "Ngày dd/mm/yyy.";
+                    lblFFRDate.Text = "Ngày dd/mm/yyyy.";
                 string tc = row["RefKH"].ToString();
                 if (tc != "")
                 {
