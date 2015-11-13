@@ -21,7 +21,7 @@ namespace WEBSITESAVVY.Pages
                 mClaimID = Session["ThamChieu"].ToString();
                 loadData();
                 LoadSIG(mClaimID);
-               exportToWord();
+                exportToWord();
             }
         }
         void LoadSIG(string claimID)
@@ -29,8 +29,10 @@ namespace WEBSITESAVVY.Pages
             DataRow row = claimDao.InfoSignatureIRPre(claimID);
             if (row != null)
             {
-                lblNguoiBaoCao.Text = row[0].ToString();
+                lblID_GDVIR.Text = row[0].ToString();
                 lblChucVuNguoiBC.Text = row[1].ToString();
+                lblDienThoaiPre.Text = row[2].ToString();
+                lblEmailPre.Text = row[3].ToString();
 
             }
 
@@ -38,8 +40,10 @@ namespace WEBSITESAVVY.Pages
             if (row1 != null)
             {
 
-                lblNguoiCheckBC.Text = row1[0].ToString();
+                lblID_GDVIRCheck.Text = row1[0].ToString();
                 lblChucvuNguoiCheck.Text = row1[1].ToString();
+                lblDienThoaiCheck.Text = row1[2].ToString();
+                lblEmailCheck.Text = row1[3].ToString();
             }
 
             DataRow row2 = claimDao.InfoSignatureDirector();
@@ -48,6 +52,8 @@ namespace WEBSITESAVVY.Pages
 
                 lblNguoiPheDuyet.Text = row2[0].ToString();
                 lblChucvuNguoiPheDuyet.Text = row2[1].ToString();
+                lblDienThoaiPheduyet.Text = row2[2].ToString();
+                lblEmailPheduyet.Text = row2[3].ToString();
             }
 
         }
@@ -82,12 +88,21 @@ namespace WEBSITESAVVY.Pages
 
                 int idDonVi = int.Parse(row["ID_DonVI"].ToString());
                 DaiDienDAO daidienDAO = new DaiDienDAO();
-                DataTable dt = daidienDAO.DSNguoiDaiDien(idDonVi);
-                if (dt.Rows.Count > 0)
+                string nguoidaidien = row["PhuTrachNBH"].ToString();
+                if (nguoidaidien != "")
                 {
-                    DataRow dtRow = dt.Rows[0];
+                    lblPhuTrachNBH.Text = nguoidaidien;
 
-                    lblKinhGui.Text = dtRow["TenNguoiDaiDien"].ToString() + " - " /* + dtRow["ChucVu"].ToString() + " - " */ + dtRow["PhongBan"].ToString();
+                }
+                else
+                {
+                    DataTable dt = daidienDAO.DSNguoiDaiDien(idDonVi);
+                    if (dt.Rows.Count > 0)
+                    {
+                        DataRow dtRow = dt.Rows[0];
+                        lblPhuTrachNBH.Text = dtRow["TenNguoiDaiDien"].ToString() + " - " /* + dtRow["ChucVu"].ToString() + " - " */ + dtRow["PhongBan"].ToString();
+
+                    }
                 }
                 //lblDateILA.Text = "Báo cáo đầu tiên ngày " + row["ILADATE"].ToString();
                 //lblDateILA.Text = "Báo cáo đầu tiên ngày " + DateTime.Parse(row["ILADATE"].ToString()).ToString("dd/MM/yyyy");
@@ -119,9 +134,9 @@ namespace WEBSITESAVVY.Pages
                 lblExecutiveSummaryIR.Text = row["ExecutiveSummaryIR"].ToString();
                 lblK.Text = row["K"].ToString();
                 lblAdjustmentIR.Text = row["AdjustmentIR"].ToString();
-                lblH.Text = row["H"].ToString();
+                lblH.Text = row["GiaTriThuHoiHIR"].ToString();
                 lblI.Text = row["I"].ToString();
-                lblTamUngBoiThuongText.Text = row["TamUngBoiThuongText"].ToString();
+                lblTamUngBoiThuongText.Text = row["lblTamUngBoiThuongTextIR"].ToString();
                 //lblTT.Text = "<p>Các thông tin và diễn biến tiếp theo liên quan đến vụ tổn thất này sẽ tiếp tục được chúng tôi quan tâm theo dõi và cập nhật ngay khi có thông tin mới nhất để phục vụ cho công tác quản lý bồi thường của Nhà Bảo Hiểm.</p>";
                 //lblTT.Text += "<p>Nếu Quý Công ty Bảo hiểm có câu hỏi hoặc bất kỳ yêu cầu nào khác sau khi xem báo cáo này, xin vui lòng thông tin cho chúng tôi để được đáp ứng thỏa đáng.</p>";
 

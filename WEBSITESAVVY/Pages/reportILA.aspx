@@ -817,8 +817,9 @@
                     </tr>
                     <tr>
                         <td width="40%" style="padding-left: 10px">
-                            <asp:Label ID="lblID_GDVILA" runat="server" key="ID_GDVILA" type="SingeLine" CssClass="field_input label-edit"  onclick="editField(this)" Font-Bold="True" 
-                                ForeColor="#000066"></asp:Label>
+                            <asp:Label ID="lblID_GDVILA" runat="server" key="ID_GDVILA" type="SingeLine" 
+                                CssClass="field_input label-edit"  onclick="editField(this)" Font-Bold="True" 
+                                ForeColor="#000066" Width="50%"></asp:Label>
                                  <asp:Panel ID="panelID_GDVILA" Width="99%"  CssClass="panelUpdate hiden" runat="server">
                                      <asp:DropDownList ID="drID_GDVILA"  Width="50%" runat="server">
                                      </asp:DropDownList>
@@ -831,8 +832,9 @@
                         <td>
                             &nbsp;</td>
                         <td align="center" width="40%">
-                            <asp:Label ID="lblID_GDVCheckILA"  key="ID_GDVCheckILA" type="SingeLine" CssClass="field_input label-edit"  onclick="editField(this)"  runat="server" Font-Bold="True" 
-                                ForeColor="#000066"></asp:Label>
+                            <asp:Label ID="lblID_GDVCheckILA"  key="ID_GDVCheckILA" type="SingeLine" 
+                                CssClass="field_input label-edit"  onclick="editField(this)"  runat="server" Font-Bold="True" 
+                                ForeColor="#000066" Width="50%"></asp:Label>
                                  <asp:Panel ID="panelID_GDVCheckILA" Width="99%"  CssClass="panelUpdate hiden" runat="server">
                                      <asp:DropDownList ID="drID_GDVCheckILA"  Width="50%" runat="server">
                                      </asp:DropDownList>

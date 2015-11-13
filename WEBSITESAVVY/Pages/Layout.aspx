@@ -131,7 +131,10 @@
                 Link = "../Pages/listworksheet.aspx";
             else if (index == 8)
                 link = "../Pages/task.aspx";
-
+            else if (index == 9) {
+                Link = "../Pages/ClaimType.aspx";
+                report = "RF";             
+            }
             if (Link !== "") {
 
                 $("#frameCenter").fadeOut(500, function () {
@@ -428,7 +431,6 @@
 			</div>
 			<div title="MORE ..." >
 				<ol type="1">
-
                     <li><a href="../Pages/docsrequestn.aspx" onclick="return loadContent(this);" class="easyui-linkbutton" data-options="plain:true" >Docs Request </a></li>
 				    <li><a href="../Pages/ViewWR.aspx" onclick="return loadContent(this);" class="easyui-linkbutton" data-options="plain:true">Weekly Update</a></li>
 				    <li><a href="../Pages/sitephoto.aspx" onclick="return loadContent(this);" class="easyui-linkbutton" data-options="plain:true" >Site Photos </a></li>
@@ -437,6 +439,8 @@
                     <li><a href="eventscase.aspx" onclick="return loadContent(this);" class="easyui-linkbutton" data-options="plain:true">Activity History</a></li>
                 </ol>
 			</div>
+               <div id="RF" title="REPORT FORM">            
+		    </div>  
 		</div>
 	</div>
 	<!--<div data-options="region:'east',split:true,collapsed:true,title:'East'" style="width:100px;padding:10px;">east region</div>-->

@@ -265,6 +265,8 @@
                     Text="Quản lý bài viết Blogs" Value="Quản lý bài viết Blogs"></asp:MenuItem>
                 <asp:MenuItem NavigateUrl="~/Pages/NewsTypes.aspx" Text="Quản lý Type News" 
                     Value="Quản lý Type News"></asp:MenuItem>
+                <asp:MenuItem NavigateUrl="~/Pages/ClaimMau.aspx" Text="CLAIM MẪU" 
+                    Value="Claim Mẫu"></asp:MenuItem>
             </Items>
         </asp:Menu>
         </div>

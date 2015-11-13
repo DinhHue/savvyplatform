@@ -19,35 +19,40 @@ namespace WEBSITESAVVY.Pages
             if (Session["ThamChieu"] != null)
             {
                 mClaimID = Session["ThamChieu"].ToString();
-                loadData();
-                exportToWord();
+                loadData();                
                 LoadSIG(mClaimID);
+                exportToWord();
             }
         }
         void LoadSIG(string claimID)
         {
-            DataRow row = claimDao.InfoSignatureIRPre(claimID);
+            DataRow row = claimDao.InfoSignatureFRPre(claimID);
             if (row != null)
             {
-                lblNguoiBaoCao.Text = row[0].ToString();
+                lblID_GDVFR.Text = row[0].ToString();
                 lblChucVuNguoiBC.Text = row[1].ToString();
+                lblDienThoaiPre.Text = row[2].ToString();
+                lblEmailPre.Text = row[2].ToString();
 
             }
 
-            DataRow row1 = claimDao.InfoSignatureIRCheck(claimID);
+            DataRow row1 = claimDao.InfoSignatureFRCheck(claimID);
             if (row1 != null)
             {
-
-                lblNguoiCheckBC.Text = row[0].ToString();
-                lblChucvuNguoiCheck.Text = row[1].ToString();
+                lblID_GDVCheckFR.Text = row1[0].ToString();
+                lblChucvuNguoiCheck.Text = row1[1].ToString();
+                lblDienThoaiCheck.Text = row1[2].ToString();
+                lblEmailCheck.Text = row1[3].ToString();
             }
 
             DataRow row2 = claimDao.InfoSignatureDirector();
             if (row2 != null)
             {
 
-                lblNguoiPheDuyet.Text = row[0].ToString();
-                lblChucvuNguoiPheDuyet.Text = row[1].ToString();
+                lblNguoiPheDuyet.Text = row2[0].ToString();
+                lblChucvuNguoiPheDuyet.Text = row2[1].ToString();
+                lblDienThoaiPheduyet.Text = row2[2].ToString();
+                lblEmailPheduyet.Text = row2[3].ToString();
             }
 
         }
@@ -82,12 +87,21 @@ namespace WEBSITESAVVY.Pages
 
                 int idDonVi = int.Parse(row["ID_DonVI"].ToString());
                 DaiDienDAO daidienDAO = new DaiDienDAO();
-                DataTable dt = daidienDAO.DSNguoiDaiDien(idDonVi);
-                if (dt.Rows.Count > 0)
+                string nguoidaidien = row["PhuTrachNBH"].ToString();
+                if (nguoidaidien != "")
                 {
-                    DataRow dtRow = dt.Rows[0];
+                    lblPhuTrachNBH.Text = nguoidaidien;
 
-                    lblKinhGui.Text = dtRow["TenNguoiDaiDien"].ToString() + " - " /* + dtRow["ChucVu"].ToString() + " - " */ + dtRow["PhongBan"].ToString();
+                }
+                else
+                {
+                    DataTable dt = daidienDAO.DSNguoiDaiDien(idDonVi);
+                    if (dt.Rows.Count > 0)
+                    {
+                        DataRow dtRow = dt.Rows[0];
+                        lblPhuTrachNBH.Text = dtRow["TenNguoiDaiDien"].ToString() + " - " /* + dtRow["ChucVu"].ToString() + " - " */ + dtRow["PhongBan"].ToString();
+
+                    }
                 }
                 //lblDateILA.Text = "Báo cáo đầu tiên ngày " + DateTime.Parse(row["ILADATE"].ToString()).ToString("dd/MM/yyyy");
                 //lblBaoCaoTruoc.Text = row["BaoCaoTruocFR"].ToString();
@@ -130,7 +144,7 @@ namespace WEBSITESAVVY.Pages
                 lblC3FR.Text = row["C3FR"].ToString();
                 lblE2.Text = row["E2"].ToString();
                 lblB1.Text = row["B1"].ToString();
-                lblH.Text = row["H"].ToString();
+                lblH.Text = row["GiaTriThuHoiHFR"].ToString();
                 lblB2.Text = row["B2"].ToString();
                 lblConclution.Text = row["Conclution"].ToString();
             }

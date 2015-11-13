@@ -1322,7 +1322,30 @@ namespace WEBSITESAVVY.DAO
 
             SqlDataAcessHelper.exNonStoreParas(sql, ds);
         }
-        
+
+        public void updateClaimMauField(int id, string key, string value)
+        {
+            string sql = "sp_ClaimMau_UpdateField";
+            List<SqlParameter> ds = new List<SqlParameter>();
+
+            ds.Add(new SqlParameter("@id", id));
+            ds.Add(new SqlParameter("@key", key));
+            ds.Add(new SqlParameter("@value", value));
+
+            SqlDataAcessHelper.exNonStoreParas(sql, ds);
+        }
+        public DataRow selectClaimMau(int id)
+        {
+            string sql = "sp_ClaimMau_SelectType";
+            List<SqlParameter> ds = new List<SqlParameter>();
+
+            ds.Add(new SqlParameter("@id", id));
+            DataTable dt = SqlDataAcessHelper.exStoreParas(sql, ds);
+            DataRow dr = null;
+            if (dt.Rows.Count > 0)
+                dr = dt.Rows[0];
+            return dr;
+        }
         public DataTable XuatClaim(string idclaim)
         {
             string sql = "sp_Claim_SelectAll";

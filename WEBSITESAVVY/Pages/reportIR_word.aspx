@@ -222,7 +222,7 @@
                             <tr>
                                 <td style="width:150px"><b><u>Kính gửi:</u></b></td>
                                 <td >
-                                    <asp:Label ID="lblKinhGui" runat="server" Width="542px" 
+                                      <asp:Label ID="lblPhuTrachNBH" runat="server" Width="556px" 
                                         CssClass="field_input" Font-Bold=True Font-Size="15px" ></asp:Label>
                                 </td>
                             </tr>
@@ -466,43 +466,43 @@
                     
                 <table style="font-size:16px;width:650px; margin:20px 0px">
                     <tr onclick="window.location.href ='#A1'">
-                        <td style="width:350px; font-size:16px" ><b>I. KHÁI QUÁT VỤ VIỆC VÀ TIẾN TRÌNH</b></td>
+                        <td style="width:350px; font-size:16px" ><b>KHÁI QUÁT VỤ VIỆC VÀ TIẾN TRÌNH</b></td>
                         <td style="text-align:right; font-size:16px" >...................................................................................</td>
                     </tr>
                 </table>     
                 <table style="font-size:16px;width:650px; margin:20px 0px">
                     <tr onclick="window.location.href ='#K'">
-                        <td style="width:350px; font-size:16px" ><b>II. QUÁ TRÌNH XỬ LÝ VÀ KHIẾU NẠI</b></td>
+                        <td style="width:350px; font-size:16px" ><b>QUÁ TRÌNH XỬ LÝ VÀ KHIẾU NẠI</b></td>
                         <td style="text-align:right; font-size:16px" >........................................................................................</td>
                     </tr>
                 </table>  
                 <table style="font-size:16px;width:650px; margin:20px 0px">
                     <tr onclick="window.location.href ='#AdjustmentIR'">
-                        <td style="width:350px; font-size:16px" ><b>III. CẬP NHẬT TIẾN ĐỘ TÍNH TOÁN</b></td>
+                        <td style="width:350px; font-size:16px" ><b>CẬP NHẬT TIẾN ĐỘ TÍNH TOÁN</b></td>
                         <td style="text-align:right; font-size:16px" >.........................................................................................</td>
                     </tr>
                 </table>  
                 <table style="font-size:16px;width:650px; margin:20px 0px">
                     <tr onclick="window.location.href ='#H'">
-                        <td style="width:300px; font-size:16px" ><b>IV. GIÁ TRỊ THU HỒI</b></td>
+                        <td style="width:300px; font-size:16px" ><b>GIÁ TRỊ THU HỒI</b></td>
                         <td style="text-align:right; font-size:16px" >.......................................................................................................................</td>
                     </tr>
                 </table>  
                 <table style="font-size:16px;width:650px; margin:20px 0px">
                     <tr onclick="window.location.href ='#I'">
-                        <td style="width:300px; font-size:16px" ><b>V. CẬP NHẬT DỰ PHÒNG</b></td>
+                        <td style="width:300px; font-size:16px" ><b>CẬP NHẬT DỰ PHÒNG</b></td>
                         <td style="text-align:right; font-size:16px" >...............................................................................................................</td>
                     </tr>
                 </table>         
                <table style="font-size:16px;width:650px; margin:20px 0px">
                     <tr onclick="window.location.href ='#TamUngBoiThuongText'">
-                        <td style="width:300px; font-size:16px" ><b>VI. TẠM ỨNG BỒI THƯỜNG</b></td>
+                        <td style="width:300px; font-size:16px" ><b>TẠM ỨNG BỒI THƯỜNG</b></td>
                         <td style="text-align:right; font-size:16px" >.........................................................................................................</td>
                     </tr>
                 </table>     
                 <table style="font-size:16px;width:650px; margin:20px 0px">
                     <tr onclick="window.location.href ='#TT'">
-                        <td style="width:300px; font-size:16px" ><b>VII. BÁO CÁO TIẾP THEO</b></td>
+                        <td style="width:300px; font-size:16px" ><b>BÁO CÁO TIẾP THEO</b></td>
                         <td style="text-align:right; font-size:16px" >..............................................................................................................</td>
                     </tr>
                 </table>          
@@ -516,35 +516,35 @@
 
 
         <div class="box" >
-            <h3 id="ExecutiveSummaryIR">I. KHÁI QUÁT VỤ VIỆC VÀ TIẾN TRÌNH</h3>
+            <h3 id="ExecutiveSummaryIR">KHÁI QUÁT VỤ VIỆC VÀ TIẾN TRÌNH</h3>
             <div>
                 <asp:Label ID="lblExecutiveSummaryIR" runat="server" Width="650px" ></asp:Label>
             </div>
         </div>
 
         <div class="box" >
-            <h3 id="K">II. QUÁ TRÌNH XỬ LÝ VÀ KHIẾU NẠI</h3>
+            <h3 id="K">QUÁ TRÌNH XỬ LÝ VÀ KHIẾU NẠI</h3>
             <div><asp:Label ID="lblK" runat="server" Width="650px" ></asp:Label></div>
         </div>
 
 
         <div class="box" >
-            <h3 id="AdjustmentIR">III. CẬP NHẬT TIẾN ĐỘ TÍNH TOÁN</h3>
+            <h3 id="AdjustmentIR">CẬP NHẬT TIẾN ĐỘ TÍNH TOÁN</h3>
             <div><asp:Label ID="lblAdjustmentIR" runat="server" Width="650px" ></asp:Label></div>
         </div>
 		
 		<div class="box" >
-            <h3 id="H">IV. GIÁ TRỊ THU HỒI</h3>
+            <h3 id="H">GIÁ TRỊ THU HỒI</h3>
             <div><asp:Label ID="lblH" runat="server" Width="650px" ></asp:Label></div>
         </div>
 
         <div class="box" >
-            <h3 id="I">V. CẬP NHẬT DỰ PHÒNG</h3>
+            <h3 id="I">CẬP NHẬT DỰ PHÒNG</h3>
             <div><asp:Label ID="lblI" runat="server" Width="650px" ></asp:Label></div>
         </div>
 
         <div class="box" >
-            <h3 id="TamUngBoiThuongText">VI. TẠM ỨNG BỒI THƯỜNG</h3>
+            <h3 id="TamUngBoiThuongText">TẠM ỨNG BỒI THƯỜNG</h3>
             <div><asp:Label ID="lblTamUngBoiThuongText" runat="server" Width="650px" ></asp:Label></div>
         </div>
 
@@ -552,100 +552,109 @@
         
 
         <div class="box" >
-            <h3 id="TT">VII. BÁO CÁO TIẾP THEO</h3>
+            <h3 id="TT">&nbsp;BÁO CÁO TIẾP THEO</h3>
             <div style="text-align: justify"><%--<asp:Label ID="lblTT" runat="server" Width="650px" ></asp:Label>--%>
             <p>Các thông tin và diễn biến tiếp theo liên quan đến vụ tổn thất này sẽ tiếp tục được chúng tôi quan tâm theo dõi và cập nhật ngay khi có thông tin mới nhất để phục vụ cho công tác quản lý bồi thường của Nhà Bảo Hiểm.</p>
             <p>Nếu Quý Công ty Bảo hiểm có câu hỏi hoặc bất kỳ yêu cầu nào khác sau khi xem báo cáo này, xin vui lòng thông tin cho chúng tôi để được đáp ứng thỏa đáng.</p>
             </div>
         </div>
+   
          <table width="100%">
                     <tr>
-                        <td width="35%" style="padding-left: 10px">
-                            <asp:Label ID="Label35" runat="server" Font-Bold="True" Text="Người báo cáo"></asp:Label>
+                        <td width="34%" style="padding-left: 10px">
+                            <asp:Label ID="Label6" runat="server" Font-Bold="True" Text="Người lập"></asp:Label>
                             <br />
-                            <asp:Label ID="Label34" runat="server" Font-Italic="True" Text="Prepared by"></asp:Label>
+                            <asp:Label ID="Label8" runat="server" Font-Italic="True" Text="Prepared by"></asp:Label>
                         </td>
-                        <td align="center">
-                            <asp:Label ID="Label42" runat="server" Font-Bold="True" Text="Người kiểm tra"></asp:Label>
+                        <td align="left">
+                            <asp:Label ID="Label10" runat="server" Font-Bold="True" Text="Người kiểm tra"></asp:Label>
                             <br />
-                            <asp:Label ID="Label43" runat="server" Font-Italic="True" 
+                            <asp:Label ID="Label12" runat="server" Font-Italic="True" 
                                 Text="Checked  by"></asp:Label>
                         </td>
-                        <td align="center" width="35%">
-                            <asp:Label ID="Label36" runat="server" Font-Bold="True" Text="Phê duyệt bởi"></asp:Label>
+                        <td align="left" width="33%">
+                            <asp:Label ID="Label14" runat="server" Font-Bold="True" Text="Phê duyệt bởi"></asp:Label>
                             <br />
-                            <asp:Label ID="Label37" runat="server" Font-Italic="True" 
-                                Text=" Approved  by"></asp:Label>
+                            <asp:Label ID="Label16" runat="server" Font-Italic="True" 
+                                Text="Approved  by"></asp:Label>
                         </td>
                     </tr>
+                    
                     <tr>
-                        <td width="35%" style="padding-left: 10px">
-                            <asp:Label ID="lblNguoiBaoCao" runat="server" Font-Bold="True" 
-                                ForeColor="#000066"></asp:Label>
-                        </td>
-                        <td align="center">
-                            <asp:Label ID="lblNguoiCheckBC" runat="server" Font-Bold="True" 
-                                ForeColor="#000066"></asp:Label>
-                        </td>
-                        <td align="center" width="35%">
-                            <asp:Label ID="lblNguoiPheDuyet" runat="server" Font-Bold="True" 
-                                ForeColor="#000066"></asp:Label>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td width="35%" style="padding-left: 10px">
+                        <td width="34%" style="padding-left: 10px">
                             <br />
                             <br />
                         </td>
-                        <td align="center">
+                        <td>
                             &nbsp;</td>
-                        <td align="center" width="35%">
+                        <td align="center" width="33%">
                             <br />
                             <br />
                             <br />
                         </td>
                     </tr>
+                    
                     <tr>
-                        <td style="font-size: 10px; font-style: italic; padding-left: 10px;" 
-                            width="35%">
-                            <asp:Label ID="Label38" runat="server" Text="(Chữ ký / Signature)"></asp:Label>
+                        <td width="34%" style="padding-left: 10px">
+                            <asp:Label ID="lblID_GDVIR" key="ID_GDVIR" type="SingeLine"  
+                                CssClass="field_input label-edit"  onclick="editField(this)" runat="server" 
+                                Font-Bold="True" Width="100%"></asp:Label>                             
+                            <br />
+                            <asp:Label ID="lblChucVuNguoiBC" runat="server" Font-Bold="False" 
+                                Font-Italic="True"></asp:Label>
                         </td>
-                        <td style="font-size: 10px; text-align: center; font-style: italic" 
-                            align="center">
-                            <asp:Label ID="Label46" runat="server" Text="(Chữ ký / Signature)"></asp:Label>
+                        <td align="left">
+                            <asp:Label ID="lblID_GDVIRCheck" key="ID_GDVIRCheck" type="SingeLine" 
+                                CssClass="label-edit"  onclick="editField(this)" runat="server" 
+                                Font-Bold="True" Width="100%"></asp:Label>
+                            <br />
+                            <asp:Label ID="lblChucvuNguoiCheck" runat="server" Font-Bold="False" 
+                                Font-Italic="True"></asp:Label>
                         </td>
-                        <td align="center" 
-                            style="font-size: 10px; text-align: center; font-style: italic" 
-                            width="35%">
-                            <asp:Label ID="Label39" runat="server" Text="(Chữ ký / Signature)"></asp:Label>
+                        <td align="left" width="33%">
+                            <asp:Label ID="lblNguoiPheDuyet" runat="server" Font-Bold="True" Width="100%"></asp:Label>
+                            <br />
+                            <asp:Label ID="lblChucvuNguoiPheDuyet" runat="server" Font-Bold="False" 
+                                Font-Italic="True"></asp:Label>
                         </td>
                     </tr>
                     <tr>
                         <td class="style2" 
-                            style="font-size: 12px; color: #000066; font-style: italic; padding-left: 10px;" 
-                            width="35%">
-                            <asp:Label ID="Label40" runat="server" Text="(Chức vụ (Job Title):"></asp:Label>
+                            width="34%">
+                            <asp:Label ID="Label49" runat="server" Text="Mobile:" Font-Bold="False" 
+                                Font-Underline="True"></asp:Label>
+                            &nbsp;<asp:Label ID="lblDienThoaiPre" runat="server"></asp:Label>
                             <br />
-                            <asp:Label ID="lblChucVuNguoiBC" runat="server" Font-Bold="True" 
-                                ForeColor="#000066"></asp:Label>
+                            <asp:Label ID="Label50" runat="server" Text="Email:" Font-Underline="True"></asp:Label>
+                            &nbsp;<asp:Label ID="lblEmailPre" runat="server" Font-Underline="True" 
+                                ForeColor="#0000CC"></asp:Label>
+                            <br />
                         </td>
-                        <td class="style2" style="font-size: 12px; color: #000066; font-style: italic" 
-                            align="center">
-                            <asp:Label ID="Label41" runat="server" Text="(Chức vụ (Job Title):"></asp:Label>
-                            <asp:Label ID="lblChucvuNguoiCheck" runat="server" Font-Bold="True" 
-                                ForeColor="#000066"></asp:Label>
+                        <td class="style2" 
+                            align="left">
+                            <asp:Label ID="Label47" runat="server" Text="Mobile:" Font-Bold="False" 
+                                Font-Underline="True"></asp:Label>
+                            &nbsp;<asp:Label ID="lblDienThoaiCheck" runat="server"></asp:Label>
+                            <br />
+                            <asp:Label ID="Label48" runat="server" Text="Email:" Font-Underline="True"></asp:Label>
+                            &nbsp;<asp:Label ID="lblEmailCheck" runat="server" Font-Underline="True" 
+                                ForeColor="#0000CC"></asp:Label>
+                            <br />
                         </td>
-                        <td class="style2" align="center" 
-                            style="font-size: 12px; color: #000066; font-style: italic" width="35%">
+                        <td class="style2" align="left" width="33%">
+                            <asp:Label ID="Label46" runat="server" Text="Mobile:" Font-Bold="False" 
+                                Font-Underline="True"></asp:Label>
+                            &nbsp;<asp:Label ID="lblDienThoaiPheduyet" runat="server"></asp:Label>
                             <br />
-                            <asp:Label ID="Label45" runat="server" Text="(Chức vụ (Job Title):"></asp:Label>
+                            <asp:Label ID="Label18" runat="server" Text="Email:" Font-Underline="True"></asp:Label>
+                            &nbsp;<asp:Label ID="lblEmailPheduyet" runat="server" Font-Underline="True" 
+                                ForeColor="#0000CC"></asp:Label>
                             <br />
-                            <asp:Label ID="lblChucvuNguoiPheDuyet" runat="server" Font-Bold="True" 
-                                ForeColor="#000066"></asp:Label>
+                            <br />
                         </td>
                     </tr>
+                   
                     </table>
-
 
     </form>
 </body>

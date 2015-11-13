@@ -319,8 +319,15 @@
                             <tr>
                                 <td style="width:200px"><b><u>Kính gửi:</u></b></td>
                                 <td >
-                                    <asp:Label ID="lblKinhGui" runat="server" Width="760px" 
-                                        CssClass="field_input" Font-Bold=True Font-Size="20px" ></asp:Label>
+                                   <asp:Label ID="lblPhuTrachNBH" runat="server" Width="760px" key="PhuTrachNBH"  type="SingleLine" onclick="editField(this)"
+                                        CssClass="field_input label-edit" Font-Bold=True Font-Size="20px" ></asp:Label>
+                                         <asp:Panel ID="panelPhuTrachNBH" Width="80%"  CssClass="panelUpdate hiden" runat="server">
+                                        <asp:TextBox ID="txtPhuTrachNBH" CssClass="hiden" TextMode="SingleLine"  Width="100%" runat="server" />
+                                        <div style="margin-top:10px">
+                                            <asp:Button ID="Button15" key="PhuTrachNBH" onclick="btnUpdate_Click" Text="Update" runat="server"/>
+                                            <input  key="PhuTrachNBH" type="button" value="Cancel" onclick="cancel(this)" />
+                                        </div>
+                                    </asp:Panel>
                                 </td>
                             </tr>
                         </table>
@@ -755,12 +762,13 @@
 		<div class="box" >
             <h3 id="H" key="H" title="Salvage" >GIÁ TRỊ THU HỒI</h3>
             <div>
-                <asp:Label ID="lblH" key="H" onclick="editField(this)" CssClass="label-edit" runat="server" Width="100%" ></asp:Label>
-                <asp:Panel ID="panelH" CssClass="panelUpdate hiden" runat="server">
-                    <asp:TextBox ID="txtH" CssClass="hiden" TextMode="MultiLine" Height="250px" runat="server" />
+                <asp:Label ID="lblGiaTriThuHoiHIR" key="GiaTriThuHoiHIR" onclick="editField(this)" 
+                    CssClass="label-edit" runat="server" Width="100%" ></asp:Label>
+                <asp:Panel ID="panelGiaTriThuHoiHIR" CssClass="panelUpdate hiden" runat="server">
+                    <asp:TextBox ID="txtGiaTriThuHoiHIR" CssClass="hiden" TextMode="MultiLine" Height="250px" runat="server" />
                     <div style="margin-top:10px">
-                        <asp:Button key="H" onclick="btnUpdate_Click" Text="Update" runat="server"/>
-                        <input key="H" type="button" value="Cancel" onclick="cancel(this)" />
+                        <asp:Button key="GiaTriThuHoiHIR" onclick="btnUpdate_Click" Text="Update" runat="server"/>
+                        <input key="GiaTriThuHoiHIR" type="button" value="Cancel" onclick="cancel(this)" />
                     </div>
                 </asp:Panel>
             </div>
@@ -783,12 +791,13 @@
         <div class="box" >
             <h3 id="TamUngBoiThuongText" key="TamUngBoiThuongText" title="Interim Payment">TẠM ỨNG BỒI THƯỜNG</h3>
             <div>
-                <asp:Label ID="lblTamUngBoiThuongText" key="TamUngBoiThuongText" onclick="editField(this)" CssClass="label-edit" runat="server" Width="100%" ></asp:Label>
-                <asp:Panel ID="panelTamUngBoiThuongText" CssClass="panelUpdate hiden" runat="server">
-                    <asp:TextBox ID="txtTamUngBoiThuongText" CssClass="hiden" TextMode="MultiLine" Height="250px" runat="server" />
+                <asp:Label ID="lblTamUngBoiThuongTextIR" key="TamUngBoithuongTextIR" 
+                    onclick="editField(this)" CssClass="label-edit" runat="server" Width="100%" ></asp:Label>
+                <asp:Panel ID="panelTamUngBoithuongTextIR" CssClass="panelUpdate hiden" runat="server">
+                    <asp:TextBox ID="txtTamUngBoithuongTextIR" CssClass="hiden" TextMode="MultiLine" Height="250px" runat="server" />
                     <div style="margin-top:10px">
-                        <asp:Button key="TamUngBoiThuongText" onclick="btnUpdate_Click" Text="Update" runat="server"/>
-                        <input key="TamUngBoiThuongText" type="button" value="Cancel" onclick="cancel(this)" />
+                        <asp:Button key="TamUngBoithuongTextIR" onclick="btnUpdate_Click" Text="Update" runat="server"/>
+                        <input key="TamUngBoithuongTextIR" type="button" value="Cancel" onclick="cancel(this)" />
                     </div>
                 </asp:Panel>
             </div>
@@ -804,94 +813,119 @@
             <p>Nếu Quý Công ty Bảo hiểm có câu hỏi hoặc bất kỳ yêu cầu nào khác sau khi xem báo cáo này, xin vui lòng thông tin cho chúng tôi để được đáp ứng thỏa đáng.</p>
             </div>
         </div>
+
          <table width="100%">
                     <tr>
-                        <td width="35%" style="padding-left: 10px">
-                            <asp:Label ID="Label35" runat="server" Font-Bold="True" Text="Người báo cáo"></asp:Label>
+                        <td width="34%" style="padding-left: 10px">
+                            <asp:Label ID="Label1" runat="server" Font-Bold="True" Text="Người lập"></asp:Label>
                             <br />
-                            <asp:Label ID="Label34" runat="server" Font-Italic="True" Text="Prepared by"></asp:Label>
+                            <asp:Label ID="Label2" runat="server" Font-Italic="True" Text="Prepared by"></asp:Label>
                         </td>
-                        <td align="center">
-                            <asp:Label ID="Label42" runat="server" Font-Bold="True" Text="Người kiểm tra"></asp:Label>
+                        <td align="left">
+                            <asp:Label ID="Label3" runat="server" Font-Bold="True" Text="Người kiểm tra"></asp:Label>
                             <br />
-                            <asp:Label ID="Label43" runat="server" Font-Italic="True" 
+                            <asp:Label ID="Label4" runat="server" Font-Italic="True" 
                                 Text="Checked  by"></asp:Label>
                         </td>
-                        <td align="center" width="35%">
-                            <asp:Label ID="Label36" runat="server" Font-Bold="True" Text="Phê duyệt bởi"></asp:Label>
+                        <td align="left" width="33%">
+                            <asp:Label ID="Label5" runat="server" Font-Bold="True" Text="Phê duyệt bởi"></asp:Label>
                             <br />
-                            <asp:Label ID="Label37" runat="server" Font-Italic="True" 
+                            <asp:Label ID="Label6" runat="server" Font-Italic="True" 
                                 Text="Approved  by"></asp:Label>
                         </td>
                     </tr>
+                    
                     <tr>
-                        <td width="35%" style="padding-left: 10px">
-                            <asp:Label ID="lblNguoiBaoCao" runat="server" Font-Bold="True" 
-                                ForeColor="#000066"></asp:Label>
-                        </td>
-                        <td align="center">
-                            <asp:Label ID="lblNguoiCheckBC" runat="server" Font-Bold="True" 
-                                ForeColor="#000066"></asp:Label>
-                        </td>
-                        <td align="center" width="35%">
-                            <asp:Label ID="lblNguoiPheDuyet" runat="server" Font-Bold="True" 
-                                ForeColor="#000066"></asp:Label>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td width="35%" style="padding-left: 10px">
+                        <td width="34%" style="padding-left: 10px">
                             <br />
                             <br />
                         </td>
                         <td>
                             &nbsp;</td>
-                        <td align="center" width="35%">
+                        <td align="center" width="33%">
                             <br />
                             <br />
                             <br />
                         </td>
                     </tr>
+                    
                     <tr>
-                        <td style="font-size: 10px; font-style: italic; padding-left: 10px;" 
-                            width="35%">
-                            <asp:Label ID="Label38" runat="server" Text="(Chữ ký / Signature)"></asp:Label>
+                        <td width="34%" style="padding-left: 10px">
+                            <asp:Label ID="lblID_GDVIR" key="ID_GDVIR" type="SingeLine"  
+                                CssClass="field_input label-edit"  onclick="editField(this)" runat="server" 
+                                Font-Bold="True" Width="100%"></asp:Label>
+                             <asp:Panel ID="panelID_GDVIR" Width="99%"  CssClass="panelUpdate hiden" runat="server">
+                                     <asp:DropDownList ID="drID_GDVIR"  Width="50%" runat="server">
+                                     </asp:DropDownList>
+                        <div style="margin-top:10px">
+                            <asp:Button ID="Button13"  key="ID_GDVIR" onclick="btnUpdateGDV_Click" Text="Update" runat="server"/>
+                            <input  key="ID_GDVIR" type="button" value="Cancel" onclick="cancel(this)" />
+                        </div>
+                    </asp:Panel>
+                            <br />
+                            <asp:Label ID="lblChucVuNguoiBC" runat="server" Font-Bold="False" 
+                                Font-Italic="True"></asp:Label>
                         </td>
-                        <td style="font-size: 10px; text-align: center; font-style: italic">
-                            <asp:Label ID="Label44" runat="server" Text="(Chữ ký / Signature)"></asp:Label>
+                        <td align="left">
+                            <asp:Label ID="lblID_GDVIRCheck" key="ID_GDVIRCheck" type="SingeLine" 
+                                CssClass="label-edit"  onclick="editField(this)" runat="server" 
+                                Font-Bold="True" Width="100%"></asp:Label>
+                             <asp:Panel ID="panelID_GDVIRCheck" Width="99%"  CssClass="panelUpdate hiden" runat="server">
+                                     <asp:DropDownList ID="drID_GDVIRCheck"  Width="50%" runat="server">
+                                     </asp:DropDownList>
+                        <div style="margin-top:10px">
+                            <asp:Button ID="Button14"  key="ID_GDVIRCheck" onclick="btnUpdateGDVCheck_Click" Text="Update" runat="server"/>
+                            <input  key="ID_GDVIRCheck" type="button" value="Cancel" onclick="cancel(this)" />
+                        </div>
+                    </asp:Panel>
+                            <br />
+                            <asp:Label ID="lblChucvuNguoiCheck" runat="server" Font-Bold="False" 
+                                Font-Italic="True"></asp:Label>
                         </td>
-                        <td align="center" 
-                            style="font-size: 10px; text-align: center; font-style: italic" 
-                            width="35%">
-                            <asp:Label ID="Label39" runat="server" Text="(Chữ ký / Signature)"></asp:Label>
+                        <td align="left" width="33%">
+                            <asp:Label ID="lblNguoiPheDuyet" runat="server" Font-Bold="True" Width="100%"></asp:Label>
+                            <br />
+                            <asp:Label ID="lblChucvuNguoiPheDuyet" runat="server" Font-Bold="False" 
+                                Font-Italic="True"></asp:Label>
                         </td>
                     </tr>
                     <tr>
                         <td class="style2" 
-                            style="font-size: 12px; color: #000066; font-style: italic; padding-left: 10px;" 
-                            width="35%">
-                            <asp:Label ID="Label40" runat="server" Text="(Chức vụ (Job Title):"></asp:Label>
+                            width="34%">
+                            <asp:Label ID="Label49" runat="server" Text="Mobile:" Font-Bold="False" 
+                                Font-Underline="True"></asp:Label>
+                            &nbsp;<asp:Label ID="lblDienThoaiPre" runat="server"></asp:Label>
                             <br />
-                            <asp:Label ID="lblChucVuNguoiBC" runat="server" Font-Bold="True" 
-                                ForeColor="#000066"></asp:Label>
+                            <asp:Label ID="Label50" runat="server" Text="Email:" Font-Underline="True"></asp:Label>
+                            &nbsp;<asp:Label ID="lblEmailPre" runat="server" Font-Underline="True" 
+                                ForeColor="#0000CC"></asp:Label>
+                            <br />
                         </td>
-                        <td class="style2" style="font-size: 12px; color: #000066; font-style: italic" 
-                            align="center">
-                            <asp:Label ID="Label41" runat="server" Text="(Chức vụ (Job Title):"></asp:Label>
+                        <td class="style2" 
+                            align="left">
+                            <asp:Label ID="Label47" runat="server" Text="Mobile:" Font-Bold="False" 
+                                Font-Underline="True"></asp:Label>
+                            &nbsp;<asp:Label ID="lblDienThoaiCheck" runat="server"></asp:Label>
                             <br />
-                            <asp:Label ID="lblChucvuNguoiCheck" runat="server" Font-Bold="True" 
-                                ForeColor="#000066"></asp:Label>
+                            <asp:Label ID="Label48" runat="server" Text="Email:" Font-Underline="True"></asp:Label>
+                            &nbsp;<asp:Label ID="lblEmailCheck" runat="server" Font-Underline="True" 
+                                ForeColor="#0000CC"></asp:Label>
+                            <br />
                         </td>
-                        <td class="style2" align="center" 
-                            style="font-size: 12px; color: #000066; font-style: italic" width="35%">
-                            <asp:Label ID="Label45" runat="server" Text="(Chức vụ (Job Title):"></asp:Label>
+                        <td class="style2" align="left" width="33%">
+                            <asp:Label ID="Label46" runat="server" Text="Mobile:" Font-Bold="False" 
+                                Font-Underline="True"></asp:Label>
+                            &nbsp;<asp:Label ID="lblDienThoaiPheduyet" runat="server"></asp:Label>
                             <br />
-                            <asp:Label ID="lblChucvuNguoiPheDuyet" runat="server" Font-Bold="True" 
-                                ForeColor="#000066"></asp:Label>
+                            <asp:Label ID="Label16" runat="server" Text="Email:" Font-Underline="True"></asp:Label>
+                            &nbsp;<asp:Label ID="lblEmailPheduyet" runat="server" Font-Underline="True" 
+                                ForeColor="#0000CC"></asp:Label>
+                            <br />
                             <br />
                         </td>
                     </tr>
+                   
                     </table>
-
     <!--tool bottom-->
     <script language="javascript">
         function printPDF() {

@@ -933,7 +933,9 @@
     <Content Include="Pages\ClaimDetail1.aspx" />
     <Content Include="Pages\ClaimDetailContent.aspx" />
     <Content Include="Pages\ClaimFollow.aspx" />
+    <Content Include="Pages\ClaimMau.aspx" />
     <Content Include="Pages\ClaimSummaryOfLossPop.aspx" />
+    <Content Include="Pages\ClaimType.aspx" />
     <Content Include="Pages\ClaimUpdateFieldPop.aspx" />
     <Content Include="Pages\CreateNewClaim.aspx" />
     <Content Include="Pages\DAILYTODO.aspx" />
@@ -1917,12 +1919,26 @@
     <Compile Include="Pages\ClaimFollow.aspx.designer.cs">
       <DependentUpon>ClaimFollow.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Pages\ClaimMau.aspx.cs">
+      <DependentUpon>ClaimMau.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\ClaimMau.aspx.designer.cs">
+      <DependentUpon>ClaimMau.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Pages\ClaimSummaryOfLossPop.aspx.cs">
       <DependentUpon>ClaimSummaryOfLossPop.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Pages\ClaimSummaryOfLossPop.aspx.designer.cs">
       <DependentUpon>ClaimSummaryOfLossPop.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ClaimType.aspx.cs">
+      <DependentUpon>ClaimType.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\ClaimType.aspx.designer.cs">
+      <DependentUpon>ClaimType.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\ClaimUpdateFieldPop.aspx.cs">
       <DependentUpon>ClaimUpdateFieldPop.aspx</DependentUpon>

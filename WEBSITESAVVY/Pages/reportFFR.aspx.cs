@@ -37,12 +37,24 @@ namespace WEBSITESAVVY.Pages
                 }
             }
         }
-
+        void loadGDV()
+        {
+            drID_GDVFFR.DataSource = gdv.DanhSachGiamDinhVien();
+            drID_GDVFFR.DataTextField = "TenGDV";
+            drID_GDVFFR.DataValueField = "ID_GDV";
+            drID_GDVFFR.DataBind();
+            drID_GDVCheckFFR.DataSource = gdv.DanhSachGiamDinhVien();
+            drID_GDVCheckFFR.DataTextField = "TenGDV";
+            drID_GDVCheckFFR.DataValueField = "ID_GDV";
+            drID_GDVCheckFFR.DataBind();
+        }
         public void loadData()
         {
             DataRow row = claimDao.LayInFoReportNormal(mClaimID);
+            DataRow rowmau = claimDao.selectClaimMau(1);
             loadSIGNPre(mClaimID);
             loadSIGNCheck(mClaimID);
+            loadGDV();
             if (row != null)
             {
                 lblTenClaim.Text = "FFR_" + row["TenClaim"].ToString();
@@ -73,14 +85,23 @@ namespace WEBSITESAVVY.Pages
 
                 int idDonVi = int.Parse(row["ID_DonVI"].ToString());
                 DaiDienDAO daidienDAO = new DaiDienDAO();
-                DataTable dt = daidienDAO.DSNguoiDaiDien(idDonVi);
-                if (dt.Rows.Count > 0)
+                string nguoidaidien = row["PhuTrachNBH"].ToString();
+                if (nguoidaidien != "")
                 {
-                    DataRow dtRow = dt.Rows[0];
-
-                    lblKinhGui.Text = dtRow["TenNguoiDaiDien"].ToString() + " - " /* + dtRow["ChucVu"].ToString() + " - " */ + dtRow["PhongBan"].ToString();
+                    lblPhuTrachNBH.Text = nguoidaidien;
+                    txtPhuTrachNBH.Text = lblPhuTrachNBH.Text;
                 }
-                lblDateILA.Text = "Báo cáo đầu tiên ngày: " + row["ILADATE"].ToString();
+                else
+                {
+                    DataTable dt = daidienDAO.DSNguoiDaiDien(idDonVi);
+                    if (dt.Rows.Count > 0)
+                    {
+                        DataRow dtRow = dt.Rows[0];
+                        lblPhuTrachNBH.Text = dtRow["TenNguoiDaiDien"].ToString() + " - " /* + dtRow["ChucVu"].ToString() + " - " */ + dtRow["PhongBan"].ToString();
+                        txtPhuTrachNBH.Text = lblPhuTrachNBH.Text;
+                    }
+                }
+                lblDateILA.Text = "Báo cáo đầu tiên: " + row["ILADATE"].ToString();
                 //lblILADATE.Text = "Báo cáo đầu tiên ngày " + row["ILADATE"].ToString();
                 //lblDateILA.Text = "Báo cáo đầu tiên ngày " + DateTime.Parse( row["ILADATE"].ToString()).ToString("dd/MM/yyyy");
                 lblBrief.Text = row["Brief"].ToString();
@@ -111,42 +132,162 @@ namespace WEBSITESAVVY.Pages
                 lblTruMucMienThuong.Text=row["TruMienThuong"].ToString();
                 lblBoiThuong.Text = row["BoiThuong"].ToString();
                 //load nội dung
+                string tomtatmau = rowmau["ExecutiveSummaryFR"].ToString();
+                string NDBHmau = rowmau["GioiThieuNDBH"].ToString();
+                string quatrinhmau = rowmau["QuaTrinhXuLyKhieuNaiK"].ToString();
+                string dienbienmau = rowmau["DienBienTonThat"].ToString();
+                string nguyennhanmau = rowmau["NguyenNhanC3FR"].ToString();
+                string phamvimau = rowmau["PhamViBaoHiemE2FR"].ToString();
+                string phammucdomau = rowmau["PhamViMucDoThietHaiD1"].ToString();
+                string yeucaubtmau = rowmau["YeuCauBoiThuongB1"].ToString();
+                string donbhkhacmau = rowmau["DonBaoHiemKhacG"].ToString();
+                string giatrithuhoimau = rowmau["GiaTriThuHoiH"].ToString();
+                string dexuatmau = rowmau["DeXuatChungCuocB2"].ToString();
+                string ketluanmau = rowmau["KetLuanFR"].ToString();
 
-                lblGioiThieu.Text = row["GioiThieu"].ToString();
-                txtGioiThieu.Text = lblGioiThieu.Text;
+                string gioithieuNDBH = row["GioiThieu"].ToString();
+                if (gioithieuNDBH != "")
+                {
+                    lblGioiThieu.Text = gioithieuNDBH;
+                    txtGioiThieu.Text = lblGioiThieu.Text;
+                }
+                else
+                {
+                    lblGioiThieu.Text = NDBHmau;
+                    txtGioiThieu.Text = lblGioiThieu.Text;
+                }
 
-                lblExecutiveSummaryFR.Text = row["ExecutiveSummaryFR"].ToString();
-                txtExecutiveSummaryFR.Text = lblExecutiveSummaryFR.Text;
+                string tomtat = row["ExecutiveSummaryFR"].ToString();
+                if (tomtat != "")
+                {
+                    lblExecutiveSummaryFR.Text = tomtat;
+                    txtExecutiveSummaryFR.Text = lblExecutiveSummaryFR.Text;
+                }
+                else
+                {
+                    lblExecutiveSummaryFR.Text = tomtatmau;
+                    txtExecutiveSummaryFR.Text = lblExecutiveSummaryFR.Text;
+                }
 
-                lblK.Text = row["K"].ToString();
-                txtK.Text = lblK.Text;
+                string quatrinh = row["K"].ToString();
+                if (quatrinh != "")
+                {
+                    lblK.Text = quatrinh;
+                    txtK.Text = lblK.Text;
+                }
+                else
+                {
+                    lblK.Text = quatrinhmau;
+                    txtK.Text = lblK.Text;
+                }
 
-                lblDienBienTonThat.Text = row["DienBienTonThat"].ToString();
-                txtDienBienTonThat.Text = lblDienBienTonThat.Text;
+                string dienbien = row["DienBienTonThat"].ToString();
+                if (dienbien != "")
+                {
+                    lblDienBienTonThat.Text = dienbien;
+                    txtDienBienTonThat.Text = lblDienBienTonThat.Text;
+                }
+                else
+                {
+                    lblDienBienTonThat.Text = dienbienmau;
+                    txtDienBienTonThat.Text = lblDienBienTonThat.Text;
+                }
 
-                lblC3FR.Text = row["C3FR"].ToString();
-                txtC3FR.Text = lblC3FR.Text;
+                string nguyennhan = row["C3FR"].ToString();
+                if (nguyennhan != "")
+                {
+                    lblC3FR.Text = nguyennhan;
+                    txtC3FR.Text = lblC3FR.Text;
+                }
+                else
+                {
+                    lblC3FR.Text = nguyennhanmau;
+                    txtC3FR.Text = lblC3FR.Text;
+                }
 
-                lblE2.Text = row["E2"].ToString();
-                txtE2.Text = lblE2.Text;
+                string phamvibaohiem = row["E2"].ToString();
+                if (phamvibaohiem != "")
+                {
+                    lblE2.Text = phamvibaohiem;
+                    txtE2.Text = lblE2.Text;
+                }
+                else
+                {
+                    lblE2.Text = phamvimau;
+                    txtE2.Text = lblE2.Text;
+                }
 
-                lblD1.Text = row["D1"].ToString();
-                txtD1.Text = lblD1.Text;
+                string phamvi = row["D1"].ToString();
+                if (phamvi != "")
+                {
+                    lblD1.Text = phamvi;
+                    txtD1.Text = lblD1.Text;
+                }
+                else
+                {
+                    lblD1.Text = phammucdomau;
+                    txtD1.Text = lblD1.Text;
+                }
 
-                lblB1.Text = row["B1"].ToString();
-                txtB1.Text = lblB1.Text;
+                string yeucaubt = row["B1"].ToString();
+                if (yeucaubt != "")
+                {
+                    lblB1.Text = yeucaubt;
+                    txtB1.Text = lblB1.Text;
+                }
+                else
+                {
+                    lblB1.Text = yeucaubtmau;
+                    txtB1.Text = lblB1.Text;
+                }
 
-                lblG.Text = row["G"].ToString();
-                txtG.Text = lblG.Text;
+                string dbhkhac = row["G"].ToString();
+                if (dbhkhac != "")
+                {
+                    lblG.Text = dbhkhac;
+                    txtG.Text = lblG.Text;
+                }
+                else
+                {
+                    lblG.Text = donbhkhacmau;
+                    txtG.Text = lblG.Text;
+                }
 
-                lblH.Text = row["H"].ToString();
-                txtH.Text = lblH.Text;
+                string giatrithuhoi = row["H"].ToString();
+                if (giatrithuhoi != "")
+                {
+                    lblH.Text = giatrithuhoi;
+                    txtH.Text = lblH.Text;
+                }
+                else
+                {
+                    lblH.Text = giatrithuhoimau;
+                    txtH.Text = lblH.Text;
+                }
 
-                lblB2.Text = row["B2"].ToString();
-                txtB2.Text = lblB2.Text;
+                string dexuat = row["B2"].ToString();
+                if (dexuat != "")
+                {
+                    lblB2.Text = dexuat;
+                    txtB2.Text = lblB2.Text;
+                }
+                else
+                {
+                    lblB2.Text = dexuatmau;
+                    txtB2.Text = lblB2.Text;
+                }
 
-                lblConclution.Text = row["Conclution"].ToString();
-                txtConclution.Text = lblConclution.Text;
+                string ketluan = row["Conclution"].ToString();
+                if (ketluan != "")
+                {
+                    lblConclution.Text = ketluan;
+                    txtConclution.Text = lblConclution.Text;
+                }
+                else
+                {
+                    lblConclution.Text = ketluanmau;
+                    txtConclution.Text = lblConclution.Text;
+                }
             }
         }
 
@@ -184,7 +325,77 @@ namespace WEBSITESAVVY.Pages
                 Response.Write("<script>alert('Error', 'Error update data');</script>");
             }
         }
+        protected void btnUpdateGDV_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                mClaimID = Session["ThamChieu"].ToString();
+                //int claimID = int.Parse(mClaimID);
 
+                Button btn = (Button)sender;
+                string key = btn.Attributes["key"];
+
+                DropDownList drValue = (DropDownList)FindControl("dr" + key);
+                int id = int.Parse(drValue.SelectedValue.ToString());
+                string title = "";
+                bool up = claimDao.UpdatePrepareFFR(mClaimID, id);
+                if (up == true)
+                {
+                    loadSIGNPre(mClaimID);
+
+                }
+                else
+                    Response.Write("<script> alert('Update preparer error!');</script>");
+                int maGDV = int.Parse(Request.Cookies["MaGDV"].Value);
+                GiamDinhVienDAO gdv = new GiamDinhVienDAO();
+                string noidung = gdv.LayTenTheoMa(maGDV) + " edited " + title + " of " + mClaimID + ".";
+                SaveLogTracking(maGDV, noidung, mClaimID);
+
+
+                Response.Redirect(Request.RawUrl + "#" + key);
+
+            }
+            catch (Exception ex)
+            {
+                Response.Write("<script>alert('Error', 'Error update data');</script>");
+            }
+        }
+        protected void btnUpdateGDVCheck_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                mClaimID = Session["ThamChieu"].ToString();
+                //int claimID = int.Parse(mClaimID);
+
+                Button btn = (Button)sender;
+                string key = btn.Attributes["key"];
+
+                DropDownList drValue = (DropDownList)FindControl("dr" + key);
+                int id = int.Parse(drValue.SelectedValue.ToString());
+                string title = "";
+
+                bool up = claimDao.UpdateCheckFFR(mClaimID, id);
+                if (up == true)
+                {
+                    loadSIGNCheck(mClaimID);
+
+                }
+                else
+                    Response.Write("<script> alert('Update preparer error!');</script>");
+                int maGDV = int.Parse(Request.Cookies["MaGDV"].Value);
+                GiamDinhVienDAO gdv = new GiamDinhVienDAO();
+                string noidung = gdv.LayTenTheoMa(maGDV) + " edited " + title + " of " + mClaimID + ".";
+                SaveLogTracking(maGDV, noidung, mClaimID);
+
+
+                Response.Redirect(Request.RawUrl + "#" + key);
+
+            }
+            catch (Exception ex)
+            {
+                Response.Write("<script>alert('Error', 'Error update data');</script>");
+            }
+        }
 
         void SaveLogTracking(int maGDV, string noidung, string maclaim)
         {
@@ -206,8 +417,10 @@ namespace WEBSITESAVVY.Pages
             DataRow row = claimDao.InfoSignatureFFRPre(claimID);
             if (row != null)
             {
-                lblNguoiBaoCao.Text = row[0].ToString();
+                lblID_GDVFFR.Text = row[0].ToString();
                 lblChucVuNguoiBC.Text = row[1].ToString();
+                lblDienThoaiPre.Text = row[2].ToString();
+                lblEmailPre.Text = row[3].ToString();
 
             }
         }
@@ -217,9 +430,12 @@ namespace WEBSITESAVVY.Pages
             if (row != null)
             {
 
-                lblNguoiCheckBC.Text = row[0].ToString();
+                lblID_GDVCheckFFR.Text = row[0].ToString();
                 lblChucvuNguoiCheck.Text = row[1].ToString();
+                lblDienThoaiCheck.Text = row[2].ToString();
+                lblEmailCheck.Text = row[3].ToString();
                 loadSIGNDirector();
+              
             }
         }
         void loadSIGNDirector()
@@ -227,9 +443,10 @@ namespace WEBSITESAVVY.Pages
             DataRow row = claimDao.InfoSignatureDirector();
             if (row != null)
             {
-
                 lblNguoiPheDuyet.Text = row[0].ToString();
                 lblChucvuNguoiPheDuyet.Text = row[1].ToString();
+                lblDienThoaiPheduyet.Text = row[2].ToString();
+                lblEmailPheduyet.Text = row[3].ToString();
             }
         }
         protected void btnPrepareFFR_Click(object sender, EventArgs e)
