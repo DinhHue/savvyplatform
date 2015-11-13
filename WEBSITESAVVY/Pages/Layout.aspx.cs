@@ -6,6 +6,8 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data;
 using WEBSITESAVVY.DAO;
+using System.Net.Json;
+
 namespace WEBSITESAVVY.Pages
 {
     public partial class Layout : System.Web.UI.Page
@@ -26,6 +28,10 @@ namespace WEBSITESAVVY.Pages
             }
             else
             {
+                //JsonTextParser parser = new JsonTextParser();
+                //JsonObject obj = parser.Parse(jsonText);
+
+
                 DataTable dt = new DataTable();
                 int idgdv = int.Parse(Request.Cookies["MaGDV"].Value);
                 dt = gdvdao.LayTenvaChucVu(idgdv);

@@ -15,8 +15,8 @@ namespace WEBSITESAVVY.Util
 
         int maxPairIndex;
 
-        readonly static int initialPairsSlotsAmount = 10;
-        readonly static int pairsSlotsAmountIncrement = 5;
+        readonly static int initialPairsSlotsAmount = 100;
+        readonly static int pairsSlotsAmountIncrement = 50;
 
         //------------------------------------------------------------------------------
         /// Public constructor

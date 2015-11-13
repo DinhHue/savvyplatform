@@ -643,6 +643,114 @@ namespace WEBSITESAVVY.Pages {
         protected global::System.Web.UI.WebControls.TextBox txtDuPhongBoiThuong;
         
         /// <summary>
+        /// MucLuc_A1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlTableRow MucLuc_A1;
+        
+        /// <summary>
+        /// MucLuc_GioiThieu control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlTableRow MucLuc_GioiThieu;
+        
+        /// <summary>
+        /// MucLuc_C1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlTableRow MucLuc_C1;
+        
+        /// <summary>
+        /// MucLuc_C3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlTableRow MucLuc_C3;
+        
+        /// <summary>
+        /// MucLuc_E1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlTableRow MucLuc_E1;
+        
+        /// <summary>
+        /// MucLuc_D1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlTableRow MucLuc_D1;
+        
+        /// <summary>
+        /// MucLuc_G control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlTableRow MucLuc_G;
+        
+        /// <summary>
+        /// MucLuc_H control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlTableRow MucLuc_H;
+        
+        /// <summary>
+        /// MucLuc_TheQuyenTruyDoi control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlTableRow MucLuc_TheQuyenTruyDoi;
+        
+        /// <summary>
+        /// MucLuc_I control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlTableRow MucLuc_I;
+        
+        /// <summary>
+        /// MucLuc_TT control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlTableRow MucLuc_TT;
+        
+        /// <summary>
+        /// panelMucLucA1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl panelMucLucA1;
+        
+        /// <summary>
         /// lblA1 control.
         /// </summary>
         /// <remarks>
@@ -677,6 +785,15 @@ namespace WEBSITESAVVY.Pages {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnUpdateA1;
+        
+        /// <summary>
+        /// panelMucLucGioiThieu control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl panelMucLucGioiThieu;
         
         /// <summary>
         /// lblGioiThieu control.
@@ -715,6 +832,15 @@ namespace WEBSITESAVVY.Pages {
         protected global::System.Web.UI.WebControls.Button btnUpdateGioiThieu;
         
         /// <summary>
+        /// panelMucLucDienBienTonThat control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl panelMucLucDienBienTonThat;
+        
+        /// <summary>
         /// lblDienBienTonThat control.
         /// </summary>
         /// <remarks>
@@ -751,6 +877,15 @@ namespace WEBSITESAVVY.Pages {
         protected global::System.Web.UI.WebControls.Button btnUpdateC1;
         
         /// <summary>
+        /// panelMucLucC3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl panelMucLucC3;
+        
+        /// <summary>
         /// lblC3 control.
         /// </summary>
         /// <remarks>
@@ -776,6 +911,15 @@ namespace WEBSITESAVVY.Pages {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtC3;
+        
+        /// <summary>
+        /// panelMucLucE1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl panelMucLucE1;
         
         /// <summary>
         /// lblE1 control.
@@ -805,6 +949,15 @@ namespace WEBSITESAVVY.Pages {
         protected global::System.Web.UI.WebControls.TextBox txtE1;
         
         /// <summary>
+        /// panelMucLucD1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl panelMucLucD1;
+        
+        /// <summary>
         /// lblD1 control.
         /// </summary>
         /// <remarks>
@@ -830,6 +983,15 @@ namespace WEBSITESAVVY.Pages {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtD1;
+        
+        /// <summary>
+        /// panelMucLucG control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl panelMucLucG;
         
         /// <summary>
         /// lblG control.
@@ -859,6 +1021,15 @@ namespace WEBSITESAVVY.Pages {
         protected global::System.Web.UI.WebControls.TextBox txtG;
         
         /// <summary>
+        /// panelMucLucH control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl panelMucLucH;
+        
+        /// <summary>
         /// lblH control.
         /// </summary>
         /// <remarks>
@@ -884,6 +1055,15 @@ namespace WEBSITESAVVY.Pages {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtH;
+        
+        /// <summary>
+        /// panelMucLucTheQuyenTruyDoi control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl panelMucLucTheQuyenTruyDoi;
         
         /// <summary>
         /// lblTheQuyenTruyDoi control.
@@ -922,6 +1102,15 @@ namespace WEBSITESAVVY.Pages {
         protected global::System.Web.UI.WebControls.Button Button2;
         
         /// <summary>
+        /// panelMucLucI control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl panelMucLucI;
+        
+        /// <summary>
         /// lblI control.
         /// </summary>
         /// <remarks>
@@ -949,6 +1138,15 @@ namespace WEBSITESAVVY.Pages {
         protected global::System.Web.UI.WebControls.TextBox txtI;
         
         /// <summary>
+        /// panelMucLucTamUngBoiThuongText control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl panelMucLucTamUngBoiThuongText;
+        
+        /// <summary>
         /// lblTamUngBoiThuongText control.
         /// </summary>
         /// <remarks>
@@ -974,6 +1172,33 @@ namespace WEBSITESAVVY.Pages {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtTamUngBoiThuongText;
+        
+        /// <summary>
+        /// panelMucLucTT control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl panelMucLucTT;
+        
+        /// <summary>
+        /// lblTT control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl lblTT;
+        
+        /// <summary>
+        /// txtTT control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl txtTT;
         
         /// <summary>
         /// Label35 control.
