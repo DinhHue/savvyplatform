@@ -102,6 +102,10 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Json, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Library\System.Net.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Web.Mobile" />
@@ -912,6 +916,7 @@
     <Content Include="Manage\QuanLyNguoiDaiDien.aspx" />
     <Content Include="Manage\QuanLyTaskAssiged.aspx" />
     <Content Include="Messages\checkedreport.aspx" />
+    <Content Include="Messages\MucLuc.aspx" />
     <Content Include="Messages\submitreport.aspx" />
     <Content Include="mobile\Homem.aspx" />
     <Content Include="mobile\InformationForm.aspx" />
@@ -1610,6 +1615,7 @@
     <Compile Include="DAO\LoaiDRDAO.cs" />
     <Compile Include="DAO\LoaiHangMucDAO.cs" />
     <Compile Include="DAO\LossListDAO.cs" />
+    <Compile Include="DAO\MucLucDAO.cs" />
     <Compile Include="DAO\NewsDAO.cs" />
     <Compile Include="DAO\NewsTypeDAO.cs" />
     <Compile Include="DAO\NhomHangMucDAO.cs" />
@@ -1642,6 +1648,7 @@
     <Compile Include="DTO\LoaiDRDTO.cs" />
     <Compile Include="DTO\LoaiHangMucDTO.cs" />
     <Compile Include="DTO\LossListDTO.cs" />
+    <Compile Include="DTO\MucLucDTO.cs" />
     <Compile Include="DTO\NewsDTO.cs" />
     <Compile Include="DTO\NewsTypeDTO.cs" />
     <Compile Include="DTO\NhomHangMucDTO.cs" />
@@ -1769,6 +1776,12 @@
     </Compile>
     <Compile Include="Messages\checkedreport.aspx.designer.cs">
       <DependentUpon>checkedreport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Messages\MucLuc.aspx.cs">
+      <DependentUpon>MucLuc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Messages\MucLuc.aspx.designer.cs">
+      <DependentUpon>MucLuc.aspx</DependentUpon>
     </Compile>
     <Compile Include="Messages\submitreport.aspx.cs">
       <DependentUpon>submitreport.aspx</DependentUpon>
