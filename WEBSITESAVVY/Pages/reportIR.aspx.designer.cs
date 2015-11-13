@@ -643,31 +643,31 @@ namespace WEBSITESAVVY.Pages {
         protected global::System.Web.UI.WebControls.Label Label23;
         
         /// <summary>
-        /// lblDuPhongBoiThuong control.
+        /// lblDuPhongTonThatIR control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblDuPhongBoiThuong;
+        protected global::System.Web.UI.WebControls.Label lblDuPhongTonThatIR;
         
         /// <summary>
-        /// panelDuPhongBoiThuong control.
+        /// panelDuPhongTonThatIR control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel panelDuPhongBoiThuong;
+        protected global::System.Web.UI.WebControls.Panel panelDuPhongTonThatIR;
         
         /// <summary>
-        /// txtDuPhongBoiThuong control.
+        /// txtDuPhongTonThatIR control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtDuPhongBoiThuong;
+        protected global::System.Web.UI.WebControls.TextBox txtDuPhongTonThatIR;
         
         /// <summary>
         /// Button11 control.

@@ -610,13 +610,13 @@
                             </td>
                             <td>:</td>
                             <td >
-                                <asp:Label ID="lblDuPhongBoiThuong" key="DuPhongBoiThuong"  type="SingleLine" onclick="editField(this)" CssClass="label-edit field_input" runat="server" Width="570px" 
+                                <asp:Label ID="lblDuPhongTonThatIR" key="DuPhongTonThatIR"  type="SingleLine" onclick="editField(this)" CssClass="label-edit field_input" runat="server" Width="570px" 
                                     Font-Bold="true" Font-Size="22px" ></asp:Label>
-                                <asp:Panel ID="panelDuPhongBoiThuong" Width="570px" CssClass="panelUpdate hiden" runat="server">
-                                    <asp:TextBox ID="txtDuPhongBoiThuong" CssClass="hiden" TextMode="SingleLine"  Width="100%" runat="server" />
+                                <asp:Panel ID="panelDuPhongTonThatIR" Width="570px" CssClass="panelUpdate hiden" runat="server">
+                                    <asp:TextBox ID="txtDuPhongTonThatIR" CssClass="hiden" TextMode="SingleLine"  Width="100%" runat="server" />
                                     <div style="margin-top:10px">
-                                        <asp:Button ID="Button11"  key="DuPhongBoiThuong" onclick="btnUpdate_Click" Text="Update" runat="server"/>
-                                        <input  key="DuPhongBoiThuong" type="button" value="Cancel" onclick="cancel(this)" />
+                                        <asp:Button ID="Button11"  key="DuPhongTonThatIR" onclick="btnUpdate_Click" Text="Update" runat="server"/>
+                                        <input  key="DuPhongTonThatIR" type="button" value="Cancel" onclick="cancel(this)" />
                                     </div>
                                 </asp:Panel>
                             </td>
@@ -685,19 +685,19 @@
                                 <table style="cursor:pointer" cellpadding="20px" width="100%" >
                     <tr><td onclick="window.location.href ='#ExecutiveSummaryIR'">
                         <b style="float:left;">KHÁI QUÁT VỤ VIỆC VÀ TIẾN TRÌNH </b>
-                        <div style="float:right; text-align:right;" >.................................................................................................</div></td></tr>
+                        <div style="float:right; text-align:right;" >..................................................................................................</div></td></tr>
                     <tr><td onclick="window.location.href ='#K'"><b style="float:left;">QUÁ TRÌNH XỬ LÝ VÀ KHIẾU NẠI </b>
-                        <div style="float:right; text-align:right;" >......................................................................................................</div></td></tr>
+                        <div style="float:right; text-align:right;" >.........................................................................................................</div></td></tr>
                     <tr><td onclick="window.location.href ='#AdjustmentIR'"><b style="float:left;">CẬP NHẬT TIẾN ĐỘ TÍNH TOÁN </b>
-                        <div style="float:right; text-align:right;" >.......................................................................................................</div></td></tr>
+                        <div style="float:right; text-align:right;" >..........................................................................................................</div></td></tr>
                     <tr><td onclick="window.location.href ='#H'"><b style="float:left;">GIÁ TRỊ THU HỒI </b>
-                        <div style="float:right; text-align:right;" >..................................................................................................................................</div></td></tr>
+                        <div style="float:right; text-align:right;" >.....................................................................................................................................</div></td></tr>
                     <tr><td onclick="window.location.href ='#I'"><b style="float:left;">CẬP NHẬT DỰ PHÒNG </b>
-                        <div style="float:right; text-align:right;" >..........................................................................................................................</div></td></tr>
+                        <div style="float:right; text-align:right;" >.............................................................................................................................</div></td></tr>
                     <tr><td onclick="window.location.href ='#TamUngBoiThuongText'"><b style="float:left;">TẠM ỨNG BỒI THƯỜNG </b>
-                        <div style="float:right; text-align:right;" >......................................................................................................................</div></td></tr>
-                    <tr><td onclick="window.location.href ='#TT'"><b style="float:left;">BÁO CÁO TIẾP THEO </b>
                         <div style="float:right; text-align:right;" >.........................................................................................................................</div></td></tr>
+                    <tr><td onclick="window.location.href ='#TT'"><b style="float:left;">BÁO CÁO TIẾP THEO </b>
+                        <div style="float:right; text-align:right;" >..............................................................................................................................</div></td></tr>
 
                 </table>
 

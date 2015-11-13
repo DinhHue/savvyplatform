@@ -262,8 +262,7 @@
             <div id="body1" class="body">
                 <div id="header">
                     <div style="height:30px"></div>
-                    <div style="float:left; width:65%; clear:both;"><img src="<%= Request.Url.GetLeftPart(UriPartial.Authority) +"/images/banner.jpg" %>" width="100%" alt="" /></div>
-            
+                    <div style="float:left; width:65%; clear:both;"><img src="<%= Request.Url.GetLeftPart(UriPartial.Authority) +"/images/banner.jpg" %>" width="100%" alt="" /></div>           
                     <div>
                         <asp:Label ID="lblFRDate" runat="server" key="FRDate" type="SingleLine" onclick="editField(this)" 
                               CssClass="field_input label-edit title_2" Width="581px" Font-Size="18px" ></asp:Label>

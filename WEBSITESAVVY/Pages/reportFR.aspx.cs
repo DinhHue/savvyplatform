@@ -51,14 +51,14 @@ namespace WEBSITESAVVY.Pages
                 //lblNgayMoPR.Text = row["NgayBatDauGiamDinh"].ToString();
                 //lblNgayMoPR.Text = "Ngày " + DateTime.Now.Day + " tháng " + DateTime.Now.Month + " năm " + DateTime.Now.Year;
                 //lblRefKH.Text    = row["RefKH"].ToString();
-                string ngayIR = "Ngày "+row["FRDate"].ToString();
+                string ngayIR = row["FRDate"].ToString();
                 if (ngayIR != "")
                 {
-                    lblFRDate.Text = ngayIR;
-                    txtFRDate.Text = row["FRDate"].ToString();
+                    lblFRDate.Text = "Ngày " + ngayIR;
+                    txtFRDate.Text = ngayIR;
                 }
                 else
-                    lblFRDate.Text = "Ngày dd/mm/yyy.";
+                    lblFRDate.Text = "Ngày dd/mm/yyyy.";
                 string tc = row["RefKH"].ToString();
                 if (tc != "")
                 {

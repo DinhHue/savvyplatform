@@ -46,9 +46,31 @@ namespace WEBSITESAVVY.Pages
                             lblSuminsured.Text = row["SumInsured"].ToString();
                             lblDeductible.Text = row["TruMienThuong"].ToString();
                             lblClaimsum.Text = row["KhieuNai"].ToString();
-                            lblpayment.Text = row["TamUngBoiThuong"].ToString();
+                            string taIR= row["TamUngBoiThuong"].ToString();
+                            if(taIR!="")
+                                lblpayment.Text=taIR;
+                            else
+                                lblpayment.Text = row["TamUngBoiThuongPR"].ToString(); 
                             lbllossestimate.Text = row["DuPhongTonThat"].ToString();
-                            lblReserve.Text = row["DuPhongBoiThuong"].ToString();
+                            string duphongILA = row["DuPhongTonThat"].ToString();
+                            string duphongPR = row["DuPhongTonThatPR"].ToString();
+                            string duphongIR = row["DuPhongTonThatIR"].ToString();
+                            if (duphongIR != "")
+                            {
+                                lblReserve.Text = duphongIR;
+                                
+                            }
+                            if (duphongIR == "" && duphongPR != "")
+                            {
+                                lblReserve.Text = duphongPR;
+                               
+                            }
+                            if (duphongIR == "" && duphongPR == "")
+                            {
+                                lblReserve.Text= duphongILA;
+                                
+                            }
+                           // lblReserve.Text =  row["DuPhongBoiThuong"].ToString();                          
                             lblsettlement.Text = row["BoiThuong"].ToString();
                             lblSR01date.Text = row["NgayBatDauGiamDinh"].ToString();
                             lblILAdate.Text = row["ILADATE"].ToString();
