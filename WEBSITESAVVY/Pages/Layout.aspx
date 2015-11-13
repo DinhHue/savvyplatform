@@ -230,6 +230,14 @@
             }
         }
 
+        function ChinhMucLuc(claimType) {
+            var url = "../Messages/MucLuc.aspx?report=" + report;
+            var contentPage = '<iframe style="width:100%; height:100% ; border:none;" src="' + url + '"></iframe>';
+
+            $('#w_Popup').html(contentPage);
+            $('#w_Popup').window('open');
+        }
+
 
 
     </script>
@@ -374,6 +382,7 @@
 				    <li><a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true" key="I" onclick="updateField(this);">Reserve for Insurer</a></li>
                     <li><a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true" key="TamUngBoiThuongText" onclick="updateField(this);">Payment On Account</a></li>
                     <li><a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true" >Procedure</a></li>
+                    <li><a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true" onclick="ChinhMucLuc(PR)" >Mục Lục</a></li>
                 </ol>
 			</div>
 			<div title="IR" >

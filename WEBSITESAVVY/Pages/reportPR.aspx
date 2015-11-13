@@ -670,26 +670,26 @@
             <div class="body">
                 <h3 style="text-align:center; font-size:25px!important; color:#006600; margin:20px 0px 0px 0">MỤC LỤC BÁO CÁO</h3>
                 <table style="font:22px; cursor:pointer; width:100%;" cellpadding="20px" >
-                    <tr><td onclick="window.location.href ='#A1'"><b style="float:left;">GIỚI THIỆU CHUNG</b> 
+                    <tr id="MucLuc_A1" runat="server"><td onclick="window.location.href ='#A1'"><b style="float:left;">GIỚI THIỆU CHUNG</b> 
                         <div style="float:right; text-align:right;" >..................................................................................................................................</div></td></tr>
-                    <tr><td onclick="window.location.href ='#GioiThieu'"><b style="float:left;">NGƯỜI ĐƯỢC BẢO HIỂM </b>
+                    <tr id="MucLuc_GioiThieu" runat="server"><td onclick="window.location.href ='#GioiThieu'"><b style="float:left;">NGƯỜI ĐƯỢC BẢO HIỂM </b>
                         <div style="float:right; text-align:right;" >........................................................................................................................</div></td></tr>
-                    <tr><td onclick="window.location.href ='#C1'"><b style="float:left;">DIỄN BIẾN </b>
+                    <tr id="MucLuc_C1" runat="server"><td onclick="window.location.href ='#C1'"><b style="float:left;">DIỄN BIẾN </b>
                         <div style="float:right; text-align:right;" >..................................................................................................................................................</div></td></tr>
-                    <tr><td onclick="window.location.href ='#C3'"><b style="float:left;">NGUYÊN NHÂN </b>
+                    <tr id="MucLuc_C3" runat="server"><td onclick="window.location.href ='#C3'"><b style="float:left;">NGUYÊN NHÂN </b>
                         <div style="float:right; text-align:right;" >..........................................................................................................................................</div></td></tr>
-                    <tr><td onclick="window.location.href ='#E1'"><b style="float:left;">PHẠM VI BẢO HIỂM </b>
+                    <tr id="MucLuc_E1" runat="server"><td onclick="window.location.href ='#E1'"><b style="float:left;">PHẠM VI BẢO HIỂM </b>
                         <div style="float:right; text-align:right;" >.................................................................................................................................</div></td></tr>
-                    <tr><td onclick="window.location.href ='#D1'"><b style="float:left;">PHẠM VI VÀ MỨC ĐỘ THIỆT HẠI</b><div style="float:right; text-align:right;" >..........................................................................................................</div></td></tr>
-                    <tr><td onclick="window.location.href ='#G'"><b style="float:left;">ĐƠN BẢO HIỂM KHÁC </b>
+                    <tr id="MucLuc_D1" runat="server"><td onclick="window.location.href ='#D1'"><b style="float:left;">PHẠM VI VÀ MỨC ĐỘ THIỆT HẠI</b><div style="float:right; text-align:right;" >..........................................................................................................</div></td></tr>
+                    <tr id="MucLuc_G" runat="server"><td onclick="window.location.href ='#G'"><b style="float:left;">ĐƠN BẢO HIỂM KHÁC </b>
                         <div style="float:right; text-align:right;" >.............................................................................................................................</div></td></tr>
-                    <tr><td onclick="window.location.href ='#H'"><b style="float:left;">GIÁ TRỊ THU HỒI </b>
+                    <tr id="MucLuc_H" runat="server"><td onclick="window.location.href ='#H'"><b style="float:left;">GIÁ TRỊ THU HỒI </b>
                         <div style="float:right; text-align:right;" >......................................................................................................................................</div></td></tr>
-                         <tr><td onclick="window.location.href ='#TheQuyenTruyDoi'"><b style="float:left;">THẾ QUYỀN TRUY ĐÒI BÊN THỨ BA </b>
+                    <tr id="MucLuc_TheQuyenTruyDoi" runat="server"><td onclick="window.location.href ='#TheQuyenTruyDoi'"><b style="float:left;">THẾ QUYỀN TRUY ĐÒI BÊN THỨ BA </b>
                         <div style="float:right; text-align:right;" >.....................................................................................................</div></td></tr>
-                    <tr><td onclick="window.location.href ='#I'"><b style="float:left;">DỰ PHÒNG BỒI THƯỜNG </b>
+                    <tr id="MucLuc_I" runat="server"><td onclick="window.location.href ='#I'"><b style="float:left;">DỰ PHÒNG BỒI THƯỜNG </b>
                         <div style="float:right; text-align:right;" >.......................................................................................................................</div></td></tr>
-                    <tr><td onclick="window.location.href ='#TT'"><b style="float:left;">BÁO CÁO TIẾP THEO </b>
+                    <tr id="MucLuc_TT" runat="server"><td onclick="window.location.href ='#TT'"><b style="float:left;">BÁO CÁO TIẾP THEO </b>
                         <div style="float:right; text-align:right;" >...............................................................................................................................</div></td></tr>
                 </table>
 
@@ -700,7 +700,7 @@
 
 
 
-        <div class="box" >
+        <div class="box" id="panelMucLucA1" runat="server" >
             <%--<h3 id="A1" key="A1" title="Giới Thiệu Chung" onclick="parent.updateField(this);">I. GIỚI THIỆU CHUNG</h3>--%>
             <h3 id="A1" key="A1" title="Giới Thiệu Chung">GIỚI THIỆU CHUNG</h3>
             <div >
@@ -715,7 +715,7 @@
             </div>
         </div>
 
-        <div class="box" >
+        <div class="box" id="panelMucLucGioiThieu" runat="server" >
             <h3 id="GioiThieu" key="GioiThieu" title="Người Được Bảo Hiểm">NGƯỜI ĐƯỢC BẢO HIỂM</h3>
             <div key="GioiThieu" >
                 <asp:Label ID="lblGioiThieu" key="GioiThieu" onclick="editField(this)" CssClass="label-edit"  runat="server" Width="100%" ></asp:Label>
@@ -729,7 +729,7 @@
             </div>
         </div>
 
-        <div class="box" >
+        <div class="box" id="panelMucLucDienBienTonThat" runat="server" >
             <h3 id="C1" key="DienBienTonThat" title="Diễn Biến" >DIỄN BIẾN</h3>
             <div>
                 <asp:Label ID="lblDienBienTonThat" key="DienBienTonThat" onclick="editField(this)" CssClass="label-edit"  runat="server" Width="100%" ></asp:Label>
@@ -743,7 +743,7 @@
             </div>
         </div>
 
-        <div class="box" >
+        <div class="box" id="panelMucLucC3" runat="server" >
             <h3 id="C3" key="C3" title="Nguyên Nhân" >NGUYÊN NHÂN</h3>
             <div>
                 <asp:Label ID="lblC3" key="C3" onclick="editField(this)" CssClass="label-edit"  runat="server" Width="100%" ></asp:Label>
@@ -757,7 +757,7 @@
             </div>
         </div>
 
-        <div class="box" >
+        <div class="box" id="panelMucLucE1" runat="server"  >
             <h3 id="E1" key="E1" title="Phạm Vi Bảo Hiểm" >PHẠM VI BẢO HIỂM</h3>
             <div>
                 <asp:Label ID="lblE1" key="E1" onclick="editField(this)" CssClass="label-edit"  runat="server" Width="100%" ></asp:Label>
@@ -771,7 +771,7 @@
             </div>
         </div>
 
-        <div class="box" >
+        <div class="box" id="panelMucLucD1" runat="server"   >
             <h3 id="D1" key="D1" title="Phạm Vi Và Mức Độ Thiệt Hại" >PHẠM VI VÀ MỨC ĐỘ THIỆT HẠI</h3>
             <div>
                 <asp:Label ID="lblD1" key="D1" onclick="editField(this)" CssClass="label-edit"  runat="server" Width="100%" ></asp:Label>
@@ -785,7 +785,7 @@
             </div>
         </div>
 
-        <div class="box" >
+        <div class="box" id="panelMucLucG" runat="server"   >
             <h3 id="G" key="G" title="Đơn Bảo Hiểm Khác" >ĐƠN BẢO HIỂM KHÁC</h3>
             <div>
                 <asp:Label ID="lblG" key="G" onclick="editField(this)" CssClass="label-edit"  runat="server" Width="100%" ></asp:Label>
@@ -799,7 +799,7 @@
             </div>
         </div>
 
-        <div class="box" >
+        <div class="box" id="panelMucLucH" runat="server"   >
             <h3 id="H" key="H" title="Giá Trị Thu Hồi" >GIÁ TRỊ THU HỒI</h3>
             <div>
                 <asp:Label ID="lblH" key="H" onclick="editField(this)" CssClass="label-edit"  runat="server" Width="100%" ></asp:Label>
@@ -813,7 +813,7 @@
             </div>
         </div>
         
-        <div class="box" >
+        <div class="box" id="panelMucLucTheQuyenTruyDoi" runat="server"   >
             <h3 id="TheQuyenTruyDoi" key="TheQuyenTruyDoi" title="Giá Trị Thu Hồi" >THẾ QUYỀN TRUY ĐÒI BÊN THỨ BA</h3>
             <div>
                 <asp:Label ID="lblTheQuyenTruyDoi" key="TheQuyenTruyDoi" onclick="editField(this)" CssClass="label-edit"  runat="server" Width="100%" ></asp:Label>
@@ -826,7 +826,7 @@
                 </asp:Panel>
             </div>
         </div>
-        <div class="box" >
+        <div class="box"  id="panelMucLucI" runat="server"  >
             <h3 id="I" key="I" title="Dự Phòng Bồi Thường" >DỰ PHÒNG BỒI THƯỜNG</h3>
             <div>
                 <asp:Label ID="lblI" key="I" onclick="editField(this)" CssClass="label-edit"  runat="server" Width="100%" ></asp:Label>
@@ -840,7 +840,7 @@
             </div>
         </div>
 
-        <div class="box" >
+        <div class="box"  id="panelMucLucTamUngBoiThuongText" runat="server"  >
             <h3 id="TamUngBoiThuongText" key="TamUngBoiThuongText" title="Tạm Ứng Bồi Thường">TẠM ỨNG BỒI THƯỜNG</h3>
             <div>
                 <asp:Label ID="lblTamUngBoiThuongText" key="TamUngBoiThuongText" onclick="editField(this)" CssClass="label-edit"  runat="server" Width="100%" ></asp:Label>
@@ -854,10 +854,10 @@
             </div>
         </div>
 
-        <div class="box" >
-            <h3 id="TT" key="TT" title="Báo Cáo Tiếp Theo" >BÁO CÁO TIẾP THEO</h3>
+        <div class="box" id="panelMucLucTT" runat="server"  >
+            <h3 id="lblTT" key="TT" title="Báo Cáo Tiếp Theo" runat="server" >BÁO CÁO TIẾP THEO</h3>
             <div style="text-align: justify"><%--<asp:Label ID="lblTT" runat="server" Width="100%" ></asp:Label>--%>
-            <p>  Các thông tin và diễn biến tiếp theo liên quan đến vụ tổn thất này sẽ tiếp tục được chúng tôi quan tâm theo dõi và sẽ định kỳ báo cáo để Nhà Bảo Hiểm nắm rõ.</p><p>  Nếu Quý Công ty Bảo hiểm có bất kỳ câu hỏi hoặc yêu cầu nào khác liên quan đến công tác giám định vụ tổn thất này, xin vui lòng liên lạc với chúng tôi để được hỗ trợ tốt nhất.</p></div>
+            <p id="txtTT" runat="server">  Các thông tin và diễn biến tiếp theo liên quan đến vụ tổn thất này sẽ tiếp tục được chúng tôi quan tâm theo dõi và sẽ định kỳ báo cáo để Nhà Bảo Hiểm nắm rõ.</p><p>  Nếu Quý Công ty Bảo hiểm có bất kỳ câu hỏi hoặc yêu cầu nào khác liên quan đến công tác giám định vụ tổn thất này, xin vui lòng liên lạc với chúng tôi để được hỗ trợ tốt nhất.</p></div>
         </div>
 
          <table width="100%">

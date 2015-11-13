@@ -25,7 +25,7 @@ namespace WEBSITESAVVY.Messages
             {
                 if (!IsPostBack)
                 {
-                    if (Session["ThamChieu"].ToString() != null)
+                    if (Session["ThamChieu"] != null)
                     {
                         report = Request.QueryString["report"].ToString();
 
