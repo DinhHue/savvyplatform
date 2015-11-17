@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Security.Cryptography;
 using System.Text;
+using System.Data;
+using WEBSITESAVVY.DAO;
 
 namespace WEBSITESAVVY.Util
 {
@@ -41,5 +43,50 @@ namespace WEBSITESAVVY.Util
             return result.ToString();
         }
 
+        public static void fixBugValueClaim()
+        {
+            String sql = "SELECT cl.ID_CLAIM FROM CLAIM cl";
+            DataTable dt = SqlDataAcessHelper.exQuery(sql);
+            foreach (DataRow row in dt.Rows)
+            {
+                String idClaim = row["ID_CLAIM"].ToString();
+
+                fixBugValueClaim(idClaim);
+            }
+        }
+
+        public static void fixBugValueClaim(String idClaim)
+        {
+            //Add colums update
+            //String[]colums = { "DienBienTonThat", "PhamViTonThat", "DePhongVaKhuyenCao", "YKienGDV", "GioiThieu" };
+
+            String sql = "SELECT * FROM CLAIM WHERE ID_CLAIM = " + idClaim;
+            DataTable dt = SqlDataAcessHelper.exQuery(sql);
+            if (dt.Rows.Count == 1)
+            {
+                DataRow row = dt.Rows[0];
+
+                ClaimDAO claimDao = new ClaimDAO();
+
+
+                foreach (DataColumn c in dt.Columns)
+                {
+                    String key = c.ColumnName;
+                    if (key!= "ID_Claim" && row[key] != null)
+                    {
+
+                        String valueOld = row[key].ToString();
+                        if (valueOld.StartsWith("<!DOCTYPE html>\r\n<html>\r\n<head>\r\n</head>\r\n<body>\r\n"))
+                        {
+                            String valueNew = valueOld.Replace("<!DOCTYPE html>\r\n<html>\r\n<head>\r\n</head>\r\n<body>\r\n", "").Replace("\r\n</body>\r\n</html>", "");
+
+                            claimDao.updateClaimField(idClaim, key, valueNew);
+                        }
+                    }
+                }
+
+
+            }
+        }
     }
 }
