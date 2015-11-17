@@ -153,5 +153,17 @@ namespace WEBSITESAVVY.DAO
             return result;
         }
 
+        //////////////////////////////////////////////////////////////
+        public static DataTable exQuery(string sql)
+        {
+            DataTable dt = new DataTable();
+            SqlConnection cn = new SqlConnection(ConfigurationManager.ConnectionStrings["SAVVYConnectionString"].ConnectionString);
+            SqlCommand cmd = new SqlCommand(sql, cn);
+            cmd.CommandType = CommandType.Text;
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+            return dt;
+        }
+
     }
 }
