@@ -1310,7 +1310,6 @@ namespace WEBSITESAVVY.DAO
 
             return SqlDataAcessHelper.exScalarStore(sql, ds);
         }
-
         public void updateClaimField(string claimID, string key, string value)
         {
             string sql = "sp_Claim_UpdateField";
@@ -1322,7 +1321,6 @@ namespace WEBSITESAVVY.DAO
 
             SqlDataAcessHelper.exNonStoreParas(sql, ds);
         }
-
         public void updateClaimMauField(int id, string key, string value)
         {
             string sql = "sp_ClaimMau_UpdateField";

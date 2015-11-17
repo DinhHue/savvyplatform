@@ -32,8 +32,7 @@ namespace WEBSITESAVVY.Pages
                 lblID_GDVFR.Text = row[0].ToString();
                 lblChucVuNguoiBC.Text = row[1].ToString();
                 lblDienThoaiPre.Text = row[2].ToString();
-                lblEmailPre.Text = row[2].ToString();
-
+                lblEmailPre.Text = row[3].ToString();
             }
 
             DataRow row1 = claimDao.InfoSignatureFRCheck(claimID);

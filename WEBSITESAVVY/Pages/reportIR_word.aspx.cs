@@ -136,7 +136,7 @@ namespace WEBSITESAVVY.Pages
                 lblAdjustmentIR.Text = row["AdjustmentIR"].ToString();
                 lblH.Text = row["GiaTriThuHoiHIR"].ToString();
                 lblI.Text = row["I"].ToString();
-                lblTamUngBoiThuongText.Text = row["lblTamUngBoiThuongTextIR"].ToString();
+                lblTamUngBoiThuongText.Text = row["TamUngBoiThuongTextIR"].ToString();
                 //lblTT.Text = "<p>Các thông tin và diễn biến tiếp theo liên quan đến vụ tổn thất này sẽ tiếp tục được chúng tôi quan tâm theo dõi và cập nhật ngay khi có thông tin mới nhất để phục vụ cho công tác quản lý bồi thường của Nhà Bảo Hiểm.</p>";
                 //lblTT.Text += "<p>Nếu Quý Công ty Bảo hiểm có câu hỏi hoặc bất kỳ yêu cầu nào khác sau khi xem báo cáo này, xin vui lòng thông tin cho chúng tôi để được đáp ứng thỏa đáng.</p>";
 

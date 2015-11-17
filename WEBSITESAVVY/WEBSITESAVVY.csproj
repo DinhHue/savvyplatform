@@ -1781,6 +1781,7 @@
     </Compile>
     <Compile Include="Messages\MucLuc.aspx.cs">
       <DependentUpon>MucLuc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Messages\MucLuc.aspx.designer.cs">
       <DependentUpon>MucLuc.aspx</DependentUpon>

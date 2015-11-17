@@ -24,3 +24,4 @@ D:\GitCode\WEBSITESAVVY\bin\zh-CHT\AjaxControlToolkit.resources.dll
 D:\GitCode\WEBSITESAVVY\obj\Debug\WEBSITESAVVY.csprojResolveAssemblyReference.cache
 D:\GitCode\WEBSITESAVVY\obj\Debug\WEBSITESAVVY.dll
 D:\GitCode\WEBSITESAVVY\obj\Debug\WEBSITESAVVY.pdb
+D:\GitCode\WEBSITESAVVY\bin\System.Net.Json.dll

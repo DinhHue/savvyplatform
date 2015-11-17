@@ -867,7 +867,7 @@
                             <br />
                             <asp:Label ID="Label34" runat="server" Font-Italic="True" Text="Prepared by"></asp:Label>
                         </td>
-                        <td align="left">
+                        <td align="left" width="33%">
                             <asp:Label ID="Label42" runat="server" Font-Bold="True" Text="Người kiểm tra"></asp:Label>
                             <br />
                             <asp:Label ID="Label43" runat="server" Font-Italic="True" 
@@ -886,7 +886,7 @@
                             <br />
                             <br />
                         </td>
-                        <td>
+                        <td width="33%">
                             &nbsp;</td>
                         <td align="center" width="33%">
                             <br />
@@ -896,7 +896,7 @@
                     </tr>
                     
                     <tr>
-                        <td width="34%" style="padding-left: 10px">
+                        <td width="34%">
                             <asp:Label ID="lblID_GDVPR" key="ID_GDVPR" type="SingeLine"  
                                 CssClass="field_input label-edit"  onclick="editField(this)" runat="server" 
                                 Font-Bold="True" Width="100%"></asp:Label>
@@ -912,7 +912,7 @@
                             <asp:Label ID="lblChucVuNguoiBC" runat="server" Font-Bold="False" 
                                 Font-Italic="True"></asp:Label>
                         </td>
-                        <td align="left">
+                        <td align="left" width="33%">
                             <asp:Label ID="lblID_GDVCheckPR" key="ID_GDVCheckPR" type="SingeLine" 
                                 CssClass="label-edit"  onclick="editField(this)" runat="server" 
                                 Font-Bold="True" Width="100%"></asp:Label>
@@ -936,8 +936,8 @@
                         </td>
                     </tr>
                     <tr>
-                        <td class="style2" 
-                            width="34%">
+                        <td 
+                            width="34%" style="font-size: 16px">
                             <asp:Label ID="Label49" runat="server" Text="Mobile:" Font-Bold="False" 
                                 Font-Underline="True"></asp:Label>
                             &nbsp;<asp:Label ID="lblDienThoaiPre" runat="server"></asp:Label>
@@ -947,8 +947,8 @@
                                 ForeColor="#0000CC"></asp:Label>
                             <br />
                         </td>
-                        <td class="style2" 
-                            align="left">
+                        <td 
+                            align="left" style="font-size: 16px" width="33%">
                             <asp:Label ID="Label47" runat="server" Text="Mobile:" Font-Bold="False" 
                                 Font-Underline="True"></asp:Label>
                             &nbsp;<asp:Label ID="lblDienThoaiCheck" runat="server"></asp:Label>
@@ -958,7 +958,7 @@
                                 ForeColor="#0000CC"></asp:Label>
                             <br />
                         </td>
-                        <td class="style2" align="left" width="33%">
+                        <td align="left" width="33%" style="font-size: 16px">
                             <asp:Label ID="Label46" runat="server" Text="Mobile:" Font-Bold="False" 
                                 Font-Underline="True"></asp:Label>
                             &nbsp;<asp:Label ID="lblDienThoaiPheduyet" runat="server"></asp:Label>

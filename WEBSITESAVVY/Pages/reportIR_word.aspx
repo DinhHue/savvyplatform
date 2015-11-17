@@ -239,7 +239,7 @@
 
                         <tr style="vertical-align:top; font-size:16px;">
                             <td colspan="3" style="text-align:center; "  >
-                                <div class="bg_text" style="margin:3px 5px">
+                                <div style="margin:3px 5px">
                                     <h2 style="padding-top:10px; padding-bottom:5px; margin:0"  >BÁO CÁO TIẾP THEO <br /></h2>
                                     
                                     <asp:Label ID="lblBrief" runat="server" Width="90%" 
@@ -254,7 +254,7 @@
                             <td style="padding:5px; font-weight: bold; width:200px;" >
                                 <asp:Label ID="Label2"  runat="server" 
                                     Text="BÁO CÁO TRƯỚC" 
-                                    Width="190px" CssClass=" bg_text" ></asp:Label>
+                                    Width="190px" ></asp:Label>
                             </td>
                             <td >:</td>
                             <td >
@@ -273,7 +273,7 @@
                             <td style="padding:5px; font-weight: bold; width:220px;" >
                                 <asp:Label ID="Label3"  runat="server" 
                                     Text="HỢP ĐỒNG BẢO HIỂM SỐ" 
-                                    Width="200px" CssClass="bg_text" ></asp:Label>
+                                    Width="200px" ></asp:Label>
                             </td>
                             <td>:</td>
                             <td >
@@ -287,7 +287,7 @@
                             <td style="padding:5px; font-weight: bold; width:200px;" >
                                 <asp:Label ID="Label7"  runat="server" 
                                     Text="TÊN VÀ ĐỊA CHỈ <br/> NGƯỜI ĐƯỢC BẢO HIỂM" 
-                                    Width="200px" CssClass=" bg_text" ></asp:Label>
+                                    Width="200px" ></asp:Label>
                             </td>
                             <td>:</td>
                             <td  >
@@ -302,7 +302,7 @@
                             <td style="padding:5px; font-weight: bold; width:200px;">
                                 <asp:Label ID="Label4"  runat="server" 
                                     Text="LĨNH VỰC KINH DOANH" 
-                                    Width="200px" CssClass=" bg_text" ></asp:Label>
+                                    Width="200px" ></asp:Label>
                             </td>
                             <td>:</td>
                             <td >
@@ -315,7 +315,7 @@
                             <td style="padding:5px; font-weight: bold; width:200px;">
                                 <asp:Label ID="Label9"  runat="server" 
                                     Text="ĐỊA ĐIỂM TỔN THẤT" 
-                                    Width="200px" CssClass=" bg_text" ></asp:Label>
+                                    Width="200px" ></asp:Label>
                             </td>
                             <td>:</td>
                             <td >
@@ -328,7 +328,7 @@
                             <td style="padding:5px; font-weight: bold; width:200px;">
                                 <asp:Label ID="Label11"  runat="server" 
                                     Text="NGÀY GIỜ TỔN THẤT" 
-                                    Width="200px" CssClass=" bg_text" ></asp:Label>
+                                    Width="200px" ></asp:Label>
                             </td>
                             <td>:</td>
                             <td >
@@ -341,7 +341,7 @@
                             <td style="padding:5px; font-weight: bold; width:200px;">
                                 <asp:Label ID="Label13"  runat="server" 
                                     Text="NGUYÊN NHÂN" 
-                                    Width="200px" CssClass=" bg_text" ></asp:Label>
+                                    Width="200px" ></asp:Label>
                             </td>
                             <td>:</td>
                             <td >
@@ -354,7 +354,7 @@
                             <td style="padding:5px; font-weight: bold; width:200px;">
                                 <asp:Label ID="Label15"  runat="server" 
                                     Text="PHẠM VI TỔN THẤT" 
-                                    Width="200px" CssClass=" bg_text" ></asp:Label>
+                                    Width="200px" ></asp:Label>
                             </td>
                             <td>:</td>
                             <td >
@@ -367,7 +367,7 @@
                             <td style="padding:5px; font-weight: bold; width:200px;">
                                 <asp:Label ID="Label17"  runat="server" 
                                     Text="QUY TẮC VÀ TÓM LƯỢC<BR/>HỢP ĐỒNG BẢO HIỂM" 
-                                    Width="200px" CssClass=" bg_text" ></asp:Label>
+                                    Width="200px" ></asp:Label>
                             </td>
                             <td>:</td>
                             <td >
@@ -397,7 +397,7 @@
                             <td style="padding:5px; font-weight: bold; width:200px;">
                                 <asp:Label ID="Label19"  runat="server" 
                                     Text="ĐIỀU KHOẢN BỔ SUNG" 
-                                    Width="200px" CssClass=" bg_text" ></asp:Label>
+                                    Width="200px" ></asp:Label>
                             </td>
                             <td>:</td>
                             <td >
@@ -410,7 +410,7 @@
                             <td style="padding:5px; font-weight: bold; width:200px;">
                                 <asp:Label ID="Label21"  runat="server" 
                                     Text="KHIẾU NẠI CỦA NĐBH" 
-                                    Width="200px" CssClass=" bg_text" ></asp:Label>
+                                    Width="200px" ></asp:Label>
                             </td>
                             <td>:</td>
                             <td >
@@ -424,7 +424,7 @@
                             <td style="padding:5px; font-weight: bold; width:200px;">
                                 <asp:Label ID="Label23"  runat="server" 
                                     Text="DỰ PHÒNG BỒI THƯỜNG" 
-                                    Width="200px" CssClass=" bg_text" ></asp:Label>
+                                    Width="200px" ></asp:Label>
                             </td>
                             <td>:</td>
                             <td >
@@ -437,7 +437,7 @@
                             <td style="padding:5px; font-weight: bold; width:200px;">
                                 <asp:Label ID="Label5"   runat="server" 
                                     Text="TẠM ỨNG BỒI THƯỜNG <br/> (ĐỀ XUẤT)" 
-                                    Width="200px" CssClass=" bg_text" ></asp:Label>
+                                    Width="200px" ></asp:Label>
                             </td>
                             <td>:</td>
                             <td >
@@ -619,8 +619,8 @@
                         </td>
                     </tr>
                     <tr>
-                        <td class="style2" 
-                            width="34%">
+                        <td 
+                            width="34%" style="font-size: 12px">
                             <asp:Label ID="Label49" runat="server" Text="Mobile:" Font-Bold="False" 
                                 Font-Underline="True"></asp:Label>
                             &nbsp;<asp:Label ID="lblDienThoaiPre" runat="server"></asp:Label>
@@ -630,8 +630,8 @@
                                 ForeColor="#0000CC"></asp:Label>
                             <br />
                         </td>
-                        <td class="style2" 
-                            align="left">
+                        <td 
+                            align="left" style="font-size: 12px">
                             <asp:Label ID="Label47" runat="server" Text="Mobile:" Font-Bold="False" 
                                 Font-Underline="True"></asp:Label>
                             &nbsp;<asp:Label ID="lblDienThoaiCheck" runat="server"></asp:Label>
@@ -641,7 +641,7 @@
                                 ForeColor="#0000CC"></asp:Label>
                             <br />
                         </td>
-                        <td class="style2" align="left" width="33%">
+                        <td align="left" width="33%" style="font-size: 12px">
                             <asp:Label ID="Label46" runat="server" Text="Mobile:" Font-Bold="False" 
                                 Font-Underline="True"></asp:Label>
                             &nbsp;<asp:Label ID="lblDienThoaiPheduyet" runat="server"></asp:Label>

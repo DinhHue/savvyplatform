@@ -997,8 +997,8 @@
                         </td>
                     </tr>
                     <tr>
-                        <td class="style2" 
-                            width="34%">
+                        <td 
+                            width="34%" style="font-size: 16px">
                             <asp:Label ID="Label49" runat="server" Text="Mobile:" Font-Bold="False" 
                                 Font-Underline="True"></asp:Label>
                             &nbsp;<asp:Label ID="lblDienThoaiPre" runat="server"></asp:Label>
@@ -1008,8 +1008,8 @@
                                 ForeColor="#0000CC"></asp:Label>
                             <br />
                         </td>
-                        <td class="style2" 
-                            align="left">
+                        <td 
+                            align="left" style="font-size: 16px">
                             <asp:Label ID="Label47" runat="server" Text="Mobile:" Font-Bold="False" 
                                 Font-Underline="True"></asp:Label>
                             &nbsp;<asp:Label ID="lblDienThoaiCheck" runat="server"></asp:Label>
@@ -1019,7 +1019,7 @@
                                 ForeColor="#0000CC"></asp:Label>
                             <br />
                         </td>
-                        <td class="style2" align="left" width="33%">
+                        <td align="left" width="33%" style="font-size: 16px">
                             <asp:Label ID="Label46" runat="server" Text="Mobile:" Font-Bold="False" 
                                 Font-Underline="True"></asp:Label>
                             &nbsp;<asp:Label ID="lblDienThoaiPheduyet" runat="server"></asp:Label>

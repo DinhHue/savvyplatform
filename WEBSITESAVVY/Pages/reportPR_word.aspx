@@ -165,6 +165,12 @@
         }
         
                 
+        .style1
+        {
+            width: 210px;
+        }
+        
+                
         </style>
 
 </head>
@@ -183,14 +189,14 @@
                 <div style="text-align:left;  margin-bottom:15px">
                     <table style="width:100%">
                         <tr valign="middle">
-                            <td style="text-align:left; font-size:15px;"><i><u>Tham chiếu KH:</u> 
+                            <td style="text-align:left; font-size:15px;"><i><u>Tham chiếu KH:</u>  
                                 <asp:Label 
-                                    ID="lblRefKH" runat="server" 
-                                Width="279px"  CssClass="field_input" Font-Size="15px" ></asp:Label> </i>
+                                    ID="lblRefKH" runat="server"  CssClass="field_input" Font-Size="15px" ></asp:Label> </i>
+                               
                             </td>
-                            <td class="align-left" style="color:#006600; font-size:15px;"><i><u>Tham chiếu Savvy:</u> </i>
+                            <td class="align-right" style="color:#006600; font-size:15px;"><i><u>Tham chiếu Savvy:</u> </i>
                                 <asp:Label ID="lblTenClaim" runat="server" 
-                                Text="SR01+ CL.TENCLAIM" Width="275px" 
+                                Text="SR01+ CL.TENCLAIM" 
                                 ForeColor="#006600" Font-Bold="True" CssClass="field_input" Font-Size="15px" ></asp:Label></td>
                         </tr>
                     </table>
@@ -224,10 +230,7 @@
             </div>
 
             <div id="content">
-                    
-
-
-                <table width="630px" cellspacing="3px" >
+                <table width="620px" cellspacing="3px" >
 
                     <tr style="vertical-align:top;">
                         <td colspan="3" style="text-align:center; "  >
@@ -242,8 +245,6 @@
                             </div>
                         </td>
                     </tr>
-
-<%--<<<<<<< .mine--%>
                         <tr style="vertical-align:top;">
                             <td style="padding:5px; font-weight: bold; font-size:16px; width:225px" >
                                 <asp:Label  runat="server" 
@@ -256,22 +257,7 @@
                                     CssClass="field_input" Font-Bold=False ></asp:Label>
                             </td>
                         </tr>
-<%--=======
-                    <tr style="vertical-align:top;">
-                        <td style="padding:5px; font-weight: bold; font-size:16px; width:225px" >
-                            <asp:Label  runat="server" 
-                                Text="BÁO CÁO TRƯỚC" 
-                                Width="225px" Font-Size="16px" ></asp:Label>
-                        </td>
-                        <td style="width:20px;" >:</td>
-                        <td style="width:390px;"  >
-                            <asp:Label ID="lblDateILA" runat="server" Width="375px" 
-                                CssClass="field_input" Font-Bold=False ></asp:Label>
-                        </td>
-                    </tr>
->>>>>>> .r145--%>
 
-<%--<<<<<<< .mine--%>
                         <tr style="vertical-align:top;">
                             <td style="padding:5px; font-weight: bold; font-size:16px; width:225px"  >
                                 <asp:Label  runat="server" 
@@ -284,23 +270,7 @@
                                     CssClass="field_input" Font-Bold="True" Font-Size="16px" ></asp:Label>
                             </td>
                         </tr>
-<%--=======
-                    <tr style="vertical-align:top;">
-                        <td style="padding:5px; font-weight: bold; font-size:16px; width:225px"  >
-                            <asp:Label  runat="server" 
-                                Text="HỢP ĐỒNG BẢO HIỂM SỐ" 
-                                Width="225px" Font-Size="16px" ></asp:Label>
-                        </td>
-                        <td >:</td>
-                        <td >
-                            <asp:Label ID="lblPolicyNo" runat="server" Width="375px" 
-                                CssClass="field_input" Font-Bold="True" Font-Size="16px" ></asp:Label>
-                        </td>
-                    </tr>
->>>>>>> .r145--%>
 
-
-<%--<<<<<<< .mine--%>
                         <tr style="vertical-align:top;">
                             <td style="padding:5px; font-weight: bold; font-size:16px; width:225px" >
                                 <asp:Label ID="Label7"  runat="server" 
@@ -315,25 +285,7 @@
                                     CssClass="field_input" Font-Bold=False ></asp:Label><br />
                             </td>
                         </tr>
-<%--=======
-                    <tr style="vertical-align:top;">
-                        <td style="padding:5px; font-weight: bold; font-size:16px; width:225px" >
-                            <asp:Label ID="Label7"  runat="server" 
-                                Text="TÊN VÀ ĐỊA CHỈ <br/> NGƯỜI ĐƯỢC BẢO HIỂM" 
-                                Width="225px" Font-Size="16px" ></asp:Label>
-                        </td>
-                        <td>:</td>
-                        <td  >
-                            <asp:Label ID="lblTenKH" runat="server" Width="375px" 
-                                CssClass="field_input" Font-Bold="True" Font-Size="16px" ></asp:Label><br />
-                            <asp:Label ID="lblDiaChiKH" runat="server" Width="375px" 
-                                CssClass="field_input" Font-Bold=False ></asp:Label><br />
-                        </td>
-                    </tr>
->>>>>>> .r145--%>
-
-<%--<<<<<<< .mine--%>
-                        <tr style="vertical-align:top;">
+                          <tr style="vertical-align:top;">
                             <td style="padding:5px; font-weight: bold; font-size:20px; width:225px" >
                                 <asp:Label  runat="server" 
                                     Text="LĨNH VỰC KINH DOANH" 
@@ -345,22 +297,7 @@
                                     CssClass="field_input" Font-Bold=False ></asp:Label>
                             </td>
                         </tr>
-<%--=======
-                    <tr style="vertical-align:top;">
-                        <td style="padding:5px; font-weight: bold; font-size:16px; width:225px" >
-                            <asp:Label  runat="server" 
-                                Text="LĨNH VỰC KINH DOANH" 
-                                Width="225px" Font-Size="16px" ></asp:Label>
-                        </td>
-                        <td>:</td>
-                        <td >
-                            <asp:Label ID="lblLinhVucKinhDoanh" runat="server" Width="375px" 
-                                CssClass="field_input" Font-Bold=False ></asp:Label>
-                        </td>
-                    </tr>
->>>>>>> .r145
---%>
-<%--<<<<<<< .mine--%>
+
                         <tr style="vertical-align:top;">
                             <td style="padding:5px; font-weight: bold; font-size:20px; width:225px" >
                                 <asp:Label ID="Label9"  runat="server" 
@@ -373,22 +310,7 @@
                                     CssClass="field_input" Font-Bold=False ></asp:Label>
                             </td>
                         </tr>
-<%--=======
-                    <tr style="vertical-align:top;">
-                        <td style="padding:5px; font-weight: bold; font-size:16px; width:225px" >
-                            <asp:Label ID="Label9"  runat="server" 
-                                Text="ĐỊA ĐIỂM TỔN THẤT" 
-                                Width="225px" Font-Size="16px" ></asp:Label>
-                        </td>
-                        <td>:</td>
-                        <td  >
-                            <asp:Label ID="lblPremises" runat="server" Width="375px" 
-                                CssClass="field_input" Font-Bold=False ></asp:Label>
-                        </td>
-                    </tr>
->>>>>>> .r145--%>
 
-<%--<<<<<<< .mine--%>
                         <tr style="vertical-align:top;">
                             <td style="padding:5px; font-weight: bold; font-size:20px; width:225px" >
                                 <asp:Label ID="Label11"  runat="server" 
@@ -401,22 +323,7 @@
                                     CssClass="field_input" Font-Bold=False Font-Size="16px" ></asp:Label>
                             </td>
                         </tr>
-<%--=======
-                    <tr style="vertical-align:top;">
-                        <td style="padding:5px; font-weight: bold; font-size:16px; width:225px" >
-                            <asp:Label ID="Label11"  runat="server" 
-                                Text="NGÀY GIỜ TỔN THẤT" 
-                                Width="225px" Font-Size="16px" ></asp:Label>
-                        </td>
-                        <td>:</td>
-                        <td  >
-                            <asp:Label ID="lblDOL" runat="server" Width="375px" 
-                                CssClass="field_input" Font-Bold=False Font-Size="16px" ></asp:Label>
-                        </td>
-                    </tr>
->>>>>>> .r145--%>
 
-<%--<<<<<<< .mine--%>
                         <tr style="vertical-align:top;">
                             <td style="padding:5px; font-weight: bold; font-size:20px; width:225px" >
                                 <asp:Label ID="Label13"  runat="server" 
@@ -429,22 +336,7 @@
                                     CssClass="field_input" Font-Bold=False ></asp:Label>
                             </td>
                         </tr>
-<%--=======
-                    <tr style="vertical-align:top;">
-                        <td style="padding:5px; font-weight: bold; font-size:16px; width:225px" >
-                            <asp:Label ID="Label13"  runat="server" 
-                                Text="NGUYÊN NHÂN" 
-                                Width="225px" Font-Size="16px" ></asp:Label>
-                        </td>
-                        <td>:</td>
-                        <td  >
-                            <asp:Label ID="lblSortCause" runat="server" Width="375px" 
-                                CssClass="field_input" Font-Bold=False ></asp:Label>
-                        </td>
-                    </tr>
->>>>>>> .r145--%>
 
-<%--<<<<<<< .mine--%>
                         <tr style="vertical-align:top;">
                             <td style="padding:5px; font-weight: bold; font-size:20px; width:225px" >
                                 <asp:Label ID="Label15"  runat="server" 
@@ -457,22 +349,6 @@
                                     CssClass="field_input" Font-Bold=False ></asp:Label>
                             </td>
                         </tr>
-<%--=======
-                    <tr style="vertical-align:top;">
-                        <td style="padding:5px; font-weight: bold; font-size:16px; width:225px" >
-                            <asp:Label ID="Label15"  runat="server" 
-                                Text="PHẠM VI TỔN THẤT" 
-                                Width="225px" Font-Size="16px" ></asp:Label>
-                        </td>
-                        <td>:</td>
-                        <td  >
-                            <asp:Label ID="lblPhamViTonThat" runat="server" Width="375px" 
-                                CssClass="field_input" Font-Bold=False ></asp:Label>
-                        </td>
-                    </tr>
->>>>>>> .r145--%>
-
-<%--<<<<<<< .mine--%>
                         <tr style="vertical-align:top;">
                             <td style="padding:5px; font-weight: bold; font-size:20px; width:225px" >
                                 <asp:Label ID="Label17"  runat="server" 
@@ -483,19 +359,6 @@
                             <td class="style1" >
                                 <asp:Label ID="lblNamPolicy" runat="server" Width="390px" 
                                     CssClass="field_input" Font-Bold="True" Font-Size="16px"  ></asp:Label><br />
-<%--=======
-                    <tr style="vertical-align:top;">
-                        <td style="padding:5px; font-weight: bold; font-size:16px; width:225px" >
-                            <asp:Label ID="Label17"  runat="server" 
-                                Text="QUY TẮC VÀ TÓM LƯỢC<BR/>HỢP ĐỒNG BẢO HIỂM" 
-                                Width="225px" Font-Size="16px" ></asp:Label>
-                        </td>
-                        <td>:</td>
-                        <td  >
-                            <asp:Label ID="lblNamPolicy" runat="server" Width="370px" 
-                                 Font-Bold="True" Font-Size="16px"  ></asp:Label><br />
->>>>>>> .r145
---%>
                             <table  cellpadding="0" style="font-size:16px;" >
                                 <tr style="vertical-align:top;">
                                     <td style="width:200px;"><span style="display:block; width:200px;"><b>1. <u>Tổng số tiền bảo hiểm:</u></b></span></td>
@@ -513,8 +376,7 @@
 
                         </td>
                     </tr>
-<%--
-<<<<<<< .mine--%>
+
                         <tr style="vertical-align:top;">
                             <td style="padding:5px; font-weight: bold; font-size:20px; width:225px" >
                                 <asp:Label ID="Label19"  runat="server" 
@@ -527,22 +389,7 @@
                                     CssClass="align-left" Font-Bold="False" Font-Size="16px"  ></asp:Label>
                             </td>
                         </tr>
-<%--=======
-                    <tr style="vertical-align:top;">
-                        <td style="padding:5px; font-weight: bold; font-size:16px; width:225px" >
-                            <asp:Label ID="Label19"  runat="server" 
-                                Text="ĐIỀU KHOẢN BỔ XUNG" 
-                                Width="225px" Font-Size="16px" ></asp:Label>
-                        </td>
-                        <td>:</td>
-                        <td   >
-                            <asp:Label ID="lblDKBX" runat="server" Width="370px" 
-                                CssClass="align-left" Font-Bold="False" Font-Size="16px"  ></asp:Label>
-                        </td>
-                    </tr>
->>>>>>> .r145--%>
 
-<%--<<<<<<< .mine--%>
                         <tr style="vertical-align:top;">
                             <td style="padding:5px; font-weight: bold; font-size:20px; width:225px">
                                 <asp:Label ID="Label21"  runat="server" 
@@ -555,7 +402,7 @@
                                     CssClass="field_input" Font-Bold="True" Font-Size="16px" ></asp:Label>
                             </td>
                         </tr>
-<tr>
+                        <tr>
                             <td class="bg_text">
                                 <asp:Label ID="Label1"  runat="server" 
                                     Text="TẠM ỨNG BỒI THƯỜNG" 
@@ -564,7 +411,7 @@
                             <td>:</td>
                             <td >
                                 <asp:Label ID="lblTamUngBoiThuongPR" 
-                                   CssClass=" field_input" runat="server" Width="570px" 
+                                   CssClass=" field_input" runat="server" Width="370px" 
                                     Font-Bold="True" Font-Size="16px" ></asp:Label>                                
                             </td>
                         </tr>
@@ -580,21 +427,6 @@
                                     CssClass="field_input" Font-Bold="True" Font-Size="16px" ></asp:Label>
                             </td>
                         </tr>
-<%--=======
-                    <tr style="vertical-align:top;">
-                        <td style="padding:5px; font-weight: bold; font-size:16px; width:225px" >
-                            <asp:Label ID="Label23"  runat="server" 
-                                Text="DỰ PHÒNG BỒI THƯỜNG" 
-                                Width="225px"  Font-Size="16px" ></asp:Label>
-                        </td>
-                        <td>:</td>
-                        <td  >
-                            <asp:Label ID="lblDuPhongBoiThuong" runat="server" Width="370px" 
-                                CssClass="field_input" Font-Bold="True" Font-Size="16px" ></asp:Label>
-                        </td>
-                    </tr>
->>>>>>> .r145--%>
-
 
                 </table>
 
@@ -614,67 +446,67 @@
                 <table style="font-size:16px;width:640px; margin:20px 0px">
                     <tr onclick="window.location.href ='#A1'">
                         <td style="width:350px; font-size:16px" ><b>GIỚI THIỆU CHUNG</b></td>
-                        <td style="text-align:right; font-size:16px" >.................................................................................................................</td>
+                        <td style="text-align:right; font-size:16px" >.....................................................................................................................</td>
                     </tr>
                 </table>
                 <table style="font-size:16px;width:640px; margin:20px 0px">
                     <tr  onclick="window.location.href ='#GioiThieu'">
                         <td style="width:350px; font-size:16px"><b>NGƯỜI ĐƯỢC BẢO HIỂM</b></td>
-                        <td style="text-align:right; font-size:16px" > ......................................................................................................</td>
+                        <td style="text-align:right; font-size:16px" > ............................................................................................................</td>
                     </tr>
                 </table>
                 <table style="font-size:16px;width:640px; margin:20px 0px">
                     <tr  onclick="window.location.href ='#C1'">
                         <td style="width:350px; font-size:16px"><b>DIỄN BIẾN</b></td>
-                        <td style="text-align:right; font-size:16px"> ................................................................................................................................ </td>
+                        <td style="text-align:right; font-size:16px"> ........................................................................................................................................ </td>
                     </tr>
                 </table>
                 <table style="font-size:16px;width:640px; margin:20px 0px">
                     <tr  onclick="window.location.href ='#C3'">
                         <td style="width:350px; font-size:16px"><b>NGUYÊN NHÂN</b></td>
-                        <td style="text-align:right;font-size:16px"> ....................................................................................................................... </td>
+                        <td style="text-align:right;font-size:16px"> ............................................................................................................................... </td>
                     </tr>
                 </table>
                 <table style="font-size:16px;width:640px; margin:20px 0px">
                     <tr  onclick="window.location.href ='#E1'">
                         <td style="width:350px; font-size:16px"><b>PHẠM VI BẢO HIỂM </b></td>
-                        <td style="text-align:right; font-size:16px"> ............................................................................................................... </td>
+                        <td style="text-align:right; font-size:16px"> ..................................................................................................................... </td>
                     </tr>
                 </table>
                 <table style="font-size:16px;width:640px; margin:20px 0px">
                     <tr  onclick="window.location.href ='#D1'">
                         <td style="width:350px; font-size:16px"><b>PHẠM VI VÀ MỨC ĐỘ THIỆT HẠI </b></td>
-                        <td style="text-align:right;  font-size:16px"> ..................................................................................... </td>
+                        <td style="text-align:right;  font-size:16px"> ........................................................................................... </td>
                     </tr>
                 </table>
                 <table style="font-size:16px;width:640px; margin:20px 0px">
                     <tr  onclick="window.location.href ='#G'">
                         <td style="width:350px; font-size:16px"><b>ĐƠN BẢO HIỂM KHÁC </b></td>
-                        <td style="text-align:right;  font-size:16px"> ........................................................................................................ </td>
+                        <td style="text-align:right;  font-size:16px"> ................................................................................................................ </td>
                     </tr>
                 </table>
                 <table style="font-size:16px;width:640px; margin:20px 0px">
                     <tr  onclick="window.location.href ='#H'">
                         <td style="width:350px; font-size:16px"><b>GIÁ TRỊ THU HỒI </b></td>
-                        <td style="text-align:right;  font-size:16px"> ................................................................................................................ </td>
+                        <td style="text-align:right;  font-size:16px"> .......................................................................................................................... </td>
                     </tr>
                 </table>
                  <table style="font-size:16px;width:640px; margin:20px 0px">
                     <tr  onclick="window.location.href ='#TheQuyenTruyDoi'">
                         <td style="width:450px; font-size:16px"><b>THẾ QUYỀN TRUY ĐÒI BÊN THỨ BA </b></td>
-                        <td style="text-align:right;  font-size:16px"> .................................................................................................... </td>
+                        <td style="text-align:right;  font-size:16px"> ..................................................................................... </td>
                     </tr>
                 </table>
                 <table style="font-size:16px;width:640px; margin:20px 0px">
                     <tr  onclick="window.location.href ='#I'">
                         <td style="width:450px; font-size:16px"><b>DỰ PHÒNG BỒI THƯỜNG </b></td>
-                        <td style="text-align:right;  font-size:16px"> .................................................................................................... </td>
+                        <td style="text-align:right;  font-size:16px"> ............................................................................................................ </td>
                     </tr>
                 </table>
                 <table style="font-size:16px;width:640px; margin:20px 0px">
                     <tr  onclick="window.location.href ='#TT'">
                         <td style="width:350px; font-size:16px"><b>BÁO CÁO TIẾP THEO </b></td>
-                        <td style="text-align:right;  font-size:16px"> ............................................................................................................... </td>
+                        <td style="text-align:right;  font-size:16px"> .................................................................................................................... </td>
                     </tr>
                 </table>
 
@@ -780,7 +612,7 @@
                     </tr>
                     
                     <tr>
-                        <td width="34%" style="padding-left: 10px">
+                        <td width="34%">
                             <asp:Label ID="lblID_GDVPR" key="ID_GDVPR" type="SingeLine"  
                                 CssClass="field_input label-edit"  onclick="editField(this)" runat="server" 
                                 Font-Bold="True" Width="100%"></asp:Label>
@@ -791,21 +623,21 @@
                         <td align="left">
                             <asp:Label ID="lblID_GDVCheckPR" key="ID_GDVCheckPR" type="SingeLine" 
                                 CssClass="label-edit"  onclick="editField(this)" runat="server" 
-                                Font-Bold="True" Width="100%"></asp:Label>                         
-                            &nbsp;<br />
-                            <asp:Label ID="lblChucvuNguoiCheck" runat="server" Font-Bold="False" 
+                                Font-Bold="True" Width="100%"></asp:Label>  <br />                        
+                            &nbsp;<asp:Label ID="lblChucvuNguoiCheck" runat="server" Font-Bold="False" 
                                 Font-Italic="True"></asp:Label>
                         </td>
                         <td align="left" width="33%">
-                            <asp:Label ID="lblNguoiPheDuyet" runat="server" Font-Bold="True" Width="100%"></asp:Label>
+                            <asp:Label ID="lblNguoiPheDuyet" runat="server" Font-Bold="True" Width="100%" 
+                                CssClass="label-edit"></asp:Label>
                             <br />
                             <asp:Label ID="lblChucvuNguoiPheDuyet" runat="server" Font-Bold="False" 
                                 Font-Italic="True"></asp:Label>
                         </td>
                     </tr>
                     <tr>
-                        <td class="style2" 
-                            width="34%">
+                        <td 
+                            width="34%" style="font-size: 14px">
                             <asp:Label ID="Label49" runat="server" Text="Mobile:" Font-Bold="False" 
                                 Font-Underline="True"></asp:Label>
                             &nbsp;<asp:Label ID="lblDienThoaiPre" runat="server"></asp:Label>
@@ -815,8 +647,8 @@
                                 ForeColor="#0000CC"></asp:Label>
                             <br />
                         </td>
-                        <td class="style2" 
-                            align="left">
+                        <td 
+                            align="left" style="font-size: 14px">
                             <asp:Label ID="Label47" runat="server" Text="Mobile:" Font-Bold="False" 
                                 Font-Underline="True"></asp:Label>
                             &nbsp;<asp:Label ID="lblDienThoaiCheck" runat="server"></asp:Label>
@@ -826,7 +658,7 @@
                                 ForeColor="#0000CC"></asp:Label>
                             <br />
                         </td>
-                        <td align="left" width="33%">
+                        <td align="left" width="33%" style="font-size: 14px">
                             <asp:Label ID="Label46" runat="server" Text="Mobile:" Font-Bold="False" 
                                 Font-Underline="True"></asp:Label>
                             &nbsp;<asp:Label ID="lblDienThoaiPheduyet" runat="server"></asp:Label>
