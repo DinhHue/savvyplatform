@@ -32,11 +32,15 @@ namespace WEBSITESAVVY.Pages
                     if (Request.QueryString["claimID"] != null)
                         claimID = Request.QueryString["claimID"].ToString();
 
+                    if (Request.QueryString["id"] != null)
+                        claimID = Request.QueryString["id"].ToString();
+
                     if (Request.QueryString["type"] != null)
                         type = Request.QueryString["type"];
 
                     if (Request.QueryString["title"] != null)
                         title = Request.QueryString["title"];
+
                     if (type == "date")
                     {
                         txtValue.TextMode = TextBoxMode.SingleLine;

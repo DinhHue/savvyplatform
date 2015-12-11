@@ -17,9 +17,11 @@ namespace WEBSITESAVVY.Pages
         protected void Page_Load(object sender, EventArgs e)
         {
             string id = "";
-            if(Session["ThamChieu"]!= null)
-                id = Session["ThamChieu"].ToString();
-           
+            if( Request.QueryString["id"]!=null)
+                id = Request.QueryString["id"];
+            //if(Session["ThamChieu"]!= null)
+            //    id = Session["ThamChieu"].ToString();
+          
             HttpCookie ck = Request.Cookies["MaGDV"];
             if (ck == null)
             {

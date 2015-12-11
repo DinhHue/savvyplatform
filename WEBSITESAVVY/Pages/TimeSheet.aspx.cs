@@ -64,12 +64,16 @@ namespace WEBSITESAVVY
 
                     if (maclaim != "" && idgdv == 0)
                     {
+                        LoadI(maclaim);
                         LoadTSTheoThamchieu(maclaim);
                     }
                     if (idgdv != 0 && maclaim == "")
                         loadTSTheoGDV(idgdv);
                     if (idgdv != 0 && maclaim != "")
-                        loadTSTheoGDVClaim(idgdv, maclaim);        
+                    {
+                        LoadI(maclaim);
+                        loadTSTheoGDVClaim(idgdv, maclaim);
+                    }
                 }
             }
         }
@@ -77,6 +81,18 @@ namespace WEBSITESAVVY
         {
             gvDSTimeSheet.DataSource = tsdao.DanhSachTimeSheetAll();
             gvDSTimeSheet.DataBind();
+        }
+        void LoadI(string idclaim)
+        {
+            DataRow dr = tsdao.TSSummaryInfo(idclaim);
+            if (dr != null)
+            {
+                lblTenClaim.Text = dr["TenClaim"].ToString() + " - " + dr["Brief"].ToString();
+                lblNgayChiDinh.Text = dr["AssignedDate"].ToString();
+                lblInsured.Text = dr["TenKhachHang"].ToString();
+            }
+            else
+                Response.Write("<script>alert('There didn't time-sheet!');</script>");
         }
         void loadGDV()
         {
@@ -119,6 +135,8 @@ namespace WEBSITESAVVY
             string ngay = txtDateFrom.Text;
             string ngayto = txtDateto.Text;
             int maLA = int.Parse(drGDV.SelectedItem.Value.ToString());
+            if (ma != "")
+                LoadI(ma);
             if (ngay == "" && ma == "" && maLA != 0)
             {
                 loadTSTheoGDV(maLA);

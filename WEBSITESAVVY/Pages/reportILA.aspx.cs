@@ -24,11 +24,13 @@ namespace WEBSITESAVVY.Pages
             //        mClaimID = Request.QueryString["claimID"];
             if (!IsPostBack)
             {
-                if (Session["ThamChieu"] != null)
+                if (Session["ThamChieu"] != null)               
                 {
                     string idclaim = Session["ThamChieu"].ToString();
                     mClaimID = idclaim;
 
+                    //if (Request.QueryString["id"] != null)
+                    //     mClaimID = Request.QueryString["id"];
                     string done = dailyDao.KiemTraTinhTrang(mClaimID, "ILA");
                     if (done != null && done.ToLower() == "yes")
                     {
@@ -224,7 +226,7 @@ namespace WEBSITESAVVY.Pages
         {
             try
             {
-                mClaimID = Session["ThamChieu"].ToString();
+                //mClaimID = Session["ThamChieu"].ToString();
                 //int claimID = int.Parse(mClaimID);
 
                 Button btn = (Button)sender;
@@ -267,21 +269,28 @@ namespace WEBSITESAVVY.Pages
             }
             else
             {
-                string id = "";
-                if (Session["ThamChieu"] != null)
-                    id = Session["ThamChieu"].ToString();
-                else
-                    Response.Write("<script> alert('Come back home page and select Claim No again!');</script>");
+                //string id = "";
+                //if (Session["ThamChieu"] != null)
+                //    id = Session["ThamChieu"].ToString();
+                //if (Request.QueryString["id"] != null)
+                //    id = Request.QueryString["id"];
+                //else
+                //    Response.Write("<script> alert('Come back home page and select Claim No again!');</script>");
                 DataTable dt = new DataTable();
                 int idgdv = int.Parse(Request.Cookies["MaGDV"].Value);
-                bool up = claimDao.UpdatePrepareILA(id, idgdv);
+                string title = "ILA'signature preparer";
+                bool up = claimDao.UpdatePrepareILA(mClaimID, idgdv);
                 if (up == true)
                 {
-                    loadSIGNPre(id);
+                    loadSIGNPre(mClaimID);
                    
                 }
                 else
                     Response.Write("<script> alert('Update preparer error!');</script>");
+                int maGDV = int.Parse(Request.Cookies["MaGDV"].Value);
+                GiamDinhVienDAO gdv = new GiamDinhVienDAO();
+                string noidung = gdv.LayTenTheoMa(maGDV) + " edited " + title + " of " + mClaimID + ".";
+                SaveLogTracking(maGDV, noidung, mClaimID);
             }
         }
 
@@ -295,21 +304,26 @@ namespace WEBSITESAVVY.Pages
             }
             else
             {
-                string id = "";
-                if (Session["ThamChieu"] != null)
-                    id = Session["ThamChieu"].ToString();
-                else
-                    Response.Write("<script> alert('Come back home page and select Claim No again!');</script>");
+                //string id = "";
+                //if (Session["ThamChieu"] != null)
+                //    id = Session["ThamChieu"].ToString();
+                //else
+                //    Response.Write("<script> alert('Come back home page and select Claim No again!');</script>");
                 DataTable dt = new DataTable();
                 int idgdv = int.Parse(Request.Cookies["MaGDV"].Value);
-                bool up = claimDao.UpdateCheckILA(id, idgdv);
+                string title = "ILA'signature checker";
+                bool up = claimDao.UpdateCheckILA(mClaimID, idgdv);
                 if (up == true)
                 {
-                    
-                    loadSIGNCheck(id);
+
+                    loadSIGNCheck(mClaimID);
                 }
                 else
                     Response.Write("<script> alert('Update preparer error!');</script>");
+                int maGDV = int.Parse(Request.Cookies["MaGDV"].Value);
+                GiamDinhVienDAO gdv = new GiamDinhVienDAO();
+                string noidung = gdv.LayTenTheoMa(maGDV) + " edited " + title + " of " + mClaimID + ".";
+                SaveLogTracking(maGDV, noidung, mClaimID);
             }
         }
        
@@ -317,26 +331,26 @@ namespace WEBSITESAVVY.Pages
         {
             if (this.IsPostBack)
             {
-                string id = "";
-                if (Session["ThamChieu"] != null)
-                {
-                    id = Session["ThamChieu"].ToString();
+                //string id = "";
+                //if (Session["ThamChieu"] != null)
+                //{
+                //    id = Session["ThamChieu"].ToString();
 
                     if (checkBoxThongBao.Checked == true)
                     {
                         string stt = "Yes";
-                        bool up = claimDao.UpdateTBCQCN(id, stt);
+                        bool up = claimDao.UpdateTBCQCN(mClaimID, stt);
                         if (up == true)
-                            loadData(id);
+                            loadData(mClaimID);
                     }
                     else
                     {
                         string stt = "No";
-                        bool up = claimDao.UpdateTBCQCN(id, stt);
+                        bool up = claimDao.UpdateTBCQCN(mClaimID, stt);
                         if (up == true)
-                            loadData(id);
+                            loadData(mClaimID);
                     }
-                }
+               // }
             }
         }
 
@@ -344,15 +358,17 @@ namespace WEBSITESAVVY.Pages
         {
             try
             {
-                mClaimID = Session["ThamChieu"].ToString();
+                //mClaimID = Session["ThamChieu"].ToString();
+                //if (Request.QueryString["id"] != null)
+                //    mClaimID = Request.QueryString["id"];
                 int claimID = int.Parse(mClaimID);
 
                 Button btn = (Button)sender;
                 string key = btn.Attributes["key"];
-
+                string titlekey = btn.Attributes["title"];
                 TextBox txtValue = (TextBox)FindControl("txt" + key);
-                string value = txtValue.Text;
-                string title = "";
+                string value = txtValue.Text.Trim();
+                string title = titlekey;
 
                 if (value.Contains("'"))
                 {
@@ -380,7 +396,7 @@ namespace WEBSITESAVVY.Pages
         {
             try
             {
-                mClaimID = Session["ThamChieu"].ToString();
+                //mClaimID = Session["ThamChieu"].ToString();
 
                 int maKH = (int)kh.LayMaKHClaim(mClaimID);
                 Button btn = (Button)sender;
@@ -410,7 +426,7 @@ namespace WEBSITESAVVY.Pages
         {
             try
             {
-                mClaimID = Session["ThamChieu"].ToString();
+                //mClaimID = Session["ThamChieu"].ToString();
                 //int claimID = int.Parse(mClaimID);
 
                 Button btn = (Button)sender;

@@ -41,7 +41,7 @@ namespace WEBSITESAVVY.Pages
         protected String getRoman(int number)
         {
             String[] riman = { "M", "XM", "CM", "D", "XD", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I" };
-           // String[] riman = { "-" };
+            //String[] riman = { "-" };
             int[] arab = { 1000, 990, 900, 500, 490, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1 };
             StringBuilder result = new StringBuilder();
             int i = 0;
@@ -65,7 +65,8 @@ namespace WEBSITESAVVY.Pages
                 string idclaim = Session["ThamChieu"].ToString();
                 Label lblngay = (Label)e.Row.FindControl("lblngay");
                 Label lblSTT = (Label)e.Row.FindControl("lblSTT");
-                lblSTT.Text = getRoman(e.Row.RowIndex + 1);
+                //lblSTT.Text = getRoman(e.Row.RowIndex + 1);
+                lblSTT.Text = "***";
                 DateTime ngay=DateTime.Parse(lblngay.Text);
                 DataTable dt = tr.TrackingDetailCase(idclaim, ngay);
                 Repeater repeaterChild = (Repeater)e.Row.FindControl("repeaterChild");

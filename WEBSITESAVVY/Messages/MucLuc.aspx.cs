@@ -52,7 +52,9 @@ namespace WEBSITESAVVY.Messages
                     ckbPR_GiaTriThuHoi.Checked = mucLucDTO.getKey("GiaTriThuHoi");
                     ckbPR_TheQuyenTruyDoiBenThuBa.Checked = mucLucDTO.getKey("TheQuyenTruyDoiBenThuBa");
                     ckbPR_DuPhongBoiThuong.Checked = mucLucDTO.getKey("DuPhongBoiThuong");
+                    ckbPR_TamUngBoiThuongText.Checked = mucLucDTO.getKey("TamUngBoiThuongText");
                     ckbPR_BaoCaoTiepTheo.Checked = mucLucDTO.getKey("BaoCaoTiepTheo");
+                    
                 }
 
             }
@@ -81,7 +83,9 @@ namespace WEBSITESAVVY.Messages
                 jsonValue.Put("GiaTriThuHoi", ckbPR_GiaTriThuHoi.Checked.ToString());
                 jsonValue.Put("TheQuyenTruyDoiBenThuBa", ckbPR_TheQuyenTruyDoiBenThuBa.Checked.ToString());
                 jsonValue.Put("DuPhongBoiThuong", ckbPR_DuPhongBoiThuong.Checked.ToString());
+                jsonValue.Put("TamUngBoiThuongText", ckbPR_TamUngBoiThuongText.Checked.ToString());
                 jsonValue.Put("BaoCaoTiepTheo", ckbPR_BaoCaoTiepTheo.Checked.ToString());
+                
 
                 MucLucDTO mucLucDTO = MucLucDAO.getMucLuc(ID_Claim, ClaimType);
                 if (mucLucDTO == null)

@@ -183,7 +183,7 @@
             <div id="body1">
                 <div id="header">
 
-                    <img src="<%= Request.Url.GetLeftPart(UriPartial.Authority) +"/images/banner.jpg" %>" style="width:500px;height:100px" alt="" />
+                    <%--<img src="<%= Request.Url.GetLeftPart(UriPartial.Authority) +"/images/banner.jpg" %>" style="width:500px;height:100px" alt="" />--%>
 
             
                     <div>
@@ -232,9 +232,6 @@
                 </div>
 
                 <div id="content">
-                    
-
-
                     <table width="620px" cellspacing="5px">
 
                         <tr style="vertical-align:top; font-size:16px;">
@@ -459,48 +456,45 @@
 
         <div class="page">
              <div >
-
-
-
                 <h3 style="text-align:center; font-size:22px; color:#006600; margin:20px 0px 30px 0; ">MỤC LỤC BÁO CÁO</h3>
                     
-                <table style="font-size:16px;width:650px; margin:20px 0px">
+                <table style="font-size:16px;width:650px; margin:20px 0px 0px 0px">
                     <tr onclick="window.location.href ='#A1'">
                         <td style="width:350px; font-size:16px" ><b>KHÁI QUÁT VỤ VIỆC VÀ TIẾN TRÌNH</b></td>
                         <td style="text-align:right; font-size:16px" >...................................................................................</td>
                     </tr>
                 </table>     
-                <table style="font-size:16px;width:650px; margin:20px 0px">
+                <table style="font-size:16px;width:650px; margin:20px 0px 0px 0px">
                     <tr onclick="window.location.href ='#K'">
                         <td style="width:350px; font-size:16px" ><b>QUÁ TRÌNH XỬ LÝ VÀ KHIẾU NẠI</b></td>
                         <td style="text-align:right; font-size:16px" >........................................................................................</td>
                     </tr>
                 </table>  
-                <table style="font-size:16px;width:650px; margin:20px 0px">
+                <table style="font-size:16px;width:650px; margin:20px 0px 0px 0px">
                     <tr onclick="window.location.href ='#AdjustmentIR'">
                         <td style="width:350px; font-size:16px" ><b>CẬP NHẬT TIẾN ĐỘ TÍNH TOÁN</b></td>
                         <td style="text-align:right; font-size:16px" >.........................................................................................</td>
                     </tr>
                 </table>  
-                <table style="font-size:16px;width:650px; margin:20px 0px">
+                <table style="font-size:16px;width:650px; margin:20px 0px 0px 0px">
                     <tr onclick="window.location.href ='#H'">
                         <td style="width:300px; font-size:16px" ><b>GIÁ TRỊ THU HỒI</b></td>
                         <td style="text-align:right; font-size:16px" >.......................................................................................................................</td>
                     </tr>
                 </table>  
-                <table style="font-size:16px;width:650px; margin:20px 0px">
+                <table style="font-size:16px;width:650px; margin:20px 0px 0px 0px">
                     <tr onclick="window.location.href ='#I'">
                         <td style="width:300px; font-size:16px" ><b>CẬP NHẬT DỰ PHÒNG</b></td>
                         <td style="text-align:right; font-size:16px" >...............................................................................................................</td>
                     </tr>
                 </table>         
-               <table style="font-size:16px;width:650px; margin:20px 0px">
+               <table style="font-size:16px;width:650px; margin:20px 0px 0px 0px">
                     <tr onclick="window.location.href ='#TamUngBoiThuongText'">
                         <td style="width:300px; font-size:16px" ><b>TẠM ỨNG BỒI THƯỜNG</b></td>
                         <td style="text-align:right; font-size:16px" >.........................................................................................................</td>
                     </tr>
                 </table>     
-                <table style="font-size:16px;width:650px; margin:20px 0px">
+                <table style="font-size:16px;width:650px; margin:20px 0px 0px 0px">
                     <tr onclick="window.location.href ='#TT'">
                         <td style="width:300px; font-size:16px" ><b>BÁO CÁO TIẾP THEO</b></td>
                         <td style="text-align:right; font-size:16px" >..............................................................................................................</td>
@@ -595,9 +589,9 @@
                     </tr>
                     
                     <tr>
-                        <td width="34%" style="padding-left: 10px">
+                        <td width="34%">
                             <asp:Label ID="lblID_GDVIR" key="ID_GDVIR" type="SingeLine"  
-                                CssClass="field_input label-edit"  onclick="editField(this)" runat="server" 
+                                CssClass="label-edit"  onclick="editField(this)" runat="server" 
                                 Font-Bold="True" Width="100%"></asp:Label>                             
                             <br />
                             <asp:Label ID="lblChucVuNguoiBC" runat="server" Font-Bold="False" 

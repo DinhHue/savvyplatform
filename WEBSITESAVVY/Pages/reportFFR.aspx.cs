@@ -101,10 +101,14 @@ namespace WEBSITESAVVY.Pages
                         txtPhuTrachNBH.Text = lblPhuTrachNBH.Text;
                     }
                 }
-                lblDateILA.Text = "Báo cáo đầu tiên: " + row["ILADATE"].ToString();
+                lblDateILA.Text = "Báo cáo đầu tiên ngày " + row["ILADATE"].ToString();
                 //lblILADATE.Text = "Báo cáo đầu tiên ngày " + row["ILADATE"].ToString();
                 //lblDateILA.Text = "Báo cáo đầu tiên ngày " + DateTime.Parse( row["ILADATE"].ToString()).ToString("dd/MM/yyyy");
-                lblBrief.Text = row["Brief"].ToString();
+                string brif = row["BriefReport"].ToString();
+                if (brif != "")
+                    lblBrief.Text = brif;
+                else
+                    lblBrief.Text = row["Brief"].ToString();
                 lblBrief1.Text = lblBrief.Text;
 
                 lblPolicyNo.Text = row["PolicyNo"].ToString();
@@ -300,10 +304,10 @@ namespace WEBSITESAVVY.Pages
 
                 Button btn = (Button)sender;
                 string key = btn.Attributes["key"];
-
+                string titlekey = btn.Attributes["title"];
                 TextBox txtValue = (TextBox)FindControl("txt" + key);
                 string value = txtValue.Text;
-                string title = "";
+                string title = titlekey;
 
                 if (value.Contains("'"))
                 {
@@ -337,7 +341,7 @@ namespace WEBSITESAVVY.Pages
 
                 DropDownList drValue = (DropDownList)FindControl("dr" + key);
                 int id = int.Parse(drValue.SelectedValue.ToString());
-                string title = "";
+                string title = "FFR'signature preparer";
                 bool up = claimDao.UpdatePrepareFFR(mClaimID, id);
                 if (up == true)
                 {
@@ -372,7 +376,7 @@ namespace WEBSITESAVVY.Pages
 
                 DropDownList drValue = (DropDownList)FindControl("dr" + key);
                 int id = int.Parse(drValue.SelectedValue.ToString());
-                string title = "";
+                string title = "FFR'signature checker";
 
                 bool up = claimDao.UpdateCheckFFR(mClaimID, id);
                 if (up == true)

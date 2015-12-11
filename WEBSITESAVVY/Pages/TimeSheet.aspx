@@ -141,7 +141,7 @@
       <div class="ambitios_wrapper" align="center">
           <table style="vertical-align: top; text-align: center" width="100%">
               <tr>
-                  <td><asp:Label ID="Label1" runat="server" Text="Date to :" Font-Bold="True"></asp:Label>
+                  <td colspan="2"><asp:Label ID="Label1" runat="server" Text="Date to :" Font-Bold="True"></asp:Label>
                             &nbsp;<asp:TextBox ID="txtDateto" runat="server" CssClass="input" 
                           Width="10%"></asp:TextBox>
                              <ajaxToolkit:CalendarExtender ID="CalendarExtender1" runat="server" 
@@ -208,7 +208,31 @@
                   </td>
               </tr>--%>
               <tr>
-                  <td align="center">
+            <td class="leftedit">
+                <asp:Label ID="Label4" runat="server" Text="Insured:"></asp:Label>
+            </td>
+            <td class="righthome">
+                <asp:Label ID="lblInsured" runat="server"></asp:Label>
+            </td>
+        </tr>
+        <tr>
+            <td class="leftedit">
+                <asp:Label ID="Label5" runat="server" Text="Case No.:"></asp:Label>
+            </td>
+            <td class="righthome">
+                <asp:Label ID="lblTenClaim" runat="server"></asp:Label>
+               </td>
+        </tr>
+        <tr>
+            <td class="leftedit">
+                <asp:Label ID="Label6" runat="server" Text="D.I.O:"></asp:Label>
+            </td>
+            <td class="righthome">
+                <asp:Label ID="lblNgayChiDinh" runat="server"></asp:Label>
+            </td>
+        </tr>
+              <tr>
+                  <td align="center" colspan="2">
                       <asp:GridView ID="gvDSTimeSheet"  runat="server"  AutoGenerateColumns="False" DataKeyNames="ID_TimeSheet"
                           PageSize="20" Font-Names="Times New Roman" Font-Size="16px"
                           CssClass="gridtable" ShowFooter="True" Width="90%" 
@@ -277,6 +301,7 @@
                       </asp:GridView>
                   </td>
               </tr>
+     
           </table>
 &nbsp;</div>
 </div>

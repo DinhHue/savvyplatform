@@ -274,7 +274,7 @@
                               <asp:Panel ID="panelFFRDate" Width="400px"  CssClass="panelUpdate hiden" runat="server">
                                     <asp:TextBox ID="txtFFRDate" CssClass="hiden" TextMode="SingleLine"  Width="100%" runat="server" />
                                     <div style="margin-top:10px">
-                                        <asp:Button ID="Button21" key="FFRDate" onclick="btnUpdate_Click" Text="Update" runat="server"/>
+                                        <asp:Button ID="Button21" title="Date prepare - FFR" key="FFRDate" onclick="btnUpdate_Click" Text="Update" runat="server"/>
                                         <input  key="FFRDate" type="button" value="Cancel" onclick="cancel(this)" />
                                     </div>
                                 </asp:Panel> 
@@ -289,7 +289,7 @@
                                     <asp:Panel ID="panelRefKH" Width="275px" CssClass="panelUpdate hiden" runat="server">
                                     <asp:TextBox ID="txtRefKH" CssClass="hiden" TextMode="SingleLine"  Width="100%" runat="server" />
                                     <div style="margin-top:10px">
-                                        <asp:Button ID="Button4" key="RefKH" onclick="btnUpdate_Click" Text="Update" runat="server"/>
+                                        <asp:Button ID="Button4" title="Reference insured - FFR" key="RefKH" onclick="btnUpdate_Click" Text="Update" runat="server"/>
                                         <input  key="RefKH" type="button" value="Cancel" onclick="cancel(this)" />
                                     </div>
                                 </asp:Panel></i>
@@ -323,7 +323,7 @@
                                          <asp:Panel ID="panelPhuTrachNBH" Width="80%"  CssClass="panelUpdate hiden" runat="server">
                                         <asp:TextBox ID="txtPhuTrachNBH" CssClass="hiden" TextMode="SingleLine"  Width="100%" runat="server" />
                                         <div style="margin-top:10px">
-                                            <asp:Button ID="Button6" key="PhuTrachNBH" onclick="btnUpdate_Click" Text="Update" runat="server"/>
+                                            <asp:Button ID="Button6" title="Đại diện NBH - FFR" key="PhuTrachNBH" onclick="btnUpdate_Click" Text="Update" runat="server"/>
                                             <input  key="PhuTrachNBH" type="button" value="Cancel" onclick="cancel(this)" />
                                         </div>
                                     </asp:Panel>
@@ -424,7 +424,7 @@
                                 <asp:Panel ID="panelPremises" Width="570px" CssClass="panelUpdate hiden" runat="server">
                                     <asp:TextBox ID="txtPremises" CssClass="hiden" TextMode="SingleLine"  Width="100%" runat="server" />
                                     <div style="margin-top:10px">
-                                        <asp:Button  key="Premises" onclick="btnUpdate_Click" Text="Update" runat="server"/>
+                                        <asp:Button  key="Premises" title="Premises - FFR" onclick="btnUpdate_Click" Text="Update" runat="server"/>
                                         <input  key="Premises" type="button" value="Cancel" onclick="cancel(this)" />
                                     </div>
                                 </asp:Panel>
@@ -445,7 +445,7 @@
                                 <asp:Panel ID="panelDOL" Width="570px" CssClass="panelUpdate hiden" runat="server">
                                     <asp:TextBox ID="txtDOL" CssClass="hiden" TextMode="SingleLine"  Width="100%" runat="server" />
                                     <div style="margin-top:10px">
-                                        <asp:Button  key="DOL" onclick="btnUpdate_Click" Text="Update" runat="server"/>
+                                        <asp:Button  key="DOL" title="Date of loss - FFR" onclick="btnUpdate_Click" Text="Update" runat="server"/>
                                         <input  key="DOL" type="button" value="Cancel" onclick="cancel(this)" />
                                     </div>
                                 </asp:Panel>
@@ -466,7 +466,7 @@
                                 <asp:Panel ID="panelSortCause" Width="570px" CssClass="panelUpdate hiden" runat="server">
                                     <asp:TextBox ID="txtSortCause" CssClass="hiden" TextMode="SingleLine"  Width="100%" runat="server" />
                                     <div style="margin-top:10px">
-                                        <asp:Button key="SortCause" onclick="btnUpdate_Click" Text="Update" runat="server"/>
+                                        <asp:Button key="SortCause" title="Cause of loss - FFR" onclick="btnUpdate_Click" Text="Update" runat="server"/>
                                         <input  key="SortCause" type="button" value="Cancel" onclick="cancel(this)" />
                                     </div>
                                 </asp:Panel>
@@ -487,7 +487,7 @@
                                 <asp:Panel ID="panelPhamViTonThat" Width="570px" CssClass="panelUpdate hiden" runat="server">
                                     <asp:TextBox ID="txtPhamViTonThat" CssClass="hiden" TextMode="MultiLine"  Width="100%" runat="server" />
                                     <div style="margin-top:10px">
-                                        <asp:Button key="PhamViTonThat" onclick="btnUpdate_Click" Text="Update" runat="server"/>
+                                        <asp:Button key="PhamViTonThat" title="Phạm vi tổn thất - FFR" onclick="btnUpdate_Click" Text="Update" runat="server"/>
                                         <input  key="PhamViTonThat" type="button" value="Cancel" onclick="cancel(this)" />
                                     </div>
                                 </asp:Panel>
@@ -509,7 +509,7 @@
                                 <asp:Panel ID="panelNamePolicy" Width="570px" CssClass="panelUpdate hiden" runat="server">
                                     <asp:TextBox ID="txtNamePolicy" CssClass="hiden" TextMode="SingleLine"  Width="100%" runat="server" />
                                     <div style="margin-top:10px">
-                                        <asp:Button  key="NamePolicy" onclick="btnUpdate_Click" Text="Update" runat="server"/>
+                                        <asp:Button  key="NamePolicy" title="Name type of policy - FFR" onclick="btnUpdate_Click" Text="Update" runat="server"/>
                                         <input  key="NamePolicy" type="button" value="Cancel" onclick="cancel(this)" />
                                     </div>
                                 </asp:Panel>
@@ -526,7 +526,7 @@
                                             <asp:Panel ID="panelSumInSured" Width="354px" CssClass="panelUpdate hiden" runat="server">
                                                 <asp:TextBox ID="txtSumInSured" CssClass="hiden" TextMode="SingleLine"  Width="100%" runat="server" />
                                                 <div style="margin-top:10px">
-                                                    <asp:Button  key="SumInSured" onclick="btnUpdate_Click" Text="Update" runat="server"/>
+                                                    <asp:Button  key="SumInSured" title="Sum Insured - FFR" onclick="btnUpdate_Click" Text="Update" runat="server"/>
                                                     <input  key="SumInSured" type="button" value="Cancel" onclick="cancel(this)" />
                                                 </div>
                                             </asp:Panel>
@@ -540,7 +540,7 @@
                                             <asp:Panel ID="panelEffective" Width="354px" CssClass="panelUpdate hiden" runat="server">
                                                 <asp:TextBox ID="txtEffective" CssClass="hiden" TextMode="SingleLine"  Width="100%" runat="server" />
                                                 <div style="margin-top:10px">
-                                                    <asp:Button  key="Effective" onclick="btnUpdate_Click" Text="Update" runat="server"/>
+                                                    <asp:Button  key="Effective" title="Effective - FFR" onclick="btnUpdate_Click" Text="Update" runat="server"/>
                                                     <input  key="Effective" type="button" value="Cancel" onclick="cancel(this)" />
                                                 </div>
                                             </asp:Panel>
@@ -553,7 +553,7 @@
                                             <asp:Panel ID="panelMucMienThuong" Width="354px" CssClass="panelUpdate hiden" runat="server">
                                                 <asp:TextBox ID="txtMucMienThuong" CssClass="hiden" TextMode="SingleLine"  Width="100%" runat="server" />
                                                 <div style="margin-top:10px">
-                                                    <asp:Button  key="MucMienThuong" onclick="btnUpdate_Click" Text="Update" runat="server"/>
+                                                    <asp:Button  key="MucMienThuong" title="Deductible - FFR" onclick="btnUpdate_Click" Text="Update" runat="server"/>
                                                     <input  key="MucMienThuong" type="button" value="Cancel" onclick="cancel(this)" />
                                                 </div>
                                             </asp:Panel>
@@ -579,7 +579,7 @@
                                 <asp:Panel ID="panelDKBX" Width="570px" CssClass="panelUpdate hiden" runat="server">
                                     <asp:TextBox ID="txtDKBX" CssClass="hiden" TextMode="SingleLine"  Width="100%" runat="server" />
                                     <div style="margin-top:10px">
-                                        <asp:Button  key="DKBX" onclick="btnUpdate_Click" Text="Update" runat="server"/>
+                                        <asp:Button  key="DKBX" title="Điều khoản bổ sung - FFR" onclick="btnUpdate_Click" Text="Update" runat="server"/>
                                         <input  key="DKBX" type="button" value="Cancel" onclick="cancel(this)" />
                                     </div>
                                 </asp:Panel>
@@ -599,7 +599,7 @@
                                 <asp:Panel ID="panelKhieuNai" Width="570px" CssClass="panelUpdate hiden" runat="server">
                                     <asp:TextBox ID="txtKhieuNai" CssClass="hiden" TextMode="SingleLine"  Width="100%" runat="server" />
                                     <div style="margin-top:10px">
-                                        <asp:Button  key="KhieuNai" onclick="btnUpdate_Click" Text="Update" runat="server"/>
+                                        <asp:Button  key="KhieuNai" title="Claim amount - FFR" onclick="btnUpdate_Click" Text="Update" runat="server"/>
                                         <input  key="KhieuNai" type="button" value="Cancel" onclick="cancel(this)" />
                                     </div>
                                 </asp:Panel>
@@ -622,7 +622,7 @@
                                 <asp:Panel ID="panelThietHaiHopLy" Width="570px" CssClass="panelUpdate hiden" runat="server">
                                     <asp:TextBox ID="txtThietHaiHopLy" CssClass="hiden" TextMode="SingleLine"  Width="100%" runat="server" />
                                     <div style="margin-top:10px">
-                                        <asp:Button  key="ThietHaiHopLy" onclick="btnUpdate_Click" Text="Update" runat="server"/>
+                                        <asp:Button  key="ThietHaiHopLy" title="Số tiền thiệt hại hợp lý - FFR" onclick="btnUpdate_Click" Text="Update" runat="server"/>
                                         <input  key="ThietHaiHopLy" type="button" value="Cancel" onclick="cancel(this)" />
                                     </div>
                                 </asp:Panel>
@@ -642,7 +642,7 @@
                                 <asp:Panel ID="panelTonThatHopLe" Width="570px" CssClass="panelUpdate hiden" runat="server">
                                     <asp:TextBox ID="txtTonThatHopLe" CssClass="hiden" TextMode="SingleLine"  Width="100%" runat="server" />
                                     <div style="margin-top:10px">
-                                        <asp:Button  key="TonThatHopLe" onclick="btnUpdate_Click" Text="Update" runat="server"/>
+                                        <asp:Button  key="TonThatHopLe" title="Số tiền thuộc phạm vi bảo hiểm - FFR" onclick="btnUpdate_Click" Text="Update" runat="server"/>
                                         <input  key="TonThatHopLe" type="button" value="Cancel" onclick="cancel(this)" />
                                     </div>
                                 </asp:Panel>
@@ -661,7 +661,7 @@
                                 <asp:Panel ID="panelTruGiaTriThuHoi" Width="570px" CssClass="panelUpdate hiden" runat="server">
                                     <asp:TextBox ID="txtTruGiaTriThuHoi" CssClass="hiden" TextMode="SingleLine"  Width="100%" runat="server" />
                                     <div style="margin-top:10px">
-                                        <asp:Button  key="TruGiaTriThuHoi" onclick="btnUpdate_Click" Text="Update" runat="server"/>
+                                        <asp:Button  key="TruGiaTriThuHoi" title="Số tiền trừ giá trị thu hồi - FFR" onclick="btnUpdate_Click" Text="Update" runat="server"/>
                                         <input  key="TruGiaTriThuHoi" type="button" value="Cancel" onclick="cancel(this)" />
                                     </div>
                                 </asp:Panel>
@@ -681,7 +681,7 @@
                                 <asp:Panel ID="panelTruMucMienThuong" Width="570px" CssClass="panelUpdate hiden" runat="server">
                                     <asp:TextBox ID="txtTruMucMienThuong" CssClass="hiden" TextMode="SingleLine"  Width="100%" runat="server" />
                                     <div style="margin-top:10px">
-                                        <asp:Button  key="TruMucMienThuong" onclick="btnUpdate_Click" Text="Update" runat="server"/>
+                                        <asp:Button  key="TruMucMienThuong" title="Số tiền trừ miễn thường - FFR" onclick="btnUpdate_Click" Text="Update" runat="server"/>
                                         <input  key="TruMucMienThuong" type="button" value="Cancel" onclick="cancel(this)" />
                                     </div>
                                 </asp:Panel>
@@ -701,7 +701,7 @@
                                 <asp:Panel ID="panelBoiThuong" Width="570px" CssClass="panelUpdate hiden" runat="server">
                                     <asp:TextBox ID="txtBoiThuong" CssClass="hiden" TextMode="SingleLine"  Width="100%" runat="server" />
                                     <div style="margin-top:10px">
-                                        <asp:Button ID="Button3"  key="BoiThuong" onclick="btnUpdate_Click" Text="Update" runat="server"/>
+                                        <asp:Button ID="Button3" title="Số tiền bồi thường - FFR"  key="BoiThuong" onclick="btnUpdate_Click" Text="Update" runat="server"/>
                                         <input  key="BoiThuong" type="button" value="Cancel" onclick="cancel(this)" />
                                     </div>
                                 </asp:Panel>
@@ -748,29 +748,29 @@
 
                 <h3 style="text-align:center; font-size:25px!important; color:#006600; margin:20px 0px 0px 0">MỤC LỤC BÁO CÁO</h3>
                                 <table style="cursor:pointer" cellpadding="20px" width="100%" >
-                    <tr><td onclick="window.location.href ='#ExecutiveSummaryFR'"><b style="float:left">I. TÓM TẮT VỤ VIỆC </b>
+                    <tr><td onclick="window.location.href ='#ExecutiveSummaryFR'"><b style="float:left">TÓM TẮT VỤ VIỆC </b>
                         <div style="float:right; text-align:right;" >..................................................................................................................................</div></td></tr>
-                    <tr><td onclick="window.location.href ='#GioiThieu'"><b style="float:left">II. NGƯỜI ĐƯỢC BẢO HIỂM </b>
+                    <tr><td onclick="window.location.href ='#GioiThieu'"><b style="float:left">NGƯỜI ĐƯỢC BẢO HIỂM </b>
                         <div style="float:right; text-align:right;" >.....................................................................................................................</div></td></tr>
-                    <tr><td onclick="window.location.href ='#K'"><b style="float:left">III. QUÁ TRÌNH XỬ LÝ VÀ KHIẾU NẠI </b>
+                    <tr><td onclick="window.location.href ='#K'"><b style="float:left">QUÁ TRÌNH XỬ LÝ VÀ KHIẾU NẠI </b>
                         <div style="float:right; text-align:right;" >.....................................................................................................</div></td></tr>
-                    <tr><td onclick="window.location.href ='#C1'"><b style="float:left">IV. DIỄN BIẾN TỔN THẤT </b>
+                    <tr><td onclick="window.location.href ='#C1'"><b style="float:left">DIỄN BIẾN TỔN THẤT </b>
                         <div style="float:right; text-align:right;" >.........................................................................................................................</div></td></tr>
-                    <tr><td onclick="window.location.href ='#C3'"><b style="float:left">V. NGUYÊN NHÂN </b>
+                    <tr><td onclick="window.location.href ='#C3'"><b style="float:left">NGUYÊN NHÂN </b>
                         <div style="float:right; text-align:right;" >.......................................................................................................................................</div></td></tr>
-                    <tr><td onclick="window.location.href ='#E1'"><b style="float:left">VI. PHẠM VI BẢO HIỂM </b>
+                    <tr><td onclick="window.location.href ='#E1'"><b style="float:left">PHẠM VI BẢO HIỂM </b>
                         <div style="float:right; text-align:right;" >.............................................................................................................................</div></td></tr>
-                    <tr><td onclick="window.location.href ='#D1'"><b style="float:left">VII. PHẠM VI VÀ MỨC ĐỘ THIỆT HẠI </b>
+                    <tr><td onclick="window.location.href ='#D1'"><b style="float:left">PHẠM VI VÀ MỨC ĐỘ THIỆT HẠI </b>
                         <div style="float:right; text-align:right;" >....................................................................................................</div></td></tr>
-                    <tr><td onclick="window.location.href ='#B1'"><b style="float:left">VIII. YÊU CẦU BỒI THƯỜNG VÀ ĐỀ XUẤT TÍNH TOÁN </b>
+                    <tr><td onclick="window.location.href ='#B1'"><b style="float:left">YÊU CẦU BỒI THƯỜNG VÀ ĐỀ XUẤT TÍNH TOÁN </b>
                         <div style="float:right; text-align:right;" >......................................................................</div></td></tr>
-                    <tr><td onclick="window.location.href ='#G'"><b style="float:left">IX. ĐƠN BẢO HIỂM KHÁC </b>
+                    <tr><td onclick="window.location.href ='#G'"><b style="float:left">ĐƠN BẢO HIỂM KHÁC </b>
                         <div style="float:right; text-align:right;" >.........................................................................................................................</div></td></tr>
-                    <tr><td onclick="window.location.href ='#H'"><b style="float:left">X. GIÁ TRỊ THU HỒI  </b>
+                    <tr><td onclick="window.location.href ='#H'"><b style="float:left">GIÁ TRỊ THU HỒI  </b>
                         <div style="float:right; text-align:right;" >....................................................................................................................................</div></td></tr>
-                    <tr><td onclick="window.location.href ='#B2'"><b style="float:left">XI. ĐỀ XUẤT CHUNG CUỘC </b>
+                    <tr><td onclick="window.location.href ='#B2'"><b style="float:left">ĐỀ XUẤT CHUNG CUỘC </b>
                         <div style="float:right; text-align:right;" >......................................................................................................................</div></td></tr>
-                    <tr><td onclick="window.location.href ='#Conclution'"><b style="float:left">XII. KẾT LUẬN </b>
+                    <tr><td onclick="window.location.href ='#Conclution'"><b style="float:left">KẾT LUẬN </b>
                         <div style="float:right; text-align:right;" >..............................................................................................................................................</div></td></tr>
                 
                 </table>
@@ -784,27 +784,26 @@
 
 
         <div class="box" >
-            <h3 id="ExecutiveSummaryFR" key="ExecutiveSummaryFR" title="Executive Summary" >I. TÓM TẮT VỤ VIỆC</h3>
+            <h3 id="ExecutiveSummaryFR" key="ExecutiveSummaryFR" title="Executive Summary" >TÓM TẮT VỤ VIỆC</h3>
             <div>
                 <asp:Label ID="lblExecutiveSummaryFR" key="ExecutiveSummaryFR" onclick="editField(this)"  CssClass="label-edit" runat="server" Width="100%" ></asp:Label>
                 <asp:Panel ID="panelExecutiveSummaryFR" CssClass="panelUpdate hiden" runat="server">
                     <asp:TextBox ID="txtExecutiveSummaryFR" CssClass="hiden" TextMode="MultiLine" Height="250px" runat="server" />
                     <div style="margin-top:10px">
-                        <asp:Button ID="Button1" key="ExecutiveSummaryFR" onclick="btnUpdate_Click" Text="Update" runat="server"/>
+                        <asp:Button ID="Button1" title="Tóm tắt vụ việc - FFR" key="ExecutiveSummaryFR" onclick="btnUpdate_Click" Text="Update" runat="server"/>
                         <input key="ExecutiveSummaryFR" type="button" value="Cancel" onclick="cancel(this)" />
                     </div>
                 </asp:Panel>
             </div>
-        </div>
-
-        <div class="box" >
-            <h3 id="GioiThieu" key="GioiThieu" title="Insured" >II. NGƯỜI ĐƯỢC BẢO HIỂM </h3>
+            <h3 id="GioiThieu" key="GioiThieu" title="Insured" >
+                NGƯỜI ĐƯỢC BẢO HIỂM
+            </h3>
             <div>
                 <asp:Label ID="lblGioiThieu" key="GioiThieu" onclick="editField(this)" CssClass="label-edit"  runat="server" Width="100%" ></asp:Label>
                 <asp:Panel ID="panelGioiThieu" CssClass="panelUpdate hiden" runat="server">
                     <asp:TextBox ID="txtGioiThieu" CssClass="hiden" TextMode="MultiLine" Height="250px" runat="server" />
                     <div style="margin-top:10px">
-                        <asp:Button key="GioiThieu" onclick="btnUpdate_Click" Text="Update" runat="server"/>
+                        <asp:Button key="GioiThieu" title="Giới thiệu NĐBH - FFR" onclick="btnUpdate_Click" Text="Update" runat="server"/>
                         <input key="GioiThieu" type="button"  value="Cancel" onclick="cancel(this)" />
                     </div>
                 </asp:Panel>
@@ -812,139 +811,121 @@
         </div>
 
         <div class="box" >
-            <h3 id="K" key="K" title="Claim handling Process" >III. QUÁ TRÌNH XỬ LÝ VÀ KHIẾU NẠI</h3>
+            <h3 id="K" key="K" title="Claim handling Process" >QUÁ TRÌNH XỬ LÝ VÀ KHIẾU NẠI</h3>
             <div>
                 <asp:Label ID="lblK" key="K" onclick="editField(this)" CssClass="label-edit" runat="server" Width="100%" ></asp:Label>
                 <asp:Panel ID="panelK" CssClass="panelUpdate hiden" runat="server">
                     <asp:TextBox ID="txtK" CssClass="hiden" TextMode="MultiLine" Height="250px" runat="server" />
                     <div style="margin-top:10px">
-                        <asp:Button ID="Button2" key="K" onclick="btnUpdate_Click" Text="Update" runat="server"/>
+                        <asp:Button ID="Button2" key="K" title="Quá trình xử lý và khiếu nại - FFR" onclick="btnUpdate_Click" Text="Update" runat="server"/>
                         <input key="K" type="button" value="Cancel" onclick="cancel(this)" />
                     </div>
                 </asp:Panel>
             </div>
-        </div>
-
-        <div class="box" >
-            <h3 id="C1" key="DienBienTonThat" title="Circumstance" >IV. DIỄN BIẾN TỔN THẤT</h3>
+            <h3 id="C1" key="DienBienTonThat" title="Circumstance" >
+                DIỄN BIẾN TỔN THẤT</h3>
             <div>
                 <asp:Label ID="lblDienBienTonThat" key="DienBienTonThat" onclick="editField(this)" CssClass="label-edit" runat="server" Width="100%" ></asp:Label>
                 <asp:Panel ID="panelDienBienTonThat" CssClass="panelUpdate hiden" runat="server">
                     <asp:TextBox ID="txtDienBienTonThat" CssClass="hiden" TextMode="MultiLine" Height="250px" runat="server" />
                     <div style="margin-top:10px">
-                        <asp:Button key="DienBienTonThat"  onclick="btnUpdate_Click" Text="Update" runat="server"/>
+                        <asp:Button key="DienBienTonThat" title="Diễn biến tổn thất - FFR"  onclick="btnUpdate_Click" Text="Update" runat="server"/>
                         <input key="DienBienTonThat"  type="button" value="Cancel" onclick="cancel(this)" />
                     </div>
                 </asp:Panel>
             </div>
-        </div>
-
-        <div class="box" >
-            <h3 id="C3" key="C3FR" title="Cause of loss">V. NGUYÊN NHÂN</h3>
+            <h3 id="C3" key="C3FR" title="Cause of loss">
+                NGUYÊN NHÂN</h3>
             <div>
                 <asp:Label ID="lblC3FR" key="C3FR" onclick="editField(this)" CssClass="label-edit" runat="server" Width="100%" ></asp:Label>
                 <asp:Panel ID="panelC3FR" CssClass="panelUpdate hiden" runat="server">
                     <asp:TextBox ID="txtC3FR" CssClass="hiden" TextMode="MultiLine" Height="250px" runat="server" />
                     <div style="margin-top:10px">
-                        <asp:Button  key="C3FR"  onclick="btnUpdate_Click" Text="Update" runat="server"/>
+                        <asp:Button  key="C3FR" title="Nguyên nhân tổn thất - FFR"  onclick="btnUpdate_Click" Text="Update" runat="server"/>
                         <input key="C3FR"  type="button" value="Cancel" onclick="cancel(this)" />
                     </div>
                 </asp:Panel>
             </div>
-        </div>
-
-        <div class="box" >
-            <h3 id="E1" key="E2" title="Policy liability" >VI. PHẠM VI BẢO HIỂM</h3>
+            <h3 id="E1" key="E2" title="Policy liability" >
+                PHẠM VI BẢO HIỂM</h3>
             <div>
                 <asp:Label ID="lblE2" key="E2" onclick="editField(this)"  CssClass="label-edit" runat="server" Width="100%" ></asp:Label>
                 <asp:Panel ID="panelE2" CssClass="panelUpdate hiden" runat="server">
                     <asp:TextBox ID="txtE2" CssClass="hiden" TextMode="MultiLine" Height="250px" runat="server" />
                     <div style="margin-top:10px">
-                        <asp:Button key="E2" onclick="btnUpdate_Click" Text="Update" runat="server"/>
+                        <asp:Button key="E2" title="Phạm vi bảo hiểm - FFR" onclick="btnUpdate_Click" Text="Update" runat="server"/>
                         <input  key="E2" type="button" value="Cancel" onclick="cancel(this)" />
                     </div>
                 </asp:Panel>
             </div>
-        </div>
-
-        <div class="box" >
-            <h3 id="D1" key="D1" title="Extent of Damage" >VII. PHẠM VI VÀ MỨC ĐỘ THIỆT HẠI</h3>
+            <h3 id="D1" key="D1" title="Extent of Damage" >
+                PHẠM VI VÀ MỨC ĐỘ THIỆT HẠI</h3>
             <div>
                 <asp:Label ID="lblD1" key="D1" onclick="editField(this)" CssClass="label-edit" runat="server" Width="100%" ></asp:Label>
                 <asp:Panel ID="panelD1" CssClass="panelUpdate hiden" runat="server">
                     <asp:TextBox ID="txtD1" CssClass="hiden" TextMode="MultiLine" Height="250px" runat="server" />
                     <div style="margin-top:10px">
-                        <asp:Button  key="D1" onclick="btnUpdate_Click" Text="Update" runat="server"/>
+                        <asp:Button  key="D1" title="Phạm vi và mức độ thiệt hại - FFR" onclick="btnUpdate_Click" Text="Update" runat="server"/>
                         <input  key="D1" type="button" value="Cancel" onclick="cancel(this)" />
                     </div>
                 </asp:Panel>
             </div>
-        </div>
-
-        <div class="box" >
-            <h3 id="B1" key="B1" title="Claim amount and proposed settlement" >VIII. YÊU CẦU BỒI THƯỜNG VÀ ĐỀ XUẤT TÍNH TOÁN</h3>
+            <h3 id="B1" key="B1" title="Claim amount and proposed settlement" >
+                YÊU CẦU BỒI THƯỜNG VÀ ĐỀ XUẤT TÍNH TOÁN</h3>
             <div>
                 <asp:Label ID="lblB1" key="B1" onclick="editField(this)" CssClass="label-edit" runat="server" Width="100%" ></asp:Label>
                 <asp:Panel ID="panelB1" CssClass="panelUpdate hiden" runat="server">
                     <asp:TextBox ID="txtB1" CssClass="hiden" TextMode="MultiLine" Height="250px" runat="server" />
                     <div style="margin-top:10px">
-                        <asp:Button key="B1" onclick="btnUpdate_Click" Text="Update" runat="server"/>
+                        <asp:Button key="B1" title="Yêu cầu bồi thường và đề xuất tính toán - FFR" onclick="btnUpdate_Click" Text="Update" runat="server"/>
                         <input  key="B1" type="button" value="Cancel" onclick="cancel(this)" />
                     </div>
                 </asp:Panel>
             </div>
-        </div>
-
-        <div class="box" >
-            <h3 id="G" key="G" title="Other Insurance" >IX. ĐƠN BẢO HIỂM KHÁC</h3>
+            <h3 id="G" key="G" title="Other Insurance" >
+                ĐƠN BẢO HIỂM KHÁC</h3>
             <div>
                 <asp:Label ID="lblG" key="G" onclick="editField(this)" CssClass="label-edit"  runat="server" Width="100%" ></asp:Label>
                 <asp:Panel ID="panelG" CssClass="panelUpdate hiden" runat="server">
                     <asp:TextBox ID="txtG" CssClass="hiden" TextMode="MultiLine" Height="250px" runat="server" />
                     <div style="margin-top:10px">
-                        <asp:Button key="G" onclick="btnUpdate_Click" Text="Update" runat="server"/>
+                        <asp:Button key="G" title="Đơn bảo hiểm khác - FFR" onclick="btnUpdate_Click" Text="Update" runat="server"/>
                         <input  key="G" type="button" value="Cancel" onclick="cancel(this)" />
                     </div>
                 </asp:Panel>
             </div>
-        </div>
-
-        <div class="box" >
-            <h3 id="H" key="H" title="Salvage" >X. GIÁ TRỊ THU HỒI</h3>
+            <h3 id="H" key="H" title="Salvage" >
+                GIÁ TRỊ THU HỒI</h3>
             <div>
                 <asp:Label ID="lblH" key="H" onclick="editField(this)" CssClass="label-edit" runat="server" Width="100%" ></asp:Label>
                 <asp:Panel ID="panelH" CssClass="panelUpdate hiden" runat="server">
                     <asp:TextBox ID="txtH" CssClass="hiden" TextMode="MultiLine" Height="250px" runat="server" />
                     <div style="margin-top:10px">
-                        <asp:Button key="H" onclick="btnUpdate_Click" Text="Update" runat="server"/>
+                        <asp:Button key="H" title="Giá trị thu hồi - FFR" onclick="btnUpdate_Click" Text="Update" runat="server"/>
                         <input  key="H" type="button" value="Cancel" onclick="cancel(this)" />
                     </div>
                 </asp:Panel>
             </div>
-        </div>
-
-        <div class="box" >
-            <h3 id="B2"  key="B2" title="Final Proposed Settlement" >XI. ĐỀ XUẤT CHUNG CUỘC</h3>
+            <h3 id="B2"  key="B2" title="Final Proposed Settlement" >
+                ĐỀ XUẤT CHUNG CUỘC</h3>
             <div>
                 <asp:Label ID="lblB2" key="B2" onclick="editField(this)"  CssClass="label-edit" runat="server" Width="100%" ></asp:Label>
                 <asp:Panel ID="panelB2" CssClass="panelUpdate hiden" runat="server">
                     <asp:TextBox ID="txtB2" CssClass="hiden" TextMode="MultiLine" Height="250px" runat="server" />
                     <div style="margin-top:10px">
-                        <asp:Button key="B2"  onclick="btnUpdate_Click" Text="Update" runat="server"/>
+                        <asp:Button key="B2" title="Đề xuất chung cuộc - FFR" onclick="btnUpdate_Click" Text="Update" runat="server"/>
                         <input  key="B2"  type="button" value="Cancel" onclick="cancel(this)" />
                     </div>
                 </asp:Panel>
             </div>
-        </div>
-
-        <div class="box" >
-            <h3 id="Conclution"  key="Conclution" title="Conclution" >XII. KẾT LUẬN</h3>
+            <h3 id="Conclution"  key="Conclution" title="Conclution" >
+                KẾT LUẬN</h3>
             <div>
                 <asp:Label ID="lblConclution"  key="Conclution" onclick="editField(this)" CssClass="label-edit"  runat="server" Width="100%" ></asp:Label>
                 <asp:Panel ID="panelConclution" CssClass="panelUpdate hiden" runat="server">
                     <asp:TextBox ID="txtConclution" CssClass="hiden" TextMode="MultiLine" Height="250px" runat="server" />
                     <div style="margin-top:10px">
-                        <asp:Button  key="Conclution" onclick="btnUpdate_Click" Text="Update" runat="server"/>
+                        <asp:Button  key="Conclution" title="Kết luận - FFR" onclick="btnUpdate_Click" Text="Update" runat="server"/>
                         <input   key="Conclution"  type="button" value="Cancel" onclick="cancel(this)" />
                     </div>
                 </asp:Panel>

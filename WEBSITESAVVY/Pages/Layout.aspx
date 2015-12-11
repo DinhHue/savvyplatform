@@ -95,7 +95,6 @@
         }
 
         function loadReport(index) {
-
             var Link = "";
             report = ""
             if (index == 0)
@@ -144,8 +143,6 @@
 
 			if (report === "") $("#choose").hide();
 			else $("#choose").show();
-
-
         }
 
         function onFinished() {
@@ -237,9 +234,7 @@
             $('#w_Popup').html(contentPage);
             $('#w_Popup').window('open');
         }
-
-
-
+        
     </script>
 
     <script type="text/javascript">
@@ -288,8 +283,7 @@
                             <asp:Label ID="lblName" runat="server" Text=""></asp:Label> <asp:Label 
                                 ID="lblChucVu" runat="server" Visible="False"></asp:Label>
                              <asp:HyperLink ID="linklogin" runat="server" Text="Log In" 
-                        NavigateUrl="~/Pages/Login.aspx"></asp:HyperLink>
-                        
+                        NavigateUrl="~/Pages/Login.aspx"></asp:HyperLink>                        
                             </span></span></a>
 						</div>
                     </td>
@@ -373,12 +367,13 @@
                    <%-- <li><a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true" key="PRDate" title="Date Prepare Report - PR" type="date" onclick="updateField(this);">Date Prepare Report</a></li>--%>
 				    <li><a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true" key="A1" title="Introduction - PR" onclick="updateField(this);">Introduction</a></li>
 				    <li><a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true" key="GioiThieu" onclick="updateField(this);">Insured </a></li>
-				    <li><a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true" key="DienBienTonThat" onclick="updateField(this);">Circumstance</a></li>
+				    <li><a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true" key="C1" onclick="updateField(this);">Circumstance</a></li>
 				    <li><a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true" key="C3" onclick="updateField(this);">Cause of loss</a></li>
 				    <li><a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true" key="E1" onclick="updateField(this);">Policy Liability</a></li>
 				    <li><a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true" key="D1" onclick="updateField(this);">Extent of Damage</a></li>
 				    <li><a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true" key="G" onclick="updateField(this);">Other Insurance </a></li>
 				    <li><a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true" key="H" onclick="updateField(this);">Salvage</a></li>
+                    <li><a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true" key="TheQuyenTruyDoi" onclick="updateField(this);">Subrogation</a></li>
 				    <li><a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true" key="I" onclick="updateField(this);">Reserve for Insurer</a></li>
                     <li><a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true" key="TamUngBoiThuongText" onclick="updateField(this);">Payment On Account</a></li>
                     <li><a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true" >Procedure</a></li>

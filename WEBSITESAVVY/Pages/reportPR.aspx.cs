@@ -106,11 +106,19 @@ namespace WEBSITESAVVY.Pages
                         txtPhuTrachNBH.Text = lblPhuTrachNBH.Text;
                     }
                 }
-                lblDateILA.Text = "Báo cáo đầu tiên: " + row["ILADATE"].ToString();
+                lblDateILA.Text = "Báo cáo đầu tiên ngày " + row["ILADATE"].ToString();
                 //lblDateILA.Text = "Báo cáo đầu tiên ngày " + DateTime.Parse( row["ILADATE"].ToString()).ToString("dd/MM/yyyy");
-                lblBrief.Text = row["Brief"].ToString();
-                //lblBrief1.Text = lblBrief.Text;
-
+                string brif = row["BriefReport"].ToString();
+                if (brif != "")
+                {
+                    lblBriefReport.Text = brif;
+                    txtBriefReport.Text = lblBriefReport.Text;
+                }
+                else
+                {
+                    lblBriefReport.Text = row["Brief"].ToString();
+                    txtBriefReport.Text = lblBriefReport.Text;
+                }
                 lblPolicyNo.Text = row["PolicyNo"].ToString();
                 lblTenKH.Text = row["TenKhachHang"].ToString();
                 lblDiaChiKH.Text = row["DiaChi"].ToString();
@@ -167,9 +175,7 @@ namespace WEBSITESAVVY.Pages
                 string gioithieumau = rowmau["GioiThieuChungA1"].ToString();
 
                 string NDBHmau = rowmau["GioiThieuNDBH"].ToString();
-
-                string dienbienmau = rowmau["DienBienTonThat"].ToString();
-
+                string dienbienmau2 = rowmau["DienBienTonThat"].ToString();
                 string nguyennhanmau = rowmau["NguyenNhanC3"].ToString();
 
                 string phamvimau = rowmau["PhamViBaoHiemE1PR"].ToString();
@@ -193,7 +199,7 @@ namespace WEBSITESAVVY.Pages
                 }
                 else
                 {
-                    lblA1.Text = NDBHmau;
+                    lblA1.Text = gioithieumau;
                     txtA1.Text = lblA1.Text;
                 }
                 string gioithieuNDBH = row["GioiThieu"].ToString();
@@ -204,21 +210,28 @@ namespace WEBSITESAVVY.Pages
                 }
                 else
                 {
-                    lblGioiThieu.Text = gioithieumau;
+                    lblGioiThieu.Text = NDBHmau;
                     txtGioiThieu.Text = lblGioiThieu.Text;
                 }
 
-                string dienbien = row["DienBienTonThat"].ToString();
+                string dienbienmau = row["DienBienTonThat"].ToString();
+                string dienbien = row["C1"].ToString();
                 if (dienbien != "")
                 {
-                    lblDienBienTonThat.Text = dienbien;
-                    txtDienBienTonThat.Text = lblDienBienTonThat.Text;
+                    lblC1.Text = dienbien;
+                    txtC1.Text = lblC1.Text;
                 }
-                else
+                if (dienbien == "" && dienbienmau != "")
                 {
-                    lblDienBienTonThat.Text = dienbienmau;
-                    txtDienBienTonThat.Text = lblDienBienTonThat.Text;
+                    lblC1.Text = dienbienmau;
+                    txtC1.Text = lblC1.Text;
                 }
+                if (dienbien == "" && dienbienmau == "")
+                {
+                    lblC1.Text = dienbienmau2;
+                    txtC1.Text = lblC1.Text;
+                }
+
                 string nguyennhan = row["C3"].ToString();
                 if (nguyennhan != "")
                 {
@@ -315,12 +328,12 @@ namespace WEBSITESAVVY.Pages
                 MucLucDTO mucLucDTO = MucLucDAO.getMucLuc(mClaimID, "PR");
                 if (mucLucDTO != null)
                 {
-                    if (mucLucDTO.getKey("GioiThieuChung") == false)
+                    if (mucLucDTO.getKey("NguoiDuocBaoHiem") == false)
                     {
                         panelMucLucGioiThieu.Visible = false;
                         MucLuc_GioiThieu.Visible = false;
                     }
-                    if (mucLucDTO.getKey("NguoiDuocBaoHiem") == false)
+                    if (mucLucDTO.getKey("GioiThieuChung") == false)
                     {
                         panelMucLucA1.Visible = false;
                         MucLuc_A1.Visible = false;
@@ -366,9 +379,14 @@ namespace WEBSITESAVVY.Pages
                         MucLuc_I.Visible = false;
                     }
                     if (mucLucDTO.getKey("BaoCaoTiepTheo") == false)
-                    {
+                     {
                         panelMucLucTT.Visible = false;
                         MucLuc_TT.Visible = false;
+                    }
+                    if (mucLucDTO.getKey("TamUngBoiThuongText") == false)
+                    {
+                        panelMucLucTamUngBoiThuongText.Visible = false;
+                        MucLuc_TamUngBoiThuongText.Visible = false;
                     }
                 }
             }
@@ -394,11 +412,11 @@ namespace WEBSITESAVVY.Pages
                 int claimID = int.Parse(mClaimID);
 
                 Button btn = (Button)sender;
-                string key = btn.Attributes["key"]; 
-
+                string key = btn.Attributes["key"];
+                string titlekey = btn.Attributes["title"];
                 TextBox txtValue = (TextBox)FindControl("txt" + key);
                 string value = txtValue.Text;
-                string title = "";
+                string title = titlekey;
 
                 if (value.Contains("'"))
                 {
@@ -432,7 +450,7 @@ namespace WEBSITESAVVY.Pages
 
                 DropDownList drValue = (DropDownList)FindControl("dr" + key);
                 int id = int.Parse(drValue.SelectedValue.ToString());
-                string title = "";               
+                string title = "PR'signature preparer";               
                 bool up = claimDao.UpdatePreparePR(mClaimID, id);
                 if (up == true)
                 {
@@ -467,7 +485,7 @@ namespace WEBSITESAVVY.Pages
 
                 DropDownList drValue = (DropDownList)FindControl("dr" + key);
                 int id = int.Parse(drValue.SelectedValue.ToString());
-                string title = "";
+                string title = "PR'signature checker";
 
                 bool up = claimDao.UpdateCheckPR(mClaimID, id);
                 if (up == true)
@@ -503,7 +521,7 @@ namespace WEBSITESAVVY.Pages
 
                 TextBox txtValue = (TextBox)FindControl("txt" + key);
                 string value = txtValue.Text;
-                string title = "";
+                string title = "Information insured";
 
                 if (value.Contains("'"))
                 {

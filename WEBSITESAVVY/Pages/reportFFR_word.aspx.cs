@@ -68,7 +68,7 @@ namespace WEBSITESAVVY.Pages
                 //lblNgayMoPR.Text = row["NgayBatDauGiamDinh"].ToString();
                 //lblNgayMoPR.Text = "Ngày " + DateTime.Now.Day + " tháng " + DateTime.Now.Month + " năm " + DateTime.Now.Year;
                 //lblRefKH.Text    = row["RefKH"].ToString();   
-                lblNgayMoPR.Text = row["FFRDate"].ToString();
+                lblNgayMoPR.Text = "Ngày "+row["FFRDate"].ToString();
                 lblRefKH.Text = "Chưa thông báo";
                 lblTenNhaBH.Text = row["TenNhaBH"].ToString();
                 lblTenDonVi.Text = row["TenDonVi"].ToString();
@@ -92,10 +92,13 @@ namespace WEBSITESAVVY.Pages
                        
                     }
                 }
-                lblDateILA.Text = "Báo cáo đầu tiên ngày: " + row["ILADATE"].ToString();
+                lblDateILA.Text = "Báo cáo đầu tiên ngày " + row["ILADATE"].ToString();
                 //lblDateILA.Text = "Báo cáo đầu tiên ngày " + DateTime.Parse( row["ILADATE"].ToString()).ToString("dd/MM/yyyy");
-                lblBrief.Text = row["Brief"].ToString();
-
+                string brif = row["BriefReport"].ToString();
+                if (brif != "")
+                    lblBrief.Text = brif;
+                else
+                    lblBrief.Text = row["Brief"].ToString();
                 lblPolicyNo.Text = row["PolicyNo"].ToString();
                 lblTenKH.Text = row["TenKhachHang"].ToString();
                 lblDiaChiKH.Text = row["DiaChi"].ToString();

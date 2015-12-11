@@ -28,7 +28,7 @@
    
         <div style="padding-right: 40px" align="right">       
                          
-                        <table align="center" width="100%">
+                        <%--<table align="center" width="100%">
                             <tr>
                                 <td align="right" width="95%">
                          
@@ -40,7 +40,7 @@
                 CssClass="ambitios_submit_button" />
                                 </td>
                             </tr>
-            </table>
+            </table>--%>
            </div>            
   <div class="ambitios_container_16">
        <div class="ambitios_content">   

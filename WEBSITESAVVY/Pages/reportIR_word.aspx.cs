@@ -92,7 +92,6 @@ namespace WEBSITESAVVY.Pages
                 if (nguoidaidien != "")
                 {
                     lblPhuTrachNBH.Text = nguoidaidien;
-
                 }
                 else
                 {
@@ -104,12 +103,14 @@ namespace WEBSITESAVVY.Pages
 
                     }
                 }
-                //lblDateILA.Text = "Báo cáo đầu tiên ngày " + row["ILADATE"].ToString();
-                //lblDateILA.Text = "Báo cáo đầu tiên ngày " + DateTime.Parse(row["ILADATE"].ToString()).ToString("dd/MM/yyyy");
-                //lblBaoCaoTruoc.Text = row["BaoCaoTruoc"].ToString();
-                lblILADATE.Text = "Báo cáo đầu tiên ngày: " + row["ILADATE"].ToString();
-                lblPRDARE.Text = "Báo cáo sơ bộ: " + row["PRDate"].ToString();
-                lblBrief.Text = row["Brief"].ToString();
+             
+                lblILADATE.Text = "Báo cáo đầu tiên ngày " + row["ILADATE"].ToString();
+                lblPRDARE.Text = "Báo cáo sơ bộ ngày " + row["PRDate"].ToString();
+                string brif = row["BriefReport"].ToString();
+                if (brif != "")
+                    lblBrief.Text = brif;
+                else
+                    lblBrief.Text = row["Brief"].ToString();
                 lblPolicyNo.Text = row["PolicyNo"].ToString();
                 lblTenKH.Text = row["TenKhachHang"].ToString();
                 lblDiaChiKH.Text = row["DiaChi"].ToString();

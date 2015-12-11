@@ -299,10 +299,10 @@ namespace WEBSITESAVVY.Pages
 
                 Button btn = (Button)sender;
                 string key = btn.Attributes["key"];
-
+                string titlekey = btn.Attributes["title"];
                 TextBox txtValue = (TextBox)FindControl("txt" + key);
                 string value = txtValue.Text;
-                string title = "";
+                string title = titlekey;
 
                 if (value.Contains("'"))
                 {
@@ -335,10 +335,10 @@ namespace WEBSITESAVVY.Pages
                 int maKH = (int)kh.LayMaKHClaim(mClaimID);
                 Button btn = (Button)sender;
                 string key = btn.Attributes["key"];
-
+                string titlekey = btn.Attributes["title"];
                 TextBox txtValue = (TextBox)FindControl("txt" + key);
                 string value = txtValue.Text;
-                string title = "";
+                string title = titlekey;
 
                 if (value.Contains("'"))
                 {
@@ -365,10 +365,10 @@ namespace WEBSITESAVVY.Pages
 
                 Button btn = (Button)sender;
                 string key = btn.Attributes["key"];
-
+                string titlekey = btn.Attributes["title"];
                 TextBox txtValue = (TextBox)FindControl("txt" + key);
                 string value = txtValue.Text;
-                string title = "";
+                string title = titlekey;
 
                 if (value.Contains("'"))
                 {

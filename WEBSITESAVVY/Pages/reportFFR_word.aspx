@@ -174,7 +174,7 @@
             <div id="body1" class="body">
                 <div id="header">
                     
-                    <img src="<%= Request.Url.GetLeftPart(UriPartial.Authority) +"/images/banner.jpg" %>" style="width:500px;height:100px" alt="" />
+                    <%--<img src="<%= Request.Url.GetLeftPart(UriPartial.Authority) +"/images/banner.jpg" %>" style="width:500px;height:100px" alt="" />--%>
 
                     <div>
                         <asp:Label ID="lblNgayMoPR" runat="server" Text="Ngày 5/3/2014."
@@ -483,75 +483,75 @@
                 
                 <h3 style="text-align:center; font-size:22px; color:#006600; margin:20px 0px 30px 0; ">MỤC LỤC BÁO CÁO</h3>
                     
-                <table style="font-size:16px;width:650px; margin:20px 0px">
+                <table style="font-size:16px;width:650px; margin:20px 0px 0px 0px">
                     <tr >
-                        <td style="width:250px; font-size:16px" ><b>I. TÓM TẮT VỤ VIỆC</b></td>
+                        <td style="width:250px; font-size:16px" ><b>TÓM TẮT VỤ VIỆC</b></td>
                         <td style="text-align:right; font-size:16px" >.....................................................................................................................</td>
                     </tr>
                 </table>     
-                <table style="font-size:16px;width:650px; margin:20px 0px">
+                <table style="font-size:16px;width:650px; margin:20px 0px 0px 0px">
                     <tr>
-                        <td style="width:300px; font-size:16px" ><b>II. NGƯỜI ĐƯỢC BẢO HIỂM </b></td>
+                        <td style="width:300px; font-size:16px" ><b>NGƯỜI ĐƯỢC BẢO HIỂM </b></td>
                         <td style="text-align:right; font-size:16px" >........................................................................................................</td>
                     </tr>
                 </table>  
-                <table style="font-size:16px;width:650px; margin:20px 0px">
+                <table style="font-size:16px;width:650px; margin:20px 0px 0px 0px">
                     <tr >
-                        <td style="width:350px;font-size:16px"  ><b>III. QUÁ TRÌNH XỬ LÝ VÀ KHIẾU NẠI</b></td>
+                        <td style="width:350px;font-size:16px"  ><b>QUÁ TRÌNH XỬ LÝ VÀ KHIẾU NẠI</b></td>
                         <td style="text-align:right; font-size:16px" >.....................................................................................</td>
                     </tr>
                 </table>  
-                <table style="font-size:16px;width:650px; margin:20px 0px">
+                <table style="font-size:16px;width:650px; margin:20px 0px 0px 0px">
                     <tr>
-                        <td style="width:250px; font-size:16px" ><b>IV. DIỄN BIẾN TỔN THẤT </b></td>
+                        <td style="width:250px; font-size:16px" ><b>DIỄN BIẾN TỔN THẤT </b></td>
                         <td style="text-align:right; font-size:16px" >............................................................................................................</td>
                     </tr>
                 </table>  
-                <table style="font-size:16px;width:650px; margin:20px 0px">
+                <table style="font-size:16px;width:650px; margin:20px 0px 0px 0px">
                     <tr >
-                        <td style="width:220px;font-size:16px" ><b>V. NGUYÊN NHÂN </b></td>
+                        <td style="width:220px;font-size:16px" ><b>NGUYÊN NHÂN </b></td>
                         <td style="text-align:right; font-size:16px" >...........................................................................................................................</td>
                     </tr>
                 </table>         
-               <table style="font-size:16px;width:650px; margin:20px 0px">
+               <table style="font-size:16px;width:650px; margin:20px 0px 0px 0px">
                     <tr >
-                        <td style="width:250px; font-size:16px" ><b>VI. PHẠM VI BẢO HIỂM  </b></td>
+                        <td style="width:250px; font-size:16px" ><b>PHẠM VI BẢO HIỂM  </b></td>
                         <td style="text-align:right; font-size:16px" >................................................................................................................</td>
                     </tr>
                 </table>     
-                <table style="font-size:16px;width:650px; margin:20px 0px">
+                <table style="font-size:16px;width:650px; margin:20px 0px 0px 0px">
                     <tr >
-                        <td style="width:350px;font-size:16px"><b>VII. PHẠM VI VÀ MỨC ĐỘ THIỆT HẠI </b></td>
+                        <td style="width:350px;font-size:16px"><b>PHẠM VI VÀ MỨC ĐỘ THIỆT HẠI </b></td>
                         <td style="text-align:right; font-size:16px" >.....................................................................................</td>
                     </tr>
                 </table>    
-                <table style="font-size:16px;width:650px; margin:20px 0px">
+                <table style="font-size:16px;width:650px; margin:20px 0px 0px 0px">
                     <tr >
-                        <td style="width:500px; font-size:16px" ><b>VIII. YÊU CẦU BỒI THƯỜNG VÀ ĐỀ XUẤT TÍNH TOÁN </b></td>
+                        <td style="width:500px; font-size:16px" ><b>YÊU CẦU BỒI THƯỜNG VÀ ĐỀ XUẤT TÍNH TOÁN </b></td>
                         <td style="text-align:right; font-size:16px" >.....................................................</td>
                     </tr>
                 </table>  
-                <table style="font-size:16px;width:650px; margin:20px 0px">
+                <table style="font-size:16px;width:650px; margin:20px 0px 0px 0px">
                     <tr >
-                        <td style="width:350px; font-size:16px" ><b>IX. ĐƠN BẢO HIỂM KHÁC </b></td>
+                        <td style="width:350px; font-size:16px" ><b>ĐƠN BẢO HIỂM KHÁC </b></td>
                         <td style="text-align:right; font-size:16px" >...........................................................................................................</td>
                     </tr>
                 </table>  
-                <table style="font-size:16px;width:650px; margin:20px 0px">
+                <table style="font-size:16px;width:650px; margin:20px 0px 0px 0px">
                     <tr >
-                        <td style="width:250px; font-size:16px" ><b>X. GIÁ TRỊ THU HỒI   </b></td>
+                        <td style="width:250px; font-size:16px" ><b>GIÁ TRỊ THU HỒI   </b></td>
                         <td style="text-align:right; font-size:16px" >.......................................................................................................................</td>
                     </tr>
                 </table> 
-                <table style="font-size:16px;width:650px; margin:20px 0px">
+                <table style="font-size:16px;width:650px; margin:20px 0px 0px 0px">
                     <tr >
-                        <td style="width:300px; font-size:16px" ><b>XI. ĐỀ XUẤT CHUNG CUỘC </b></td>
+                        <td style="width:300px; font-size:16px" ><b>ĐỀ XUẤT CHUNG CUỘC </b></td>
                         <td style="text-align:right; font-size:16px" >.........................................................................................................</td>
                     </tr>
                 </table>  
-                <table style="font-size:16px;width:650px; margin:20px 0px">
+                <table style="font-size:16px;width:650px; margin:20px 0px 0px 0px">
                     <tr >
-                        <td style="width:250px; font-size:16px" ><b>XII. KẾT LUẬN  </b></td>
+                        <td style="width:250px; font-size:16px" ><b>KẾT LUẬN  </b></td>
                         <td style="text-align:right; font-size:16px" >................................................................................................................................</td>
                     </tr>
                 </table>  
@@ -566,68 +566,68 @@
 
 
         <div class="box" >
-            <h3 id="ExecutiveSummaryFR">I. TÓM TẮT VỤ VIỆC</h3>
+            <h3 id="ExecutiveSummaryFR">TÓM TẮT VỤ VIỆC</h3>
             <div>
                 <asp:Label ID="lblExecutiveSummaryFR" runat="server" Width="650px" ></asp:Label>
             </div>
         </div>
 
         <div class="box" >
-            <h3 id="GioiThieu">II. NGƯỜI ĐƯỢC BẢO HIỂM </h3>
+            <h3 id="GioiThieu">NGƯỜI ĐƯỢC BẢO HIỂM </h3>
             <div>
                 <asp:Label ID="lblGioiThieu" runat="server" Width="650px" ></asp:Label>
             </div>
         </div>
 
         <div class="box" >
-            <h3 id="K">III. QUÁ TRÌNH XỬ LÝ VÀ KHIẾU NẠI</h3>
+            <h3 id="K">QUÁ TRÌNH XỬ LÝ VÀ KHIẾU NẠI</h3>
             <div><asp:Label ID="lblK" runat="server" Width="650px" ></asp:Label></div>
         </div>
 
         <div class="box" >
-            <h3 id="C1">IV. DIỄN BIẾN TỔN THẤT</h3>
+            <h3 id="C1">DIỄN BIẾN TỔN THẤT</h3>
             <div>
                 <asp:Label ID="lblDienBienTonThat" runat="server" Width="650px" ></asp:Label>
             </div>
         </div>
 
         <div class="box" >
-            <h3 id="C3">V. NGUYÊN NHÂN</h3>
+            <h3 id="C3">NGUYÊN NHÂN</h3>
             <div><asp:Label ID="lblC3" runat="server" Width="650px" ></asp:Label></div>
         </div>
 
         <div class="box" >
-            <h3 id="E1">VI. PHẠM VI BẢO HIỂM</h3>
+            <h3 id="E1">PHẠM VI BẢO HIỂM</h3>
             <div><asp:Label ID="lblE2" runat="server" Width="650px" ></asp:Label></div>
         </div>
 
         <div class="box" >
-            <h3 id="D1">VII. PHẠM VI VÀ MỨC ĐỘ THIỆT HẠI</h3>
+            <h3 id="D1">PHẠM VI VÀ MỨC ĐỘ THIỆT HẠI</h3>
             <div><asp:Label ID="lblD1" runat="server" Width="650px" ></asp:Label></div>
         </div>
 
         <div class="box" >
-            <h3 id="B1">VIII. YÊU CẦU BỒI THƯỜNG VÀ ĐỀ XUẤT TÍNH TOÁN</h3>
+            <h3 id="B1">YÊU CẦU BỒI THƯỜNG VÀ ĐỀ XUẤT TÍNH TOÁN</h3>
             <div><asp:Label ID="lblB1" runat="server" Width="650px" ></asp:Label></div>
         </div>
 
         <div class="box" >
-            <h3 id="G">IX. ĐƠN BẢO HIỂM KHÁC</h3>
+            <h3 id="G">ĐƠN BẢO HIỂM KHÁC</h3>
             <div><asp:Label ID="lblG" runat="server" Width="650px" ></asp:Label></div>
         </div>
 
         <div class="box" >
-            <h3 id="H">X. GIÁ TRỊ THU HỒI</h3>
+            <h3 id="H">&nbsp;GIÁ TRỊ THU HỒI</h3>
             <div><asp:Label ID="lblH" runat="server" Width="650px" ></asp:Label></div>
         </div>
 
         <div class="box" >
-            <h3 id="B2">XI. ĐỀ XUẤT CHUNG CUỘC</h3>
+            <h3 id="B2">ĐỀ XUẤT CHUNG CUỘC</h3>
             <div><asp:Label ID="lblB2" runat="server" Width="650px" ></asp:Label></div>
         </div>
 
         <div class="box" >
-            <h3 id="Conclution">XII. KẾT LUẬN</h3>
+            <h3 id="Conclution">&nbsp;KẾT LUẬN</h3>
             <div><asp:Label ID="lblConclution" runat="server" Width="650px" ></asp:Label></div>
         </div>
 

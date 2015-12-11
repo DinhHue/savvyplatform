@@ -93,20 +93,24 @@ namespace WEBSITESAVVY.Pages
                 }
                 //lblDateILA.Text = "Báo cáo đầu tiên ngày " + DateTime.Parse(row["ILADATE"].ToString()).ToString("dd/MM/yyyy");
                 //lblBaoCaoTruoc.Text = row["BaoCaoTruocFR"].ToString();
-                lblILADATE.Text = "Báo cáo đầu tiên: " + row["ILADATE"].ToString();
+                lblILADATE.Text = "Báo cáo đầu tiên ngày " + row["ILADATE"].ToString();
                 string ngaysobo = row["PRDate"].ToString();
                 if (ngaysobo != "")
                 {
-                    lblPRDARE.Text = "Báo cáo sơ bộ: " + row["PRDate"].ToString();
+                    lblPRDARE.Text = "Báo cáo sơ bộ ngày " + row["PRDate"].ToString();
                 }
                 else
                     lblPRDARE.Text = "";
                 string ngaytieptheo = row["IRDate"].ToString();
                 if (ngaytieptheo != "")
-                    lblIRDATE.Text = "Báo cáo tiếp theo: " + row["IRDate"].ToString();
+                    lblIRDATE.Text = "Báo cáo tiếp theo ngày " + row["IRDate"].ToString();
                 else
                     lblIRDATE.Text = "";
-                lblBrief.Text = row["Brief"].ToString();
+                string brif = row["BriefReport"].ToString();
+                if (brif != "")
+                    lblBrief.Text = brif;
+                else
+                    lblBrief.Text = row["Brief"].ToString();
                 lblBrief1.Text = lblBrief.Text;
                 lblPolicyNo.Text = row["PolicyNo"].ToString();
                 lblTenKH.Text = row["TenKhachHang"].ToString();
@@ -256,10 +260,10 @@ namespace WEBSITESAVVY.Pages
 
                 Button btn = (Button)sender;
                 string key = btn.Attributes["key"];
-
+                string titlekey = btn.Attributes["title"];
                 TextBox txtValue = (TextBox)FindControl("txt" + key);
                 string value = txtValue.Text;
-                string title = "";
+                string title = titlekey;
 
                 if (value.Contains("'"))
                 {
@@ -294,7 +298,7 @@ namespace WEBSITESAVVY.Pages
 
                 DropDownList drValue = (DropDownList)FindControl("dr" + key);
                 int id = int.Parse(drValue.SelectedValue.ToString());
-                string title = "";
+                string title = "FR'signature preparer";
                 bool up = claimDao.UpdatePrepareFR(mClaimID, id);
                 if (up == true)
                 {
@@ -329,7 +333,7 @@ namespace WEBSITESAVVY.Pages
 
                 DropDownList drValue = (DropDownList)FindControl("dr" + key);
                 int id = int.Parse(drValue.SelectedValue.ToString());
-                string title = "";
+                string title = "IR'signature checker";
 
                 bool up = claimDao.UpdateCheckFR(mClaimID, id);
                 if (up == true)

@@ -60,7 +60,7 @@ namespace WEBSITESAVVY.Pages
                 txtGiaTriThuHoiHIR.Text = dr["GiaTriThuHoiHIR"].ToString();
                 lblCapNhatDuPhongI.Text = dr["CapNhatDuPhongI"].ToString();
                 txtCapNhatDuPhongI.Text = dr["CapNhatDuPhongI"].ToString();
-                lblTamUngBoiThuongTextIR.Text = dr["TamUngBoithuongTextIR"].ToString();
+                lblTamUngBoithuongTextIR.Text = dr["TamUngBoithuongTextIR"].ToString();
                 txtTamUngBoithuongTextIR.Text = dr["TamUngBoithuongTextIR"].ToString();
                 //FR
                 lblExecutiveSummaryFR.Text = dr["ExecutiveSummaryFR"].ToString();

@@ -196,7 +196,7 @@
             <div id="body1" class="body">
                 <div id="header">
 
-                    <img src="<%= Request.Url.GetLeftPart(UriPartial.Authority) +"/images/banner.jpg" %>" style="width:500px;height:100px" alt="" />
+                    <%--<img src="<%= Request.Url.GetLeftPart(UriPartial.Authority) +"/images/banner.jpg" %>" style="width:500px;height:100px" alt="" />--%>
 
             
                     <div style="line-height:1.5;">
@@ -534,49 +534,49 @@
 
                 <h3 style="text-align:center; font-size:22px; color:#006600; margin:20px 0px 30px 0; ">MỤC LỤC BÁO CÁO</h3>
                     
-                <table style="font-size:16px;width:650px; margin:20px 0px">
+                <table style="font-size:16px;width:650px; margin:20px 0px 0px 0px">
                     <tr >
                         <td style="width:180px; font-size:16px" ><b>TÓM TẮT VỤ VIỆC</b></td>
                         <td style="text-align:right; font-size:16px" >.....................................................................................................................</td>
                     </tr>
                 </table>     
-                <table style="font-size:16px;width:650px; margin:20px 0px">
+                <table style="font-size:16px;width:650px; margin:20px 0px 0px 0px">
                     <tr>
                         <td style="width:350px; font-size:16px" ><b>QUÁ TRÌNH XỬ LÝ VÀ KHIẾU NẠI</b></td>
                         <td style="text-align:right; font-size:16px" >........................................................................................</td>
                     </tr>
                 </table>  
-                <table style="font-size:16px;width:650px; margin:20px 0px">
+                <table style="font-size:16px;width:650px; margin:20px 0px 0px 0px">
                     <tr >
                         <td style="font-size:16px" class="style3" ><b>NGUYÊN NHÂN</b></td>
                         <td style="text-align:right; font-size:16px" >.........................................................................................................................</td>
                     </tr>
                 </table>  
-                <table style="font-size:16px;width:650px; margin:20px 0px">
+                <table style="font-size:16px;width:650px; margin:20px 0px 0px 0px">
                     <tr>
                         <td style="width:200px; font-size:16px" ><b>PHẠM VI BẢO HIỂM</b></td>
                         <td style="text-align:right; font-size:16px" >................................................................................................................</td>
                     </tr>
                 </table>  
-                <table style="font-size:16px;width:650px; margin:20px 0px">
+                <table style="font-size:16px;width:650px; margin:20px 0px 0px 0px">
                     <tr >
                         <td style="font-size:16px" class="style2" ><b>YÊU CẦU BỒI THƯỜNG VÀ ĐỀ XUẤT TÍNH TOÁN</b></td>
                         <td style="text-align:right; font-size:16px" >..........................................................</td>
                     </tr>
                 </table>         
-               <table style="font-size:16px;width:650px; margin:20px 0px">
+               <table style="font-size:16px;width:650px; margin:20px 0px 0px 0px">
                     <tr >
                         <td style="width:180px; font-size:16px" ><b>GIÁ TRỊ THU HỒI</b></td>
                         <td style="text-align:right; font-size:16px" >......................................................................................................................</td>
                     </tr>
                 </table>     
-                <table style="font-size:16px;width:650px; margin:20px 0px">
+                <table style="font-size:16px;width:650px; margin:20px 0px 0px 0px">
                     <tr >
                         <td style="font-size:16px" class="style1" ><b>ĐỀ XUẤT CHUNG CUỘC</b></td>
                         <td style="text-align:right; font-size:16px" >........................................................................................................</td>
                     </tr>
                 </table>    
-                <table style="font-size:16px;width:650px; margin:20px 0px">
+                <table style="font-size:16px;width:650px; margin:20px 0px 0px 0px">
                     <tr >
                         <td style="width:150px; font-size:16px" ><b>KẾT LUẬN</b></td>
                         <td style="text-align:right; font-size:16px" >................................................................................................................................</td>

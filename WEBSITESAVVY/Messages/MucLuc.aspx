@@ -11,17 +11,19 @@
     <div>
         <asp:Panel ID="panel_PR" runat="server" >
             <ul>
-                <li><asp:CheckBox ID="ckbPR_GioiThieuChung" Checked="true" Text="Giới Thiệu Chung" runat="server" /> </li>
-                <li><asp:CheckBox ID="ckbPR_NguoiDuocBaoHiem" Checked="true" Text="Người Được Bảo Hiểm" runat="server" /> </li>
-                <li><asp:CheckBox ID="ckbPR_DienBien" Checked="true" Text="Diễn Biến" runat="server" /> </li>
-                <li><asp:CheckBox ID="ckbPR_NguyenNhan" Checked="true" Text="Nguyên Nhân" runat="server" /> </li>
-                <li><asp:CheckBox ID="ckbPR_PhamViBaoHiem" Checked="true" Text="Phạm Vi Bảo Hiểm" runat="server" /> </li>
-                <li><asp:CheckBox ID="ckbPR_PhamViVaMucDoThietHai" Checked="true" Text="Phạm Vi Và Mức Độ Thiệt Hại" runat="server" /> </li>
-                <li><asp:CheckBox ID="ckbPR_DonBaoHiemKhac" Checked="true" Text="Đơn Bảo Hiểm Khác" runat="server" /> </li>
-                <li><asp:CheckBox ID="ckbPR_GiaTriThuHoi" Checked="true" Text="Giá Trị Thu Hồi" runat="server" /> </li>
-                <li><asp:CheckBox ID="ckbPR_TheQuyenTruyDoiBenThuBa" Checked="true" Text="Thế Quyền Truy Đòi Bên Thứ Ba" runat="server" /> </li>
-                <li><asp:CheckBox ID="ckbPR_DuPhongBoiThuong" Checked="true" Text="Dự Phòng Bồi Thường" runat="server" /> </li>
-                <li><asp:CheckBox ID="ckbPR_BaoCaoTiepTheo" Checked="true" Text="Báo Cáo Tiếp Theo" runat="server" /> </li>
+               <asp:CheckBox ID="ckbPR_GioiThieuChung" Checked="true" Text="Giới Thiệu Chung" runat="server" /> <br />
+                <asp:CheckBox ID="ckbPR_NguoiDuocBaoHiem" Checked="true" Text="Người Được Bảo Hiểm" runat="server" /> <br />
+                <asp:CheckBox ID="ckbPR_DienBien" Checked="true" Text="Diễn Biến" runat="server" /> <br />
+                <asp:CheckBox ID="ckbPR_NguyenNhan" Checked="true" Text="Nguyên Nhân" runat="server" /> <br />
+                <asp:CheckBox ID="ckbPR_PhamViBaoHiem" Checked="true" Text="Phạm Vi Bảo Hiểm" runat="server" /> <br />
+                <asp:CheckBox ID="ckbPR_PhamViVaMucDoThietHai" Checked="true" Text="Phạm Vi Và Mức Độ Thiệt Hại" runat="server" /> <br />
+                <asp:CheckBox ID="ckbPR_DonBaoHiemKhac" Checked="true" Text="Đơn Bảo Hiểm Khác" runat="server" /> <br />
+               <asp:CheckBox ID="ckbPR_GiaTriThuHoi" Checked="true" Text="Giá Trị Thu Hồi" runat="server" /> <br />
+                <asp:CheckBox ID="ckbPR_TheQuyenTruyDoiBenThuBa" Checked="true" Text="Thế Quyền Truy Đòi Bên Thứ Ba" runat="server" /> <br />
+                <asp:CheckBox ID="ckbPR_DuPhongBoiThuong" Checked="true" Text="Dự Phòng Bồi Thường" runat="server" /> <br />
+               <asp:CheckBox ID="ckbPR_TamUngBoiThuongText" Checked="true" Text="Tạm Ứng Bồi Thường" runat="server" /> <br />
+               <asp:CheckBox ID="ckbPR_BaoCaoTiepTheo" Checked="true" Text="Báo Cáo Tiếp Theo" runat="server" /> <br />
+               
             </ul>
 
             <asp:Button  Text="Update" runat="server" onclick="update_Click"/>

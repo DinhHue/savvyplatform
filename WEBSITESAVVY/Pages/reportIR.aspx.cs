@@ -104,16 +104,20 @@ namespace WEBSITESAVVY.Pages
                 //lblDateILA.Text = "Báo cáo đầu tiên ngày " + row["ILADATE"].ToString();
                 //lblDateILA.Text = "Báo cáo đầu tiên ngày " + DateTime.Parse(row["ILADATE"].ToString()).ToString("dd/MM/yyyy");
                 //lblBaoCaoTruoc.Text = row["BaoCaoTruoc"].ToString();
-                lblILADATE.Text = "Báo cáo đầu tiên: " + row["ILADATE"].ToString();
+                lblILADATE.Text = "Báo cáo đầu tiên ngày " + row["ILADATE"].ToString();
                 string ngaysobo = row["PRDate"].ToString();
                 if (ngaysobo != "")
                 {
-                    lblPRDARE.Text = "Báo cáo sơ bộ: " + row["PRDate"].ToString();
+                    lblPRDARE.Text = "Báo cáo sơ bộ ngày" + row["PRDate"].ToString();
                 }
                 else
                     lblPRDARE.Text = "";
-              
-                lblBrief.Text = row["Brief"].ToString();
+
+                string brif = row["BriefReport"].ToString();
+                if (brif != "")
+                    lblBrief.Text = brif;
+                else
+                    lblBrief.Text = row["Brief"].ToString();
                 lblBrief1.Text = lblBrief.Text;
                 lblPolicyNo.Text = row["PolicyNo"].ToString();
                 lblTenKH.Text = row["TenKhachHang"].ToString();
@@ -218,13 +222,13 @@ namespace WEBSITESAVVY.Pages
                 string tamung = row["TamUngBoithuongTextIR"].ToString();
                 if (tamung != "")
                 {
-                    lblTamUngBoiThuongTextIR.Text = tamung;
-                    txtTamUngBoithuongTextIR.Text = lblTamUngBoiThuongTextIR.Text;
+                    lblTamUngBoithuongTextIR.Text = tamung;
+                    txtTamUngBoithuongTextIR.Text = lblTamUngBoithuongTextIR.Text;
                 }
                 else
                 {
-                    lblTamUngBoiThuongTextIR.Text = tamungmau;
-                    txtTamUngBoithuongTextIR.Text = lblTamUngBoiThuongTextIR.Text;
+                    lblTamUngBoithuongTextIR.Text = tamungmau;
+                    txtTamUngBoithuongTextIR.Text = lblTamUngBoithuongTextIR.Text;
                 }
                 //lblTT.Text = "<p>Các thông tin và diễn biến tiếp theo liên quan đến vụ tổn thất này sẽ tiếp tục được chúng tôi quan tâm theo dõi và cập nhật ngay khi có thông tin mới nhất để phục vụ cho công tác quản lý bồi thường của Nhà Bảo Hiểm.</p>";
                 //lblTT.Text += "<p>Nếu Quý Công ty Bảo hiểm có câu hỏi hoặc bất kỳ yêu cầu nào khác sau khi xem báo cáo này, xin vui lòng thông tin cho chúng tôi để được đáp ứng thỏa đáng.</p>";
@@ -241,10 +245,10 @@ namespace WEBSITESAVVY.Pages
 
                 Button btn = (Button)sender;
                 string key = btn.Attributes["key"];
-
+                string titlekey = btn.Attributes["title"];
                 TextBox txtValue = (TextBox)FindControl("txt" + key);
                 string value = txtValue.Text;
-                string title = "";
+                string title = titlekey;
 
                 if (value.Contains("'"))
                 {
@@ -278,7 +282,7 @@ namespace WEBSITESAVVY.Pages
 
                 DropDownList drValue = (DropDownList)FindControl("dr" + key);
                 int id = int.Parse(drValue.SelectedValue.ToString());
-                string title = "";
+                string title = "IR'signature preparer";
                 bool up = claimDao.UpdatePrepareIR(mClaimID, id);
                 if (up == true)
                 {
@@ -313,7 +317,7 @@ namespace WEBSITESAVVY.Pages
 
                 DropDownList drValue = (DropDownList)FindControl("dr" + key);
                 int id = int.Parse(drValue.SelectedValue.ToString());
-                string title = "";
+                string title = "IR'signature checker";
 
                 bool up = claimDao.UpdateCheckIR(mClaimID, id);
                 if (up == true)

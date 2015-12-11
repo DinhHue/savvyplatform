@@ -64,7 +64,7 @@ namespace WEBSITESAVVY.Pages
                 //lblNgayMoPR.Text = row["NgayBatDauGiamDinh"].ToString();
                 //lblNgayMoPR.Text = "Ngày " + DateTime.Now.Day + " tháng " + DateTime.Now.Month + " năm " + DateTime.Now.Year;
                 //lblRefKH.Text    = row["RefKH"].ToString(); 
-                string ngayIR = row["FRDate"].ToString();
+                string ngayIR = "Ngày "+row["FRDate"].ToString();
                 if (ngayIR != "")
                 {
                     lblFRDate.Text = ngayIR;
@@ -104,10 +104,14 @@ namespace WEBSITESAVVY.Pages
                 }
                 //lblDateILA.Text = "Báo cáo đầu tiên ngày " + DateTime.Parse(row["ILADATE"].ToString()).ToString("dd/MM/yyyy");
                 //lblBaoCaoTruoc.Text = row["BaoCaoTruocFR"].ToString();
-                lblILADATE.Text = "Báo cáo đầu tiên ngày: " + row["ILADATE"].ToString();
-                lblPRDARE.Text = "Báo cáo sơ bộ: " + row["PRDate"].ToString();
-                lblIRDATE.Text = "Báo cáo tiếp theo: " + row["IRDate"].ToString();
-                lblBrief.Text = row["Brief"].ToString();
+                lblILADATE.Text = "Báo cáo đầu tiên ngày " + row["ILADATE"].ToString();
+                lblPRDARE.Text = "Báo cáo sơ bộ ngày " + row["PRDate"].ToString();
+                lblIRDATE.Text = "Báo cáo tiếp theo ngày " + row["IRDate"].ToString();
+                string brif = row["BriefReport"].ToString();
+                if (brif != "")
+                    lblBrief.Text = brif;
+                else
+                    lblBrief.Text = row["Brief"].ToString();
                 lblPolicyNo.Text = row["PolicyNo"].ToString();
                 lblTenKH.Text = row["TenKhachHang"].ToString();
                 lblDiaChiKH.Text = row["DiaChi"].ToString();

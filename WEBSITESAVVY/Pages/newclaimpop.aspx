@@ -109,6 +109,7 @@
                         <asp:ListItem Value="PD">Property &amp; Casualty</asp:ListItem>
                         <asp:ListItem Value="EG">Engineering Insurance</asp:ListItem>
                         <asp:ListItem Value="CT">Construction Insurance</asp:ListItem>
+                        <asp:ListItem Value="PL">Public Liability</asp:ListItem>
                         <asp:ListItem Value="RS">Risk Survey</asp:ListItem>
                     </asp:DropDownList>
                     &nbsp;-

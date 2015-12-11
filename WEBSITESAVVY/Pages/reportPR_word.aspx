@@ -179,7 +179,7 @@
 
         <div >
             <div >
-                <img src="<%= Request.Url.GetLeftPart(UriPartial.Authority) +"/images/banner.jpg" %>" style="width:500px;height:100px" alt="" />
+              <%--  <img src="<%= Request.Url.GetLeftPart(UriPartial.Authority) +"/images/banner.jpg" %>" style="width:500px;height:100px" alt="" />--%>
 
                 <div>    
                     <asp:Label ID="lblNgayMoPR" runat="server" Text="Ngày 5/3/2014."
@@ -213,7 +213,7 @@
                                 CssClass="field_input" Font-Bold="True" Font-Size="16px" ></asp:Label></h3>
                     <div style="font:20px; margin-bottom:10px" ><i>
                         <u><asp:Label  runat="server" Font-Size="16px" >Địa chỉ</asp:Label>:</u>
-                        <asp:Label ID="lblDiaChiNBH" runat="server" Width="640px" Font-Size="16px"  ></asp:Label></i>
+                        <asp:Label ID="lblDiaChiNBH" runat="server" Width="550px" Font-Size="16px"  ></asp:Label></i>
                     </div>
 
                     <table width="650px" >
@@ -403,10 +403,10 @@
                             </td>
                         </tr>
                         <tr>
-                            <td class="bg_text">
+                            <td>
                                 <asp:Label ID="Label1"  runat="server" 
                                     Text="TẠM ỨNG BỒI THƯỜNG" 
-                                    Width="260px" ></asp:Label>
+                                    Width="225px" ></asp:Label>
                             </td>
                             <td>:</td>
                             <td >
@@ -439,139 +439,159 @@
 
         <div class="page">
             <div class="body">
-
-
-
                 <h3 style="text-align:center; font-size:22px; color:#006600; margin:20px 0px 0px 0">MỤC LỤC BÁO CÁO</h3>
-                <table style="font-size:16px;width:640px; margin:20px 0px">
-                    <tr onclick="window.location.href ='#A1'">
+              <%--  <table style="font-size:16px;width:640px; margin:20px 0px 0px 0px">
+                    <tr id="MucLuc_A1" runat="server">
                         <td style="width:350px; font-size:16px" ><b>GIỚI THIỆU CHUNG</b></td>
                         <td style="text-align:right; font-size:16px" >.....................................................................................................................</td>
                     </tr>
                 </table>
-                <table style="font-size:16px;width:640px; margin:20px 0px">
-                    <tr  onclick="window.location.href ='#GioiThieu'">
+                <table style="font-size:16px;width:640px; margin:20px 0px 0px 0px">
+                    <tr id="MucLuc_GioiThieu" runat="server">
                         <td style="width:350px; font-size:16px"><b>NGƯỜI ĐƯỢC BẢO HIỂM</b></td>
                         <td style="text-align:right; font-size:16px" > ............................................................................................................</td>
                     </tr>
                 </table>
-                <table style="font-size:16px;width:640px; margin:20px 0px">
-                    <tr  onclick="window.location.href ='#C1'">
+                <table style="font-size:16px;width:640px; margin:20px 0px 0px 0px">
+                    <tr id="MucLuc_C1" runat="server">
                         <td style="width:350px; font-size:16px"><b>DIỄN BIẾN</b></td>
                         <td style="text-align:right; font-size:16px"> ........................................................................................................................................ </td>
                     </tr>
                 </table>
-                <table style="font-size:16px;width:640px; margin:20px 0px">
-                    <tr  onclick="window.location.href ='#C3'">
+                <table style="font-size:16px;width:640px; margin:20px 0px 0px 0px">
+                    <tr id="MucLuc_C3" runat="server">
                         <td style="width:350px; font-size:16px"><b>NGUYÊN NHÂN</b></td>
                         <td style="text-align:right;font-size:16px"> ............................................................................................................................... </td>
                     </tr>
                 </table>
-                <table style="font-size:16px;width:640px; margin:20px 0px">
-                    <tr  onclick="window.location.href ='#E1'">
+                <table style="font-size:16px;width:640px; margin:20px 0px 0px 0px">
+                    <tr id="MucLuc_E1" runat="server" >
                         <td style="width:350px; font-size:16px"><b>PHẠM VI BẢO HIỂM </b></td>
                         <td style="text-align:right; font-size:16px"> ..................................................................................................................... </td>
                     </tr>
                 </table>
-                <table style="font-size:16px;width:640px; margin:20px 0px">
-                    <tr  onclick="window.location.href ='#D1'">
+                <table style="font-size:16px;width:640px;margin:20px 0px 0px 0px">
+                    <tr id="MucLuc_D1" runat="server">
                         <td style="width:350px; font-size:16px"><b>PHẠM VI VÀ MỨC ĐỘ THIỆT HẠI </b></td>
                         <td style="text-align:right;  font-size:16px"> ........................................................................................... </td>
                     </tr>
                 </table>
-                <table style="font-size:16px;width:640px; margin:20px 0px">
-                    <tr  onclick="window.location.href ='#G'">
+                <table style="font-size:16px;width:640px; margin:20px 0px 0px 0px">
+                    <tr id="MucLuc_G" runat="server">
                         <td style="width:350px; font-size:16px"><b>ĐƠN BẢO HIỂM KHÁC </b></td>
                         <td style="text-align:right;  font-size:16px"> ................................................................................................................ </td>
                     </tr>
                 </table>
-                <table style="font-size:16px;width:640px; margin:20px 0px">
-                    <tr  onclick="window.location.href ='#H'">
+                <table style="font-size:16px;width:640px; margin:20px 0px 0px 0px">
+                    <tr id="MucLuc_H" runat="server">
                         <td style="width:350px; font-size:16px"><b>GIÁ TRỊ THU HỒI </b></td>
                         <td style="text-align:right;  font-size:16px"> .......................................................................................................................... </td>
                     </tr>
                 </table>
-                 <table style="font-size:16px;width:640px; margin:20px 0px">
-                    <tr  onclick="window.location.href ='#TheQuyenTruyDoi'">
+                 <table style="font-size:16px;width:640px; margin:20px 0px 0px 0px">
+                    <tr id="MucLuc_TheQuyenTruyDoi" runat="server">
                         <td style="width:450px; font-size:16px"><b>THẾ QUYỀN TRUY ĐÒI BÊN THỨ BA </b></td>
                         <td style="text-align:right;  font-size:16px"> ..................................................................................... </td>
                     </tr>
                 </table>
-                <table style="font-size:16px;width:640px; margin:20px 0px">
-                    <tr  onclick="window.location.href ='#I'">
+                <table style="font-size:16px;width:640px; margin:20px 0px 0px 0px">
+                    <tr id="MucLuc_I" runat="server">
                         <td style="width:450px; font-size:16px"><b>DỰ PHÒNG BỒI THƯỜNG </b></td>
                         <td style="text-align:right;  font-size:16px"> ............................................................................................................ </td>
                     </tr>
                 </table>
-                <table style="font-size:16px;width:640px; margin:20px 0px">
-                    <tr  onclick="window.location.href ='#TT'">
+                <table style="font-size:16px;width:640px; margin:20px 0px 0px 0px">
+                    <tr id="MucLuc_TamUngBoiThuongText" runat="server">
+                        <td style="width:450px; font-size:16px"><b>TẠM ỨNG BỒI THƯỜNG </b></td>
+                        <td style="text-align:right;  font-size:16px"> ............................................................................................................ </td>
+                    </tr>
+                </table>
+                <table style="font-size:16px;width:640px; margin:20px 0px 0px 0px">
+                    <tr id="MucLuc_TT" runat="server">
                         <td style="width:350px; font-size:16px"><b>BÁO CÁO TIẾP THEO </b></td>
                         <td style="text-align:right;  font-size:16px"> .................................................................................................................... </td>
                     </tr>
+                </table>
+--%>
+                    <table style="font-size:16px;width:640px; margin:20px 0px 0px 0px" >
+                    <tr id="MucLuc_A1" runat="server"><td onclick="window.location.href ='#A1'">
+                        <b style="float:left;">GIỚI THIỆU CHUNG</b>...........................................................................................................</td></tr>
+                    <tr id="MucLuc_GioiThieu" runat="server"><td onclick="window.location.href ='#GioiThieu'"><b style="float:left;">NGƯỜI ĐƯỢC BẢO HIỂM</b> ...............................................................................................</td></tr>
+                    <tr id="MucLuc_C1" runat="server"><td onclick="window.location.href ='#C1'"><b style="float:left;">DIỄN BIẾN </b>...........................................................................................................................</td></tr>
+                    <tr id="MucLuc_C3" runat="server"><td onclick="window.location.href ='#C3'"><b style="float:left;">NGUYÊN NHÂN </b>..................................................................................................................</td></tr>
+                    <tr id="MucLuc_E1" runat="server"><td onclick="window.location.href ='#E1'"><b style="float:left;">PHẠM VI BẢO HIỂM  </b>.........................................................................................................</td></tr>
+                    <tr id="MucLuc_D1" runat="server"><td onclick="window.location.href ='#D1'"><b style="float:left;">PHẠM VI VÀ MỨC ĐỘ THIỆT HẠI</b>................................................................................</td></tr>
+                    <tr id="MucLuc_G" runat="server"><td onclick="window.location.href ='#G'"><b style="float:left;">ĐƠN BẢO HIỂM KHÁC </b>....................................................................................................</td></tr>
+                    <tr id="MucLuc_H" runat="server"><td onclick="window.location.href ='#H'"><b style="float:left;">GIÁ TRỊ THU HỒI </b>..............................................................................................................</td></tr>
+                    <tr id="MucLuc_TheQuyenTruyDoi" runat="server">
+                        <td onclick="window.location.href ='#TheQuyenTruyDoi'"><b style="float:left;">THẾ QUYỀN TRUY ĐÒI BÊN THỨ BA </b>..........................................................................</td></tr>
+                    <tr id="MucLuc_I" runat="server"><td onclick="window.location.href ='#I'"><b style="float:left;">DỰ PHÒNG BỒI THƯỜNG </b>..............................................................................................</td></tr>
+                     <tr id="MucLuc_TamUngBoiThuongText" runat="server"><td onclick="window.location.href ='#TamUngBoiThuongText'"><b style="float:left;">TẠM ỨNG BỒI THƯỜNG </b>................................................................................................</td></tr>
+                    <tr id="MucLuc_TT" runat="server"><td onclick="window.location.href ='#TT'"><b style="float:left;">BÁO CÁO TIẾP THEO </b>.......................................................................................................</td></tr>
                 </table>
 
             </div>
             <div style="clear:both; page-break-after: always;"><br /></div>
         </div>
 
-        <div class="box" style="font-size:16px" >
+        <div class="box" id="panelMucLucA1" runat="server" style="font-size:16px" >
             <h3 style="font-size:16px" id="A1">GIỚI THIỆU CHUNG</h3>
             <div>
                 <asp:Label ID="lblA1" runat="server" Width="650px" ></asp:Label>
             </div>
         </div>
 
-        <div class="box" style="font-size:16px" >
+        <div class="box"  id="panelMucLucGioiThieu" runat="server" style="font-size:16px" >
             <h3 id="GioiThieu">NGƯỜI ĐƯỢC BẢO HIỂM</h3>
             <div><asp:Label ID="lblGioiThieu" runat="server" Width="650px" ></asp:Label></div>
         </div>
 
-        <div class="box" style="font-size:16px" >
+        <div class="box" id="panelMucLucDienBienTonThat" runat="server" style="font-size:16px" >
             <h3 id="C1">DIỄN BIẾN</h3>
             <div><asp:Label ID="lblC1" runat="server" Width="650px" ></asp:Label></div>
         </div>
 
-        <div class="box" style="font-size:16px" >
+        <div class="box" id="panelMucLucC3" runat="server" style="font-size:16px" >
             <h3 id="C3">NGUYÊN NHÂN</h3>
             <div><asp:Label ID="lblC3" runat="server" Width="650px" ></asp:Label></div>
         </div>
 
-        <div class="box" style="font-size:16px" >
+        <div class="box" id="panelMucLucE1"  runat="server" style="font-size:16px" >
             <h3 id="E1">PHẠM VI BẢO HIỂM</h3>
             <div><asp:Label ID="lblE1" runat="server" Width="650px" ></asp:Label></div>
         </div>
 
-        <div class="box" >
+        <div class="box" id="panelMucLucD1" runat="server" >
             <h3 id="D1">PHẠM VI VÀ MỨC ĐỘ THIỆT HẠI</h3>
             <div><asp:Label ID="lblD1" runat="server" Width="650px" ></asp:Label></div>
         </div>
 
-        <div class="box" >
+        <div class="box"  id="panelMucLucG" runat="server" >
             <h3 id="G">ĐƠN BẢO HIỂM KHÁC</h3>
             <div><asp:Label ID="lblG" runat="server" Width="650px" ></asp:Label></div>
         </div>
 
-        <div class="box" >
+        <div class="box"  id="panelMucLucH" runat="server" >
             <h3 id="H">GIÁ TRỊ THU HỒI</h3>
             <div><asp:Label ID="lblH" runat="server" Width="650px" ></asp:Label></div>
         </div>
-        <div class="box" >
+        <div class="box" id="panelMucLucTheQuyenTruyDoi" runat="server">
             <h3 id="TheQuyenTruyDoi">THẾ QUYỀN TRUY ĐÒI BÊN THỨ BA</h3>
             <div>
                 <asp:Label ID="lblTheQuyenTruyDoi" key="TheQuyenTruyDoi" onclick="editField(this)" CssClass="label-edit"  runat="server" Width="100%" ></asp:Label>
                 </div>
         </div>
-        <div class="box" >
+        <div class="box"  id="panelMucLucI" runat="server">
             <h3 id="I">DỰ PHÒNG BỒI THƯỜNG</h3>
             <div><asp:Label ID="lblI" runat="server" Width="650px" ></asp:Label></div>
         </div>
 
-        <div class="box" >
+        <div class="box" id="panelMucLucTamUngBoiThuongText" runat="server">
             <h3 id="TamUngBoiThuongText">TẠM ỨNG BỒI THƯỜNG</h3>
             <div><asp:Label ID="lblTamUngBoiThuongText" runat="server" Width="650px" ></asp:Label></div>
         </div>
 
-        <div class="box" >
+        <div class="box" id="panelMucLucTT" runat="server">
             <h3 id="TT">BÁO CÁO TIẾP THEO</h3>
             <div style="text-align: justify"><%--<asp:Label ID="lblTT" runat="server" Width="850px" ></asp:Label>--%>
             <p>  Các thông tin và diễn biến tiếp theo liên quan đến vụ tổn thất này sẽ tiếp tục được chúng tôi quan tâm theo dõi và sẽ định kỳ báo cáo để Nhà Bảo Hiểm nắm rõ.</p><p>  Nếu Quý Công ty Bảo hiểm có bất kỳ câu hỏi hoặc yêu cầu nào khác liên quan đến công tác giám định vụ tổn thất này, xin vui lòng liên lạc với chúng tôi để được hỗ trợ tốt nhất.</p></div>

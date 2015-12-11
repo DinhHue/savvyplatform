@@ -6,7 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using WEBSITESAVVY.DAO;
 using System.Data;
-
+using WEBSITESAVVY.Util;
 namespace WEBSITESAVVY.Pages
 {
     public partial class Home : System.Web.UI.Page
@@ -15,6 +15,7 @@ namespace WEBSITESAVVY.Pages
         DataTable dt = new DataTable();
         DonViBHDAO dv = new DonViBHDAO();
         GiaiDoanDAO gd = new GiaiDoanDAO();
+        //SAVVYUtil sa = new SAVVYUtil();
         GiamDinhVienDAO gdvdao = new GiamDinhVienDAO();
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -32,6 +33,7 @@ namespace WEBSITESAVVY.Pages
                     LoadMaHoa();
                     loadStatus();
                     loadGDV();
+                    SAVVYUtil.fixBugValueClaim();
                 }
             }
         }
@@ -117,7 +119,7 @@ namespace WEBSITESAVVY.Pages
                 Session["ThamChieu"] = mathamchieu;
                 //Response.Redirect("~/Pages/ManageClaim.aspx?thamchieu=" + mathamchieu);
                 //Response.Redirect("~/Pages/InformationForm.aspx?Reference="+mathamchieu);
-                Response.Redirect("~/Pages/Layout.aspx");
+                Response.Redirect("~/Pages/Layout.aspx?id="+mathamchieu);
             }
             else
                 Response.Write("<script>alert('Nhập sai tham chiếu!');</script>");
@@ -160,7 +162,7 @@ namespace WEBSITESAVVY.Pages
                 bool kt = CheckPub(magdv, ma);
                 if (kt == true)
                 {
-                    Response.Redirect("~/Pages/Layout.aspx");
+                    Response.Redirect("~/Pages/Layout.aspx?id="+ ma);
                 }
                 else
                     Response.Write("<script> alert('You can't acess on this case!');</script>");
@@ -325,16 +327,15 @@ namespace WEBSITESAVVY.Pages
 
         protected void btnSearchKey_Click(object sender, EventArgs e)
         {
-            string key = txtTuKhoa.Text;
-            Response.Redirect("~/Pages/search.aspx?key="+key);
+            //string key = txtTuKhoa.Text;
+            //Response.Redirect("~/Pages/search.aspx?key="+key);
         }
 
         protected void btnXemDonViBH_Click(object sender, EventArgs e)
         {
-            string mahoa=drDonViBH.SelectedItem.ToString();
+            string mahoa = drDonViBH.SelectedItem.ToString();
             loadTheoMaHoa(mahoa);
         }
-
        
     }
 }

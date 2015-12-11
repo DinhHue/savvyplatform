@@ -516,9 +516,9 @@
         </div>
 
         <div class="box" >
-              <h2 id="H2" key="TamUngBoiThuongText" title="Interim Payment">TẠM&nbsp; ỨNG&nbsp; BỒI&nbsp; THƯỜNG</h3>
+              <h2 id="H2" key="TamUngBoithuongTextIR" title="Interim Payment">TẠM&nbsp; ỨNG&nbsp; BỒI&nbsp; THƯỜNG</h3>
             <div>
-                <asp:Label ID="lblTamUngBoiThuongTextIR" key="TamUngBoithuongTextIR" 
+                <asp:Label ID="lblTamUngBoithuongTextIR" key="TamUngBoithuongTextIR" 
                     onclick="editField(this)" CssClass="label-edit" runat="server" Width="100%" ></asp:Label>
                 <asp:Panel ID="panelTamUngBoithuongTextIR" CssClass="panelUpdate hiden" runat="server">
                     <asp:TextBox ID="txtTamUngBoithuongTextIR" CssClass="hiden" TextMode="MultiLine" Height="250px" runat="server" />

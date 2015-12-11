@@ -48,7 +48,7 @@ namespace WEBSITESAVVY.Account
                     Session["ChucVu"] = dr[2].ToString();
                     HttpCookie ck = new HttpCookie("MaGDV");
                     ck.Value = ID_GDV.ToString();
-                    ck.Expires = DateTime.Now.AddDays(7);
+                    ck.Expires = DateTime.Now.AddDays(30);
                     Response.Cookies.Add(ck);
                     Response.Redirect("~/Pages/Home.aspx");
                     

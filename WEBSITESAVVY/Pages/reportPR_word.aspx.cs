@@ -6,6 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data;
 using WEBSITESAVVY.DAO;
+using WEBSITESAVVY.DTO;
 using System.Text;
 using System.IO;
 
@@ -101,9 +102,13 @@ namespace WEBSITESAVVY.Pages
 
                     }
                 }
-                lblDateILA.Text = "Báo cáo đầu tiên ngày: " + row["ILADATE"].ToString();
-                //lblDateILA.Text = "Báo cáo đầu tiên ngày " + DateTime.Parse( row["ILADATE"].ToString()).ToString("dd/MM/yyyy");
-                lblBrief.Text = row["Brief"].ToString();
+                lblDateILA.Text = "Báo cáo đầu tiên ngày " + row["ILADATE"].ToString();
+           
+                string brif = row["BriefReport"].ToString();
+                if (brif != "")
+                    lblBrief.Text = brif;
+                else
+                    lblBrief.Text = row["Brief"].ToString();
                 //lblBrief1.Text = lblBrief.Text;
 
                 lblPolicyNo.Text = row["PolicyNo"].ToString();
@@ -130,7 +135,12 @@ namespace WEBSITESAVVY.Pages
                 //load nội dung
                 lblGioiThieu.Text = row["GioiThieu"].ToString();
                 lblA1.Text = row["A1"].ToString();
-                lblC1.Text = row["DienBienTonThat"].ToString();
+                string dienbienmau = row["DienBienTonThat"].ToString();
+                string dienbien = row["C1"].ToString();
+                if (dienbien != "")
+                    lblC1.Text = dienbien;
+                else
+                    lblC1.Text = dienbienmau;
                 lblC3.Text = row["C3"].ToString();
                 lblD1.Text = row["D1"].ToString();
                 lblE1.Text = row["E1"].ToString();
@@ -143,6 +153,71 @@ namespace WEBSITESAVVY.Pages
                 //            "quan tâm theo dõi và sẽ định kỳ báo cáo để Nhà Bảo Hiểm nắm rõ.</p>" +
                 //            "<p>  Nếu Quý Công ty Bảo hiểm có bất kỳ câu hỏi hoặc yêu cầu nào khác liên quan đến công tác" +
                 //            "giám định vụ tổn thất này, xin vui lòng liên lạc với chúng tôi để được hỗ trợ tốt nhất.</p>";
+
+                MucLucDTO mucLucDTO = MucLucDAO.getMucLuc(mClaimID, "PR");
+                if (mucLucDTO != null)
+                {
+                    if (mucLucDTO.getKey("NguoiDuocBaoHiem") == false)
+                    {                        
+                        panelMucLucGioiThieu.Visible = false;
+                        MucLuc_GioiThieu.Visible = false;
+                    }
+                    if (mucLucDTO.getKey("GioiThieuChung") == false)
+                    {
+                        panelMucLucA1.Visible = false;
+                        MucLuc_A1.Visible = false;
+                    }
+                    if (mucLucDTO.getKey("DienBien") == false)
+                    {
+                        panelMucLucDienBienTonThat.Visible = false;
+                        MucLuc_C1.Visible = false;
+                    }
+                    if (mucLucDTO.getKey("NguyenNhan") == false)
+                    {
+                        panelMucLucC3.Visible = false;
+                        MucLuc_C3.Visible = false;
+                    }
+                    if (mucLucDTO.getKey("PhamViBaoHiem") == false)
+                    {
+                        panelMucLucE1.Visible = false;
+                        MucLuc_E1.Visible = false;
+                    }
+                    if (mucLucDTO.getKey("PhamViVaMucDoThietHai") == false)
+                    {
+                        panelMucLucD1.Visible = false;
+                        MucLuc_D1.Visible = false;
+                    }
+                    if (mucLucDTO.getKey("DonBaoHiemKhac") == false)
+                    {
+                        panelMucLucG.Visible = false;
+                        MucLuc_G.Visible = false;
+                    }
+                    if (mucLucDTO.getKey("GiaTriThuHoi") == false)
+                    {
+                        panelMucLucH.Visible = false;
+                        MucLuc_H.Visible = false;
+                    }
+                    if (mucLucDTO.getKey("TheQuyenTruyDoiBenThuBa") == false)
+                    {
+                        panelMucLucTheQuyenTruyDoi.Visible = false;
+                        MucLuc_TheQuyenTruyDoi.Visible = false;
+                    }
+                    if (mucLucDTO.getKey("DuPhongBoiThuong") == false)
+                    {
+                        panelMucLucI.Visible = false;
+                        MucLuc_I.Visible = false;
+                    }
+                    if (mucLucDTO.getKey("BaoCaoTiepTheo") == false)
+                    {
+                        panelMucLucTT.Visible = false;
+                        MucLuc_TT.Visible = false;
+                    }
+                    if (mucLucDTO.getKey("TamUngBoiThuongText") == false)
+                    {
+                        panelMucLucTamUngBoiThuongText.Visible = false;
+                        MucLuc_TamUngBoiThuongText.Visible = false;
+                    }
+                }
             }
             else
             {
