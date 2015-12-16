@@ -12,18 +12,21 @@ namespace WEBSITESAVVY.Pages
 {
     public partial class basicinforpop : System.Web.UI.Page
     {
-        string maclaim = "";
+        string mClaimID = "";
         protected void Page_Load(object sender, EventArgs e)
         {
+
+            if (Request.QueryString["claimID"] != null)
+                mClaimID = Request.QueryString["claimID"];
+
             drDonvi.Attributes.Add("required", "required");
             if (!this.IsPostBack)
             {
-                if (Session["ThamChieu"] != null)
+                if (mClaimID != "")
                 {
-                    maclaim = Session["ThamChieu"].ToString();
                     drNBH.Visible = false;
                     drDonvi.Visible = false;
-                    LoadInfor(maclaim);
+                    LoadInfor(mClaimID);
                     drloaihinhtonthat.Visible = false;
                     //LoadDRNBH();
                     //int ma = int.Parse(drNBH.SelectedItem.Value.ToString());
@@ -112,8 +115,8 @@ namespace WEBSITESAVVY.Pages
         }
         protected void btnUpdate_Click(object sender, EventArgs e)
         {
-           maclaim=Session["ThamChieu"].ToString();
-           cldto.MaClaim = maclaim;
+           //maclaim=Session["ThamChieu"].ToString();
+           cldto.MaClaim = mClaimID;
            string policy = txtPolicyNo.Text.Trim();
            if (policy != "")
                cldto.PolicyNo = policy;
@@ -134,7 +137,7 @@ namespace WEBSITESAVVY.Pages
                cldto.Dol = dol;
            else
                cldto.Dol = "";
-           int maKH = cl.ClaimMaKH(maclaim);
+           int maKH = cl.ClaimMaKH(mClaimID);
            if (maKH != 0)
                khdto.MaKhachHang = maKH;
            else
@@ -178,7 +181,7 @@ namespace WEBSITESAVVY.Pages
            if(drloaihinhtonthat.Visible==true)
            {
                 int idlhtt= int.Parse(drloaihinhtonthat.SelectedItem.Value.ToString());
-                UpdateLHTT(maclaim,idlhtt);
+                UpdateLHTT(mClaimID, idlhtt);
            }
            if (btnChangeInsurer.Visible == true)
                up = cl.UpdateBasicInforNotInsurer(cldto);
@@ -192,26 +195,26 @@ namespace WEBSITESAVVY.Pages
             if (up == true && upkh == true)
             {
                 sm.CapNhatInfoBasicFR(cldto);
-               
-                string noidung = gdv.LayTenTheoMa(maGDV) + " edited cover site survey report of case " +maclaim + " .";
-                SaveLogTracking(maGDV, noidung, maclaim);
 
-                Response.Write("<script>window.parent.location = '../Pages/Layout.aspx'</script>");
+                string noidung = gdv.LayTenTheoMa(maGDV) + " edited cover site survey report of case " + mClaimID + " .";
+                SaveLogTracking(maGDV, noidung, mClaimID);
+
+                Response.Write("<script>window.parent.location = '../Pages/Layout.aspx?id=" + mClaimID + "'</script>");
                 sm.CapNhatInfoBasic(cldto, khdto);
             }
             if (up == true && upkh == false)
             {
-                
-                string noidung = gdv.LayTenTheoMa(maGDV) + " failed to edit Insured of site survey report of case " + maclaim + " .";
-                SaveLogTracking(maGDV, noidung, maclaim);
+
+                string noidung = gdv.LayTenTheoMa(maGDV) + " failed to edit Insured of site survey report of case " + mClaimID + " .";
+                SaveLogTracking(maGDV, noidung, mClaimID);
                 Response.Write("<script> alert('Error Update Isured!');</script>");
             }
             if (up == false && upkh == true)
                 Response.Write("<script> alert('Error ID Claim Infor!');</script>");
             if (up == false && upkh == false)
             {
-                string noidung = gdv.LayTenTheoMa(maGDV) + " failed to edit cover site survey report of case " + maclaim + " .";
-                SaveLogTracking(maGDV, noidung, maclaim);
+                string noidung = gdv.LayTenTheoMa(maGDV) + " failed to edit cover site survey report of case " + mClaimID + " .";
+                SaveLogTracking(maGDV, noidung, mClaimID);
                 Response.Write("<script> alert('Error Update!');</script>");
             }
           

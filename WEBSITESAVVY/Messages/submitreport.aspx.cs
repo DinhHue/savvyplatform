@@ -18,19 +18,23 @@ namespace WEBSITESAVVY.Messages
         DaiLyDAO dldao = new DaiLyDAO();
 
         public static string report = "";
+        private static String mClaimID = "";
 
         protected void Page_Load(object sender, EventArgs e)
         {
             try
             {
+                if (Request.QueryString["claimID"] != null)
+                    mClaimID = Request.QueryString["claimID"];
+
                 if (!IsPostBack)
                 {
-                    if (Session["ThamChieu"] != null)
+                    if (mClaimID  != "")
                     {
                         report = Request.QueryString["report"].ToString();
 
                         loadGDV();
-                        string id = Session["ThamChieu"].ToString();
+                        string id = mClaimID;
                         string tt = LayTinhTrang(id, report);
                         if (tt == "No")
                             loadTB(id, report);
@@ -114,12 +118,11 @@ namespace WEBSITESAVVY.Messages
         }
         protected void btnSend_Click(object sender, EventArgs e)
         {
-             if (Session["ThamChieu"] != null && Request.Cookies["MaGDV"] !=null)
+            if (Request.Cookies["MaGDV"] !=null)
             {
-                string idclaim = Session["ThamChieu"].ToString();
                 int magdv = int.Parse(Request.Cookies["MaGDV"].Value);
                 dldto.MaGDV = magdv;
-                dldto.MaClaim = idclaim;               
+                dldto.MaClaim = mClaimID;               
                 string diengiai = txtNoiDung.Text;
                 if (diengiai == "")
                     Response.Write("<script>alert('Chưa nhập diễn giải công việc!');<script/>");
@@ -141,7 +144,7 @@ namespace WEBSITESAVVY.Messages
                         dldto.DienGiai = drDSGDV.SelectedItem.ToString() +": " + diengiai;
                         string email = gdv.LayEmail(user);
 
-                        string brief = idclaim + " - " + cl.Laybrif(idclaim);
+                        string brief = mClaimID + " - " + cl.Laybrif(mClaimID);
                         string deadtime = DateTime.Now.ToShortDateString();
                         string bodyCC = "Dear " + drDSGDV.SelectedItem.ToString();
                         bodyCC += "<br/>";
@@ -160,7 +163,7 @@ namespace WEBSITESAVVY.Messages
                         if (them == true)
                         {
                             sendmail.Send_Email_Task(email, "Task-to-do " + brief, bodyCC, "huedinh@savvyadjusters.vn");
-                            SaveLogTracking(magdv, gdv.LayTenTheoMa(magdv) + " gửi tin nhắn cho " + ten + " nhờ kiểm tra " + report, idclaim);
+                            SaveLogTracking(magdv, gdv.LayTenTheoMa(magdv) + " gửi tin nhắn cho " + ten + " nhờ kiểm tra " + report, mClaimID);
 
                             Response.Write("<script> window.parent.closeAllDialog(); </script>");
                            

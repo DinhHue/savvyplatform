@@ -196,7 +196,7 @@
             <div id="body1" class="body">
                 <div id="header">
 
-                    <%--<img src="<%= Request.Url.GetLeftPart(UriPartial.Authority) +"/images/banner.jpg" %>" style="width:500px;height:100px" alt="" />--%>
+                    <img src="<%= Request.Url.GetLeftPart(UriPartial.Authority) +"/images/banner.jpg" %>" style="width:500px;height:100px" alt="" />
 
             
                     <div style="line-height:1.5;">

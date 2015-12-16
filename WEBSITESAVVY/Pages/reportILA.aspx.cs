@@ -20,17 +20,14 @@ namespace WEBSITESAVVY.Pages
         GiamDinhVienDAO gdv = new GiamDinhVienDAO();
         protected void Page_Load(object sender, EventArgs e)
         {
-            //if (Request.QueryString["claimID"] != null)
-            //        mClaimID = Request.QueryString["claimID"];
+            if (Request.QueryString["claimID"] != null)
+                 mClaimID = Request.QueryString["claimID"];
+
             if (!IsPostBack)
             {
-                if (Session["ThamChieu"] != null)               
+                if (mClaimID != "")               
                 {
-                    string idclaim = Session["ThamChieu"].ToString();
-                    mClaimID = idclaim;
 
-                    //if (Request.QueryString["id"] != null)
-                    //     mClaimID = Request.QueryString["id"];
                     string done = dailyDao.KiemTraTinhTrang(mClaimID, "ILA");
                     if (done != null && done.ToLower() == "yes")
                     {

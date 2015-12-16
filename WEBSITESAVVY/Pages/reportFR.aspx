@@ -60,6 +60,8 @@
                     toolbar_items_size: 'small',
 
                     image_advtab: true,
+                    relative_urls: false,
+
 
 
                 });

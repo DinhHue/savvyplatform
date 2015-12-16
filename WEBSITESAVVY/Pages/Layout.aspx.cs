@@ -13,12 +13,18 @@ namespace WEBSITESAVVY.Pages
     public partial class Layout : System.Web.UI.Page
     {
         public static string claimName = "";
+        public static string claimID = "";
+
+
         GiamDinhVienDAO gdvdao = new GiamDinhVienDAO();
         protected void Page_Load(object sender, EventArgs e)
         {
             string id = "";
-            if( Request.QueryString["id"]!=null)
+            if (Request.QueryString["id"] != null)
+            {
                 id = Request.QueryString["id"];
+                claimID = id;
+            }
             //if(Session["ThamChieu"]!= null)
             //    id = Session["ThamChieu"].ToString();
           

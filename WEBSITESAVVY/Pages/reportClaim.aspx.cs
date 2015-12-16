@@ -24,12 +24,12 @@ namespace WEBSITESAVVY.Pages
 
         protected void Page_Load(object sender, EventArgs e)
         {
+
+            if (Request.QueryString["claimID"] != null)
+                mClaimID = Request.QueryString["claimID"];
+
             if (!IsPostBack)
             {
-                if (Session["ThamChieu"] != null)
-                    mClaimID = Session["ThamChieu"].ToString();
-                if (Request.QueryString["claimID"] != null)
-                    mClaimID = Request.QueryString["claimID"];
                 BindGrid(mClaimID);
             }
         }

@@ -26,11 +26,14 @@ namespace WEBSITESAVVY.Pages
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["ThamChieu"] != null)
+            if (Request.QueryString["claimID"] != null)
+                mClaimID = Request.QueryString["claimID"];
+
+            if (mClaimID.Trim() != "")
             {
                 if (!IsPostBack)
                 {
-                    mClaimID = Session["ThamChieu"].ToString();
+                    //mClaimID = Session["ThamChieu"].ToString();
                     string done = dailyDao.KiemTraTinhTrang(mClaimID, "PR");
                     if (done != null && done.ToLower() == "yes")
                     {
@@ -408,7 +411,7 @@ namespace WEBSITESAVVY.Pages
         {
             try
             {
-                mClaimID = Session["ThamChieu"].ToString();
+                //mClaimID = Session["ThamChieu"].ToString();
                 int claimID = int.Parse(mClaimID);
 
                 Button btn = (Button)sender;
@@ -442,7 +445,7 @@ namespace WEBSITESAVVY.Pages
         {
             try
             {
-                mClaimID = Session["ThamChieu"].ToString();
+                //mClaimID = Session["ThamChieu"].ToString();
                 //int claimID = int.Parse(mClaimID);
 
                 Button btn = (Button)sender;
@@ -477,7 +480,7 @@ namespace WEBSITESAVVY.Pages
         {
             try
             {
-                mClaimID = Session["ThamChieu"].ToString();
+                //mClaimID = Session["ThamChieu"].ToString();
                 //int claimID = int.Parse(mClaimID);
 
                 Button btn = (Button)sender;
@@ -513,7 +516,7 @@ namespace WEBSITESAVVY.Pages
         {
             try
             {
-                mClaimID = Session["ThamChieu"].ToString();
+                //mClaimID = Session["ThamChieu"].ToString();
 
                 int maKH = (int)kh.LayMaKHClaim(mClaimID);
                 Button btn = (Button)sender;
@@ -613,11 +616,7 @@ namespace WEBSITESAVVY.Pages
             }
             else
             {
-                string id = "";
-                if (Session["ThamChieu"] != null)
-                    id = Session["ThamChieu"].ToString();
-                else
-                    Response.Write("<script> alert('Come back home page and select Claim No again!');</script>");
+                string id = mClaimID;
                 DataTable dt = new DataTable();
                 int idgdv = int.Parse(Request.Cookies["MaGDV"].Value);
                 bool up = claimDao.UpdatePreparePR(id, idgdv);
@@ -641,11 +640,7 @@ namespace WEBSITESAVVY.Pages
             }
             else
             {
-                string id = "";
-                if (Session["ThamChieu"] != null)
-                    id = Session["ThamChieu"].ToString();
-                else
-                    Response.Write("<script> alert('Come back home page and select Claim No again!');</script>");
+                string id = mClaimID;
                 DataTable dt = new DataTable();
                 int idgdv = int.Parse(Request.Cookies["MaGDV"].Value);
                 bool up = claimDao.UpdateCheckPR(id, idgdv);

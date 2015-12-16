@@ -26,9 +26,6 @@ namespace WEBSITESAVVY.Pages
                     if (Request.QueryString["key"] != null)
                         key = Request.QueryString["key"].ToString();
 
-                    if (Session["ThamChieu"] != null)
-                        claimID = Session["ThamChieu"].ToString();
-
                     if (Request.QueryString["claimID"] != null)
                         claimID = Request.QueryString["claimID"].ToString();
 

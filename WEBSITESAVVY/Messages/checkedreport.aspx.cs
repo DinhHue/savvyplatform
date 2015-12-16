@@ -18,20 +18,24 @@ namespace WEBSITESAVVY.Messages
         DaiLyDAO dldao = new DaiLyDAO();
 
         public static string report = "";
+        private static String mClaimID = "";
+
 
         protected void Page_Load(object sender, EventArgs e)
         {
             try
             {
+                if (Request.QueryString["claimID"] != null)
+                    mClaimID = Request.QueryString["claimID"];
+                if (Request.QueryString["report"] != null)
+                    report = Request.QueryString["report"].ToString();
+
                 if (!IsPostBack)
                 {
-                    if (Session["ThamChieu"].ToString() != null)
+                    if (mClaimID != "")
                     {
-
-                        report = Request.QueryString["report"].ToString();
-
                         loadGDV();
-                        string id = Session["ThamChieu"].ToString();
+                        string id = mClaimID;
                         string tt = LayTinhTrang(id, report);
 
                         if (tt == "No")
@@ -119,9 +123,9 @@ namespace WEBSITESAVVY.Messages
         protected void btnSend_Click(object sender, EventArgs e)
         {
 
-            if (Session["ThamChieu"] != null && Request.Cookies["MaGDV"] != null)
+            if (Request.Cookies["MaGDV"] != null)
             {
-                string idclaim = Session["ThamChieu"].ToString();
+                string idclaim = mClaimID;
                 int magdv = int.Parse(Request.Cookies["MaGDV"].Value);
 
                 string diengiai = txtNoiDung.Text;

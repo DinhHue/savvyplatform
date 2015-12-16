@@ -12,11 +12,13 @@ namespace WEBSITESAVVY.Pages
 {
     public partial class ClaimSummaryOfLossPop : System.Web.UI.Page
     {
-        static String claimID = "";
+        static String mClaimID = "";
         GiamDinhVienDAO gdv = new DAO.GiamDinhVienDAO();
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+            if (Request.QueryString["claimID"] != null)
+                mClaimID = Request.QueryString["claimID"];
+
             if (!IsPostBack)
             {
                 HttpCookie ck = Request.Cookies["MaGDV"];
@@ -25,9 +27,8 @@ namespace WEBSITESAVVY.Pages
                     string id = Request.Cookies["MaGDV"].Value;
 
 
-                    if (Session["ThamChieu"] != null)
+                    if (mClaimID != "")
                     {
-                        claimID = Session["ThamChieu"].ToString();
 
                         grDanhMucThietHaiSR01.Visible = false;
                         grDanhMucThietHaiILA.Visible = false;
@@ -57,7 +58,7 @@ namespace WEBSITESAVVY.Pages
         private void loadDanhMucThietHai()
         {
             DanhMucThietHaiDAO danhMucThietHaiDAO = new DanhMucThietHaiDAO();
-            DataTable dataSource = danhMucThietHaiDAO.DanhSachDanhMucThietHaiTheoClaim(claimID);
+            DataTable dataSource = danhMucThietHaiDAO.DanhSachDanhMucThietHaiTheoClaim(mClaimID);
 
             grDanhMucThietHaiILA.DataSource = dataSource;
             grDanhMucThietHaiILA.DataBind();
@@ -125,7 +126,7 @@ namespace WEBSITESAVVY.Pages
                 DanhMucThietHaiDAO dao = new DanhMucThietHaiDAO();
 
                 DanhMucThietHaiDTO thietHai = new DanhMucThietHaiDTO();
-                string thamchieu = Session["ThamChieu"].ToString();
+                string thamchieu = mClaimID;
                 thietHai.MaClaim = thamchieu;
                 thietHai.MaHangMuc = int.Parse(drDamaged.SelectedValue);
                 thietHai.ThietHaiHoanToan = txtTotally.Text;
@@ -160,8 +161,7 @@ namespace WEBSITESAVVY.Pages
 
                 DanhMucThietHaiDTO thietHai = new DanhMucThietHaiDTO();
                 thietHai.Ma = int.Parse( hiddenDanhMucID.Value );
-                string thamchieu = Session["ThamChieu"].ToString();
-                thietHai.MaClaim = thamchieu;
+                thietHai.MaClaim = mClaimID;
                 thietHai.MaHangMuc = int.Parse(drDamaged.SelectedValue);
                 thietHai.ThietHaiHoanToan = txtTotally.Text;
                 thietHai.TrangThai = txtPartial.Text;
@@ -178,8 +178,8 @@ namespace WEBSITESAVVY.Pages
 
                 Response.Write("<script>parent.reloaData();</script>");
                 int maGDV = int.Parse(Request.Cookies["MaGDV"].Value);
-                string noidung = gdv.LayTenTheoMa(maGDV) + " edited summary of loss of case" + thamchieu + " .";
-                SaveLogTracking(maGDV, noidung, thamchieu);
+                string noidung = gdv.LayTenTheoMa(maGDV) + " edited summary of loss of case" + mClaimID + " .";
+                SaveLogTracking(maGDV, noidung, mClaimID);
                 loadDanhMucThietHai();
             }
             catch (Exception ex)
@@ -248,7 +248,7 @@ namespace WEBSITESAVVY.Pages
         {
             GridViewRow grRow = grDanhMucThietHaiILA.Rows[e.RowIndex];
             string id = ((HiddenField)grRow.FindControl("hiddenID")).Value;
-            string thamchieu = Session["ThamChieu"].ToString();
+            string thamchieu = mClaimID;
             DanhMucThietHaiDAO dao = new DanhMucThietHaiDAO();
             bool kq=dao.XoaDanhMucThietHai(int.Parse( id ));
             if (kq == true)
@@ -264,7 +264,7 @@ namespace WEBSITESAVVY.Pages
         {
             GridViewRow grRow = grDanhMucThietHaiSR01.Rows[e.RowIndex];
             string id = ((HiddenField)grRow.FindControl("hiddenID")).Value;
-            string thamchieu = Session["ThamChieu"].ToString();
+            string thamchieu = mClaimID;
             DanhMucThietHaiDAO dao = new DanhMucThietHaiDAO();
             bool kq=dao.XoaDanhMucThietHai(int.Parse(id));
             if (kq == true)

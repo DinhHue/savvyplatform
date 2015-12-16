@@ -16,9 +16,12 @@ namespace WEBSITESAVVY.Pages
         private ClaimDAO claimDao = new ClaimDAO();
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["ThamChieu"] != null)
+            if (Request.QueryString["claimID"] != null)
+                mClaimID = Request.QueryString["claimID"];
+
+            if (mClaimID != "")
             {
-                mClaimID = Session["ThamChieu"].ToString();
+                //mClaimID = Session["ThamChieu"].ToString();
                 loadData();
                 LoadSIG(mClaimID);
                 exportToWord();

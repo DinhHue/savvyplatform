@@ -14,16 +14,20 @@ namespace WEBSITESAVVY.Messages
     public partial class MucLuc : System.Web.UI.Page
     {
 
+        public static string mClaimID = "";
+        public static string mClaimType = "";
+
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Request.QueryString["claimID"] != null)
+                mClaimID = Request.QueryString["claimID"];
+            if (Request.QueryString["report"] != null)
+                mClaimType = Request.QueryString["report"];
 
             if (!IsPostBack)
             {
-                if (Session["ThamChieu"] != null)
+                if (mClaimID != "")
                 {
-                    ViewState["ID_Claim"]  = Session["ThamChieu"].ToString();
-                    ViewState["ClaimType"] = Request.QueryString["report"].ToString();
-
                     LoadMucLuc();
                 }
             }
@@ -31,12 +35,10 @@ namespace WEBSITESAVVY.Messages
 
         protected void LoadMucLuc()
         {
-            string ClaimType = ViewState["ClaimType"].ToString();
-            string ID_Claim = ViewState["ID_Claim"].ToString();
 
-            MucLucDTO mucLucDTO = MucLucDAO.getMucLuc(ID_Claim, ClaimType);
+            MucLucDTO mucLucDTO = MucLucDAO.getMucLuc(mClaimID, mClaimType);
 
-            if (ClaimType == "PR")
+            if (mClaimType == "PR")
             {
                 panel_PR.Visible = true;
 
@@ -58,7 +60,7 @@ namespace WEBSITESAVVY.Messages
                 }
 
             }
-            else if(ClaimType == "IR")
+            else if (mClaimType == "IR")
             {
 
             }
@@ -66,10 +68,8 @@ namespace WEBSITESAVVY.Messages
 
         protected void update_Click(object sender, EventArgs e)
         {
-            string ClaimType = ViewState["ClaimType"].ToString();
-            string ID_Claim = ViewState["ID_Claim"].ToString();
 
-            if (ClaimType == "PR")
+            if (mClaimType == "PR")
             {
 
                 JSonObject jsonValue = new JSonObject();
@@ -87,12 +87,12 @@ namespace WEBSITESAVVY.Messages
                 jsonValue.Put("BaoCaoTiepTheo", ckbPR_BaoCaoTiepTheo.Checked.ToString());
                 
 
-                MucLucDTO mucLucDTO = MucLucDAO.getMucLuc(ID_Claim, ClaimType);
+                MucLucDTO mucLucDTO = MucLucDAO.getMucLuc(mClaimID, mClaimType);
                 if (mucLucDTO == null)
                 {
                     mucLucDTO = new MucLucDTO();
-                    mucLucDTO.ID_Claim = ID_Claim;
-                    mucLucDTO.ClaimType = ClaimType;
+                    mucLucDTO.ID_Claim = mClaimID;
+                    mucLucDTO.ClaimType = mClaimType;
                     mucLucDTO.JsonValue = jsonValue.ToString();
 
                     MucLucDAO.Insert(mucLucDTO);

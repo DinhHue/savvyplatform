@@ -23,9 +23,11 @@ namespace WEBSITESAVVY.Pages
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["ThamChieu"] != null)
+            if (Request.QueryString["claimID"] != null)
+                mClaimID = Request.QueryString["claimID"];
+
+            if (mClaimID != "")
             {
-                mClaimID = Session["ThamChieu"].ToString();
 
                 if (!IsPostBack)
                 {
@@ -255,7 +257,7 @@ namespace WEBSITESAVVY.Pages
         {
             try
             {
-                mClaimID = Session["ThamChieu"].ToString();
+                //mClaimID = Session["ThamChieu"].ToString();
                 int claimID = int.Parse(mClaimID);
 
                 Button btn = (Button)sender;
@@ -290,7 +292,7 @@ namespace WEBSITESAVVY.Pages
         {
             try
             {
-                mClaimID = Session["ThamChieu"].ToString();
+                //mClaimID = Session["ThamChieu"].ToString();
                 //int claimID = int.Parse(mClaimID);
 
                 Button btn = (Button)sender;
@@ -325,7 +327,7 @@ namespace WEBSITESAVVY.Pages
         {
             try
             {
-                mClaimID = Session["ThamChieu"].ToString();
+                //mClaimID = Session["ThamChieu"].ToString();
                 //int claimID = int.Parse(mClaimID);
 
                 Button btn = (Button)sender;
@@ -416,11 +418,7 @@ namespace WEBSITESAVVY.Pages
             }
             else
             {
-                string id = "";
-                if (Session["ThamChieu"] != null)
-                    id = Session["ThamChieu"].ToString();
-                else
-                    Response.Write("<script> alert('Come back home page and select Claim No again!');</script>");
+                string id = mClaimID;
                 DataTable dt = new DataTable();
                 int idgdv = int.Parse(Request.Cookies["MaGDV"].Value);
                 bool up = claimDao.UpdatePrepareFR(id, idgdv);
@@ -444,11 +442,7 @@ namespace WEBSITESAVVY.Pages
             }
             else
             {
-                string id = "";
-                if (Session["ThamChieu"] != null)
-                    id = Session["ThamChieu"].ToString();
-                else
-                    Response.Write("<script> alert('Come back home page and select Claim No again!');</script>");
+                string id = mClaimID;
                 DataTable dt = new DataTable();
                 int idgdv = int.Parse(Request.Cookies["MaGDV"].Value);
                 bool up = claimDao.UpdateCheckFR(id, idgdv);

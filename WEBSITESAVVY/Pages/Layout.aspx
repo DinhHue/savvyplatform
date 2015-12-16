@@ -49,6 +49,7 @@
     <script type="text/javascript">
 
         var report = "";
+        var claimID = '<%= claimID %>';
 
         function closeDialog() {
             //$('.panel-tool-close').trigger("click");
@@ -80,6 +81,7 @@
 
         function showPopup(obj) {
             var href = $(obj).attr("href");
+            href += "&claimID=" + claimID;
 
             var content = "<iframe src='"+ href +"'></iframe>";
 
@@ -98,40 +100,40 @@
             var Link = "";
             report = ""
             if (index == 0)
-                Link = "../Pages/generalinformation.aspx";
+                Link = "../Pages/generalinformation.aspx?claimID=" + claimID;
 //                
 //            if (index == 1)
 //                Link = "../Pages/sitephoto.aspx";
             if (index == 1) {
-                Link = "../Pages/reportSR01.aspx";
+                Link = "../Pages/reportSR01.aspx?claimID=" + claimID;
                 report = "SR01"
             }
             else if (index == 2) {
-                Link = "../Pages/reportILA.aspx";
+                Link = "../Pages/reportILA.aspx?claimID=" + claimID;
                 report = "ILA"
             }
             else if (index == 3) {
-                Link = "../Pages/reportPR.aspx";
+                Link = "../Pages/reportPR.aspx?claimID=" + claimID;
                 report = "PR"
             }
             else if (index == 4) {
-                Link = "../Pages/reportIR.aspx";
+                Link = "../Pages/reportIR.aspx?claimID=" + claimID;
                 report = "IR"
             }
             else if (index == 5) {
-                Link = "../Pages/reportFR.aspx";
+                Link = "../Pages/reportFR.aspx?claimID=" + claimID;
                 report = "FR"
             }
             else if (index == 6) {
-                Link = "../Pages/reportFFR.aspx";
+                Link = "../Pages/reportFFR.aspx?claimID=" + claimID;
                 report = "FFR"
             }
             else if (index == 7)
-                Link = "../Pages/listworksheet.aspx";
+                Link = "../Pages/listworksheet.aspx?claimID=" + claimID;
             else if (index == 8)
-                link = "../Pages/task.aspx";
+                link = "../Pages/task.aspx?claimID=" + claimID;
             else if (index == 9) {
-                Link = "../Pages/ClaimType.aspx";
+                Link = "../Pages/ClaimType.aspx?claimID=" + claimID;
                 report = "RF";             
             }
             if (Link !== "") {
@@ -175,7 +177,8 @@
             var param = "?key=" + key;
            
             if (type)  param += "&type=" + type;
-            param += "&title=" + strTitle;
+                param += "&title=" + strTitle;
+            param += "&claimID=" + claimID;
 
             var content = "<iframe src='../Pages/ClaimUpdateFieldPop.aspx" + param + "'></iframe>";
            
@@ -206,7 +209,7 @@
 
         function SendSubmit() {
             if (report != "") {
-                var url = "../Messages/submitreport.aspx?report=" + report;
+                var url = "../Messages/submitreport.aspx?report=" + report + "&claimID=" + claimID;
                 var contentPage = '<iframe style="width:100%; height:100% ; border:none;" src="' + url + '"></iframe>'
                 //$("#w_MessageClaim").html(contentPage);
                 //$('#w_MessageClaim').window('open');
@@ -217,7 +220,7 @@
         }
         function SendChecked() {
             if (report != "") {
-                var url = "../Messages/checkedreport.aspx?report=" + report;
+                var url = "../Messages/checkedreport.aspx?report=" + report + "&claimID=" + claimID;
                 var contentPage = '<iframe style="width:100%; height:100% ; border:none;" src="' + url + '"></iframe>'
                 //$("#w_CheckClaim").html(contentPage);
                 //$('#w_CheckClaim').window('open');
@@ -228,7 +231,7 @@
         }
 
         function ChinhMucLuc(claimType) {
-            var url = "../Messages/MucLuc.aspx?report=" + report;
+            var url = "../Messages/MucLuc.aspx?report=" + report + "&claimID=" + claimID;
             var contentPage = '<iframe style="width:100%; height:100% ; border:none;" src="' + url + '"></iframe>';
 
             $('#w_Popup').html(contentPage);

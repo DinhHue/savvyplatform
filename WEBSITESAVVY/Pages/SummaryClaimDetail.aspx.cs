@@ -11,6 +11,7 @@ namespace WEBSITESAVVY.Pages
 {
     public partial class SummaryClaimDetail : System.Web.UI.Page
     {
+
         protected void Page_Load(object sender, EventArgs e)
         {
             string mathamchieu = Session["ThamChieu"].ToString();

@@ -25,13 +25,13 @@ namespace WEBSITESAVVY.Pages
         KhachHangDAO kh = new KhachHangDAO();
         protected void Page_Load(object sender, EventArgs e)
         {
-            //if (Request.QueryString["claimID"] != null)
-            //        mClaimID = Request.QueryString["claimID"];
+            if (Request.QueryString["claimID"] != null)
+                mClaimID = Request.QueryString["claimID"];
             if (!IsPostBack)
             {
-                if (Session["ThamChieu"] != null)
+                if (mClaimID.Trim() != "")
                 {
-                    string idclaim = Session["ThamChieu"].ToString();
+                    string idclaim = mClaimID;
                     mClaimID = idclaim;
                     string done = dailyDao.KiemTraTinhTrang(mClaimID, "SR01");
                     if (done != null && done.ToLower() == "yes")
@@ -234,9 +234,9 @@ namespace WEBSITESAVVY.Pages
             if (this.IsPostBack)
             {
                 string id = "";
-                if (Session["ThamChieu"] != null)
+                if (Request.QueryString["claimID"] != null)
                 {
-                    id = Session["ThamChieu"].ToString();
+                    id = Request.QueryString["claimID"];
 
                     if (checkBoxThongBao.Checked==true)
                     {
@@ -294,7 +294,7 @@ namespace WEBSITESAVVY.Pages
         {
             try
             {
-                mClaimID = Session["ThamChieu"].ToString();
+                //mClaimID = Session["ThamChieu"].ToString();
                 int claimID = int.Parse(mClaimID);
 
                 Button btn = (Button)sender;
@@ -330,7 +330,7 @@ namespace WEBSITESAVVY.Pages
         {
             try
             {
-                mClaimID = Session["ThamChieu"].ToString();
+                //mClaimID = Session["ThamChieu"].ToString();
               
                 int maKH = (int)kh.LayMaKHClaim(mClaimID);
                 Button btn = (Button)sender;
@@ -360,7 +360,7 @@ namespace WEBSITESAVVY.Pages
         {
             try
             {
-                mClaimID = Session["ThamChieu"].ToString();
+                //mClaimID = Session["ThamChieu"].ToString();
                 int claimID = int.Parse(mClaimID);
 
                 Button btn = (Button)sender;
