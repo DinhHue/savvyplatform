@@ -26,6 +26,9 @@ namespace WEBSITESAVVY.Pages
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Request.QueryString["claimID"] != null)
+                mClaimID = Request.QueryString["claimID"];
+
             if (!this.IsPostBack)
             {
 
@@ -33,14 +36,8 @@ namespace WEBSITESAVVY.Pages
                 if (ck != null)
                 {
                     string id= Request.Cookies["MaGDV"].Value;
-                    
 
-                    if (Session["ThamChieu"] != null)
-                    {
-                        mClaimID = Session["ThamChieu"].ToString();
-                        BindGrid(mClaimID);
-
-                    }
+                    BindGrid(mClaimID);
                 }
             }
         }

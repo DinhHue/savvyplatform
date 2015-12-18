@@ -27,6 +27,10 @@ namespace WEBSITESAVVY.Pages
                 LoadSIG(mClaimID);
                 exportToWord();
             }
+            else
+            {
+                Response.Write("<javascript>alert('Error!');<javascript>");
+            }
         }
         void LoadSIG(string claimID)
         {

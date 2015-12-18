@@ -60,7 +60,7 @@
                     toolbar_items_size: 'small',
 
                     image_advtab: true,
-
+                    convert_urls : false
 
                 });
             }
@@ -936,7 +936,7 @@
     </script>
     <div id="tool_bottom" runat="server" class="tool_bottom" >
         <button class="btn" onclick="printPDF();" >Export to PDF</button> &nbsp;&nbsp;&nbsp;  &nbsp
-        <button class="btn" onclick="window.open('../Pages/reportIR_word.aspx','_blank');">Export To Word</button> &nbsp;&nbsp;&nbsp;  &nbsp
+        <button class="btn" onclick="window.open('../Pages/reportIR_word.aspx?ClaimID=<%= mClaimID %>','_blank');">Export To Word</button> &nbsp;&nbsp;&nbsp;  &nbsp
         <asp:Button class="btn" ID="btnPrepareIR" runat="server" Text="Preparer" 
             onclick="btnPrepareIR_Click" />  
             &nbsp;&nbsp;&nbsp;  &nbsp

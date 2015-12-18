@@ -57,7 +57,7 @@
                     toolbar_items_size: 'small',
 
                     image_advtab: true,
-
+                    convert_urls : false
 
                 });
             }

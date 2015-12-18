@@ -10,24 +10,27 @@ namespace WEBSITESAVVY.Pages
 {
     public partial class discussionclaim : System.Web.UI.Page
     {
+        static string mClaimID = "";
+
         ClaimDAO cldao = new ClaimDAO();
         //SendMailDAO sm = new SendMailDAO();
         protected void Page_Load(object sender, EventArgs e)
         {
+
+            if (Request.QueryString["claimID"] != null)
+                mClaimID = Request.QueryString["claimID"];
+
             if (!this.IsPostBack)
             {
-                string id = Session["ThamChieu"].ToString();
-                if (id != null)
-                {
-                    load(id);
-                   
-                }
+
+                load(mClaimID);
+
             }
         }
-        void load(string id)
+        void load(string mClaimID)
         {
             DataTable dt = new DataTable();
-            dt = cldao.SelectClaimDiscussion(id);
+            dt = cldao.SelectClaimDiscussion(mClaimID);
             if (dt.Rows.Count > 0)
             {
                 DataRow dr = dt.Rows[0];

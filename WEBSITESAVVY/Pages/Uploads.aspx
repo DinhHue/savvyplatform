@@ -83,10 +83,10 @@
         <div id="display_thumb">
             <asp:Repeater ID="repeaterView" runat="server" >
                 <ItemTemplate>
-                    <div class="item itemThumb" tag="../Uploads/Images/<%# Eval("Name") %>" onclick="selectUrl(this)" title="<%# Eval("Name") %>" >
+                    <div class="item itemThumb" tag="<%= Request.Url.GetLeftPart(UriPartial.Authority) %>/Uploads/Images/<%# Eval("Name") %>" onclick="selectUrl(this)" title="<%# Eval("Name") %>" >
                          <table style="height:100%">
                             <tr valign="middle"><td>
-                                <img alt="../Uploads/Images/Thumb/<%# Eval("Name") %>" src="../Uploads/Images/Thumb/<%# Eval("Name") %>"  style="max-height:115px" />
+                                <img alt="<%= Request.Url.GetLeftPart(UriPartial.Authority) %>/Uploads/Images/Thumb/<%# Eval("Name") %>" src="<%= Request.Url.GetLeftPart(UriPartial.Authority) %>/Uploads/Images/Thumb/<%# Eval("Name") %>"  style="max-height:115px" />
                             </td></tr>
                          </table>
                     </div>
@@ -108,7 +108,7 @@
                 <asp:Repeater ID="repeaterList" runat="server" >
                     <ItemTemplate>
 
-                        <tr class="item" tag="../Uploads/Images/<%# Eval("Name") %>" onclick="selectUrl(this)" >
+                        <tr class="item" tag="<%= Request.Url.GetLeftPart(UriPartial.Authority) %>/Uploads/Images/<%# Eval("Name") %>" onclick="selectUrl(this)" >
                             <td valign='middle'> <%# Eval("Name") %> </td>
                             <td><%# (long)Eval("Length")/1024%> KB</td>
                             <td><%# Eval("Extension")%></td>

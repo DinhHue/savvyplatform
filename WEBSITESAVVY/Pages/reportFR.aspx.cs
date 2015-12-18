@@ -39,6 +39,10 @@ namespace WEBSITESAVVY.Pages
                     loadData();
                 }
             }
+            else
+            {
+                Response.Write("<javascript>alert('Error!');<javascript>");
+            }
         }
 
         public void loadData()

@@ -17,6 +17,7 @@ namespace WEBSITESAVVY.Pages
 
 
         GiamDinhVienDAO gdvdao = new GiamDinhVienDAO();
+
         protected void Page_Load(object sender, EventArgs e)
         {
             string id = "";

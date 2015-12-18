@@ -10,13 +10,17 @@ namespace WEBSITESAVVY.Pages
 {
     public partial class task : System.Web.UI.Page
     {
+        public static string mClaimID = "";
         DaiLyDAO dldao = new DaiLyDAO();
+
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Request.QueryString["claimID"] != null)
+                mClaimID = Request.QueryString["claimID"];
+
             if (!this.IsPostBack)
             {
-                string id = Session["ThamChieu"].ToString();
-                gvDSDuocNhan.DataSource = dldao.TaskClaim(id);
+                gvDSDuocNhan.DataSource = dldao.TaskClaim(mClaimID);
                 gvDSDuocNhan.DataBind();
             }
         }

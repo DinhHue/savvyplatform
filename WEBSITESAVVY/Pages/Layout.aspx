@@ -74,6 +74,8 @@
 
         function loadContent(obj) {
             var href = $(obj).attr("href");
+            href += "?claimID=" + claimID;
+
             var content = "<iframe src='"+ href +"'></iframe>";
             $("#frameCenter").attr("src", href);
             return false;
